@@ -2,10 +2,15 @@
   "name": "story-components",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5"
+  }
 }
