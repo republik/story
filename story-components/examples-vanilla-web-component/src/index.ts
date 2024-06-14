@@ -52,8 +52,8 @@ export class MyCounter extends HTMLElement {
     this.update(--this.count);
   }
 
-  update(count) {
-    this.shadowRoot!.getElementById("count")!.innerHTML = count;
+  update(count: number) {
+    this.shadowRoot!.getElementById("count")!.innerHTML = `${count}`;
   }
 }
 

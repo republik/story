@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Component</title>
+  </head>
+  <body>
+    <div id="app">
+      <my-counter>Hey</my-counter>
+      <my-counter>Ho</my-counter>
+      <my-counter></my-counter>
+    </div>
+
+    <script type="module">
+      import "./src/style.css";
+
+      import { MyCounter } from ".";
+
+      customElements.define("my-counter", MyCounter);
+    </script>
+  </body>
+</html>
