@@ -2,6 +2,16 @@
   "name": "@story-component/test",
   "type": "module",
   "exports": {
-    ".": "./index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsup ./index.ts --watch --config ../tsup.config.ts",
+    "build": "tsup ./index.ts --config ../tsup.config.ts"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0"
   }
 }

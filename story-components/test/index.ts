@@ -25,6 +25,8 @@ template.innerHTML = /*html*/ `
   <button id="inc">+</button>`;
 
 export class MyCounter extends HTMLElement {
+  count: number;
+
   constructor() {
     super();
     this.count = 0;
@@ -32,9 +34,13 @@ export class MyCounter extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-    this.shadowRoot.getElementById("inc").onclick = () => this.inc();
-    this.shadowRoot.getElementById("dec").onclick = () => this.dec();
+    this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    this.shadowRoot
+      ?.getElementById("inc")
+      ?.addEventListener("click", () => this.inc());
+    this.shadowRoot
+      ?.getElementById("dec")
+      ?.addEventListener("click", () => this.dec());
     this.update(this.count);
   }
 
@@ -47,7 +53,7 @@ export class MyCounter extends HTMLElement {
   }
 
   update(count) {
-    this.shadowRoot.getElementById("count").innerHTML = count;
+    this.shadowRoot!.getElementById("count")!.innerHTML = count;
   }
 }
 
