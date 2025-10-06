@@ -57,4 +57,4 @@ export class MyCounter extends HTMLElement {
   }
 }
 
-// customElements.define("my-counter", MyCounter);
+customElements.define("examples-vanilla-web-component", MyCounter);
