@@ -3,57 +3,27 @@
 		shadow: 'open'}}/>
 
 <script lang="ts">
-
-  import {css} from '@story/theme/css'
   import {onMount} from 'svelte'
+  import ActualComponent from './ActualComponent.svelte'
 
+  // ADD STYLES TO COMPONENT'S SHADOW ROOT
+  // (instead of the head of the main document)
+  // there might be a better way to add the styles to the shadowroot, but i couldn't find it...
   onMount(async () => {
     const shadowRoot = $host()?.shadowRoot
+    const ID = 'story-components-theme'
 
+    if (shadowRoot && !shadowRoot.getElementById(ID)) {
+      const theme = await import('./style.css?inline')
 
-    console.log('shadowRoot', shadowRoot)
-
-    if (shadowRoot && !shadowRoot.querySelector('#story-theme-styles')) {
-      const fonts = await import('@story/theme/fonts.css?inline')
-      const styles = await import('@story/theme/styles.css?inline')
-
-      const font = document.createElement('style')
-      font.id = 'story-theme-fonts'
-      font.textContent = fonts.default
-      shadowRoot.appendChild(font)
-
-      const style = document.createElement('style')
-      style.id = 'story-theme-styles'
-      console.log(styles.default)
-      //style.textContent = styles.default.replace(/:not\(#\\#\):not\(#\\#\)/g, ':not(#\\#)')
-      style.textContent = styles.default
-      shadowRoot.appendChild(style)
-
-      // todo: remove on unmount
+      const node = document.createElement('style')
+      node.id = ID
+      node.textContent = theme.default
+      shadowRoot.appendChild(node)
     }
   })
-
-  const TRAFFIC_LIGHTS: string[] = ['red', 'orange', 'green']
-  let lightIndex: number = $state(0)
-
-  const light: string = $derived(TRAFFIC_LIGHTS[lightIndex])
-
-  function nextLight(): void {
-    lightIndex = (lightIndex + 1) % TRAFFIC_LIGHTS.length
-  }
 </script>
 
 <div id="custom-element-container">
-    <button onclick={nextLight}>Next light</button>
-    <p class={css({ fontSize : '2xl'})}>Light is: {light}</p>
-    <p class={css({ textStyle: 'airy'})}>
-        You must
-        {#if light === "red"}
-            <span>STOP</span>
-        {:else if light === "orange"}
-            <span>SLOW DOWN</span>
-        {:else if light === "green"}
-            <span>GO</span>
-        {/if}
-    </p>
+    <ActualComponent/>
 </div>

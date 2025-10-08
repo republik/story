@@ -5,7 +5,10 @@ export default defineConfig({
   preflight: true,
   polyfill: true,
   prefix: "r",
+
+  // the :host selector combined with the :not(#/#):not(#/#) specificity hack does not target the host as it should, so we use a wrapper div with an id as root element instead
   cssVarRoot: "#custom-element-container",
+
   // strictTokens: true,
 
   presets,
