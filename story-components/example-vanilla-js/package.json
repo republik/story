@@ -1,5 +1,5 @@
 {
-  "name": "@story-components/examples-vanilla-web-components",
+  "name": "@story/example-vanilla-js",
   "type": "module",
   "exports": {
     ".": {
