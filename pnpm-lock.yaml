@@ -46,6 +46,28 @@ importers:
         specifier: ^3.9.1
         version: 3.9.1(rollup@4.52.4)(typescript@5.6.2)(vite@5.3.1(lightningcss@1.25.1))
 
+  story-components/the-big-question:
+    dependencies:
+      '@story/theme':
+        specifier: workspace:*
+        version: link:../../theme
+    devDependencies:
+      '@pandacss/dev':
+        specifier: ^0.53.1
+        version: 0.53.7(typescript@5.6.2)
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^6.2.1
+        version: 6.2.1(svelte@5.39.9)(vite@7.1.9(lightningcss@1.25.1))
+      concurrently:
+        specifier: ^9.2.1
+        version: 9.2.1
+      svelte:
+        specifier: ^5.39.9
+        version: 5.39.9
+      vite:
+        specifier: ^7.1.9
+        version: 7.1.9(lightningcss@1.25.1)
+
   theme:
     devDependencies:
       '@pandacss/dev':

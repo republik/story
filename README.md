@@ -10,15 +10,16 @@ Here is how to get started with a web component using Svelte + Panda CSS:
 2. Update the `name` attribute of the `package.json` file so that the name matches your new folder name, with the
    `@story/` prefix. (
    `@story/MY_COMPONENT`)
-3. Update the `tag` attribute of the `src/index.svelte` file (in the `svelte:options` at the top) so that the tag of
-   your custom element matches the name of your folder. (`tag: 'MY_COMPONENT',`).
-4. The `src/index.svelte`file contains essential configuration code, notably to get Panda CSS to play nice with the
+3. Update the `tag` attribute of the `customElement` in the `src/index.svelte` file (in the `svelte:options` at the top)
+   so that the tag of your custom element matches the name of your folder. (`tag: 'MY_COMPONENT',`).
+4. If you want to use input props, update the `props` attribute of the `customElement`, also in the `src/index.svelte`.
+5. The `src/index.svelte`file contains essential configuration code, notably to get Panda CSS to play nice with the
    rest of the setup. I don't recommended to poke it too much. Better to develop your component in separate
-   files, like in the example.
-5. Optional: Update the `README.md` file in your new folder with some documentation.
-6. Install your dependencies with `pnpm install` (from the root of the monorepo).
-7. Run `pnpm dev` from the project root to start the development server.
-8. Use `index.html` to develop your component in the browser.
+   files, like in the example. Don't forget to pass your input props to the child components.
+6. Optional: Update the `README.md` file in your new folder with some documentation.
+7. Install your dependencies with `pnpm install` (from the root of the monorepo).
+8. Run `pnpm dev` from the project root to start the development server.
+9. Use `index.html` to develop your component in the browser.
 
 --
 

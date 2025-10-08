@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Story Component</title>
+</head>
+<body>
+<div id="app">
+    <the-big-question></the-big-question>
+</div>
+<script type="module">
+  // import './dist/index.js'
+  import './src/index.svelte'
+  import { bigQuestionData } from './data.ts'
+
+  // Wait for custom element to be defined
+  customElements.whenDefined('the-big-question').then(() => {
+    const element = document.querySelector('the-big-question')
+    // TODO: disappears on hot reload
+    element.data = bigQuestionData
+  })
+</script>
+</body>
+</html>
