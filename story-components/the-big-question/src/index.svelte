@@ -11,6 +11,7 @@
 
   let {data} = $props();
 
+
   // ADD STYLES TO COMPONENT'S SHADOW ROOT
   // (instead of the head of the main document)
   // there might be a better way to add the styles to the shadowroot, but i couldn't find it...

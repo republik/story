@@ -9,6 +9,7 @@ export default defineConfig({
       fileName: "index",
     },
     copyPublicDir: false,
+    // minify: false, // for debuging purposes
   },
   plugins: [
     svelte({
