@@ -8,8 +8,13 @@
 <script lang="ts">
   import {onMount} from 'svelte'
   import TheBigQuestion from './TheBigQuestion.svelte'
+  import type {InputData} from './types.d.ts'
 
-  let {data} = $props();
+  interface Props {
+    data?: InputData
+  }
+
+  let {data}: Props = $props();
 
 
   // ADD STYLES TO COMPONENT'S SHADOW ROOT
