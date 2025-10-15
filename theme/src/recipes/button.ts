@@ -43,7 +43,7 @@ export const buttonRecipe = defineRecipe({
       outline: {
         bg: 'transparent',
         borderColor: 'current',
-        borderStyle: 'solid',
+        borderStyle: 'solid',xw
         borderWidth: '1px',
       },
     },

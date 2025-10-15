@@ -1,32 +1,43 @@
-<script module lang="ts">
-  export type BigQuestionDataType = {
-    question: string;
-    answers: {
-      respondent: {
-        name: string;
-        description: string;
-        avatarUrl: string;
-      };
-      text: string;
-    }[];
+<script lang="ts">
+  import type { Answer, AnswersByCategory, InputData, Respondent as RespondentType } from "./types.d.ts";
+  import { css } from "@story/theme/css";
+  import Respondent from "./Respondent.svelte";
+  import AnswersOverlay from "./AnswersOverlay.svelte";
+
+  interface Props {
+    data: InputData;
+  }
+
+  let { data }: Props = $props();
+  let selected: AnswersByCategory | undefined = $state();
+
+  function bringFocusFirst(focus: RespondentType, answers: Answer[]): Answer[] {
+    const index = answers.findIndex(answer => answer.respondent.name === focus.name);
+    const beforeFocus = answers.slice(0, index);
+    const focusAndAfter = answers.slice(index);
+    return [...focusAndAfter, ...beforeFocus];
   };
 </script>
 
-<script lang="ts">
-  import {css} from '@story/theme/css'
+<h1 class={css({ textStyle: 'h1Serif', mb: 4, mt: 12})}>{data?.question || 'No data :-('}</h1>
+{#each data?.answers as { category, answers }}
+  <div style:background={category.background} class={css({ mb: '4-8'})}>
+    <h2
+      class={css({ textStyle: 'h1Sans', p: '4-8', textTransform: 'capitalize', borderBottom: '1px solid rgba(0,0,0,0.1)'})}
+      style:color={category.color}
+      style:background={category.background}>
+      {category.name}
+    </h2>
 
-  let {data}: { data: BigQuestionDataType } = $props();
-</script>
-
-<div class={css({ padding: 4, maxWidth: 'content.text' })}>
-    <h1 class={css({ textStyle: 'h1Serif'})}>{data?.question || 'No data :-('}</h1>
-    {#each data?.answers as { respondent, text }}
-        <div class={css({ mt: 12})}>
-            <img src={respondent.avatarUrl} alt={respondent.name} width="100" height="100" loading="lazy"/>
-            <h2 class={css({ textStyle: 'h2Serif'})}>{respondent.name}</h2>
-            <p class={css({ textStyle: 'serifRegular'})}>{@html respondent.description}</p>
-            <h3 class={css({ textStyle: 'h3Sans', mt: 4})}>ANSWER:</h3>
-            <div>{@html text}</div>
-        </div>
-    {/each}
-</div>
+    <div
+      class={css({ p: '4-8', display: 'flex', flexDirection: 'column', gap: '4-8'})}>
+      {#each answers as { respondent }}
+        <Respondent respondent={respondent}
+                    onClick={() => selected = { category, answers: bringFocusFirst(respondent, answers) }} />
+      {/each}
+    </div>
+  </div>
+{/each}
+{#if selected}
+  <AnswersOverlay answersByCategory={selected} onClose={() => selected = undefined } />
+{/if}
