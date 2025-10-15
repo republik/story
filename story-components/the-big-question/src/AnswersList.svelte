@@ -22,8 +22,8 @@
       <h2 class={css({ py: 2, textStyle: 'h3Sans', position: 'sticky', top: '105px', zIndex: 1 })}
           style:background={answersByCategory.category.background}>{respondent.name}</h2>
       <p
-        class={css({ textStyle: 'sansSerifRegular', opacity: 0.5, maxWidth: '350px', pb: 2})}>{@html respondent.description}</p>
-      {@html text}
+        class={css({ textStyle: 'sans', opacity: 0.5, maxWidth: '350px', pb: 4, '& a': { textDecoration: 'underline'}})}>{@html respondent.description}</p>
+      <div class={css({ textStyle: 'serif', '& p': {pb: 4 }, '& a': { textDecoration: 'underline'}})}>{@html text}</div>
     </div>
   {/each}
 </div>
