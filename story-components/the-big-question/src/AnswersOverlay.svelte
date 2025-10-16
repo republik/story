@@ -30,7 +30,6 @@
   function handleClose() {
     const mainDocument = dialog?.ownerDocument || document;
     mainDocument.body.style.overflow = "";
-    window.scrollTo(0, 0);
     onClose();
   }
 </script>
@@ -73,6 +72,7 @@
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    z-index: 100;
   }
 
   dialog[open] {
