@@ -3,18 +3,20 @@
 		shadow: 'open',
 		props: {
          componentData: { type: 'Object', attribute: 'componentdata'}
-		}}} />
+		}}}/>
 
 <script lang="ts">
-  import { onMount } from "svelte";
+  import {onMount} from "svelte";
   import TheBigQuestion from "./TheBigQuestion.svelte";
-  import type { InputData } from "./types.d.ts";
+  import type {InputData} from "./types.d.ts";
+  import fontsCSS from '@story/theme/fonts.css?inline';
+  import stylesCSS from '@story/theme/styles.css?inline';
 
   interface Props {
     componentData?: InputData;
   }
 
-  let { componentData }: Props = $props();
+  let {componentData}: Props = $props();
   let shadowRoot = $host()?.shadowRoot;
 
   console.log("data in web component:", componentData);
@@ -26,16 +28,14 @@
     const ID = "story-components-theme";
 
     if (shadowRoot && !shadowRoot.getElementById(ID)) {
-      const theme = await import("./style.css?inline");
-
       const node = document.createElement("style");
       node.id = ID;
-      node.textContent = theme.default;
+      node.textContent = fontsCSS + stylesCSS;
       shadowRoot.appendChild(node);
     }
   });
 </script>
 
 <div id="custom-element-container">
-  <TheBigQuestion componentData={componentData} shadowRoot={shadowRoot} />
+    <TheBigQuestion componentData={componentData} shadowRoot={shadowRoot}/>
 </div>
