@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Story Component</title>
 </head>
-<body>
-<div id="app" style="max-width: 700px; margin: auto; padding: 1rem;">
+<body style="margin: 0">
+<div style="max-width: 700px; margin: auto; padding: 1rem;">
     <h1>Grosse Heiterkeit</h1>
 
     <p>Es war längstens dunkel, als der Walliser Nationalrat Peter von Roten ein Votum hielt, am 20. Dezember 1950. Die
@@ -14,9 +14,11 @@
         hatten, ob Süssmost von der Steuer befreit oder der Abgabensatz auf Setz­zwiebeln gesenkt werden solle.</p>
 
     <p>Aber jetzt, gegen 21 Uhr, wurde es lustig.</p>
+</div>
 
-    <the-big-question></the-big-question>
+<the-big-question></the-big-question>
 
+<div style="max-width: 700px; margin: auto; padding: 1rem;">
     <p>Als der katholisch-konservative von Roten nämlich sein Postulat verteidigte, begann er die Rede folgender­massen:
         «Meine Damen und Herren».</p>
 
@@ -74,7 +76,7 @@
   customElements.whenDefined('the-big-question').then(() => {
     const element = document.querySelector('the-big-question')
     // TODO: disappears on hot reload
-    element.data = bigQuestionData
+    element.componentData = bigQuestionData
   })
 </script>
 </body>

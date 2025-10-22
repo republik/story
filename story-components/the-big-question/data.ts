@@ -5,9 +5,7 @@ export const bigQuestionData: InputData = {
   answers: [
     {
       category: {
-        name: "science",
-        color: "#892387",
-        background: "#BCB0E0",
+        name: "wissenschaft",
       },
       answers: [
         {
@@ -18,11 +16,12 @@ export const bigQuestionData: InputData = {
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
           },
-          text: "<p>Der Klimawandel ist keine Bedrohung in der fernen Zukunft, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
+          text: "<p>Der Klimawandel ist <b>eine Bedrohung in der fernen Zukunft</b>, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
         },
         {
           respondent: {
             name: "Bill McKibben",
+            descriptionShort: "Klimaaktivist & Autor",
             description:
               'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
             avatarUrl:
@@ -33,6 +32,7 @@ export const bigQuestionData: InputData = {
         {
           respondent: {
             name: "Rebecca Solnit",
+            descriptionShort: "Schriftstellerin aus San Francisco",
             description:
               'Schriftstellerin, San Francisco; Mitgründerin des Klimaprojekts <a href="https://www.nottoolateclimate.com/">Not too Late</a>',
             avatarUrl:
@@ -44,9 +44,7 @@ export const bigQuestionData: InputData = {
     },
     {
       category: {
-        name: "activism",
-        color: "#5D55C7",
-        background: "#EEADA5",
+        name: "aktivismus",
       },
       answers: [
         {
@@ -113,9 +111,7 @@ export const bigQuestionData: InputData = {
     },
     {
       category: {
-        name: "journalism",
-        color: "brown",
-        background: "#FAEBD7",
+        name: "kultur",
       },
       answers: [
         {

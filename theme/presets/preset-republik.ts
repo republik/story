@@ -1,8 +1,8 @@
-import { definePreset } from '@pandacss/dev'
-import { buttonRecipe } from '../src/recipes/button'
+import { definePreset } from "@pandacss/dev";
+import { buttonRecipe } from "../src/recipes/button";
 
 export const presetRepublik = definePreset({
-  name: 'republik',
+  name: "republik",
   conditions: {
     extend: {
       light: '[data-theme="light"] &',
@@ -13,105 +13,105 @@ export const presetRepublik = definePreset({
   },
   globalCss: {
     html: {
-      WebkitFontSmoothing: 'auto',
-      MozOsxFontSmoothing: 'auto',
+      WebkitFontSmoothing: "auto",
+      MozOsxFontSmoothing: "auto",
     },
   },
   // Useful for theme customization
   theme: {
     extend: {
       breakpoints: {
-        sm: '375px',
-        md: '768px',
-        lg: '1025px',
+        sm: "375px",
+        md: "768px",
+        lg: "1025px",
       },
       tokens: {
         colors: {
           neutral: {
-            '50': { value: '#ffffff' },
-            '950': { value: '#020202' },
+            "50": { value: "#ffffff" },
+            "950": { value: "#020202" },
           },
-          white: { value: '#fff' },
-          transparent: { value: 'transparent' },
-          current: { value: 'currentColor' },
+          white: { value: "#fff" },
+          transparent: { value: "transparent" },
+          current: { value: "currentColor" },
         },
         shadows: {
-          sm: { value: '0 0 6px 0 rgba(0, 0, 0, 0.35)' },
+          sm: { value: "0 0 6px 0 rgba(0, 0, 0, 0.35)" },
         },
         sizes: {
-          full: { value: '100%' },
-          viewportWidth: { value: '100vw' },
-          24: { value: '6rem' },
-          narrow: { value: '30rem' },
-          center: { value: '695px' },
+          full: { value: "100%" },
+          viewportWidth: { value: "100vw" },
+          24: { value: "6rem" },
+          narrow: { value: "30rem" },
+          center: { value: "695px" },
         },
         spacing: {
-          0: { value: '0rem' },
-          px: { value: '1px' },
-          0.5: { value: '0.125rem' },
-          1: { value: '0.25rem' },
-          1.5: { value: '0.375rem' },
-          2: { value: '0.5rem' },
-          2.5: { value: '0.625rem' },
-          3: { value: '0.75rem' },
-          3.5: { value: '0.9375rem' },
-          4: { value: '1rem' },
-          5: { value: '1.25rem' },
-          6: { value: '1.5rem' },
-          8: { value: '2rem' },
-          10: { value: '2.5rem' },
-          12: { value: '3rem' },
-          16: { value: '4rem' },
-          32: { value: '8rem' },
+          0: { value: "0rem" },
+          px: { value: "1px" },
+          0.5: { value: "0.125rem" },
+          1: { value: "0.25rem" },
+          1.5: { value: "0.375rem" },
+          2: { value: "0.5rem" },
+          2.5: { value: "0.625rem" },
+          3: { value: "0.75rem" },
+          3.5: { value: "0.9375rem" },
+          4: { value: "1rem" },
+          5: { value: "1.25rem" },
+          6: { value: "1.5rem" },
+          8: { value: "2rem" },
+          10: { value: "2.5rem" },
+          12: { value: "3rem" },
+          16: { value: "4rem" },
+          32: { value: "8rem" },
         },
         radii: {
-          full: { value: '9999px' },
+          full: { value: "9999px" },
         },
         fonts: {
           republikSerif: {
-            value: 'RepublikSerif, Georgia, serif',
+            value: "RepublikSerif, Georgia, serif",
           },
           rubis: {
-            value: 'Rubis, Georgia, Droid-Serif, serif',
+            value: "Rubis, Georgia, Droid-Serif, serif",
           },
           gtAmericaStandard: {
             value:
-              'GT-America-Standard, Helvetica-Neue, Arial, Roboto, sans-serif',
+              "GT-America-Standard, Helvetica-Neue, Arial, Roboto, sans-serif",
           },
           inicia: {
-            value: 'Inicia-Medium, Helvetica-Neue, Arial, Roboto, sans-serif',
+            value: "Inicia-Medium, Helvetica-Neue, Arial, Roboto, sans-serif",
           },
           druk: {
-            value: 'Druk, Helvetica-Neue, Arial, Roboto, sans-serif',
+            value: "Druk, Helvetica-Neue, Arial, Roboto, sans-serif",
           },
         },
         fontWeights: {
-          regular: { value: '400' },
-          medium: { value: '500' },
-          bold: { value: '700' },
-          black: { value: '900' },
+          regular: { value: "400" },
+          medium: { value: "500" },
+          bold: { value: "700" },
+          black: { value: "900" },
         },
         fontSizes: {
-          xs: { value: '0.75rem' },
-          s: { value: '0.875rem' },
-          base: { value: '1rem' },
-          l: { value: '1.125rem' },
-          xl: { value: '1.25rem' },
-          '2xl': { value: '1.5rem' },
-          '3xl': { value: '2rem' },
-          '4xl': { value: '3rem' },
-          '8xl': { value: '6rem' },
-          '16xl': { value: '12rem' },
+          xs: { value: "0.75rem" },
+          s: { value: "0.875rem" },
+          base: { value: "1rem" },
+          l: { value: "1.125rem" },
+          xl: { value: "1.25rem" },
+          "2xl": { value: "1.5rem" },
+          "3xl": { value: "2rem" },
+          "4xl": { value: "3rem" },
+          "8xl": { value: "6rem" },
+          "16xl": { value: "12rem" },
         },
         lineHeights: {
           1: { value: 1 },
         },
         animations: {
-          spin: { value: 'spin 1s linear infinite' },
-          slideUp: { value: 'slideUp 300ms ease-in-out' },
-          slideDown: { value: 'slideDown 300ms ease-in-out' },
-          fadeIn: { value: 'fadeIn 300ms ease-in-out' },
-          fadeOut: { value: 'fadeOut 300ms ease-in-out' },
+          spin: { value: "spin 1s linear infinite" },
+          slideUp: { value: "slideUp 300ms ease-in-out" },
+          slideDown: { value: "slideDown 300ms ease-in-out" },
+          fadeIn: { value: "fadeIn 300ms ease-in-out" },
+          fadeOut: { value: "fadeOut 300ms ease-in-out" },
         },
       },
       semanticTokens: {
@@ -119,149 +119,156 @@ export const presetRepublik = definePreset({
           text: {
             DEFAULT: {
               value: {
-                base: '{colors.neutral.950}',
-                _light: '{colors.neutral.950}',
-                _dark: '{colors.neutral.50}',
+                base: "{colors.neutral.950}",
+                _light: "{colors.neutral.950}",
+                _dark: "{colors.neutral.50}",
               },
             },
             inverted: {
               value: {
-                base: '{colors.neutral.50}',
-                _light: '{colors.neutral.50}',
-                _dark: '{colors.neutral.950}',
+                base: "{colors.neutral.50}",
+                _light: "{colors.neutral.50}",
+                _dark: "{colors.neutral.950}",
               },
             },
             white: {
-              value: '{colors.neutral.50}',
+              value: "{colors.neutral.50}",
             },
             black: {
-              value: '{colors.neutral.950}',
+              value: "{colors.neutral.950}",
             },
             marketingAccent: {
-              value: '#FF6969',
+              value: "#FF6969",
             },
           },
           contrast: {
             value: {
-              base: 'black',
-              _light: 'black',
-              _dark: 'white',
+              base: "black",
+              _light: "black",
+              _dark: "white",
             },
           },
           background: {
             DEFAULT: {
               value: {
-                base: 'white',
-                _light: 'white',
-                _dark: '#191919',
+                base: "white",
+                _light: "white",
+                _dark: "#191919",
               },
             },
             marketing: {
-              value: '#F2ECE6',
+              value: "#F2ECE6",
             },
             marketingAlt: {
-              value: '#E2FBA6',
+              value: "#E2FBA6",
             },
             marketingAccent: {
-              value: '#FF9A82',
+              value: "#FF9A82",
             },
             marketingAccentAlt: {
-              value: '#FFA4DD',
+              value: "#FFA4DD",
             },
           },
           pageBackground: {
             value: {
-              base: 'white',
-              _light: 'white',
-              _dark: '#191919',
+              base: "white",
+              _light: "white",
+              _dark: "#191919",
             },
           },
           link: {
             value: {
-              base: '#00AA00',
-              _light: '#00AA00',
-              _dark: '#00AA00',
+              base: "#00AA00",
+              _light: "#00AA00",
+              _dark: "#00AA00",
             },
           },
           primary: {
             value: {
-              base: '#00AA00',
-              _light: '#00AA00',
-              _dark: '#00AA00',
+              base: "#00AA00",
+              _light: "#00AA00",
+              _dark: "#00AA00",
             },
           },
           primaryHover: {
             value: {
-              base: '#008800',
-              _light: '#008800',
-              _dark: '#008800',
+              base: "#008800",
+              _light: "#008800",
+              _dark: "#008800",
             },
           },
           overlay: {
             value: {
-              base: 'rgba(0,0,0,0.2)',
-              _light: 'rgba(0,0,0,0.2)',
-              _dark: 'rgba(0,0,0,0.4)',
+              base: "rgba(0,0,0,0.2)",
+              _light: "rgba(0,0,0,0.2)",
+              _dark: "rgba(0,0,0,0.4)",
             },
           },
           error: {
-            value: { base: '#dc2626', _light: '#dc2626', _dark: '#dc2626' },
+            value: { base: "#dc2626", _light: "#dc2626", _dark: "#dc2626" },
           },
           divider: {
             value: {
-              base: '#DBDCDD',
-              _light: '#DBDCDD',
-              _dark: '#4C4C4C',
+              base: "#DBDCDD",
+              _light: "#DBDCDD",
+              _dark: "#4C4C4C",
             },
           },
           disabled: {
             value: {
-              base: '#B8BDC1',
-              _light: '#B8BDC1',
-              _dark: '#949494',
+              base: "#B8BDC1",
+              _light: "#B8BDC1",
+              _dark: "#949494",
             },
           },
           textSoft: {
             value: {
-              base: '#757575',
-              _light: '#757575',
-              _dark: '#A9A9A9',
+              base: "#757575",
+              _light: "#757575",
+              _dark: "#A9A9A9",
+            },
+          },
+          hover: {
+            value: {
+              base: "#F7F8F7",
+              _light: "#F7F8F7",
+              _dark: "#292929",
             },
           },
         },
         sizes: {
-          maxContentWidth: { value: '52rem' },
+          maxContentWidth: { value: "52rem" },
           content: {
-            text: { value: '42rem' },
-            narrow: { value: '27rem' },
+            text: { value: "42rem" },
+            narrow: { value: "27rem" },
           },
           header: {
-            height: { value: { base: '48px', md: '60px' } },
-            avatar: { value: { base: '26px', md: '32px' } },
-            logoHeight: { value: { base: '23px', md: '28px' } },
+            height: { value: { base: "48px", md: "60px" } },
+            avatar: { value: { base: "26px", md: "32px" } },
+            logoHeight: { value: { base: "23px", md: "28px" } },
           },
         },
 
         lineHeights: {
-          pageNav: { value: '2.5rem' },
+          pageNav: { value: "2.5rem" },
         },
         spacing: {
-          '4-6': { value: { base: '1rem', md: '1.5rem' } },
-          '4-8': { value: { base: '1rem', md: '2rem' } },
-          '8-16': { value: { base: '2rem', md: '4rem' } },
-          '16-32': { value: { base: '4rem', md: '8rem' } },
-          '32-64': { value: { base: '8rem', md: '16rem' } },
+          "4-6": { value: { base: "1rem", md: "1.5rem" } },
+          "4-8": { value: { base: "1rem", md: "2rem" } },
+          "8-16": { value: { base: "2rem", md: "4rem" } },
+          "16-32": { value: { base: "4rem", md: "8rem" } },
+          "32-64": { value: { base: "8rem", md: "16rem" } },
           header: {
-            height: { value: '{sizes.header.height}' },
-            avatarMargin: { value: '0.6875rem  1rem' },
-            logoMargin: { value: { base: '12px 0', md: '15px 0' } },
+            height: { value: "{sizes.header.height}" },
+            avatarMargin: { value: "0.6875rem  1rem" },
+            logoMargin: { value: { base: "12px 0", md: "15px 0" } },
           },
         },
         fontSizes: {
-          'l-xl': {
+          "l-xl": {
             value: {
-              base: '{fontSizes.l}',
-              md: '{fontSizes.xl}',
+              base: "{fontSizes.l}",
+              md: "{fontSizes.xl}",
             },
           },
         },
@@ -269,135 +276,149 @@ export const presetRepublik = definePreset({
 
       textStyles: {
         body: {
-          description: 'Body text',
+          description: "Body text",
           value: {
-            fontFamily: 'gtAmericaStandard',
+            fontFamily: "gtAmericaStandard",
+          },
+        },
+        reading: {
+          description: "Long form body text",
+          value: {
+            fontFamily: "rubis",
+            fontWeight: "normal",
+            fontStyle: "normal",
+            lineHeight: 1.5,
+            "& b": {
+              fontWeight: 700,
+            },
+            "& a": { textDecoration: "underline", fontWeight: 700 },
           },
         },
         airy: {
-          description: 'Airy body text',
+          description: "Airy body text",
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontSize: 'l',
+            fontFamily: "gtAmericaStandard",
+            fontSize: "l",
             lineHeight: 1.4,
-            '& b': {
-              fontWeight: 500,
+            "& b": {
+              fontWeight: 700,
             },
+            "& a": { textDecoration: "underline", fontWeight: 700 },
           },
         },
         title: {
           value: {
-            fontFamily: 'republikSerif',
-            fontWeight: 'black',
-            fontStyle: 'normal',
-            fontSize: '4em',
+            fontFamily: "republikSerif",
+            fontWeight: "black",
+            fontStyle: "normal",
+            fontSize: "4em",
           },
         },
         teaserTitle: {
           value: {
-            fontFamily: 'republikSerif',
-            fontWeight: 'black',
-            fontStyle: 'normal',
-            fontSize: { base: '3xl', md: '3rem' },
+            fontFamily: "republikSerif",
+            fontWeight: "black",
+            fontStyle: "normal",
+            fontSize: { base: "3xl", md: "3rem" },
             lineHeight: 1.125,
           },
         },
         teaserLead: {
           value: {
-            fontFamily: 'rubis',
-            fontWeight: 'regular',
-            fontStyle: 'normal',
-            fontSize: { base: 'l', md: 'xl' },
+            fontFamily: "rubis",
+            fontWeight: "regular",
+            fontStyle: "normal",
+            fontSize: { base: "l", md: "xl" },
             lineHeight: 1.375,
           },
         },
         teaserLeadSans: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'regular',
-            fontStyle: 'normal',
-            fontSize: { base: 'l', md: 'xl' },
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "regular",
+            fontStyle: "normal",
+            fontSize: { base: "l", md: "xl" },
             lineHeight: 1.375,
           },
         },
         teaserCredits: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'regular',
-            fontStyle: 'normal',
-            fontSize: 's',
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "regular",
+            fontStyle: "normal",
+            fontSize: "s",
             lineHeight: 1.375,
           },
         },
         sans: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'regular',
-            fontStyle: 'normal',
-            fontSize: 'base',
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "regular",
+            fontStyle: "normal",
+            fontSize: "base",
             lineHeight: 1.5,
           },
         },
         serif: {
           value: {
-            fontFamily: 'rubis',
-            fontWeight: 'regular',
-            fontStyle: 'normal',
-            fontSize: 'base',
+            fontFamily: "rubis",
+            fontWeight: "regular",
+            fontStyle: "normal",
+            fontSize: "base",
             lineHeight: 1.5,
           },
         },
         h1Sans: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'medium',
-            fontStyle: 'normal',
-            fontSize: '3xl',
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "medium",
+            fontStyle: "normal",
+            fontSize: "3xl",
             lineHeight: 1.16667,
           },
         },
         h2Sans: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'medium',
-            fontStyle: 'normal',
-            fontSize: '2xl',
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "medium",
+            fontStyle: "normal",
+            fontSize: "2xl",
             lineHeight: 1.16667,
           },
         },
         h3Sans: {
           value: {
-            fontFamily: 'gtAmericaStandard',
-            fontWeight: 'medium',
-            fontStyle: 'normal',
-            fontSize: 'xl',
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "medium",
+            fontStyle: "normal",
+            fontSize: "xl",
             lineHeight: 1.16667,
           },
         },
         h1Serif: {
           value: {
-            fontFamily: 'rubis',
-            fontWeight: 'bold',
-            fontStyle: 'normal',
-            fontSize: '3xl',
+            fontFamily: "rubis",
+            fontWeight: "bold",
+            fontStyle: "normal",
+            fontSize: "3xl",
             lineHeight: 1.16667,
           },
         },
         h2Serif: {
           value: {
-            fontFamily: 'rubis',
-            fontWeight: 'bold',
-            fontStyle: 'normal',
-            fontSize: '2xl',
+            fontFamily: "rubis",
+            fontWeight: "bold",
+            fontStyle: "normal",
+            fontSize: "2xl",
             lineHeight: 1.16667,
           },
         },
         h3Serif: {
           value: {
-            fontFamily: 'rubis',
-            fontWeight: 'bold',
-            fontStyle: 'normal',
-            fontSize: 'xl',
+            fontFamily: "rubis",
+            fontWeight: "bold",
+            fontStyle: "normal",
+            fontSize: "xl",
             lineHeight: 1.16667,
           },
         },
@@ -405,79 +426,79 @@ export const presetRepublik = definePreset({
         // LEGACY
         serifTitle: {
           value: {
-            fontFamily: 'republikSerif',
+            fontFamily: "republikSerif",
             fontWeight: 900,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         serifRegular: {
           value: {
-            fontFamily: 'rubis',
+            fontFamily: "rubis",
             fontWeight: 400,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         serifItalic: {
           value: {
-            fontFamily: 'rubis',
+            fontFamily: "rubis",
             fontWeight: 400,
-            fontStyle: 'italic',
+            fontStyle: "italic",
           },
         },
         serifBold: {
           value: {
-            fontFamily: 'rubis',
+            fontFamily: "rubis",
             fontWeight: 700,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         serifBoldItalic: {
           value: {
-            fontFamily: 'rubis',
+            fontFamily: "rubis",
             fontWeight: 700,
-            fontStyle: 'italic',
+            fontStyle: "italic",
           },
         },
         sansSerifRegular: {
           value: {
-            fontFamily: 'gtAmericaStandard',
+            fontFamily: "gtAmericaStandard",
             fontWeight: 400,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         sansSerifItalic: {
           value: {
-            fontFamily: 'gtAmericaStandard',
+            fontFamily: "gtAmericaStandard",
             fontWeight: 400,
-            fontStyle: 'italic',
+            fontStyle: "italic",
           },
         },
         sansSerifMedium: {
           value: {
-            fontFamily: 'gtAmericaStandard',
+            fontFamily: "gtAmericaStandard",
             fontWeight: 500,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         sansSerifBold: {
           value: {
-            fontFamily: 'gtAmericaStandard',
+            fontFamily: "gtAmericaStandard",
             fontWeight: 700,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         monospaceRegular: {
           value: {
-            fontFamily: 'Menlo, Courier, monospace',
+            fontFamily: "Menlo, Courier, monospace",
             fontWeight: 400,
-            fontStyle: 'normal',
+            fontStyle: "normal",
           },
         },
         cursiveTitle: {
           value: {
-            fontFamily: 'inicia',
+            fontFamily: "inicia",
             fontWeight: 500,
-            fontStyle: 'italic',
+            fontStyle: "italic",
           },
         },
       },
@@ -490,19 +511,19 @@ export const presetRepublik = definePreset({
     keyframes: {
       radixCollapsibleSlideDown: {
         from: { height: 0 },
-        to: { height: 'var(--radix-collapsible-content-height)' },
+        to: { height: "var(--radix-collapsible-content-height)" },
       },
       radixCollapsibleSlideUp: {
-        from: { height: 'var(--radix-collapsible-content-height)' },
+        from: { height: "var(--radix-collapsible-content-height)" },
         to: { height: 0 },
       },
       progressGrow: {
         from: { width: 0 },
-        to: { width: 'var(--progress-width)' },
+        to: { width: "var(--progress-width)" },
       },
       spin: {
-        from: { transform: 'rotate(0deg)' },
-        to: { transform: 'rotate(360deg)' },
+        from: { transform: "rotate(0deg)" },
+        to: { transform: "rotate(360deg)" },
       },
       fadeIn: {
         from: { opacity: 0 },
@@ -513,13 +534,13 @@ export const presetRepublik = definePreset({
         to: { opacity: 0 },
       },
       slideUp: {
-        from: { transform: 'translateY(100%)' },
-        to: { transform: 'translateY(0%)' },
+        from: { transform: "translateY(100%)" },
+        to: { transform: "translateY(0%)" },
       },
       slideDown: {
-        from: { transform: 'translateY(0%)' },
-        to: { transform: 'translateY(100%)' },
+        from: { transform: "translateY(0%)" },
+        to: { transform: "translateY(100%)" },
       },
     },
   },
-})
+});

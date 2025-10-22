@@ -2,7 +2,7 @@
   import type { AnswersByCategory } from "./types.d.ts";
   import { onMount } from "svelte";
   import AnswersList from "./AnswersList.svelte";
-  import { X } from "@lucide/svelte";
+  import { ChevronLeft } from "@lucide/svelte";
   import { css } from "@story/theme/css";
 
   interface Props {
@@ -39,17 +39,17 @@
   bind:this={dialog}
   onclose={handleClose}
   onclick={(e) => { if (e.target === dialog) dialog.close(); }}
-  style:background={category.background}
+  class={css({ background: 'hover', color: '#000000'})}
 >
 
   <div
-    class={css({ p: '4-8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, borderBottom: '1px solid rgba(0,0,0,0.1)' })}
-    style:background={category.background}>
-    <h2 class={css({ textStyle: 'h1Sans', textTransform: 'capitalize' })}
-        style:color={category.color}>{category.name}</h2>
+    class={css({ pt: 4, pb: 8, px: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, background: 'hover' })}>
     <button title='close modal' onclick={() => dialog?.close()} class={css({ cursor: 'pointer' })}>
-      <X size="40" />
+      <ChevronLeft size="24" class={css({ display: 'inline' })} />
+      <span>Übersicht</span>
     </button>
+    <h2
+      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 700, textTransform: 'capitalize', fontSize: '3xl' })}>{category.name}</h2>
   </div>
 
   <AnswersList answersByCategory={answersByCategory} />

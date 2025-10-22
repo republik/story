@@ -1,13 +1,12 @@
-export type CategoryName = "activism" | "journalism" | "science";
+export type CategoryName = "wissenschaft" | "aktivismus" | "kultur";
 
 export type Category = {
   name: CategoryName;
-  color: string;
-  background: string;
 };
 
 export type Respondent = {
   name: string;
+  descriptionShort?: string;
   description: string;
   avatarUrl: string;
 };
