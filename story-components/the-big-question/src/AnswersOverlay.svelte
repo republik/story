@@ -60,6 +60,7 @@
       <span>Übersicht</span>
     </button>
     <select
+      class={css({ fontWeight: 500 })}
       value={category?.name}
       onchange={(e) => {
           if (e.target instanceof HTMLSelectElement) {

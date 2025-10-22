@@ -15,6 +15,7 @@
   }
 
   let { componentData }: Props = $props();
+  let shadowRoot = $host()?.shadowRoot;
 
   console.log("data in web component:", componentData);
 
@@ -22,7 +23,6 @@
   // (instead of the head of the main document)
   // there might be a better way to add the styles to the shadowroot, but i couldn't find it...
   onMount(async () => {
-    const shadowRoot = $host()?.shadowRoot;
     const ID = "story-components-theme";
 
     if (shadowRoot && !shadowRoot.getElementById(ID)) {
@@ -37,5 +37,5 @@
 </script>
 
 <div id="custom-element-container">
-  <TheBigQuestion componentData={componentData} />
+  <TheBigQuestion componentData={componentData} shadowRoot={shadowRoot} />
 </div>
