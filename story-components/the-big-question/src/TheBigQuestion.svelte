@@ -49,26 +49,31 @@
 
 <div class={css({
     color: '#000000',
-    my: '80px',
-    maxWidth: 'content.text',
-    margin: 'auto'
+    mb: 16,
+    margin: 'auto',
   })}>
   {#each (componentData?.answers || []) as { category, answers }}
     <h2
       id={category.name}
       class={css({
-          textStyle: 'serifTitle',
-          fontSize: '2xl',
+          textStyle: 'sansSerifBold',
+          fontSize: '24px',
           letterSpacing: '-2%',
           lineHeight: 1.5,
           textAlign: 'center',
-          p: '8-16'
+          pt: '16',
+          pb: '8'
         })}>
       {category.name}
     </h2>
 
     <div
-      class={css({ display: 'flex', flexDirection: 'column', gap: '4-8', px: '8', pb: '12'})}>
+      class={css({
+      display: 'flex',
+      overflowX: 'scroll',
+      scrollSnapType: 'x mandatory',
+      pb: 4,
+    })}>
       {#each answers as { respondent, quote }}
         <RespondentCompact respondent={respondent}
                            quote={quote}

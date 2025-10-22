@@ -15,8 +15,8 @@
   class={css({ maxWidth: 'content.text', p: '4' })}>
   {#each answersByCategory.answers as { respondent, text }}
     <h2
+      style:background={answersByCategory.category.color}
       class={css({
-          background: 'hover',
           fontFamily: 'gtAmericaStandard',
           fontWeight: 700,
           fontSize: '3xl',
@@ -26,6 +26,7 @@
           pt: 2,
           pb: 1,
           mb: 1,
+          transition: 'background 1s ease',
         })}>
       {respondent.name}</h2>
     <p
