@@ -21,7 +21,7 @@
           textTransform: 'capitalize',
           fontSize: '3xl',
           position: 'sticky',
-          top: '60px',
+          top: '55px',
           zIndex: 4,
           pt: 2,
           pb: 1,

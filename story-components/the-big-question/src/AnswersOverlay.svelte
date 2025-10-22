@@ -3,15 +3,17 @@
   import { onMount } from "svelte";
   import AnswersList from "./AnswersList.svelte";
   import { ChevronLeft } from "@lucide/svelte";
-  import { css } from "@story/theme/css";
+  import { css, cx } from "@story/theme/css";
+  import { button } from "@story/theme/recipes";
 
   interface Props {
     answersByCategory: AnswersByCategory;
     onClose: () => void;
+    onNext: () => void;
   }
 
-  let { answersByCategory, onClose }: Props = $props();
-  let { category } = answersByCategory;
+  let { answersByCategory, onClose, onNext }: Props = $props();
+  let { category } = $derived(answersByCategory);
 
   let dialog: HTMLDialogElement | undefined = $state(); // HTMLDialogElement
 
@@ -49,10 +51,17 @@
       <span>Übersicht</span>
     </button>
     <h2
-      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 700, textTransform: 'capitalize', fontSize: '3xl' })}>{category.name}</h2>
+      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 700, textTransform: 'capitalize' })}>{category.name}</h2>
   </div>
 
   <AnswersList answersByCategory={answersByCategory} />
+
+  <div class={css({ p: 4, textAlign: 'center', pb: 12 })}>
+    <button class={ cx(
+        button({ variant: 'outline'})
+      )} onclick={onNext}>Nächste Kategorie
+    </button>
+  </div>
 </dialog>
 
 

@@ -17,6 +17,17 @@
     const focusAndAfter = answers.slice(index);
     return [...focusAndAfter, ...beforeFocus];
   };
+
+  function loadNextCategory(): void {
+    if (!selected || !componentData) return;
+
+    const currentIndex = componentData.answers.findIndex(
+      (item) => item.category.name === selected?.category.name
+    );
+
+    const nextIndex = (currentIndex + 1) % componentData.answers.length;
+    selected = componentData.answers[nextIndex];
+  }
 </script>
 
 <div class={css({ background: 'hover', color: '#000000', my: '80px'})}>
@@ -35,7 +46,7 @@
     </div>
   {/each}
   {#if selected}
-    <AnswersOverlay answersByCategory={selected} onClose={() => selected = undefined } />
+    <AnswersOverlay answersByCategory={selected} onClose={() => selected = undefined } onNext={loadNextCategory} />
   {/if}
 </div>
 
