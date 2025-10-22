@@ -11,6 +11,7 @@
 </script>
 
 <div
+  id="answers-list"
   class={css({ maxWidth: 'content.text', p: '4' })}>
   {#each answersByCategory.answers as { respondent, text }}
     <h2

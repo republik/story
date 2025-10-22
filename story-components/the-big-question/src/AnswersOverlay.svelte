@@ -24,10 +24,16 @@
     const originalOverflow = body.style.overflow;
     body.style.overflow = "hidden";
 
+    scrollUp();
+
     return () => {
       body.style.overflow = originalOverflow;
     };
   });
+
+  function scrollUp() {
+    dialog?.scrollTo({ top: 0 });
+  }
 
   function handleClose() {
     const mainDocument = dialog?.ownerDocument || document;
@@ -42,6 +48,7 @@
   onclose={handleClose}
   onclick={(e) => { if (e.target === dialog) dialog.close(); }}
   class={css({ background: 'hover', color: '#000000'})}
+  id='answers-overlay'
 >
 
   <div
@@ -59,7 +66,7 @@
   <div class={css({ p: 4, textAlign: 'center', pb: 12 })}>
     <button class={ cx(
         button({ variant: 'outline'})
-      )} onclick={onNext}>Nächste Kategorie
+      )} onclick={() => { onNext(); scrollUp();}}>Nächste Kategorie
     </button>
   </div>
 </dialog>
