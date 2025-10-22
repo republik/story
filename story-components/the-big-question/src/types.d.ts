@@ -1,4 +1,4 @@
-export type CategoryName = "wissenschaft" | "aktivismus" | "kultur";
+export type CategoryName = "Wissenschaft" | "Aktivismus" | "Kultur";
 
 export type Category = {
   name: CategoryName;

@@ -5,7 +5,7 @@ export const bigQuestionData: InputData = {
   answers: [
     {
       category: {
-        name: "wissenschaft",
+        name: "Wissenschaft",
       },
       answers: [
         {
@@ -44,7 +44,7 @@ export const bigQuestionData: InputData = {
     },
     {
       category: {
-        name: "aktivismus",
+        name: "Aktivismus",
       },
       answers: [
         {
@@ -111,7 +111,7 @@ export const bigQuestionData: InputData = {
     },
     {
       category: {
-        name: "kultur",
+        name: "Kultur",
       },
       answers: [
         {

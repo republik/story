@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { AnswersByCategory } from "./types.d.ts";
+  import type { AnswersByCategory, CategoryName } from "./types.d.ts";
   import { onMount } from "svelte";
   import AnswersList from "./AnswersList.svelte";
   import { ChevronLeft } from "@lucide/svelte";
@@ -8,11 +8,13 @@
 
   interface Props {
     answersByCategory: AnswersByCategory;
+    categoryNames: CategoryName[];
     onClose: () => void;
     onNext: () => void;
+    onSelect: (e?: HTMLSelectElement) => void;
   }
 
-  let { answersByCategory, onClose, onNext }: Props = $props();
+  let { answersByCategory, categoryNames, onClose, onNext, onSelect }: Props = $props();
   let { category } = $derived(answersByCategory);
 
   let dialog: HTMLDialogElement | undefined = $state(); // HTMLDialogElement
@@ -57,8 +59,21 @@
       <ChevronLeft size="24" class={css({ display: 'inline' })} />
       <span>Übersicht</span>
     </button>
-    <h2
-      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 700, textTransform: 'capitalize' })}>{category.name}</h2>
+    <select
+      value={category?.name}
+      onchange={(e) => {
+          if (e.target instanceof HTMLSelectElement) {
+            onSelect(e.target);
+            scrollUp();
+          }
+      }}
+    >
+      {#each categoryNames as c}
+        <option value={c}>
+          {c}
+        </option>
+      {/each}
+    </select>
   </div>
 
   <AnswersList answersByCategory={answersByCategory} />

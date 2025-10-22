@@ -19,7 +19,6 @@
           background: 'hover',
           fontFamily: 'gtAmericaStandard',
           fontWeight: 700,
-          textTransform: 'capitalize',
           fontSize: '3xl',
           position: 'sticky',
           top: '55px',
