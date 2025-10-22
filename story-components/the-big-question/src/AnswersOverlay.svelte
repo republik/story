@@ -55,7 +55,7 @@
 >
 
   <div
-    class={css({ pt: 4, pb: 8, px: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, transition: 'background 1s ease' })}
+    class={css({ pt: '4-8', pb: '8-16', px: '4-8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, transition: 'background 1s ease' })}
     style:background={category?.color}>
     <button title='close modal' onclick={() => dialog?.close()} class={css({ cursor: 'pointer' })}>
       <ChevronLeft size="24" class={css({ display: 'inline' })} />
@@ -81,9 +81,10 @@
 
   <AnswersList answersByCategory={answersByCategory} />
 
-  <div class={css({ p: 4, textAlign: 'center', pb: 12 })}>
+  <div class={css({ p: 4, pb: 12 })}>
     <button class={ cx(
-        button({ variant: 'outline'})
+        button({ variant: 'outline'}),
+        css({ mx: 'auto'})
       )} onclick={() => { onNext(); scrollUp();}}>Nächste Kategorie
     </button>
   </div>
