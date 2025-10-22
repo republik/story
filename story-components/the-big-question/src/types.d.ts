@@ -2,6 +2,7 @@ export type CategoryName = "Wissenschaft" | "Aktivismus" | "Kultur";
 
 export type Category = {
   name: CategoryName;
+  color: string;
 };
 
 export type Respondent = {
@@ -14,6 +15,7 @@ export type Respondent = {
 export type Answer = {
   respondent: Respondent;
   text: string;
+  quote: string;
 };
 
 export type AnswersByCategory = {

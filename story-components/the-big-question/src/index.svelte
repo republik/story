@@ -37,5 +37,5 @@
 </script>
 
 <div id="custom-element-container">
-    <TheBigQuestion componentData={componentData} shadowRoot={shadowRoot}/>
+    <TheBigQuestion componentData={componentData}/>
 </div>
