@@ -7,7 +7,7 @@ export type Category = {
 
 export type Respondent = {
   name: string;
-  descriptionShort?: string;
+  title: string;
   description: string;
   avatarUrl: string;
 };

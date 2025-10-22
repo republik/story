@@ -1,6 +1,6 @@
 <svelte:options customElement={{
 		tag: 'the-big-question',
-		shadow: 'open',
+		shadow: 'open', // should we disabled it?
 		props: {
          componentData: { type: 'Object', attribute: 'componentdata'}
 		}}}/>
@@ -19,8 +19,6 @@
   let {componentData}: Props = $props();
   let shadowRoot = $host()?.shadowRoot;
 
-  console.log("data in web component:", componentData);
-
   // ADD STYLES TO COMPONENT'S SHADOW ROOT
   // (instead of the head of the main document)
   // there might be a better way to add the styles to the shadowroot, but i couldn't find it...
@@ -36,6 +34,4 @@
   });
 </script>
 
-<div id="custom-element-container">
-    <TheBigQuestion componentData={componentData}/>
-</div>
+<TheBigQuestion componentData={componentData}/>
