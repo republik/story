@@ -20,7 +20,8 @@
          flexDir: 'row',
          alignItems: 'start',
          gap: 16,
-         py: 16,
+         pt: 16,
+         pb: '250px',
         }
       })}>
       <div class={css({
@@ -42,7 +43,6 @@
           pt: 2,
           pb: 1,
           mb: 1,
-          transition: 'background 1s ease',
         })}>
             {respondent.name}
           </h2>
@@ -65,6 +65,7 @@
             width: '570px',
             flexShrink: 0,
             mt: 2,
+            pb: 0,
           }
         })}>{@html text}</div>
     </div>

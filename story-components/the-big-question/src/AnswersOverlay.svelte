@@ -49,13 +49,13 @@
   bind:this={dialog}
   onclose={handleClose}
   onclick={(e) => { if (e.target === dialog) dialog.close(); }}
-  class={css({ color: '#000000', transition: 'background 1s ease' })}
+  class={css({ color: '#000000' })}
   id='answers-overlay'
   style:background={category?.color}
 >
 
   <div
-    class={css({ pt: '4-8', pb: '8-16', px: '4-8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, transition: 'background 1s ease' })}
+    class={css({ pt: '4-8', pb: '8-16', px: '4-8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3 })}
     style:background={category?.color}>
     <button title='close modal' onclick={() => dialog?.close()} class={css({ cursor: 'pointer' })}>
       <ChevronLeft size="24" class={css({ display: 'inline' })} />
