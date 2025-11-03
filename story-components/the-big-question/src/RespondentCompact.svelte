@@ -45,7 +45,7 @@
        tabindex="0"
   >
     <p
-      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 'medium', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%'})}>
+      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 'medium', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%', wordWrap: 'initial' })}>
       "{quote}"</p>
     <div>
       <div class={css({ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 4 })}>
