@@ -49,7 +49,7 @@
       "{quote}"</p>
     <div>
       <div class={css({ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 4 })}>
-        <div>
+        <div class={css({ display: 'flex', flexDirection: 'column', justifyContent: 'center' })}>
           <h2
             class={css({ textStyle: 'sansSerifBold', fontSize: '18px', lineHeight: '120%', letterSpacing: '-2%'})}>{respondent.name}</h2>
           <p

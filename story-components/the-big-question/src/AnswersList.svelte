@@ -32,7 +32,7 @@
          top: '200px',
         }
       })}>
-        <div>
+        <div class={css({ display: 'flex', flexDirection: 'column'})}>
           <h2
             style:background={answersByCategory.category.color}
             class={css({
