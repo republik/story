@@ -39,10 +39,10 @@
           fontFamily: 'gtAmericaStandard',
           fontWeight: 700,
           fontSize: '3xl',
+          lineHeight: '100%',
           zIndex: 4,
-          pt: 2,
-          pb: 1,
-          mb: 1,
+          pt: 6,
+          pb: 4,
         })}>
             {respondent.name}
           </h2>

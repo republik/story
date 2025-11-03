@@ -6,7 +6,8 @@ export const bigQuestionData: InputData = {
     {
       category: {
         name: "Politik & Kooperation",
-        color: "#B0CFC5",
+        color: "#B0CFC5FF",
+        hover: "rgba(176,207,197,0.7)",
       },
       answers: [
         {
@@ -78,7 +79,8 @@ export const bigQuestionData: InputData = {
     {
       category: {
         name: "Innovation & Praxis",
-        color: "#DFBB30",
+        color: "#DFBB30FF",
+        hover: "rgba(223,187,48,0.7)",
       },
       answers: [
         {
@@ -163,7 +165,8 @@ export const bigQuestionData: InputData = {
     {
       category: {
         name: "Forschung",
-        color: "#F78290",
+        color: "#f78290",
+        hover: "rgba(247,130,144,0.7)",
       },
       answers: [
         {
@@ -264,6 +267,7 @@ export const bigQuestionData: InputData = {
       category: {
         name: "Klimaschutz",
         color: "#A5BACC",
+        hover: "rgba(165,186,204,0.7)",
       },
       answers: [
         {
@@ -350,6 +354,7 @@ export const bigQuestionData: InputData = {
       category: {
         name: "Medien & Kultur",
         color: "#FFBCDC",
+        hover: "rgba(255,188,220,0.7)",
       },
       answers: [
         {

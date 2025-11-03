@@ -8,6 +8,7 @@ export type CategoryName =
 export type Category = {
   name: CategoryName;
   color: string;
+  hover: string;
 };
 
 export type Respondent = {

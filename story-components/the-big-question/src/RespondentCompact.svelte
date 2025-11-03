@@ -21,22 +21,28 @@
     '&:last-child': { mr: 'auto' },
   })}
 >
-  <div class={css({
+  <div
+    style="--category-color: {category.color}; --category-hover: {category.hover};"
+    class={css({
       cursor: 'pointer',
       p: 4,
       m: 2,
       width: '320px',
-      minHeight: '440px',
+      minHeight: '420px',
       display: 'flex',
       flexShrink: 0,
       flexDirection: 'column',
       justifyContent: 'space-between',
+      background: 'var(--category-color)',
+      transition: 'background 0.3s ease',
+      '&:hover': {
+        background: 'var(--category-hover)',
+      },
     })}
        onclick={onClick}
        onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') onClick(); }}
        role="button"
        tabindex="0"
-       style:background={category.color}
   >
     <p
       class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 'medium', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%'})}>
