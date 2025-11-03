@@ -28,6 +28,7 @@
       p: 4,
       m: 2,
       width: '320px',
+      maxWidth: 'calc(100vw - 16px)',
       minHeight: '440px',
       display: 'flex',
       flexShrink: 0,
