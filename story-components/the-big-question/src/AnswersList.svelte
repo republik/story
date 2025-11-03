@@ -21,7 +21,7 @@
          alignItems: 'start',
          gap: 16,
          pt: 16,
-         pb: '250px',
+         pb: '80px',
         }
       })}>
       <div class={css({
@@ -56,6 +56,7 @@
       <div
         class={css({
           textStyle: 'reading',
+          fontSize: '18px',
           pt: 6,
           pb: 12,
           '& p': {

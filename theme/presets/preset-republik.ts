@@ -78,12 +78,6 @@ export const presetRepublik = definePreset({
             value:
               "GT-America-Standard, Helvetica-Neue, Arial, Roboto, sans-serif",
           },
-          inicia: {
-            value: "Inicia-Medium, Helvetica-Neue, Arial, Roboto, sans-serif",
-          },
-          druk: {
-            value: "Druk, Helvetica-Neue, Arial, Roboto, sans-serif",
-          },
         },
         fontWeights: {
           regular: { value: "400" },
@@ -287,6 +281,7 @@ export const presetRepublik = definePreset({
             fontFamily: "rubis",
             fontWeight: "normal",
             fontStyle: "normal",
+            
             lineHeight: 1.5,
             "& b": {
               fontWeight: 700,
@@ -492,13 +487,6 @@ export const presetRepublik = definePreset({
             fontFamily: "Menlo, Courier, monospace",
             fontWeight: 400,
             fontStyle: "normal",
-          },
-        },
-        cursiveTitle: {
-          value: {
-            fontFamily: "inicia",
-            fontWeight: 500,
-            fontStyle: "italic",
           },
         },
       },

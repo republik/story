@@ -26,7 +26,7 @@
       p: 4,
       m: 2,
       width: '320px',
-      minHeight: '420px',
+      minHeight: '440px',
       display: 'flex',
       flexShrink: 0,
       flexDirection: 'column',
@@ -39,8 +39,8 @@
        style:background={category.color}
   >
     <p
-      class={css({ textStyle: 'sansSerifBold', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%'})}>"{quote}
-      "</p>
+      class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 'medium', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%'})}>
+      "{quote}"</p>
     <div>
       <div class={css({ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 4 })}>
         <div>

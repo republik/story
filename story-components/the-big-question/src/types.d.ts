@@ -1,4 +1,9 @@
-export type CategoryName = "Wissenschaft" | "Aktivismus" | "Kultur";
+export type CategoryName =
+  | "Politik & Kooperation"
+  | "Innovation & Praxis"
+  | "Forschung"
+  | "Klimaschutz"
+  | "Medien & Kultur";
 
 export type Category = {
   name: CategoryName;

@@ -5,207 +5,416 @@ export const bigQuestionData: InputData = {
   answers: [
     {
       category: {
-        name: "Wissenschaft",
+        name: "Politik & Kooperation",
         color: "#B0CFC5",
       },
       answers: [
         {
           respondent: {
-            name: "Friederike Otto",
-            title: "Environmental economist",
+            name: "Christiana Figueres",
+            title: "Architektin des Pariser Abkommens",
             description:
-              "Klimatologin, Hauptautorin des 6. Berichts des Weltklimarats IPCC",
+              "Als frühere Chefin der UN-Klimarahmenkonvention federführend beim Pariser Abkommen. Heute Mitgründerin der NGO <a href='https://www.globaloptimism.com/' target='_blank'>Global&nbsp;Optimism</a>",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
           },
-          quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Der Klimawandel ist <b>eine Bedrohung in der fernen Zukunft</b>, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
+          quote: "Was einst ambitioniert schien, ist nun greifbar.",
+          text: "<p>Im vergangenen Jahrzehnt war das Pariser Abkommen mit seinem 1,5‑Grad-Ziel unser Kompass und gab Regierungen, Unternehmen und Bürgerinnen Orientierung. «1,5 Grad zum Überleben» wurde zum Schlachtruf, der beispielloses Handeln mobilisierte. Heute zeigt uns die Wissenschaft: Jeder Bruchteil eines Grades zählt, und der Weg zu 1,5&nbsp;Grad wird schmaler. Statt dies als Wegmarke zu sehen, können wir sie als moralische Basis begreifen, die uns zu höheren Ambitionen antreibt.</p><p>Das Momentum ist längst nicht vorbei. Das jüngste Gutachten des Internationalen Gerichtshofs bestätigt, was verletzliche Staaten und junge Menschen seit langem fordern: Staaten müssen Menschen und den Planeten vor Klimaschäden schützen. Das Gutachten stärkt die Verantwortung, erneuert den Pariser Geist und verleiht ihm völkerrechtliche Autorität. Gleichzeitig werden Technologien zur Bekämpfung des Klimawandels – erneuerbare Energien, Speicher, Elektromobilität, grüner Wasserstoff – immer verfügbarer und erschwinglicher. Das ist ein Ergebnis des Pariser Vermächtnisses. <b>Was einst ambitioniert schien, ist nun greifbar.</b></p><p>Das kommende Jahrzehnt wird von Erzählungen über Regeneration, Wohlbefinden, Solidarität und Handlungsfähigkeit geprägt sein. Mit vereinten Kräften aus Wissenschaft, Recht und Technologie können wir die Geschichte einer lebenswerten, gerechten und regenerativen Zukunft schreiben.</p>",
         },
         {
           respondent: {
-            name: "Bill McKibben",
-            title: "Klimaaktivist & Autor",
+            name: "Damilola Ogunbiyi",
+            title: "UN-Sonderbeauftragte",
             description:
-              'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
+              "UN-Sonderbeauftragte für <a href='https://www.seforall.org/' target='_blank'>Sustainable Energy for All</a> (SEforALL)",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
           },
           quote:
-            "Over the next ten years, new narratives that emphasise opportunities rather than fears will be crucial: climate protection as a project for modernisation, security and freedom.",
-          text: "<p>Dass es – mit Abstand – das Grösste ist, was Menschen je getan haben. Wir verzetteln uns in tausend alltäglichen politischen Kämpfen. Aber wenn die Menschen in hundert oder, so Gott will, in tausend Jahren auf unsere Zeit zurück­blicken, wird sie eine einzige Frage interessieren: Ihr wart dabei, als die Temperatur nach oben schnellte. Was hat eure Gesellschaft getan, um das zu verhindern?</p>",
+            "Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationengerechtigkeit.",
+          text: "<p><b>Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationengerechtigkeit.</b></p><p>Mit zunehmenden Klimafolgen richtet sich die Aufmerksamkeit darauf, wie wir mit einer wärmeren Welt leben. Forderungen nach Gerechtigkeit, Finanzierung von Verlusten und Schäden sowie lokal getriebene Anpassungsstrategien rücken ins Zentrum der Verhandlungen.</p><p>Extreme Wetterereignisse, Ressourcenknappheit und Migration werden nicht mehr nur als Umweltprobleme, sondern als Bedrohungen der geopolitischen Stabilität verstanden. Dieser Blickwinkel kann neue Akteure mobilisieren – etwa Verteidigungsministerien oder Finanzinstitutionen, die Klimapolitik bislang als Randthema betrachteten.</p><p>Nicht zuletzt bleibt das moralische Narrativ der Generationengerechtigkeit wirksam. Jugend- und zivilgesellschaftliche Bewegungen setzen mit ihrem Fokus auf Verantwortung, Fairness und systemischen Wandel politische Führungskräfte unter Druck. Klimawandel ist längst kein Randthema mehr, sondern eine zentrale Herausforderung für Wirtschaft, Menschenrechte und unsere gemeinsame Zukunft.</p>",
         },
         {
           respondent: {
-            name: "Rebecca Solnit",
-            title: "Schriftstellerin",
+            name: "Felix Wertli",
+            title: "Umweltbotschafter",
             description:
-              'Schriftstellerin, San Francisco; Mitgründerin des Klimaprojekts <a href="https://www.nottoolateclimate.com/">Not too Late</a>',
+              "Botschafter für die Umwelt und Abteilungschef Internationales, <a href='https://www.bafu.admin.ch/bafu/de/home/amt/geschaeftsleitung-des-bafu/direktionsbereich-politik/abteilung-internationales.html' target='_blank'>Bundesamt für Umwelt</a>",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
           },
           quote:
-            "There is still time, and pressure could still be exerted politically, socially and legally. But at the same time, countries are at war with each other, and democracies are becoming unstable almost as quickly as the polar ice caps.",
-          text: "<p>Vor einigen Jahrzehnten legte die Klima­bewegung den Schwerpunkt auf Sparsamkeit und Verzicht, und das hat die Menschen irgendwie davon überzeugt, dass wir von einer Ära des Überflusses zu einer Ära der Armut übergehen müssen. Ich denke allerdings, wir können das aus zwei Gründen neu framen.</p><p>Zum einen hatten wir noch vor zwanzig Jahren nicht die solide Technologie der erneuerbaren Energien, die es uns ermöglicht, schnell und nahezu vollständig von fossilen Brenn­stoffen wegzukommen und gleichzeitig weiterhin gut beleuchtete Wohnungen und gute Verkehrs­mittel zu haben (wenn auch nicht dieselben Verkehrs­mittel oder deren übermässige Nutzung durch die Wohl­habenden).</p><p>Vor allem aber ist es ein Problem der Perspektive: In vielerlei Hinsicht ist unser Zeitalter ein Zeitalter der Armut – wir sind arm an Hoffnung auf die Zukunft, an Harmonie mit der Natur, an sauberer Luft und sauberem Wasser und gesundem Boden und oft auch an Gesundheit. Allein die fossilen Emissionen töten acht Millionen Menschen pro Jahr. Und die grosse Mehrheit der Menschen auf der Erde lebt ohnehin in «Armut». Selbst diejenigen unter uns, die in finanzieller Hinsicht wohlhabend sind, sind zu oft arm an sozialer Verbundenheit und Vertrauen in die Gesellschaft, zu oft einsam, zu oft von einem Gefühl der Sinnlosigkeit und Entfremdung geplagt.</p><p>Die aktuelle Klima­revolution könnte uns in all diesen Bereichen wohl­habender machen, nicht zuletzt durch die Dezentralisierung von power – einerseits der Energie, die unsere Maschinen antreibt und unsere Häuser beleuchtet, andererseits der politischen Macht, die von den Unternehmen für fossile Brennstoffe, den mit ihnen verflochtenen Regierungen und den Profiteuren dieses Zeugs ausgeht, was uns vielleicht insgesamt weniger kapitalistisch macht. Ich glaube, der Wandel erfordert, dass wir unsere Vorstellung von Wohlstand, Lebens­qualität und Sicherheit ändern und weniger greifbare materielle Dinge wie Schönheit, Freundschaft und Hoffnung als zentraler für ein gutes Leben ansehen. Wenn das Klimachaos eine Art Krieg gegen die Natur ist, könnte dies auch bedeuten, Frieden mit der Natur zu schliessen, was ein wissenschaftlicher und ein wirtschaftlicher, aber auch ein spiritueller Weg nach vorn ist.</p>",
+            "Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.",
+          text: "<p>Das Pariser Abkommen hat die globale Klimapolitik nachhaltig geprägt. <b>Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.</b></p><p>Vor dem Abkommen steuerte die Welt auf eine Erwärmung von rund 4 Grad zu. Dank der nationalen Klimaziele von über 180 Staaten dürfte die Erwärmung nun wohl unter 3 Grad liegen. Das ist ein historischer Fortschritt. Investitionen in erneuerbare Energien sind heute doppelt so hoch wie jene in fossile Energien – ein klares Zeichen des Wandels.</p><p>Zugleich hat sich das Abkommen als widerstandsfähig erwiesen: Selbst der zeitweilige Rückzug der USA konnte seinen Fortbestand nicht gefährden.</p><p>Die Schweiz wird sich in den internationalen Klimaverhandlungen weiterhin dafür einsetzen, dass alle Staaten ihren fairen Beitrag leisten und die nötigen Rahmenbedingungen geschaffen werden, damit Klimamassnahmen weltweit ambitionierter und schneller umgesetzt werden können.</p><p>Damit setzt sich die Schweiz für ihre eigenen Interessen ein, wie auch für die Menschen, die vom Klimawandel am meisten betroffen sind.</p>",
         },
         {
           respondent: {
-            name: "Friederike Otto",
-            title: "Environmental economist",
+            name: "Aline Trede",
+            title: "Grünen-Nationalrätin",
             description:
-              "Klimatologin, Hauptautorin des 6. Berichts des Weltklimarats IPCC",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
-          },
-          quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Der Klimawandel ist <b>eine Bedrohung in der fernen Zukunft</b>, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
-        },
-        {
-          respondent: {
-            name: "Bill McKibben",
-            title: "Klimaaktivist & Autor",
-            description:
-              'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
-          },
-          quote:
-            "Over the next ten years, new narratives that emphasise opportunities rather than fears will be crucial: climate protection as a project for modernisation, security and freedom.",
-          text: "<p>Dass es – mit Abstand – das Grösste ist, was Menschen je getan haben. Wir verzetteln uns in tausend alltäglichen politischen Kämpfen. Aber wenn die Menschen in hundert oder, so Gott will, in tausend Jahren auf unsere Zeit zurück­blicken, wird sie eine einzige Frage interessieren: Ihr wart dabei, als die Temperatur nach oben schnellte. Was hat eure Gesellschaft getan, um das zu verhindern?</p>",
-        },
-        {
-          respondent: {
-            name: "Rebecca Solnit",
-            title: "Schriftstellerin",
-            description:
-              'Schriftstellerin, San Francisco; Mitgründerin des Klimaprojekts <a href="https://www.nottoolateclimate.com/">Not too Late</a>',
+              "<a href='https://www.alinetrede.ch/politik' target='_blank'>Nationalrätin</a> und Fraktionschefin der Grünen",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
           },
           quote:
-            "There is still time, and pressure could still be exerted politically, socially and legally. But at the same time, countries are at war with each other, and democracies are becoming unstable almost as quickly as the polar ice caps.",
-          text: "<p>Vor einigen Jahrzehnten legte die Klima­bewegung den Schwerpunkt auf Sparsamkeit und Verzicht, und das hat die Menschen irgendwie davon überzeugt, dass wir von einer Ära des Überflusses zu einer Ära der Armut übergehen müssen. Ich denke allerdings, wir können das aus zwei Gründen neu framen.</p><p>Zum einen hatten wir noch vor zwanzig Jahren nicht die solide Technologie der erneuerbaren Energien, die es uns ermöglicht, schnell und nahezu vollständig von fossilen Brenn­stoffen wegzukommen und gleichzeitig weiterhin gut beleuchtete Wohnungen und gute Verkehrs­mittel zu haben (wenn auch nicht dieselben Verkehrs­mittel oder deren übermässige Nutzung durch die Wohl­habenden).</p><p>Vor allem aber ist es ein Problem der Perspektive: In vielerlei Hinsicht ist unser Zeitalter ein Zeitalter der Armut – wir sind arm an Hoffnung auf die Zukunft, an Harmonie mit der Natur, an sauberer Luft und sauberem Wasser und gesundem Boden und oft auch an Gesundheit. Allein die fossilen Emissionen töten acht Millionen Menschen pro Jahr. Und die grosse Mehrheit der Menschen auf der Erde lebt ohnehin in «Armut». Selbst diejenigen unter uns, die in finanzieller Hinsicht wohlhabend sind, sind zu oft arm an sozialer Verbundenheit und Vertrauen in die Gesellschaft, zu oft einsam, zu oft von einem Gefühl der Sinnlosigkeit und Entfremdung geplagt.</p><p>Die aktuelle Klima­revolution könnte uns in all diesen Bereichen wohl­habender machen, nicht zuletzt durch die Dezentralisierung von power – einerseits der Energie, die unsere Maschinen antreibt und unsere Häuser beleuchtet, andererseits der politischen Macht, die von den Unternehmen für fossile Brennstoffe, den mit ihnen verflochtenen Regierungen und den Profiteuren dieses Zeugs ausgeht, was uns vielleicht insgesamt weniger kapitalistisch macht. Ich glaube, der Wandel erfordert, dass wir unsere Vorstellung von Wohlstand, Lebens­qualität und Sicherheit ändern und weniger greifbare materielle Dinge wie Schönheit, Freundschaft und Hoffnung als zentraler für ein gutes Leben ansehen. Wenn das Klimachaos eine Art Krieg gegen die Natur ist, könnte dies auch bedeuten, Frieden mit der Natur zu schliessen, was ein wissenschaftlicher und ein wirtschaftlicher, aber auch ein spiritueller Weg nach vorn ist.</p>",
+            "Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.",
+          text: "<p>Die Diskussion muss sich nicht darum drehen, ob wir das 1.5-Grad-Ziel erreichen. Sondern wie wir so nah wie möglich daran herankommen. <b>Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.</b> Das wird die Aufgabe der nächsten Jahre sein. Es macht einen Unterschied, ob sich die Erde um 1,5, 2 oder 4 Grad erwärmt – und momentan sind wir auf dem falschen Weg.</p>",
+        },
+        {
+          respondent: {
+            name: "Delia Berner",
+            title: "Expertin für Klimapolitik",
+            description:
+              "Expertin für internationale Klimapolitik beim Dachverband <a href='https://www.alliancesud.ch/de' target='_blank'>Alliance&nbsp;Sud</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+          },
+          quote:
+            "Das Pariser Abkommen verlangt auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.",
+          text: "<p>Das Abkommen ist sehr wertvoll, aber es erfüllt sich nicht von selbst. Es braucht Bürgerinnen und Bürger, die von der Politik einfordern, dass sie ihren Teil zum weltweiten Klimaschutz beiträgt.</p><p>Es braucht alle Teile, um das Puzzle fertigzustellen und die globale Erwärmung einzudämmen.</p><p>Nicht zu vergessen: Die ärmere Hälfte der Weltbevölkerung ist nur für gut 10 Prozent der CO<sub>2</sub>-Emissionen verantwortlich. <b>Das Pariser Abkommen verlangt daher auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.</b> Dies wird die künftigen Erzählungen aus dem Globalen Süden prägen – je nachdem, ob sich Ungleichheit und Multikrisen verschlimmern oder die globale Zusammenarbeit die natürlichen Lebensgrundlagen unseres Planeten schützt und die Verbundenheit der Weltbevölkerung stärkt.</p>",
         },
       ],
     },
     {
       category: {
-        name: "Aktivismus",
+        name: "Innovation & Praxis",
+        color: "#DFBB30",
+      },
+      answers: [
+        {
+          respondent: {
+            name: "Eugenia Kargbo",
+            title: "Hitzebeauftragte in Sierra Leone",
+            description:
+              "Hitzebeauftragte in Freetown, Sierra Leone, und Strategin bei der NGO <a href='https://www.climateresilience.org/' target='_blank'>Climate Resilience for All</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+          },
+          quote:
+            "Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.",
+          text: "<p>Weltweit müssen wir über blosse Versprechen hinausgehen und echte Mechanismen schaffen, die Ambition mit Gerechtigkeit verbinden. Wer für die grössten Emissionen verantwortlich ist, muss für Verluste und Schäden haftbar gemacht werden – etwa in Städten wie Freetown, wo Menschen bereits unter extremer Hitze, Überschwemmungen und damit verbundener Verdrängung leiden. Händlerinnen, Kinder in informellen Schulen und Familien in Slums brauchen Unterstützung, um mit den heutigen Klimaschocks umzugehen.</p><p><b>Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.</b> Städte stehen an vorderster Front – gestärkt können sie zu Motoren wirksamer Klimalösungen werden. </p><p>In Afrika, wo Städte rasant wachsen, aber oft ohne resilienten Infrastrukturaufbau, geht es um Anpassung und faire Finanzierung. In Freetown etwa pilotieren wir wärmereflektierende Dächer, bauen resiliente Märkte und entwickeln gemeinsam mit den Gemeinden innovative Projekte. Doch diese Ansätze können nur skaliert werden, wenn Städte direkten Zugang zu Klimafinanzierung erhalten.</p>",
+        },
+        {
+          respondent: {
+            name: "Line Barfod",
+            title: "Umweltbürgermeisterin von Kopenhagen",
+            description:
+              "Für Klimaschutz zuständige die Bürgermeisterin von Kopenhagen",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt – lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.",
+          text: "<p>Das Pariser Abkommen und das 1,5‑Grad-Ziel haben die globale Klimapolitik geprägt und eine gemeinsame Richtung vorgegeben. Auch heute bleiben sie unverzichtbar, doch ihre Rolle wandelt sich. 1,5 Grad ist keine ferne Grenze mehr, sondern zunehmend Realität. Die Klimafolgen nehmen weltweit zu. Das macht ambitioniertes Handeln dringlicher denn je.</p><p>Städte sind für 70&nbsp;Prozent der globalen Emissionen verantwortlich und spielen eine Schlüsselrolle. Führung bedeutet nicht nur, ambitionierte Ziele zu formulieren, sondern sie auch umzusetzen. Die neue 10-Jahres-Klimastrategie von Kopenhagen baut auf frühere Netto-null-Zielen auf – mit höheren Ambitionen: klimapositiv werden und konsumbezogene Emissionen halbieren. </p><p><b>Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt – lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.</b> Klimaschutz verlangt Transformation – nicht nur der Energieinfrastruktur, sondern auch, wie wir leben, uns bewegen und konsumieren. Dieser Wandel birgt auch Chancen: lebenswerte Städte, saubere Luft, bessere Gesundheit und gerechtere Perspektiven. Das sind die Erzählungen, die handeln lassen: Klimaschutz nicht als Verzicht, sondern als Weg zu einem besseren Leben.</p>",
+        },
+        {
+          respondent: {
+            name: "Sam Butler-Sloss",
+            title: "Experte für Energiewende",
+            description:
+              "Ökonom und Experte für die Energiewende bei der <a href='https://ember-energy.org/' target='_blank'>Analysefirma&nbsp;Ember</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+          },
+          quote:
+            "Klimaschutz wird von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.",
+          text: "<p>Wir haben das Problem erkannt, aber die Möglichkeiten unterschätzt. Die Menschheit schreitet voran, vom Jagen fossiler Brennstoffe zum «Ernten der Sonne». Es ist mehr als ein einfacher Austausch – schmutzig raus, sauber rein – es ist eine technologische Revolution. Wenn Solar- und Windkraft ihr Wachstum der letzten 30 Jahre nur 5 Jahre weiter halten, wird die globale Nachfrage nach fossilen Brennstoffen endgültig sinken.</p><p>Das Pariser Abkommen beruhte auf gemeinsamem Handeln. Also: Alle müssen sich einschränken, alle übernehmen Verantwortung für kommende Generationen. Heute müssen wir uns dank Elektrotechnik weniger einschränken, und können trotzdem verantwortungsvoll handeln. </p><p>Eine neue Dynamik rückt in den Vordergrund. <b>Klimaschutz wird so von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.</b> Diese Verschiebung vereint mehrere Motive – ökonomische Chancen, Sicherheit, Wettbewerbsfähigkeit – für ein Ziel. Ein Ziel, das von vielen starken Motiven getragen wird, gewinnt mehr Momentum und Resilienz als eines, das nur auf einem beruht.</p>",
+        },
+        {
+          respondent: {
+            name: "Mohamed Adow",
+            title: "Experte für Klimapolitik",
+            description:
+              "Gründer der Denkfabrik <a href='https://www.powershiftafrica.org/' target='_blank'>Power&nbsp;Shift&nbsp;Africa</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+          },
+          quote:
+            "Um Momentum und Glaubwürdigkeit zurückzugewinnen, müssen wir nachlegen, nicht unsere Ambitionen abschwächen.",
+          text: "<p>Ja, wir haben versagt. Die Emissionen steigen weiter, die Finanzmittel reichen bei weitem nicht aus. Doch das liegt nicht am 1,5-Grad-Ziel, sondern daran, dass wir es nicht einhalten.</p><p>Das Ziel jetzt aufzugeben, würde das Vertrauen der Öffentlichkeit in Regierungen untergraben und signalisieren, dass die Welt bereit ist, ihre Verwundbarsten zu opfern.</p><p><b>Um Momentum und Glaubwürdigkeit zurückzugewinnen, müssen wir nachlegen, nicht unsere Ambitionen abschwächen.</b> Das nächste Jahrzehnt muss von Massnahmen geprägt sein, die das 1,5‑Grad-Ziel unterstreichen und in transformative Taten übersetzen.</p>",
+        },
+        {
+          respondent: {
+            name: "Helen Clarkson",
+            title: "Klima- und Humanitärexpertin",
+            description:
+              "Geschäftsführerin der NGO <a href='https://www.theclimategroup.org/' target='_blank'>Climate&nbsp;Group</a>, die Landes- und Regionalregierungen vereint.",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote: "Das Ziel bleibt ein entscheidender Referenzpunkt.",
+          text: "<p>Seit 2015 zeigt die Wissenschaft klarer denn je: Überschreiten wir 1,5&nbsp;Grad, drohen katastrophale Folgen für Planet und Mensch. <b>Das Ziel bleibt deshalb ein entscheidender Referenzpunkt.</b></p><p>Wir haben grosse Fortschritte gemacht, was das Verständnis für Verpflichtungen angeht. Die harte Arbeit bleibt, die Ziele in grossem Massstab und schnell umzusetzen.</p><p>Darauf muss nun unser Fokus liegen. Vieles davon ist unspektakuläre Arbeit hinter den Kulissen, zum Beispiel  Stromnetze zu modernisieren und Vorschriften anzupassen. Dafür braucht es Zusammenarbeit mit klarer Zielsetzung zwischen Regionen, Städten, Unternehmen, Gemeinschaften und nationalen Regierungen.</p><p>Am Ende werden wir entweder einen lebenswerten Planeten haben oder nicht. Unsere Aufgabe ist es, so schnell wie möglich zu handeln, um zu schützen, was wir können.</p>",
+        },
+        {
+          respondent: {
+            name: "Thomas Hügli",
+            title: "Nachhaltigkeitsexperte",
+            description:
+              "Nachhaltigkeits- und Biodiversitätsexperte bei der Versicherungsgesellschaft AXA und Präsident des Stiftungsrates der <a href='https://www.klimastiftung.ch/de/' target='_blank'>Klimastiftung&nbsp;Schweiz</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+          },
+          quote:
+            "Nebst Digitalisierungs- und Effizienzmassnahmen braucht es skalierbare, zukunftsfähige Innovationen.",
+          text: "<p><b>Nebst Digitalisierungs- und Effizienzmassnahmen braucht es skalierbare, zukunftsfähige Innovationen</b> – sie sind das wirtschaftliche Narrativ für die nächsten zehn Jahre. Auch für die Schweizer Wirtschaft, die innerhalb weniger Jahrzehnte ihre CO<sub>2</sub>-Emissionen markant senken muss.</p><p>Die Klimastiftung Schweiz unterstützt Schweizer und Liechtensteiner KMU bei ihren Innovationsprojekten für das Klima. Von diesen Clean-Tech-Lösungen profitiert der Werkplatz Schweiz durch eine höhere weltweite Konkurrenz- und Wettbewerbsfähigkeit sowie unsere Volkswirtschaft durch neue Arbeitsplätze und damit lokale Wertschöpfung.</p>",
+        },
+      ],
+    },
+    {
+      category: {
+        name: "Forschung",
         color: "#F78290",
       },
       answers: [
         {
           respondent: {
-            name: "Greta Thunberg",
+            name: "Reto Knutti",
+            title: "Klimatologe",
             description:
-              "Klimatologin, Hauptautorin des 6. Berichts des Weltklimarats IPCC",
-            title: "Environmental economist",
+              "<a href='https://usys.ethz.ch/personen/profil.reto-knutti.html' target='_blank'>Professor&nbsp;für&nbsp;Klimaphysik</a> an der ETH Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
           },
           quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Der Klimawandel ist keine Bedrohung in der fernen Zukunft, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
+            "Es fehlt die Verbindlichkeit, die Absichtserklärungen reichen nicht und die effektiven Reduktionen noch viel weniger.",
+          text: "<p>Die Flexibilität als Stärke von Paris, mit der jedes Land entsprechend seinen Möglichkeiten beiträgt, ist gleichzeitig die grösste Schwäche: <b>Es fehlt die Verbindlichkeit, die Absichtserklärungen reichen nicht und die effektiven Reduktionen noch viel weniger.</b> Letztendlich hängt die Wirksamkeit von Abkommen vom politischen Willen und von den Massnahmen in den einzelnen Ländern ab.</p><p>In einer Welt, in der internationale Zusammenarbeit kritischer wäre denn je, wird die Bedeutung von Paris leider weiter abnehmen. Klimapolitik ist nationale Politik. Sie ist geprägt von Kulturen, Rechtssystemen, Möglichkeiten, Werten. Am Ende geht es um die Umsetzung durch uns alle. Dafür braucht es neue Narrative: Wie soll die Schweiz 2050 aussehen? Was macht sie lebenswert?</p>",
         },
         {
           respondent: {
-            name: "Bertrand Piccard",
-            title: "Environmental economist",
+            name: "Maja Göpel",
+            title: "Transformationsforscherin",
             description:
-              'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
+              "Transformationsforscherin und Honorarprofessorin an der Leuphana Universität Lüneburg; <a href='https://www.maja-goepel.de/' target='_blank'>Bestsellerautorin</a>",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
           },
           quote:
-            "When the Paris Agreement was signed in 2015, the world was headed toward a catastrophic warming of nearly 5°C by 2100.",
-          text: "<p>Dass es – mit Abstand – das Grösste ist, was Menschen je getan haben. Wir verzetteln uns in tausend alltäglichen politischen Kämpfen. Aber wenn die Menschen in hundert oder, so Gott will, in tausend Jahren auf unsere Zeit zurück­blicken, wird sie eine einzige Frage interessieren: Ihr wart dabei, als die Temperatur nach oben schnellte. Was hat eure Gesellschaft getan, um das zu verhindern?</p>",
+            "Die nächsten zehn Jahre wird es darum gehen, dass sich evidenzbasierte Politik gegen das Recht des Stärkeren verteidigen kann.",
+          text: "<p>Das Pariser Klimaabkommen ist mehr als Umweltpolitik. Es ist der Versuch, auf das Wissen über eine sich verändernde Welt zu reagieren und damit verbundene Fragen zu Menschenrechten, disruptierten Wertschöpfungsketten und Sicherheitsfragen handhabbar zu machen.</p><p>Dafür definiert es Verantwortlichkeiten. Genau deshalb steigen Autokraten aus. <b>Die nächsten zehn Jahre wird es also darum gehen, dass sich evidenzbasierte Politik gegen das Recht des Stärkeren verteidigen kann.</b></p>",
         },
+
         {
           respondent: {
-            name: "Olivier Baumann",
-            title: "Environmental economist",
+            name: "Michael E. Mann",
+            title: "Klimatologe",
             description:
-              'Schriftstellerin, San Francisco; Mitgründerin des Klimaprojekts <a href="https://www.nottoolateclimate.com/">Not too Late</a>',
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
-          },
-          quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Vor einigen Jahrzehnten legte die Klima­bewegung den Schwerpunkt auf Sparsamkeit und Verzicht, und das hat die Menschen irgendwie davon überzeugt, dass wir von einer Ära des Überflusses zu einer Ära der Armut übergehen müssen. Ich denke allerdings, wir können das aus zwei Gründen neu framen.</p><p>Zum einen hatten wir noch vor zwanzig Jahren nicht die solide Technologie der erneuerbaren Energien, die es uns ermöglicht, schnell und nahezu vollständig von fossilen Brenn­stoffen wegzukommen und gleichzeitig weiterhin gut beleuchtete Wohnungen und gute Verkehrs­mittel zu haben (wenn auch nicht dieselben Verkehrs­mittel oder deren übermässige Nutzung durch die Wohl­habenden).</p><p>Vor allem aber ist es ein Problem der Perspektive: In vielerlei Hinsicht ist unser Zeitalter ein Zeitalter der Armut – wir sind arm an Hoffnung auf die Zukunft, an Harmonie mit der Natur, an sauberer Luft und sauberem Wasser und gesundem Boden und oft auch an Gesundheit. Allein die fossilen Emissionen töten acht Millionen Menschen pro Jahr. Und die grosse Mehrheit der Menschen auf der Erde lebt ohnehin in «Armut». Selbst diejenigen unter uns, die in finanzieller Hinsicht wohlhabend sind, sind zu oft arm an sozialer Verbundenheit und Vertrauen in die Gesellschaft, zu oft einsam, zu oft von einem Gefühl der Sinnlosigkeit und Entfremdung geplagt.</p><p>Die aktuelle Klima­revolution könnte uns in all diesen Bereichen wohl­habender machen, nicht zuletzt durch die Dezentralisierung von power – einerseits der Energie, die unsere Maschinen antreibt und unsere Häuser beleuchtet, andererseits der politischen Macht, die von den Unternehmen für fossile Brennstoffe, den mit ihnen verflochtenen Regierungen und den Profiteuren dieses Zeugs ausgeht, was uns vielleicht insgesamt weniger kapitalistisch macht. Ich glaube, der Wandel erfordert, dass wir unsere Vorstellung von Wohlstand, Lebens­qualität und Sicherheit ändern und weniger greifbare materielle Dinge wie Schönheit, Freundschaft und Hoffnung als zentraler für ein gutes Leben ansehen. Wenn das Klimachaos eine Art Krieg gegen die Natur ist, könnte dies auch bedeuten, Frieden mit der Natur zu schliessen, was ein wissenschaftlicher und ein wirtschaftlicher, aber auch ein spiritueller Weg nach vorn ist.</p>",
-        },
-        {
-          respondent: {
-            name: "Silvia Schiaulini",
-            title: "Environmental economist",
-            description:
-              "Klimatologin, Hauptautorin des 6. Berichts des Weltklimarats IPCC",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
-          },
-          quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Der Klimawandel ist keine Bedrohung in der fernen Zukunft, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
-        },
-        {
-          respondent: {
-            name: "Jeremy Stucki",
-            title: "Environmental economist",
-            description:
-              'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
+              "Professor für Atmosphärenwissenschaften an der University of Pennsylvania. Mitarbeit an den Berichten des Weltklimarats (IPCC) sowie Autor von «<a href='https://www.oekom.de/buch/moment-der-entscheidung-9783987260698' target='_blank'>Moment der Entscheidung</a>» (2024)",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
           },
           quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Dass es – mit Abstand – das Grösste ist, was Menschen je getan haben. Wir verzetteln uns in tausend alltäglichen politischen Kämpfen. Aber wenn die Menschen in hundert oder, so Gott will, in tausend Jahren auf unsere Zeit zurück­blicken, wird sie eine einzige Frage interessieren: Ihr wart dabei, als die Temperatur nach oben schnellte. Was hat eure Gesellschaft getan, um das zu verhindern?</p>",
+            "Jedes Zehntelgrad zählt, wenn es darum geht, Schäden zu vermeiden.",
+          text: "<p>Wir müssen uns klarmachen, dass wir zwar die 1,5-Grad-Ausfahrt auf dieser gefährlichen Autobahn verpassen könnten, aber die grundlegende Richtlinie des Pariser Abkommens bleibt bestehen: so schnell wie möglich von fossilen Brennstoffen wegkommen und die globalen Emissionen reduzieren. Die 1,5-Grad waren schon immer ein ehrgeiziges Ziel. <b>Jedes Zehntelgrad zählt, wenn es darum geht, Schäden zu vermeiden.</b></p>",
         },
         {
           respondent: {
-            name: "Sabrina Weiss",
-            title: "Environmental economist",
+            name: "Friederike Otto",
+            title: "Physikerin",
             description:
-              'Schriftstellerin, San Francisco; Mitgründerin des Klimaprojekts <a href="https://www.nottoolateclimate.com/">Not too Late</a>',
+              "Professorin für Klimawissenschaften am Imperial College London. Mitarbeit an den Berichten des Weltklimarats (IPCC) sowie Autorin von «<a href='https://www.ullstein.de/werke/klimaungerechtigkeit/hardcover/9783550202445' target='_blank'>Klimaungerechtigkeit</a>» (2023)",
             avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
           },
           quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Vor einigen Jahrzehnten legte die Klima­bewegung den Schwerpunkt auf Sparsamkeit und Verzicht, und das hat die Menschen irgendwie davon überzeugt, dass wir von einer Ära des Überflusses zu einer Ära der Armut übergehen müssen. Ich denke allerdings, wir können das aus zwei Gründen neu framen.</p><p>Zum einen hatten wir noch vor zwanzig Jahren nicht die solide Technologie der erneuerbaren Energien, die es uns ermöglicht, schnell und nahezu vollständig von fossilen Brenn­stoffen wegzukommen und gleichzeitig weiterhin gut beleuchtete Wohnungen und gute Verkehrs­mittel zu haben (wenn auch nicht dieselben Verkehrs­mittel oder deren übermässige Nutzung durch die Wohl­habenden).</p><p>Vor allem aber ist es ein Problem der Perspektive: In vielerlei Hinsicht ist unser Zeitalter ein Zeitalter der Armut – wir sind arm an Hoffnung auf die Zukunft, an Harmonie mit der Natur, an sauberer Luft und sauberem Wasser und gesundem Boden und oft auch an Gesundheit. Allein die fossilen Emissionen töten acht Millionen Menschen pro Jahr. Und die grosse Mehrheit der Menschen auf der Erde lebt ohnehin in «Armut». Selbst diejenigen unter uns, die in finanzieller Hinsicht wohlhabend sind, sind zu oft arm an sozialer Verbundenheit und Vertrauen in die Gesellschaft, zu oft einsam, zu oft von einem Gefühl der Sinnlosigkeit und Entfremdung geplagt.</p><p>Die aktuelle Klima­revolution könnte uns in all diesen Bereichen wohl­habender machen, nicht zuletzt durch die Dezentralisierung von power – einerseits der Energie, die unsere Maschinen antreibt und unsere Häuser beleuchtet, andererseits der politischen Macht, die von den Unternehmen für fossile Brennstoffe, den mit ihnen verflochtenen Regierungen und den Profiteuren dieses Zeugs ausgeht, was uns vielleicht insgesamt weniger kapitalistisch macht. Ich glaube, der Wandel erfordert, dass wir unsere Vorstellung von Wohlstand, Lebens­qualität und Sicherheit ändern und weniger greifbare materielle Dinge wie Schönheit, Freundschaft und Hoffnung als zentraler für ein gutes Leben ansehen. Wenn das Klimachaos eine Art Krieg gegen die Natur ist, könnte dies auch bedeuten, Frieden mit der Natur zu schliessen, was ein wissenschaftlicher und ein wirtschaftlicher, aber auch ein spiritueller Weg nach vorn ist.</p>",
+            "Für alle, die weiterhin die Wahrheit verteidigen und für eine lebenswerte Zukunft kämpfen, bleibt das Pariser Abkommen eines der wichtigsten Werkzeuge,…",
+          text: "<p><b>Für alle, die weiterhin die Wahrheit verteidigen und für eine lebenswerte Zukunft kämpfen, bleibt das Pariser Abkommen eines der wichtigsten Werkzeuge, um Regierungen zur Verantwortung zu ziehen und Schäden für Bürger zu verhindern.</b> Wie die Präambel des Abkommens sagt, sind Menschenrechte für alle eine Utopie, für die es sich zu kämpfen lohnt.</p><p>Das passiert aber nicht von selbst. Der Klimawandel und seine schlimmen Folgen halten an, weil die fossile Industrie in den sozialen Netzwerken willige Helfer gefunden hat, die ihre Fehlinformationen effizienter verbreiten.</p><p>Wir müssen für die Institutionen kämpfen, die das Abkommen möglich gemacht haben, nämlich die Uno, den Weltklimarat (IPCC) sowie die nationalen und internationalen Gerichte, die nun dafür sorgen, dass nationale Gesetze auch umgesetzt werden. Statt ständig ihre Schwächen zu beklagen, sollten wir dafür sorgen, dass sie stark bleiben.</p>",
+        },
+        {
+          respondent: {
+            name: "Claudia Kemfert",
+            title: "Energieökonomin",
+            description:
+              "Professorin für Energiewirtschaft; Leiterin der Abteilung Energie, Verkehr, Umwelt beim Deutschen Institut für Wirtschafts­forschung; Autorin von «<a href='https://www.claudiakemfert.de/medien/buecher/' target='_blank'>Schockwellen</a>» (2023)",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Entscheidend werden neue Erzählungen sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.",
+          text: "<p>Das 1,5-Grad-Ziel bleibt zentral, weil es den wissenschaftlich fundierten Rahmen für das Überleben künftiger Generationen markiert. Doch als politischer und gesellschaftlicher Bezugspunkt verliert es an Zugkraft, wenn die Kluft zwischen Ziel und Realität weiter wächst. Wir erleben aktuell ein «Umsetzungsdefizit»: Statt konsequenter Klimapolitik sehen wir Verzögerung, Ausnahmen und Rückschritte.</p><p><b>Für die nächsten zehn Jahre werden neue Erzählungen entscheidend sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.</b> Erneuerbare Energien schaffen Unabhängigkeit und sichern Wohlstand. Die Energiewende ist kein Verzichts-, sondern ein Zukunftsprojekt, das Innovation, Gerechtigkeit und Lebensqualität verbindet.</p><p>Wenn es gelingt, diese positive Erzählung gesellschaftlich zu verankern – «Handeln ist billiger als nicht Handeln» –, kann das 1,5-Grad-Ziel wieder an Strahlkraft gewinnen: als Kompass für eine klimaneutrale, gerechte und sichere Zukunft.</p>",
+        },
+        {
+          respondent: {
+            name: "Anthony Patt",
+            title: "Experte für Klimapolitik",
+            description:
+              "<a href='https://usys.ethz.ch/personen/profil.anthony-patt.html' target='_blank'>Professor für Klimapolitik</a>, ETH Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.",
+          text: "<p><b>Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.</b> Die meisten Länder haben offizielle Ziele festgelegt, bis 2050 netto null Emissionen zu erreichen. Kaum jemand hatte dies 2015 erwartet.</p><p>Viele Länder, darunter alle EU-Mitgliedstaaten, haben seitdem Massnahmen entwickelt und umgesetzt. Ob die Schweiz ihre Ziele erreichen wird, hängt davon ab, wie das CO<sub>2</sub>-Gesetz revidiert und das Klima- und Innovationsgesetz umgesetzt wird.</p><p>Es darf keine neuen Investitionen in fossile Technologien wie Benzin- und Dieselfahrzeuge, Öl- und Erdgasheizungen oder umweltverschmutzende Fabriken geben. Bestehende Anlagen müssen schneller stillgelegt werden.</p><p>Dafür braucht es internationale Zusammenarbeit, und hier zeigt das Pariser Abkommen seinen grössten Mehrwert. In Ländern mit niedrigerem Einkommen müssen CO<sub>2</sub>-freie Projekte gemeinsam geplant und finanziert werden, ebenso die Wertschöpfungsketten für wichtige Mineralien wie Kupfer, Nickel und Lithium.</p>",
+        },
+        {
+          respondent: {
+            name: "Katharine Hayhoe",
+            title: "Klimawissenschaftlerin",
+            description:
+              "Leitende Wissenschaftlerin der NGO The Nature Conservancy und Professorin an der Texas Tech University; Autorin «<a href='https://www.buchhaus.ch/de/buecher/fachbuecher/geschichte/politik/detail/ISBN-9781982143831/Hayhoe-Katharine/Saving-Us' target='_blank'>Saving&nbsp;Us</a>» (2021)",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem…",
+          text: "<p>Als das Pariser Abkommen 2015 unterschrieben wurde, drohte uns eine katastrophale Erwärmung von fast 5 Grad bis 2100. In Paris wurde klar: Der Klimawandel bedroht das Wohl der Menschen, und die Ära der fossilen Brennstoffe muss enden. Dank der ergriffenen Massnahmen liegen die Prognosen heute etwa bei 3 Grad. Das ist immer noch zu hoch, aber ein Beweis, dass globale Abkommen etwas bewirken können.</p><p><b>Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem. Sondern auch soziale und technologische Kipppunkte, die uns helfen werden.</b></p><p>Die meisten Menschen machen sich Sorgen ums Klima, realisieren aber nicht, dass es vielen anderen genauso geht. Und dass Lösungen existieren, um eine bessere Zukunft möglich zu machen. Globales Handeln hängt von solchen Narrativen ab, die Hoffnung und Handlungsfähigkeit schaffen. Soziale Kipppunkte entstehen, wenn normale Menschen an eine bessere Welt glauben, andere mit dieser Vision inspirieren und gemeinsam daran arbeiten, sie zu verwirklichen.</p>",
         },
       ],
     },
     {
       category: {
-        name: "Kultur",
+        name: "Klimaschutz",
         color: "#A5BACC",
       },
       answers: [
         {
           respondent: {
-            name: "David Bauer",
-            title: "Environmental economist",
+            name: "Bill McKibben",
+            title: "Aktivist und Autor",
             description:
-              "Klimatologin, Hauptautorin des 6. Berichts des Weltklimarats IPCC",
+              "Klimaaktivist, Gründer der NGO 350.org und Autor von «<a href='https://wwnorton.com/books/Here-Comes-the-Sun/' target='_blank'>Here&nbsp;Comes&nbsp;the&nbsp;Sun</a>» (2025)",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
           },
           quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Der Klimawandel ist keine Bedrohung in der fernen Zukunft, er findet in diesem Moment statt und verursacht bereits heute weltweit enorme menschliche und wirtschaftliche Verluste. Arme Menschen, die am wenigsten zu dieser Krise beigetragen haben, sind überall auf der Welt am stärksten betroffen. Aber auch reiche Länder spüren die Krise durch geringeres Wirtschafts­wachstum, Ernte­verluste, Unter­brechungen der Versorgungs­kette und eine Vielzahl anderer Auswirkungen.</p><p>Hohe Temperaturen und durch den Klima­wandel verursachte extreme Wetter­ereignisse werden in den nächsten Jahren schlimmer werden, und wir müssen uns an diese neue Situation anpassen. Aber wenn wir jetzt handeln und ehrgeizige Massnahmen zur Reduzierung der Treibhausgas­emissionen ergreifen, können wir die schlimmsten Auswirkungen noch abwenden.</p>",
+            "Zehn Jahre nach dem grossen Erfolg von Paris haben wir eine neue Chance: Strom lässt sich heute am günstigsten erzeugen, indem man eine Glasscheibe auf die Sonne richtet.",
+          text: "<p><b>Zehn Jahre nach dem grossen Erfolg von Paris haben wir eine neue Chance: Strom lässt sich heute am günstigsten erzeugen, indem man eine Glasscheibe auf die Sonne richtet.</b> Auch die fossile Industrie hat diese neue Realität erkannt und setzt alles daran, den Übergang zu sauberer Energie zu verlangsamen. Wie stark sich die Erde letztlich erwärmt, wird entscheidender von diesem Kampf bestimmt als von internationaler Diplomatie.</p>",
         },
         {
           respondent: {
-            name: "Elia Blülle",
-            title: "Environmental economist",
+            name: "Nemonte Nenquimo",
+            title: "Ecuadorianische Umweltschützerin",
             description:
-              'Klimaaktivist, Autor, Gründer von <a href="https://350.org/">350.org</a>',
+              "Führende Vertreterin der Waorani im ecuadorianischen Amazonas; Mitgründerin der NGO Amazon Frontlines und Autorin von «<a href='https://www.penguin.de/buecher/nemonte-nenquimo-tochter-des-regenwaldes/buch/9783453218369' target='_blank'>Tochter&nbsp;des&nbsp;Regenwaldes</a>» (2024)",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+          },
+          quote:
+            "Den indigenen Völkern sollte man mehr Gehör schenken, denn sie spüren die Folgen des Klimawandels bereits unmittelbar.",
+          text: "<p><b>Den indigenen Völkern sollte man mehr Gehör schenken, denn sie spüren die Folgen des Klimawandels bereits unmittelbar.</b> Von Frauen geführte Gemeinschaften sollten gezielt gestärkt werden. Nur durch die kollektiven Kräfte der Gemeinschaften können wir echte Veränderungen vorantreiben, die das Leben und das Gleichgewicht des Klimas auf unserem Planeten schützen.</p>",
+        },
+        {
+          respondent: {
+            name: "Patrick Hofstetter",
+            title: "Klimaschutz- und Energieexperte",
+            description:
+              "Klimaschutz- und Energieexperte des <a href='https://www.wwf.ch/de/spenden/die-alpen-schuetzen?gad_source=1&gad_campaignid=23092936309&gbraid=0AAAAAD_KKJBqgPC1rnOiGcwsIIXL4Spbm&gclid=CjwKCAjwgeLHBhBuEiwAL5gNEQZTRlz9QC84fgnyUBr7w3xYUg1PFUDawnz6GRXU4QQzLoKqHQ7t3BoC8KoQAvD_BwE' target='_blank'>WWF&nbsp;Schweiz</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+          },
+          quote:
+            "Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung.",
+          text: "<p>Eine der grossen Leistungen der Klimakonvention bleibt zentral: die schlimmsten Folgen des Klimawandels greifbar zu machen. <b>Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung</b> – und desto grösser die Bereitschaft, auch über CO<sub>2</sub>-Entnahme oder riskantes Geoengineering zu sprechen.</p><p>Gleichzeitig werden China und andere aufstrebende Mächte die Lösungsmärkte noch stärker dominieren. Ihre Ambitionen, die planetaren Grenzen etwa durch die Zuteilung von Kontingenten zu verwalten, werden dabei zunehmend offenkundiger.\n</p>",
+        },
+        {
+          respondent: {
+            name: "Cyrill Hermann",
+            title: "Aktiv beim Klimastreik",
+            description:
+              "Aktiv beim Klimastreik und schrieb das Buch «<a href='https://rotpunktverlag.ch/buecher/what-do-we-want' target='_blank'>What do we want? Der Klimastreik – von Systemwandel bis Klimagerechtigkeit</a>» (2025)",
             avatarUrl:
               "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
           },
           quote:
-            "What really makes climate change a crisis is the historical exploitation of marginalized groups, especially in the Global South, especially by the Global North.",
-          text: "<p>Dass es – mit Abstand – das Grösste ist, was Menschen je getan haben. Wir verzetteln uns in tausend alltäglichen politischen Kämpfen. Aber wenn die Menschen in hundert oder, so Gott will, in tausend Jahren auf unsere Zeit zurück­blicken, wird sie eine einzige Frage interessieren: Ihr wart dabei, als die Temperatur nach oben schnellte. Was hat eure Gesellschaft getan, um das zu verhindern?</p>",
+            "Paris ist auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.",
+          text: "<p>Das Pariser Abkommen ist ein Kompromiss zwischen der Begrenzung von Zerstörung, Leid und Tod einerseits und dem Verzicht auf Profite der fossilen Industrie andererseits. Nur durch den beharrlichen Einsatz der Small-Island-States, der Jugendbewegungen und zahlreicher NGO fand die richtungsweisende 1,5-Grad-Grenze schliesslich Eingang in das Abkommen. Bis heute bleibt sie der Massstab wirksamer Klimapolitik.</p><p>Die Regierungen dieser Welt haben das Abkommen feierlich unterzeichnet – und brechen seitdem Tag für Tag ihr Versprechen. Wie kann das sein, angesichts der Hitzewellen, Dürren, Stürme und Fluten der letzten Jahre? <b>Paris ist so auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.</b></p><p>Doch das Versprechen, die Erderhitzung auf 1,5 Grad zu begrenzen, ist nicht verschwunden. Auch wenn bürgerliche Kräfte versuchen, dieses Ziel in Vergessenheit geraten zu lassen, dürfen und werden wir es nie aufgeben.</p><p>Für uns als Bewegung war und ist das Abkommen ein Kompass: zuerst die Basis für unsere Forderung nach netto null bis 2030, heute Massstab für unsere Wut und Enttäuschung über ein System, das Menschen im Globalen Süden schon so viel genommen hat – und auch uns im Norden alles zu nehmen droht.</p><p>Das Pariser Abkommen mahnt uns: Wir können uns nicht auf unsere Regierungen verlassen. Klimagerechtigkeit bleibt Handarbeit.</p>",
+        },
+        {
+          respondent: {
+            name: "Carla Hinrichs",
+            title: "Aktivistin bei Neue Generation",
+            description:
+              "Teil der Protestgruppe <a href='https://neuegeneration.com/' target='_blank'>Neue&nbsp;Generation</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungsträger zur Verantwortung zu ziehen.",
+          text: "<p>Das gebrochene 1,5-Grad-Ziel ist ein Mahnmal für die hohlen Versprechen. Es steht stellvertretend für das Versagen der Staaten, sich an ihre eigenen Gesetze zu halten – für die Ignoranz gegenüber uns jungen Menschen, die in eine Höllenzukunft geschickt werden. <b>Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungsträger zur Verantwortung zu ziehen.</b></p>",
+        },
+        {
+          respondent: {
+            name: "Rosmarie Wydler-Wälti",
+            title: "Klimaseniorin",
+            description:
+              "Co-Präsidentin des Vereins <a href='https://www.klimaseniorinnen.ch/' target='_blank'>Klimaseniorinnen&nbsp;Schweiz</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist.",
+          text: "<p>Das Pariser Abkommen hat dem Klimaschutz einen massiven Schub verliehen, ist jedoch rechtlich nicht bindend. So kann es nicht verwundern, dass das Hauptziel bis jetzt nicht erreicht wurde. 2024 hat das globale Klima erstmals die 1,5-Grad-Grenze überschritten, vor der uns Klimaforschende seit Jahren warnen. Also braucht es dringend grosse Anstrengungen, um die maximal tolerable Obergrenze von 2 Grad überhaupt noch zu erreichen.</p><p><b>Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist. Es erhält nach seinem 10-Jahr-Jubiläum hoffentlich neuen Auftrieb und Aktualität.</b></p><p>Zwei Erzählungen werden die nächsten Jahre prägen. Einerseits werden die Folgen der Klimakatastrophe drastischer. Gesundheitsgefährdende Hitzewellen, Bergrutsche und schwindende Gletscher treten auch in unseren Alpenländern immer häufiger auf. Die Schäden und ihre Verursacher lassen sich nicht mehr leugnen. Wir müssen uns unserer Verantwortung als grosser CO<sub>2</sub>-Emittent bewusst sein.</p><p>Zum anderen werden immer mehr Klimaklagen vor Gerichten eingereicht, welche Politik und Öffentlichkeit beschäftigen. Auf die erfolgreiche Klage der Klimaseniorinnen am Europäischen Gerichtshof für Menschenrechte wurde bereits in einem Dutzend Gerichtsfällen in aller Welt Bezug genommen.</p>",
+        },
+      ],
+    },
+    {
+      category: {
+        name: "Medien & Kultur",
+        color: "#FFBCDC",
+      },
+      answers: [
+        {
+          respondent: {
+            name: "Adam McKay",
+            title: "Drehbuchautor und Filmregisseur",
+            description:
+              "Drehbuchautor und Filmregisseur von «Don’t Look Up»; Gründer der gemeinnützigen Produktionsfirma <a href='https://yellowdotstudios.com/' target='_blank'>Yellow&nbsp;Dot&nbsp;Studios</a>",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+          },
+          quote:
+            "Leider wird das Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.",
+          text: "<p>In den letzten Jahren haben wir die Erwärmung von über 1,5 Grad mehrfach überschritten. Meiner Meinung nach ist das 1,5-Grad-Ziel faktisch bereits Geschichte.</p><p>Da Regierungen weltweit ihre Versprechen zurückziehen, ist das Pariser Abkommen an diesem Punkt nicht de facto obsolet?</p><p>Der letzte US-Präsident weigerte sich, einen Klimanotstand auszurufen, und der neue Präsident hält alles für einen Schwindel.</p><p><b>Leider wird das Pariser Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese sehr vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.</b></p>",
+        },
+        {
+          respondent: {
+            name: "Seraina Kobler",
+            title: "Schriftstellerin und Journalistin",
+            description:
+              "Journalistin und Autorin mehrerer Krimis sowie des düsteren Zukunftsromans «<a href='https://www.serainakobler.com/veranstaltungen/arbeiten/buecher' target='_blank'>Regenschatten</a>» (2020)",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Noch könnte man Druck aufbauen – politisch, gesellschaftlich, juristisch. Gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.",
+          text: "<p>«Kannst du eine kurze Einschätzung zum Pariser Klimaabkommen schreiben?» Klar, schrieb ich, doch es vergingen Tage, ja Wochen, ich recherchierte den aktuellen Stand. Dachte an Weihnachten 2015, die leichte Euphorie in der Redaktion: Da passierte etwas! Tatsächlich! Aus diffuser Angst und Bedrohung wurden Zahlen und Mittel, vernünftige Schritte von aufgeklärten Menschen. Noch immer nicht genug, aber immerhin. Vielleicht würde es doch gelingen, wie damals mit vereinten Kräften die Löcher in der Ozonschicht zu schliessen.</p><p>Heute tun sich die Löcher in der Umsetzung der nationalen Klimazusagen auf. Wir sprechen kaum noch von 1,5 Grad, nicht einmal von 2, sondern eher von 3 oder mehr Grad. Da ist wieder dieses Gefühl, wie in Zeitlupe gegen eine Mauer zu fahren. <b>Noch wäre Zeit, noch könnte man Druck aufbauen – politisch, gesellschaftlich, juristisch. Doch gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.</b></p><p>Nie war unser Lebensstil so sichtbar in seinen Auswirkungen. Es braucht nicht mehr sonderlich viel Vorstellungsvermögen, um Dystopien zu schreiben. Aber wir brauchen andere Erzählungen – von Hoffnung und Mut. Selbst im Äussersten das Antlitz der Menschlichkeit zu bewahren, zählt.</p>",
+        },
+        {
+          respondent: {
+            name: "Matthew Winning",
+            title: "Umweltökonom und Stand-up-Comedian",
+            description:
+              "Umweltökonom am University College London, Stand-up-Comedian und Autor von «<a href='https://mattwinning.com/book/' target='_blank'>Hot&nbsp;Mess</a>» (2022)",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote: "Das Pariser Abkommen bleibt ein verlässlicher Anker.",
+          text: "<p>Die unaufhörliche Erwärmung, das Verschleiern durch die Industrie und ständig wechselnde politische Bedingungen haben die Beständigkeit des Pariser Abkommens auf die Probe gestellt. Diese Herausforderungen müssen wir meistern. <b>Das Pariser Abkommen bleibt ein verlässlicher Anker.</b> Schon die Verhinderung eines kleinen Anstiegs der Temperatur kann irgendwo auf der Welt Leid reduzieren.</p><p>Gleichzeitig glaube ich, dass das Abkommen vor allem für Industrie, Regierungen und Klimafachleute relevant ist. Was wir wirklich brauchen, sind neue Geschichten, die das Leben gewöhnlicher Menschen berühren – über Sinn, Sicherheit, Gesundheit und Wohlstand. Lokale, gemeinschaftsbasierte Geschichten sind dabei entscheidend.</p>",
+        },
+        {
+          respondent: {
+            name: "Lucy Stone",
+            title: "Storytelling-Expertin",
+            description:
+              "Gründerin des Netzwerks <a href='https://www.climate-spring.org/' target='_blank'>Climate&nbsp;Spring</a> für Filmschaffende",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.",
+          text: "<p>Die dominanten Narrative folgen einer Logik der Ausbeutung: fossile Brennstoffe als Symbol für Fortschritt, Natur als Ware, Konsum als Ziel. Das sind die Wurzeln der Klimakrise. <b>Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.</b></p><p>Wir brauchen Erzählungen, die eine regenerative Zukunft lebendig machen – eine Zukunft, die bereits möglich ist: Erneuerbare Energien versorgen unsere Häuser und unseren Verkehr. Ernährungssysteme stellen Ökosysteme wieder her. Menschen werden als Teil der Natur verstanden, nicht getrennt von ihr.</p><p>Bei Climate Spring arbeiten wir mit Autorinnen, Produzenten und Kreativen daran, diese Geschichten über Film, TV und Popkultur zu verbreiten und Klimanarrative grossflächig zu verändern. Kultur geht Politik voraus, und Vorstellungskraft ist der erste Schritt zur Gestaltungskraft. Narrative müssen die Menschen spüren lassen: Diese Zukunft ist möglich, erstrebenswert und wir alle gestalten sie mit.</p>",
+        },
+        {
+          respondent: {
+            name: "Nicole Zabel-Wasmuth",
+            title: "Medien- und Umweltrechtlerin",
+            description:
+              "Medien- und Umweltrechtlerin; Gründerin des Netzwerks <a href='https://planetnarratives.de/' target='_blank'>Planet&nbsp;Narratives</a> für Filmschaffende",
+            avatarUrl:
+              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+          },
+          quote:
+            "Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.",
+          text: "<p>Damit Abkommen umgesetzt werden, braucht es eine starke gesellschaftliche Kraft, die Veränderung nicht nur einfordert, sondern trägt. Hier besteht eine Wechselwirkung: Ohne soziale Kipppunkte gibt es keine ambitionierten Abkommen und keine Umsetzung der Politik in konkrete und geeignete Massnahmen – und ohne verbindliche Regeln scheitert freiwilliges Handeln immer wieder an entgegenstehenden Einzelinteressen.</p><p><b>Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.</b> Für die nächsten zehn Jahre braucht es Erzählungen, die auf Gemeinsamkeit und Verbundenheit setzen und die Realität als positiv gestaltbar zeigen. </p><p>Medien und Kultur spielen dabei eine Schlüsselrolle. Mit wirksamen Geschichten lässt sich die verbreitete Annahme überwinden, dass Menschen vor allem egoistisch handeln. Wirksam sind Geschichten, die keine naive Hoffnung verbreiten, sondern informierten Optimismus: Sie zeigen Lösungen und machen deutlich, dass Wandel möglich ist.</p>",
         },
       ],
     },

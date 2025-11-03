@@ -81,9 +81,9 @@
 
   <AnswersList answersByCategory={answersByCategory} />
 
-  <div class={css({ p: 4, pb: 12 })}>
+  <div class={css({ p: 4, pb: '300px' })}>
     <button class={ cx(
-        button({ variant: 'outline'}),
+        button({ variant: 'outline', size: 'large' }),
         css({ mx: 'auto'})
       )} onclick={() => { onNext(); scrollUp();}}>Nächste Kategorie
     </button>
