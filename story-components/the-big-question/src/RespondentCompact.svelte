@@ -28,7 +28,7 @@
       p: 4,
       m: 2,
       width: '320px',
-      minHeight: '420px',
+      minHeight: '440px',
       display: 'flex',
       flexShrink: 0,
       flexDirection: 'column',
