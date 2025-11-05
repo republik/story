@@ -48,7 +48,7 @@
   >
     <p
       class={css({ fontFamily: 'gtAmericaStandard', fontWeight: 'medium', fontSize: '24px', lineHeight: '120%', letterSpacing: '-2%', wordWrap: 'initial' })}>
-      "{quote}"</p>
+      «{quote}»</p>
     <div>
       <div class={css({ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 4 })}>
         <div class={css({ display: 'flex', flexDirection: 'column', justifyContent: 'center' })}>
