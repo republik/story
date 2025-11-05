@@ -59,7 +59,7 @@
           </p>
         </div>
         <img class={css({ borderRadius: '84px', mx: 2})}
-             src={respondent.avatarUrl}
+             src={respondent.avatarUrl.thumb}
              alt={respondent.name}
              height="84"
              width="84"

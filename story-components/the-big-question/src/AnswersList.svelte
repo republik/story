@@ -48,9 +48,8 @@
           <p
             class={css({ textStyle: 'airy', pb: 12 })}>{@html respondent.description}</p>
         </div>
-        <img src={respondent.avatarUrl}
-             alt={respondent.name}
-             loading="lazy" />
+        <img src={respondent.avatarUrl.normal}
+             alt={respondent.name} />
       </div>
       <div
         class={css({

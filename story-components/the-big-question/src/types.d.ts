@@ -15,7 +15,10 @@ export type Respondent = {
   name: string;
   title: string;
   description: string;
-  avatarUrl: string;
+  avatarUrl: {
+    thumb: string;
+    normal: string;
+  };
 };
 
 export type Answer = {

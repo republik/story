@@ -16,8 +16,12 @@ export const bigQuestionData: InputData = {
             title: "Architektin des Pariser Abkommens",
             description:
               "Als frühere Chefin der UN-Klimarahmenkonvention federführend beim Pariser Abkommen. Heute Mitgründerin der NGO <a href='https://www.globaloptimism.com/' target='_blank'>Global&nbsp;Optimism</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5359c187-778d-48c5-b4a1-71f045814ff5/170_christina_figueres.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/3db99d37-34a9-49a3-8bf0-b2f6394b3aa3/600_christina_figueres.jpg",
+            },
           },
           quote: "Was einst ambitioniert schien, ist nun greifbar.",
           text: "<p>Im vergangenen Jahrzehnt war das Pariser Abkommen mit seinem 1,5‑Grad-Ziel unser Kompass und gab Regierungen, Unternehmen und Bürgerinnen Orientierung. «1,5 Grad zum Überleben» wurde zum Schlachtruf, der beispielloses Handeln mobilisierte. Heute zeigt uns die Wissenschaft: Jeder Bruchteil eines Grades zählt, und der Weg zu 1,5&nbsp;Grad wird schmaler. Statt dies als Wegmarke zu sehen, können wir sie als moralische Basis begreifen, die uns zu höheren Ambitionen antreibt.</p><p>Das Momentum ist längst nicht vorbei. Das jüngste Gutachten des Internationalen Gerichtshofs bestätigt, was verletzliche Staaten und junge Menschen seit langem fordern: Staaten müssen Menschen und den Planeten vor Klimaschäden schützen. Das Gutachten stärkt die Verantwortung, erneuert den Pariser Geist und verleiht ihm völkerrechtliche Autorität. Gleichzeitig werden Technologien zur Bekämpfung des Klimawandels – erneuerbare Energien, Speicher, Elektromobilität, grüner Wasserstoff – immer verfügbarer und erschwinglicher. Das ist ein Ergebnis des Pariser Vermächtnisses. <b>Was einst ambitioniert schien, ist nun greifbar.</b></p><p>Das kommende Jahrzehnt wird von Erzählungen über Regeneration, Wohlbefinden, Solidarität und Handlungsfähigkeit geprägt sein. Mit vereinten Kräften aus Wissenschaft, Recht und Technologie können wir die Geschichte einer lebenswerten, gerechten und regenerativen Zukunft schreiben.</p>",
@@ -28,8 +32,12 @@ export const bigQuestionData: InputData = {
             title: "UN-Sonderbeauftragte",
             description:
               "UN-Sonderbeauftragte für <a href='https://www.seforall.org/' target='_blank'>Sustainable Energy for All</a> (SEforALL)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/515fc78a-9948-4dbc-b2e8-a12e6b7a583c/170_damilola_ogunbiyi.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/82972887-8890-4630-b384-497cbd158aca/600_damilola_ogunbiyi.jpg",
+            },
           },
           quote:
             "Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationengerechtigkeit.",
@@ -41,8 +49,12 @@ export const bigQuestionData: InputData = {
             title: "Umweltbotschafter",
             description:
               "Botschafter für die Umwelt und Abteilungschef Internationales, <a href='https://www.bafu.admin.ch/bafu/de/home/amt/geschaeftsleitung-des-bafu/direktionsbereich-politik/abteilung-internationales.html' target='_blank'>Bundesamt für Umwelt</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/ef83342e-48cf-4dc0-8b7c-0970a12fde82/170_felix-wertli.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/b453bff5-fb16-44c2-9c3a-fb7eaa105577/600_felix-wertli.jpg",
+            },
           },
           quote:
             "Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.",
@@ -54,8 +66,12 @@ export const bigQuestionData: InputData = {
             title: "Grünen-Nationalrätin",
             description:
               "<a href='https://www.alinetrede.ch/politik' target='_blank'>Nationalrätin</a> und Fraktionschefin der Grünen",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/7bc16b0e-d0e4-4575-b071-e4eea1fba8fd/170_aline-trede.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d37d088d-2bb0-460b-813e-c1867bbb01c0/600_aline-trede.jpg",
+            },
           },
           quote:
             "Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.",
@@ -67,8 +83,12 @@ export const bigQuestionData: InputData = {
             title: "Expertin für Klimapolitik",
             description:
               "Expertin für internationale Klimapolitik beim Dachverband <a href='https://www.alliancesud.ch/de' target='_blank'>Alliance&nbsp;Sud</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5caec643-8f68-4134-bfb3-f7a0cbd5d826/170_delia-berner.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/655633fa-0c04-446d-a1f0-81b859e256b3/600_delia-berner.jpg",
+            },
           },
           quote:
             "Das Pariser Abkommen verlangt auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.",
@@ -89,8 +109,12 @@ export const bigQuestionData: InputData = {
             title: "Hitzebeauftragte in Sierra Leone",
             description:
               "Hitzebeauftragte in Freetown, Sierra Leone, und Strategin bei der NGO <a href='https://www.climateresilience.org/' target='_blank'>Climate Resilience for All</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/eb86f92f-b43a-459a-acf3-1d6df7b8b937/170_eugenia-karbgbo.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/e67e43c2-8582-40a0-8454-28f6f5a9f849/600_eugenia-karbgbo.jpg",
+            },
           },
           quote:
             "Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.",
@@ -102,8 +126,12 @@ export const bigQuestionData: InputData = {
             title: "Umweltbürgermeisterin von Kopenhagen",
             description:
               "Für Klimaschutz zuständige die Bürgermeisterin von Kopenhagen",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d2394c9c-a6eb-4b8b-966e-cad06c78be45/170_line-barfod.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/31e56af8-5ccc-43d7-bc06-f64e772bf251/600_line-barfod.jpg",
+            },
           },
           quote:
             "Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt – lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.",
@@ -115,8 +143,12 @@ export const bigQuestionData: InputData = {
             title: "Experte für Energiewende",
             description:
               "Ökonom und Experte für die Energiewende bei der <a href='https://ember-energy.org/' target='_blank'>Analysefirma&nbsp;Ember</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/b88d9fbd-95c4-4439-97e3-15b8a12be91c/170_sam-butler-sloss.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c7b5b626-895e-4b7a-9349-49aa9b9817cc/600_sambutler_sloss.jpg",
+            },
           },
           quote:
             "Klimaschutz wird von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.",
@@ -128,8 +160,12 @@ export const bigQuestionData: InputData = {
             title: "Experte für Klimapolitik",
             description:
               "Gründer der Denkfabrik <a href='https://www.powershiftafrica.org/' target='_blank'>Power&nbsp;Shift&nbsp;Africa</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c3136104-1bbf-4d5b-a595-cd0ea13db143/170_mohamed_adow.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/f062ed8d-9488-409e-8b5a-e45582ad3eae/600_mohamed_adow.jpg",
+            },
           },
           quote:
             "Um Momentum und Glaubwürdigkeit zurückzugewinnen, müssen wir nachlegen, nicht unsere Ambitionen abschwächen.",
@@ -141,8 +177,12 @@ export const bigQuestionData: InputData = {
             title: "Klima- und Humanitärexpertin",
             description:
               "Geschäftsführerin der NGO <a href='https://www.theclimategroup.org/' target='_blank'>Climate&nbsp;Group</a>, die Landes- und Regionalregierungen vereint.",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/57231a94-662b-42bc-9a07-0d18726ffbfb/170_helen-clarkson-22.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/681b020d-b925-49aa-8679-3d6da2862940/600_helen-clarkson-22.jpg",
+            },
           },
           quote: "Das Ziel bleibt ein entscheidender Referenzpunkt.",
           text: "<p>Seit 2015 zeigt die Wissenschaft klarer denn je: Überschreiten wir 1,5&nbsp;Grad, drohen katastrophale Folgen für Planet und Mensch. <b>Das Ziel bleibt deshalb ein entscheidender Referenzpunkt.</b></p><p>Wir haben grosse Fortschritte gemacht, was das Verständnis für Verpflichtungen angeht. Die harte Arbeit bleibt, die Ziele in grossem Massstab und schnell umzusetzen.</p><p>Darauf muss nun unser Fokus liegen. Vieles davon ist unspektakuläre Arbeit hinter den Kulissen, zum Beispiel  Stromnetze zu modernisieren und Vorschriften anzupassen. Dafür braucht es Zusammenarbeit mit klarer Zielsetzung zwischen Regionen, Städten, Unternehmen, Gemeinschaften und nationalen Regierungen.</p><p>Am Ende werden wir entweder einen lebenswerten Planeten haben oder nicht. Unsere Aufgabe ist es, so schnell wie möglich zu handeln, um zu schützen, was wir können.</p>",
@@ -153,8 +193,12 @@ export const bigQuestionData: InputData = {
             title: "Nachhaltigkeitsexperte",
             description:
               "Nachhaltigkeits- und Biodiversitätsexperte bei der Versicherungsgesellschaft AXA und Präsident des Stiftungsrates der <a href='https://www.klimastiftung.ch/de/' target='_blank'>Klimastiftung&nbsp;Schweiz</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/11dee161-a09d-4076-b8b2-ffb50c8a3523/rebecca-solnit.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/bccd2555-4506-4043-a3cf-d272824abed4/170_thomashuegli_quer.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/ad4d9c36-4fe6-4951-956b-67d90e848ff7/600_thomashuegli_quer.jpg",
+            },
           },
           quote:
             "Nebst Digitalisierungs- und Effizienzmassnahmen braucht es skalierbare, zukunftsfähige Innovationen.",
@@ -175,8 +219,10 @@ export const bigQuestionData: InputData = {
             title: "Klimatologe",
             description:
               "<a href='https://usys.ethz.ch/personen/profil.reto-knutti.html' target='_blank'>Professor&nbsp;für&nbsp;Klimaphysik</a> an der ETH Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb: "",
+              normal: "",
+            },
           },
           quote:
             "Es fehlt die Verbindlichkeit, die Absichtserklärungen reichen nicht und die effektiven Reduktionen noch viel weniger.",
@@ -188,8 +234,12 @@ export const bigQuestionData: InputData = {
             title: "Transformationsforscherin",
             description:
               "Transformationsforscherin und Honorarprofessorin an der Leuphana Universität Lüneburg; <a href='https://www.maja-goepel.de/' target='_blank'>Bestsellerautorin</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c0f1c63c-e284-4f63-851e-cbebdd1f79b1/170_maja_goepel.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/9c49b7ab-8e34-4509-b336-8ac825ee26f6/600_maja_goepel.jpg",
+            },
           },
           quote:
             "Die nächsten zehn Jahre wird es darum gehen, dass sich evidenzbasierte Politik gegen das Recht des Stärkeren verteidigen kann.",
@@ -202,8 +252,12 @@ export const bigQuestionData: InputData = {
             title: "Klimatologe",
             description:
               "Professor für Atmosphärenwissenschaften an der University of Pennsylvania. Mitarbeit an den Berichten des Weltklimarats (IPCC) sowie Autor von «<a href='https://www.oekom.de/buch/moment-der-entscheidung-9783987260698' target='_blank'>Moment der Entscheidung</a>» (2024)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/8b60f9ab-149d-47f8-af8c-51e69e5321c1/170_michael-emann.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/fe6cac3f-08dd-4665-98d7-5eaf159f9e14/600_michael_e._mann.jpg",
+            },
           },
           quote:
             "Jedes Zehntelgrad zählt, wenn es darum geht, Schäden zu vermeiden.",
@@ -215,8 +269,12 @@ export const bigQuestionData: InputData = {
             title: "Physikerin",
             description:
               "Professorin für Klimawissenschaften am Imperial College London. Mitarbeit an den Berichten des Weltklimarats (IPCC) sowie Autorin von «<a href='https://www.ullstein.de/werke/klimaungerechtigkeit/hardcover/9783550202445' target='_blank'>Klimaungerechtigkeit</a>» (2023)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d8f129f0-49ad-4985-b104-2530578488d1/170_frederike-otto.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/9823f0ba-d667-4d55-9b69-1afdc87c8a78/600_frederike-otto.jpg",
+            },
           },
           quote:
             "Für alle, die weiterhin die Wahrheit verteidigen und für eine lebenswerte Zukunft kämpfen, bleibt das Pariser Abkommen eines der wichtigsten Werkzeuge,…",
@@ -228,8 +286,12 @@ export const bigQuestionData: InputData = {
             title: "Energieökonomin",
             description:
               "Professorin für Energiewirtschaft; Leiterin der Abteilung Energie, Verkehr, Umwelt beim Deutschen Institut für Wirtschafts­forschung; Autorin von «<a href='https://www.claudiakemfert.de/medien/buecher/' target='_blank'>Schockwellen</a>» (2023)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/44c68b0f-7f29-4fa3-a78a-2b14f05ff147/170_claudia-kemfert.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/f82d01d7-f43b-459c-8de7-f08b6c57a539/600_claudia-kemfert.jpg",
+            },
           },
           quote:
             "Entscheidend werden neue Erzählungen sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.",
@@ -241,8 +303,12 @@ export const bigQuestionData: InputData = {
             title: "Experte für Klimapolitik",
             description:
               "<a href='https://usys.ethz.ch/personen/profil.anthony-patt.html' target='_blank'>Professor für Klimapolitik</a>, ETH Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1953b745-b264-4ded-93fb-80b5427eb3e6/170_anthony_patt.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/93e178ca-175d-4033-81aa-d15c218a64ec/600_anthony_patt.jpg",
+            },
           },
           quote:
             "Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.",
@@ -254,8 +320,12 @@ export const bigQuestionData: InputData = {
             title: "Klimawissenschaftlerin",
             description:
               "Leitende Wissenschaftlerin der NGO The Nature Conservancy und Professorin an der Texas Tech University; Autorin «<a href='https://www.buchhaus.ch/de/buecher/fachbuecher/geschichte/politik/detail/ISBN-9781982143831/Hayhoe-Katharine/Saving-Us' target='_blank'>Saving&nbsp;Us</a>» (2021)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c80faa24-b780-4c04-a541-66b86d6b23d0/170_katharine-hayhoe-.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/974a3a33-2527-490f-9611-cfd95703fac3/600_katharine-hayhoe-.jpg",
+            },
           },
           quote:
             "Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem…",
@@ -276,8 +346,12 @@ export const bigQuestionData: InputData = {
             title: "Aktivist und Autor",
             description:
               "Klimaaktivist, Gründer der NGO 350.org und Autor von «<a href='https://wwnorton.com/books/Here-Comes-the-Sun/' target='_blank'>Here&nbsp;Comes&nbsp;the&nbsp;Sun</a>» (2025)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/a53889fc-dfbb-458a-952c-9fd4e088bad9/170_bill-mckibben_.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5de4cf78-76af-4c85-bebb-a0fb365398f4/600_bill-mckibben_.jpg",
+            },
           },
           quote:
             "Zehn Jahre nach dem grossen Erfolg von Paris haben wir eine neue Chance: Strom lässt sich heute am günstigsten erzeugen, indem man eine Glasscheibe auf die Sonne richtet.",
@@ -289,8 +363,12 @@ export const bigQuestionData: InputData = {
             title: "Ecuadorianische Umweltschützerin",
             description:
               "Führende Vertreterin der Waorani im ecuadorianischen Amazonas; Mitgründerin der NGO Amazon Frontlines und Autorin von «<a href='https://www.penguin.de/buecher/nemonte-nenquimo-tochter-des-regenwaldes/buch/9783453218369' target='_blank'>Tochter&nbsp;des&nbsp;Regenwaldes</a>» (2024)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1015b7d5-0b2d-4b11-9175-23dd9bfaa9d6/170_nemonte-nenquimo-(c)-amazon-frontlines.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/eaaa5279-3e67-4ac8-8d4e-4560f356ca06/600_nemonte-nenquimo-(c)-amazon-frontlines.jpg",
+            },
           },
           quote:
             "Den indigenen Völkern sollte man mehr Gehör schenken, denn sie spüren die Folgen des Klimawandels bereits unmittelbar.",
@@ -302,8 +380,12 @@ export const bigQuestionData: InputData = {
             title: "Klimaschutz- und Energieexperte",
             description:
               "Klimaschutz- und Energieexperte des <a href='https://www.wwf.ch/de/spenden/die-alpen-schuetzen?gad_source=1&gad_campaignid=23092936309&gbraid=0AAAAAD_KKJBqgPC1rnOiGcwsIIXL4Spbm&gclid=CjwKCAjwgeLHBhBuEiwAL5gNEQZTRlz9QC84fgnyUBr7w3xYUg1PFUDawnz6GRXU4QQzLoKqHQ7t3BoC8KoQAvD_BwE' target='_blank'>WWF&nbsp;Schweiz</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/7c3c9277-34de-444e-b50b-26c3a1acfd45/170_patrick-hofstetter.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/460da74a-25fe-413d-8cfd-9cf34e11f847/600_patrick-hofstetter.jpg",
+            },
           },
           quote:
             "Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung.",
@@ -315,8 +397,12 @@ export const bigQuestionData: InputData = {
             title: "Aktiv beim Klimastreik",
             description:
               "Aktiv beim Klimastreik und schrieb das Buch «<a href='https://rotpunktverlag.ch/buecher/what-do-we-want' target='_blank'>What do we want? Der Klimastreik – von Systemwandel bis Klimagerechtigkeit</a>» (2025)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6cb3223e-0f3e-4c13-8dd2-5f1384461877/170_cyril-hermann.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/3f4ccf8c-6b4c-4a02-b915-0a3e61e5b0ed/600_cyril-hermann.jpg",
+            },
           },
           quote:
             "Paris ist auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.",
@@ -328,8 +414,12 @@ export const bigQuestionData: InputData = {
             title: "Aktivistin bei Neue Generation",
             description:
               "Teil der Protestgruppe <a href='https://neuegeneration.com/' target='_blank'>Neue&nbsp;Generation</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/0ba93570-5443-441f-8ae1-f106519c468e/170_carla_hinrichs.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6c14080d-29da-4184-bef0-c436fd22e3d6/600_carla_hinrichs.jpg",
+            },
           },
           quote:
             "Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungsträger zur Verantwortung zu ziehen.",
@@ -341,8 +431,12 @@ export const bigQuestionData: InputData = {
             title: "Klimaseniorin",
             description:
               "Co-Präsidentin des Vereins <a href='https://www.klimaseniorinnen.ch/' target='_blank'>Klimaseniorinnen&nbsp;Schweiz</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6d8e04ba-e3d6-4687-bf27-64228c79eb8b/170_rosmariewydler-waelti_bw.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/8f760300-ac4d-4488-948c-79e4e7ec9c2e/600_rosmariewydler-waelti_bw.jpg",
+            },
           },
           quote:
             "Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist.",
@@ -363,8 +457,12 @@ export const bigQuestionData: InputData = {
             title: "Drehbuchautor und Filmregisseur",
             description:
               "Drehbuchautor und Filmregisseur von «Don’t Look Up»; Gründer der gemeinnützigen Produktionsfirma <a href='https://yellowdotstudios.com/' target='_blank'>Yellow&nbsp;Dot&nbsp;Studios</a>",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/882cba6e-1e6b-4120-a6bd-1f4adb284812/friederikeotto_by_christianwerner_hr.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1cde6869-a072-4b87-ae38-43a7635bce09/170_adam-mckay1_credit-emma-mcintyre.jpeg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5fc99897-9e7e-421a-aa9a-6cb2dcdb58db/600_adam-mckay1_credit-emma-mcintyre.jpeg",
+            },
           },
           quote:
             "Leider wird das Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.",
@@ -376,8 +474,12 @@ export const bigQuestionData: InputData = {
             title: "Schriftstellerin und Journalistin",
             description:
               "Journalistin und Autorin mehrerer Krimis sowie des düsteren Zukunftsromans «<a href='https://www.serainakobler.com/veranstaltungen/arbeiten/buecher' target='_blank'>Regenschatten</a>» (2020)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/075df1b5-7e0b-4f72-98b7-705f33621719/170_seraina-kobler.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6509c018-43a3-42c2-8c22-38a7868d65ea/600_seraina-kobler.jpg",
+            },
           },
           quote:
             "Noch könnte man Druck aufbauen – politisch, gesellschaftlich, juristisch. Gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.",
@@ -389,8 +491,12 @@ export const bigQuestionData: InputData = {
             title: "Umweltökonom und Stand-up-Comedian",
             description:
               "Umweltökonom am University College London, Stand-up-Comedian und Autor von «<a href='https://mattwinning.com/book/' target='_blank'>Hot&nbsp;Mess</a>» (2022)",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d0867b30-eb6b-4977-ac2c-058f2400dcbb/170_matt-winning.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/71a28e84-9f20-4f6e-a6ec-bab9a9e98d52/600_matt-winning.jpg",
+            },
           },
           quote: "Das Pariser Abkommen bleibt ein verlässlicher Anker.",
           text: "<p>Die unaufhörliche Erwärmung, das Verschleiern durch die Industrie und ständig wechselnde politische Bedingungen haben die Beständigkeit des Pariser Abkommens auf die Probe gestellt. Diese Herausforderungen müssen wir meistern. <b>Das Pariser Abkommen bleibt ein verlässlicher Anker.</b> Schon die Verhinderung eines kleinen Anstiegs der Temperatur kann irgendwo auf der Welt Leid reduzieren.</p><p>Gleichzeitig glaube ich, dass das Abkommen vor allem für Industrie, Regierungen und Klimafachleute relevant ist. Was wir wirklich brauchen, sind neue Geschichten, die das Leben gewöhnlicher Menschen berühren – über Sinn, Sicherheit, Gesundheit und Wohlstand. Lokale, gemeinschaftsbasierte Geschichten sind dabei entscheidend.</p>",
@@ -401,8 +507,12 @@ export const bigQuestionData: InputData = {
             title: "Storytelling-Expertin",
             description:
               "Gründerin des Netzwerks <a href='https://www.climate-spring.org/' target='_blank'>Climate&nbsp;Spring</a> für Filmschaffende",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d2d946fa-724b-4fb5-b469-42eabf4c5c3b/170_lucy_stone.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/12c17f40-2003-4564-bd4d-237e09c50ee1/600_lucy_stone.jpg",
+            },
           },
           quote:
             "Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.",
@@ -414,8 +524,12 @@ export const bigQuestionData: InputData = {
             title: "Medien- und Umweltrechtlerin",
             description:
               "Medien- und Umweltrechtlerin; Gründerin des Netzwerks <a href='https://planetnarratives.de/' target='_blank'>Planet&nbsp;Narratives</a> für Filmschaffende",
-            avatarUrl:
-              "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-edge-question/files/3ef2ce9e-a569-4899-a72e-3c443bbc0a55/billmckibben(photocreditnanciebattaglia)-highres.jpg",
+            avatarUrl: {
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/995e19d1-2c77-4d43-893f-6c9e3d2639b3/170_nicole-zabel-wasmuth.jpeg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/61ac9f17-f5d1-4094-9463-8cbb57c6b565/600_nicole-zabel-wasmuth.jpeg",
+            },
           },
           quote:
             "Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.",

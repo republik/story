@@ -81,7 +81,7 @@
 
   <AnswersList answersByCategory={answersByCategory} />
 
-  <div class={css({ p: 4, pb: '300px' })}>
+  <div class={css({ p: 4, pb: '300px', display: 'flex', justifyContent: 'center' })}>
     <button class={ cx(
         button({ variant: 'outline', size: 'large' }),
         css({ mx: 'auto'})
