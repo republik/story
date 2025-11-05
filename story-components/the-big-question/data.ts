@@ -15,7 +15,7 @@ export const bigQuestionData: InputData = {
             name: "Christiana Figueres",
             title: "Architektin des Pariser Abkommens",
             description:
-              "Als frühere Chefin der UN-Klimarahmenkonvention federführend beim Pariser Abkommen. Heute Mitgründerin der NGO <a href='https://www.globaloptimism.com/' target='_blank'>Global&nbsp;Optimism</a>",
+              "Als frühere Chefin der UN-Klimarahmenkonvention federführend beim Pariser Abkommen. Heute Mitgründerin der NGO <a href='https://www.globaloptimism.com/' target='_blank'>Global\u00a0Optimism</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5359c187-778d-48c5-b4a1-71f045814ff5/170_christina_figueres.jpg",
@@ -24,7 +24,7 @@ export const bigQuestionData: InputData = {
             },
           },
           quote: "Was einst ambitioniert schien, ist nun greifbar.",
-          text: "<p>Im vergangenen Jahrzehnt war das Pariser Abkommen mit seinem 1,5‑Grad-Ziel unser Kompass und gab Regierungen, Unternehmen und Bürgerinnen Orientierung. «1,5&nbsp;Grad zum Überleben» wurde zum Schlachtruf, der beispielloses Handeln mobilisierte. Heute zeigt uns die Wissenschaft: Jeder Bruchteil eines&nbsp;Grades zählt, und der Weg zu 1,5&nbsp;Grad wird schmaler. Statt dies als Wegmarke zu sehen, können wir sie als moralische Basis begreifen, die uns zu höheren Ambitionen antreibt.</p><p>Das Momentum ist längst nicht vorbei. Das jüngste Gutachten des Internationalen Gerichtshofs bestätigt, was verletzliche Staaten und junge Menschen seit langem fordern: Staaten müssen Menschen und den Planeten vor Klimaschäden schützen. Das Gutachten stärkt die Verantwortung, erneuert den Pariser Geist und verleiht ihm völkerrechtliche Autorität. Gleichzeitig werden Technologien zur Bekämpfung des Klimawandels&nbsp;– erneuerbare Energien, Speicher, Elektromobilität, grüner Wasserstoff&nbsp;– immer verfügbarer und erschwinglicher. Das ist ein Ergebnis des Pariser Vermächtnisses. <b>Was einst ambitioniert schien, ist nun greifbar.</b></p><p>Das kommende Jahrzehnt wird von Erzählungen über Regeneration, Wohlbefinden, Solidarität und Handlungsfähigkeit geprägt sein. Mit vereinten Kräften aus Wissenschaft, Recht und Technologie können wir die Geschichte einer lebenswerten, gerechten und regenerativen Zukunft schreiben.</p>",
+          text: "<p>Im vergangenen Jahrzehnt war das Pariser Abkommen mit seinem 1,5‑Grad-Ziel unser Kompass und gab Regierungen, Unternehmen und Bürgerinnen Orientierung. «1,5\u00a0Grad zum Überleben» wurde zum Schlachtruf, der beispielloses Handeln mobilisierte. Heute zeigt uns die Wissenschaft: Jeder Bruchteil eines\u00a0Grades zählt, und der Weg zu 1,5\u00a0Grad wird schmaler. Statt dies als Wegmarke zu sehen, können wir sie als moralische Basis begreifen, die uns zu höheren Ambitionen antreibt.</p><p>Das Momentum ist längst nicht vorbei. Das jüngste Gutachten des Internationalen Gerichtshofs bestätigt, was verletzliche Staaten und junge Menschen seit langem fordern: Staaten müssen Menschen und den Planeten vor Klimaschäden schützen. Das Gutachten stärkt die Verantwortung, erneuert den Pariser Geist und verleiht ihm völkerrechtliche Autorität. Gleichzeitig werden Technologien zur Bekämpfung des Klimawandels\u00a0– erneuerbare Energien, Speicher, Elektromobilität, grüner Wasserstoff\u00a0– immer verfügbarer und erschwinglicher. Das ist ein Ergebnis des Pariser Vermächtnisses. <b>Was einst ambitioniert schien, ist nun greifbar.</b></p><p>Das kommende Jahrzehnt wird von Erzählungen über Regeneration, Wohlbefinden, Solidarität und Handlungsfähigkeit geprägt sein. Mit vereinten Kräften aus Wissenschaft, Recht und Technologie können wir die Geschichte einer lebenswerten, gerechten und regenerativen Zukunft schreiben.</p>",
         },
         {
           respondent: {
@@ -41,7 +41,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationen­gerechtigkeit.",
-          text: "<p><b>Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationengerechtigkeit.</b></p><p>Mit zunehmenden Klimafolgen richtet sich die Aufmerksamkeit darauf, wie wir mit einer wärmeren Welt leben. Forderungen nach Gerechtigkeit, Finanzierung von Verlusten und Schäden sowie lokal getriebene Anpassungsstrategien rücken ins Zentrum der Verhandlungen.</p><p>Extreme Wetterereignisse, Ressourcenknappheit und Migration werden nicht mehr nur als Umweltprobleme, sondern als Bedrohungen der geopolitischen Stabilität verstanden. Dieser Blickwinkel kann neue Akteure mobilisieren&nbsp;– etwa Verteidigungsministerien oder Finanzinstitutionen, die Klimapolitik bislang als Randthema betrachteten.</p><p>Nicht zuletzt bleibt das moralische Narrativ der Generationengerechtigkeit wirksam. Jugend- und zivilgesellschaftliche Bewegungen setzen mit ihrem Fokus auf Verantwortung, Fairness und systemischen Wandel politische Führungskräfte unter Druck. Klimawandel ist längst kein Randthema mehr, sondern eine zentrale Herausforderung für Wirtschaft, Menschenrechte und unsere gemeinsame Zukunft.</p>",
+          text: "<p><b>Wir brauchen neue Erzählungen, die das 1,5‑Grad-Ziel ergänzen: Anpassung, Sicherheit, Generationengerechtigkeit.</b></p><p>Mit zunehmenden Klimafolgen richtet sich die Aufmerksamkeit darauf, wie wir mit einer wärmeren Welt leben. Forderungen nach Gerechtigkeit, Finanzierung von Verlusten und Schäden sowie lokal getriebene Anpassungsstrategien rücken ins Zentrum der Verhandlungen.</p><p>Extreme Wetterereignisse, Ressourcenknappheit und Migration werden nicht mehr nur als Umweltprobleme, sondern als Bedrohungen der geopolitischen Stabilität verstanden. Dieser Blickwinkel kann neue Akteure mobilisieren\u00a0– etwa Verteidigungsministerien oder Finanzinstitutionen, die Klimapolitik bislang als Randthema betrachteten.</p><p>Nicht zuletzt bleibt das moralische Narrativ der Generationengerechtigkeit wirksam. Jugend- und zivilgesellschaftliche Bewegungen setzen mit ihrem Fokus auf Verantwortung, Fairness und systemischen Wandel politische Führungskräfte unter Druck. Klimawandel ist längst kein Randthema mehr, sondern eine zentrale Herausforderung für Wirtschaft, Menschenrechte und unsere gemeinsame Zukunft.</p>",
         },
         {
           respondent: {
@@ -58,7 +58,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.",
-          text: "<p>Das Pariser Abkommen hat die globale Klimapolitik nachhaltig geprägt. <b>Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.</b></p><p>Vor dem Abkommen steuerte die Welt auf eine Erwärmung von rund 4&nbsp;Grad zu. Dank der nationalen Klimaziele von über 180 Staaten dürfte die Erwärmung nun wohl unter 3&nbsp;Grad liegen. Das ist ein historischer Fortschritt. Investitionen in erneuerbare Energien sind heute doppelt so hoch wie jene in fossile Energien&nbsp;– ein klares Zeichen des Wandels.</p><p>Zugleich hat sich das Abkommen als widerstandsfähig erwiesen: Selbst der zeitweilige Rückzug der USA konnte seinen Fortbestand nicht gefährden.</p><p>Die Schweiz wird sich in den internationalen Klimaverhandlungen weiterhin dafür einsetzen, dass alle Staaten ihren fairen Beitrag leisten und die nötigen Rahmenbedingungen geschaffen werden, damit Klimamassnahmen weltweit ambitionierter und schneller umgesetzt werden können.</p><p>Damit setzt sich die Schweiz für ihre eigenen Interessen ein, wie auch für die Menschen, die vom Klimawandel am meisten betroffen sind.</p>",
+          text: "<p>Das Pariser Abkommen hat die globale Klimapolitik nachhaltig geprägt. <b>Heute geht es nicht mehr darum, ob die Dekarbonisierung gelingt, sondern wie schnell sie weltweit umgesetzt werden kann.</b></p><p>Vor dem Abkommen steuerte die Welt auf eine Erwärmung von rund 4\u00a0Grad zu. Dank der nationalen Klimaziele von über 180 Staaten dürfte die Erwärmung nun wohl unter 3\u00a0Grad liegen. Das ist ein historischer Fortschritt. Investitionen in erneuerbare Energien sind heute doppelt so hoch wie jene in fossile Energien\u00a0– ein klares Zeichen des Wandels.</p><p>Zugleich hat sich das Abkommen als widerstandsfähig erwiesen: Selbst der zeitweilige Rückzug der USA konnte seinen Fortbestand nicht gefährden.</p><p>Die Schweiz wird sich in den internationalen Klimaverhandlungen weiterhin dafür einsetzen, dass alle Staaten ihren fairen Beitrag leisten und die nötigen Rahmenbedingungen geschaffen werden, damit Klimamassnahmen weltweit ambitionierter und schneller umgesetzt werden können.</p><p>Damit setzt sich die Schweiz für ihre eigenen Interessen ein, wie auch für die Menschen, die vom Klimawandel am meisten betroffen sind.</p>",
         },
         {
           respondent: {
@@ -75,14 +75,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.",
-          text: "<p>Die Diskussion muss sich nicht darum drehen, ob wir das 1.5-Grad-Ziel erreichen. Sondern wie wir so nah wie möglich daran herankommen. <b>Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.</b> Das wird die Aufgabe der nächsten Jahre sein. Es macht einen Unterschied, ob sich die Erde um 1,5, 2 oder 4&nbsp;Grad erwärmt&nbsp;– und momentan sind wir auf dem falschen Weg.</p>",
+          text: "<p>Die Diskussion muss sich nicht darum drehen, ob wir das 1.5-Grad-Ziel erreichen. Sondern wie wir so nah wie möglich daran herankommen. <b>Die Massnahmen müssen genauso akzeptiert werden wie das Ziel selbst, und die Dringlichkeit muss erkannt werden.</b> Das wird die Aufgabe der nächsten Jahre sein. Es macht einen Unterschied, ob sich die Erde um 1,5, 2 oder 4\u00a0Grad erwärmt\u00a0– und momentan sind wir auf dem falschen Weg.</p>",
         },
         {
           respondent: {
             name: "Delia Berner",
             title: "Expertin für Klimapolitik",
             description:
-              "Expertin für internationale Klimapolitik beim Dachverband <a href='https://www.alliancesud.ch/de' target='_blank'>Alliance&nbsp;Sud</a>",
+              "Expertin für internationale Klimapolitik beim Dachverband <a href='https://www.alliancesud.ch/de' target='_blank'>Alliance\u00a0Sud</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5caec643-8f68-4134-bfb3-f7a0cbd5d826/170_delia-berner.jpg",
@@ -92,7 +92,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Das Pariser Abkommen verlangt auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.",
-          text: "<p>Das Abkommen ist sehr wertvoll, aber es erfüllt sich nicht von selbst. Es braucht Bürgerinnen und Bürger, die von der Politik einfordern, dass sie ihren Teil zum weltweiten Klimaschutz beiträgt.</p><p>Es braucht alle Teile, um das Puzzle fertigzustellen und die globale Erwärmung einzudämmen.</p><p>Nicht zu vergessen: Die ärmere Hälfte der Weltbevölkerung ist nur für gut 10&nbsp;Prozent der CO<sub>2</sub>-Emissionen verantwortlich. <b>Das Pariser Abkommen verlangt daher auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.</b> Dies wird die künftigen Erzählungen aus dem Globalen Süden prägen&nbsp;– je nachdem, ob sich Ungleichheit und Multikrisen verschlimmern oder die globale Zusammenarbeit die natürlichen Lebensgrundlagen unseres Planeten schützt und die Verbundenheit der Weltbevölkerung stärkt.</p>",
+          text: "<p>Das Abkommen ist sehr wertvoll, aber es erfüllt sich nicht von selbst. Es braucht Bürgerinnen und Bürger, die von der Politik einfordern, dass sie ihren Teil zum weltweiten Klimaschutz beiträgt.</p><p>Es braucht alle Teile, um das Puzzle fertigzustellen und die globale Erwärmung einzudämmen.</p><p>Nicht zu vergessen: Die ärmere Hälfte der Weltbevölkerung ist nur für gut 10\u00a0Prozent der CO<sub>2</sub>-Emissionen verantwortlich. <b>Das Pariser Abkommen verlangt daher auch finanziellen Ausgleich, um die ärmeren Menschen in der Klimakrise zu unterstützen.</b> Dies wird die künftigen Erzählungen aus dem Globalen Süden prägen\u00a0– je nachdem, ob sich Ungleichheit und Multikrisen verschlimmern oder die globale Zusammenarbeit die natürlichen Lebensgrundlagen unseres Planeten schützt und die Verbundenheit der Weltbevölkerung stärkt.</p>",
         },
       ],
     },
@@ -118,7 +118,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.",
-          text: "<p>Weltweit müssen wir über blosse Versprechen hinausgehen und echte Mechanismen schaffen, die Ambition mit Gerechtigkeit verbinden. Wer für die grössten Emissionen verantwortlich ist, muss für Verluste und Schäden haftbar gemacht werden&nbsp;– etwa in Städten wie Freetown, wo Menschen bereits unter extremer Hitze, Überschwemmungen und damit verbundener Verdrängung leiden. Händlerinnen, Kinder in informellen Schulen und Familien in Slums brauchen Unterstützung, um mit den heutigen Klimaschocks umzugehen.</p><p><b>Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.</b> Städte stehen an vorderster Front&nbsp;– gestärkt können sie zu Motoren wirksamer Klimalösungen werden. </p><p>In Afrika, wo Städte rasant wachsen, aber oft ohne resilienten Infrastrukturaufbau, geht es um Anpassung und faire Finanzierung. In Freetown etwa pilotieren wir wärme­reflektierende Dächer, bauen resiliente Märkte und entwickeln gemeinsam mit den Gemeinden innovative Projekte. Doch diese Ansätze können nur skaliert werden, wenn Städte direkten Zugang zu Klimafinanzierung erhalten.</p>",
+          text: "<p>Weltweit müssen wir über blosse Versprechen hinausgehen und echte Mechanismen schaffen, die Ambition mit Gerechtigkeit verbinden. Wer für die grössten Emissionen verantwortlich ist, muss für Verluste und Schäden haftbar gemacht werden\u00a0– etwa in Städten wie Freetown, wo Menschen bereits unter extremer Hitze, Überschwemmungen und damit verbundener Verdrängung leiden. Händlerinnen, Kinder in informellen Schulen und Familien in Slums brauchen Unterstützung, um mit den heutigen Klimaschocks umzugehen.</p><p><b>Das nächste Jahrzehnt muss geprägt sein davon, Macht und Ressourcen dorthin zu verlagern, wo die Auswirkungen des Klimawandels am stärksten spürbar sind.</b> Städte stehen an vorderster Front\u00a0– gestärkt können sie zu Motoren wirksamer Klimalösungen werden. </p><p>In Afrika, wo Städte rasant wachsen, aber oft ohne resilienten Infrastrukturaufbau, geht es um Anpassung und faire Finanzierung. In Freetown etwa pilotieren wir wärme­reflektierende Dächer, bauen resiliente Märkte und entwickeln gemeinsam mit den Gemeinden innovative Projekte. Doch diese Ansätze können nur skaliert werden, wenn Städte direkten Zugang zu Klimafinanzierung erhalten.</p>",
         },
         {
           respondent: {
@@ -134,15 +134,15 @@ export const bigQuestionData: InputData = {
             },
           },
           quote:
-            "Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt&nbsp;– lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.",
-          text: "<p>Das Pariser Abkommen und das 1,5‑Grad-Ziel haben die globale Klimapolitik geprägt und eine gemeinsame Richtung vorgegeben. Auch heute bleiben sie unverzichtbar, doch ihre Rolle wandelt sich. 1,5&nbsp;Grad ist keine ferne Grenze mehr, sondern zunehmend Realität. Die Klimafolgen nehmen weltweit zu. Das macht ambitioniertes Handeln dringlicher denn je.</p><p>Städte sind für 70&nbsp;Prozent der globalen Emissionen verantwortlich und spielen eine Schlüsselrolle. Führung bedeutet nicht nur, ambitionierte Ziele zu formulieren, sondern sie auch umzusetzen. Die neue 10-Jahres-Klimastrategie von Kopenhagen baut auf frühere Netto-null-Zielen auf&nbsp;– mit höheren Ambitionen: klimapositiv werden und konsumbezogene Emissionen halbieren. </p><p><b>Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt&nbsp;– lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.</b> Klimaschutz verlangt Transformation&nbsp;– nicht nur der Energieinfrastruktur, sondern auch, wie wir leben, uns bewegen und konsumieren. Dieser Wandel birgt auch Chancen: lebenswerte Städte, saubere Luft, bessere Gesundheit und gerechtere Perspektiven. Das sind die Erzählungen, die handeln lassen: Klimaschutz nicht als Verzicht, sondern als Weg zu einem besseren Leben.</p>",
+            "Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt\u00a0– lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.",
+          text: "<p>Das Pariser Abkommen und das 1,5‑Grad-Ziel haben die globale Klimapolitik geprägt und eine gemeinsame Richtung vorgegeben. Auch heute bleiben sie unverzichtbar, doch ihre Rolle wandelt sich. 1,5\u00a0Grad ist keine ferne Grenze mehr, sondern zunehmend Realität. Die Klimafolgen nehmen weltweit zu. Das macht ambitioniertes Handeln dringlicher denn je.</p><p>Städte sind für 70\u00a0Prozent der globalen Emissionen verantwortlich und spielen eine Schlüsselrolle. Führung bedeutet nicht nur, ambitionierte Ziele zu formulieren, sondern sie auch umzusetzen. Die neue 10-Jahres-Klimastrategie von Kopenhagen baut auf frühere Netto-null-Zielen auf\u00a0– mit höheren Ambitionen: klimapositiv werden und konsumbezogene Emissionen halbieren. </p><p><b>Wir können nicht darauf bauen, dass das Leben unverändert bleibt. Wandel kommt\u00a0– lenken wir ihn nicht, lenkt er uns, und die Verwundbarsten zahlen den höchsten Preis.</b> Klimaschutz verlangt Transformation\u00a0– nicht nur der Energieinfrastruktur, sondern auch, wie wir leben, uns bewegen und konsumieren. Dieser Wandel birgt auch Chancen: lebenswerte Städte, saubere Luft, bessere Gesundheit und gerechtere Perspektiven. Das sind die Erzählungen, die handeln lassen: Klimaschutz nicht als Verzicht, sondern als Weg zu einem besseren Leben.</p>",
         },
         {
           respondent: {
             name: "Sam Butler-Sloss",
             title: "Experte für Energiewende",
             description:
-              "Ökonom und Experte für die Energiewende bei der <a href='https://ember-energy.org/' target='_blank'>Analysefirma&nbsp;Ember</a>",
+              "Ökonom und Experte für die Energiewende bei der <a href='https://ember-energy.org/' target='_blank'>Analysefirma\u00a0Ember</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/b88d9fbd-95c4-4439-97e3-15b8a12be91c/170_sam-butler-sloss.jpg",
@@ -152,14 +152,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Klimaschutz wird von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.",
-          text: "<p>Wir haben das Problem erkannt, aber die Möglichkeiten unterschätzt. Die Menschheit schreitet voran, vom Jagen fossiler Brennstoffe zum «Ernten der Sonne». Es ist mehr als ein einfacher Austausch&nbsp;– schmutzig raus, sauber rein&nbsp;– es ist eine technologische Revolution. Wenn Solar- und Windkraft ihr Wachstum der letzten 30 Jahre nur 5 Jahre weiter halten, wird die globale Nachfrage nach fossilen Brennstoffen endgültig sinken.</p><p>Das Pariser Abkommen beruhte auf gemeinsamem Handeln. Also: Alle müssen sich einschränken, alle übernehmen Verantwortung für kommende Generationen. Heute müssen wir uns dank Elektrotechnik weniger einschränken, und können trotzdem verantwortungsvoll handeln. </p><p>Eine neue Dynamik rückt in den Vordergrund. <b>Klimaschutz wird so von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.</b> Diese Verschiebung vereint mehrere Motive&nbsp;– ökonomische Chancen, Sicherheit, Wettbewerbs­fähigkeit&nbsp;– für ein Ziel. Ein Ziel, das von vielen starken Motiven getragen wird, gewinnt mehr Momentum und Resilienz als eines, das nur auf einem beruht.</p>",
+          text: "<p>Wir haben das Problem erkannt, aber die Möglichkeiten unterschätzt. Die Menschheit schreitet voran, vom Jagen fossiler Brennstoffe zum «Ernten der Sonne». Es ist mehr als ein einfacher Austausch\u00a0– schmutzig raus, sauber rein\u00a0– es ist eine technologische Revolution. Wenn Solar- und Windkraft ihr Wachstum der letzten 30 Jahre nur 5 Jahre weiter halten, wird die globale Nachfrage nach fossilen Brennstoffen endgültig sinken.</p><p>Das Pariser Abkommen beruhte auf gemeinsamem Handeln. Also: Alle müssen sich einschränken, alle übernehmen Verantwortung für kommende Generationen. Heute müssen wir uns dank Elektrotechnik weniger einschränken, und können trotzdem verantwortungsvoll handeln. </p><p>Eine neue Dynamik rückt in den Vordergrund. <b>Klimaschutz wird so von moralischer Pflicht zum wirtschaftlichen, strategischen und ökologischen Erfolgsfaktor.</b> Diese Verschiebung vereint mehrere Motive\u00a0– ökonomische Chancen, Sicherheit, Wettbewerbs­fähigkeit\u00a0– für ein Ziel. Ein Ziel, das von vielen starken Motiven getragen wird, gewinnt mehr Momentum und Resilienz als eines, das nur auf einem beruht.</p>",
         },
         {
           respondent: {
             name: "Mohamed Adow",
             title: "Experte für Klimapolitik",
             description:
-              "Gründer der Denkfabrik <a href='https://www.powershiftafrica.org/' target='_blank'>Power&nbsp;Shift&nbsp;Africa</a>",
+              "Gründer der Denkfabrik <a href='https://www.powershiftafrica.org/' target='_blank'>Power\u00a0Shift\u00a0Africa</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c3136104-1bbf-4d5b-a595-cd0ea13db143/170_mohamed_adow.jpg",
@@ -176,7 +176,7 @@ export const bigQuestionData: InputData = {
             name: "Helen Clarkson",
             title: "Klima- und Humanitärexpertin",
             description:
-              "Geschäftsführerin der NGO <a href='https://www.theclimategroup.org/' target='_blank'>Climate&nbsp;Group</a>, die Landes- und Regionalregierungen vereint.",
+              "Geschäftsführerin der NGO <a href='https://www.theclimategroup.org/' target='_blank'>Climate\u00a0Group</a>, die Landes- und Regionalregierungen vereint.",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/57231a94-662b-42bc-9a07-0d18726ffbfb/170_helen-clarkson-22.jpg",
@@ -185,14 +185,14 @@ export const bigQuestionData: InputData = {
             },
           },
           quote: "Das Ziel bleibt ein entscheidender Referenzpunkt.",
-          text: "<p>Seit 2015 zeigt die Wissenschaft klarer denn je: Überschreiten wir 1,5&nbsp;Grad, drohen katastrophale Folgen für Planet und Mensch. <b>Das Ziel bleibt deshalb ein entscheidender Referenzpunkt.</b></p><p>Wir haben grosse Fortschritte gemacht, was das Verständnis für Verpflichtungen angeht. Die harte Arbeit bleibt, die Ziele in grossem Massstab und schnell umzusetzen.</p><p>Darauf muss nun unser Fokus liegen. Vieles davon ist unspektakuläre Arbeit hinter den Kulissen, zum Beispiel  Stromnetze zu modernisieren und Vorschriften anzupassen. Dafür braucht es Zusammenarbeit mit klarer Zielsetzung zwischen Regionen, Städten, Unternehmen, Gemeinschaften und nationalen Regierungen.</p><p>Am Ende werden wir entweder einen lebenswerten Planeten haben oder nicht. Unsere Aufgabe ist es, so schnell wie möglich zu handeln, um zu schützen, was wir können.</p>",
+          text: "<p>Seit 2015 zeigt die Wissenschaft klarer denn je: Überschreiten wir 1,5\u00a0Grad, drohen katastrophale Folgen für Planet und Mensch. <b>Das Ziel bleibt deshalb ein entscheidender Referenzpunkt.</b></p><p>Wir haben grosse Fortschritte gemacht, was das Verständnis für Verpflichtungen angeht. Die harte Arbeit bleibt, die Ziele in grossem Massstab und schnell umzusetzen.</p><p>Darauf muss nun unser Fokus liegen. Vieles davon ist unspektakuläre Arbeit hinter den Kulissen, zum Beispiel  Stromnetze zu modernisieren und Vorschriften anzupassen. Dafür braucht es Zusammenarbeit mit klarer Zielsetzung zwischen Regionen, Städten, Unternehmen, Gemeinschaften und nationalen Regierungen.</p><p>Am Ende werden wir entweder einen lebenswerten Planeten haben oder nicht. Unsere Aufgabe ist es, so schnell wie möglich zu handeln, um zu schützen, was wir können.</p>",
         },
         {
           respondent: {
             name: "Thomas Hügli",
             title: "Nachhaltigkeitsexperte",
             description:
-              "Nachhaltigkeits- und Biodiversitätsexperte bei der Versicherungsgesellschaft AXA und Präsident des Stiftungsrates der <a href='https://www.klimastiftung.ch/de/' target='_blank'>Klimastiftung&nbsp;Schweiz</a>",
+              "Nachhaltigkeits- und Biodiversitätsexperte bei der Versicherungsgesellschaft AXA und Präsident des Stiftungsrates der <a href='https://www.klimastiftung.ch/de/' target='_blank'>Klimastiftung\u00a0Schweiz</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/bccd2555-4506-4043-a3cf-d272824abed4/170_thomashuegli_quer.jpg",
@@ -202,7 +202,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Nebst Digitalisierungs- und Effizienzmassnahmen braucht es skalierbare, zukunftsfähige Innovationen.",
-          text: "<p><b>Nebst Digitalisierungs- und Effizienz­massnahmen braucht es skalierbare, zukunfts­fähige Innovationen</b>&nbsp;– sie sind das wirtschaftliche Narrativ für die nächsten zehn Jahre. Auch für die Schweizer Wirtschaft, die innerhalb weniger Jahrzehnte ihre CO<sub>2</sub>-Emissionen markant senken muss.</p><p>Die Klimastiftung Schweiz unterstützt Schweizer und Liechtensteiner KMU bei ihren Innovationsprojekten für das Klima. Von diesen Clean-Tech-Lösungen profitiert der Werkplatz Schweiz durch eine höhere weltweite Konkurrenz- und Wettbewerbs­fähigkeit sowie unsere Volkswirtschaft durch neue Arbeitsplätze und damit lokale Wertschöpfung.</p>",
+          text: "<p><b>Nebst Digitalisierungs- und Effizienz­massnahmen braucht es skalierbare, zukunfts­fähige Innovationen</b>\u00a0– sie sind das wirtschaftliche Narrativ für die nächsten zehn Jahre. Auch für die Schweizer Wirtschaft, die innerhalb weniger Jahrzehnte ihre CO<sub>2</sub>-Emissionen markant senken muss.</p><p>Die Klimastiftung Schweiz unterstützt Schweizer und Liechtensteiner KMU bei ihren Innovationsprojekten für das Klima. Von diesen Clean-Tech-Lösungen profitiert der Werkplatz Schweiz durch eine höhere weltweite Konkurrenz- und Wettbewerbs­fähigkeit sowie unsere Volkswirtschaft durch neue Arbeitsplätze und damit lokale Wertschöpfung.</p>",
         },
       ],
     },
@@ -218,7 +218,7 @@ export const bigQuestionData: InputData = {
             name: "Reto Knutti",
             title: "Klimatologe",
             description:
-              "<a href='https://usys.ethz.ch/personen/profil.reto-knutti.html' target='_blank'>Professor&nbsp;für&nbsp;Klimaphysik</a> an der ETHU&nbsp;Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
+              "<a href='https://usys.ethz.ch/personen/profil.reto-knutti.html' target='_blank'>Professor\u00a0für\u00a0Klimaphysik</a> an der ETHU\u00a0Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5beeffa2-31e3-4575-955a-65885234ee71/knutti_reto_klein.jpg",
@@ -297,14 +297,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Entscheidend werden neue Erzählungen sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.",
-          text: "<p>Das 1,5-Grad-Ziel bleibt zentral, weil es den wissenschaftlich fundierten Rahmen für das Überleben künftiger Generationen markiert. Doch als politischer und gesellschaftlicher Bezugspunkt verliert es an Zugkraft, wenn die Kluft zwischen Ziel und Realität weiter wächst. Wir erleben aktuell ein «Umsetzungsdefizit»: Statt konsequenter Klimapolitik sehen wir Verzögerung, Ausnahmen und Rückschritte.</p><p><b>Für die nächsten zehn Jahre werden neue Erzählungen entscheidend sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.</b> Erneuerbare Energien schaffen Unabhängigkeit und sichern Wohlstand. Die Energiewende ist kein Verzichts-, sondern ein Zukunftsprojekt, das Innovation, Gerechtigkeit und Lebensqualität verbindet.</p><p>Wenn es gelingt, diese positive Erzählung gesellschaftlich zu verankern&nbsp;– «Handeln ist billiger als nicht Handeln»&nbsp;–, kann das 1,5-Grad-Ziel wieder an Strahlkraft gewinnen: als Kompass für eine klimaneutrale, gerechte und sichere Zukunft.</p>",
+          text: "<p>Das 1,5-Grad-Ziel bleibt zentral, weil es den wissenschaftlich fundierten Rahmen für das Überleben künftiger Generationen markiert. Doch als politischer und gesellschaftlicher Bezugspunkt verliert es an Zugkraft, wenn die Kluft zwischen Ziel und Realität weiter wächst. Wir erleben aktuell ein «Umsetzungsdefizit»: Statt konsequenter Klimapolitik sehen wir Verzögerung, Ausnahmen und Rückschritte.</p><p><b>Für die nächsten zehn Jahre werden neue Erzählungen entscheidend sein, die nicht Angst, sondern Chancen betonen: Klimaschutz als Modernisierungs-, Sicherheits- und Freiheitsprojekt.</b> Erneuerbare Energien schaffen Unabhängigkeit und sichern Wohlstand. Die Energiewende ist kein Verzichts-, sondern ein Zukunftsprojekt, das Innovation, Gerechtigkeit und Lebensqualität verbindet.</p><p>Wenn es gelingt, diese positive Erzählung gesellschaftlich zu verankern\u00a0– «Handeln ist billiger als nicht Handeln»\u00a0–, kann das 1,5-Grad-Ziel wieder an Strahlkraft gewinnen: als Kompass für eine klimaneutrale, gerechte und sichere Zukunft.</p>",
         },
         {
           respondent: {
             name: "Anthony Patt",
             title: "Experte für Klimapolitik",
             description:
-              "<a href='https://usys.ethz.ch/personen/profil.anthony-patt.html' target='_blank'>Professor für Klimapolitik</a>, ETH&nbsp;Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
+              "<a href='https://usys.ethz.ch/personen/profil.anthony-patt.html' target='_blank'>Professor für Klimapolitik</a>, ETH\u00a0Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1953b745-b264-4ded-93fb-80b5427eb3e6/170_anthony_patt.jpg",
@@ -314,14 +314,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.",
-          text: "<p><b>Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.</b> Die meisten Länder haben offizielle Ziele festgelegt, bis&nbsp;2050 netto null Emissionen zu erreichen. Kaum jemand hatte dies 2015 erwartet.</p><p>Viele Länder, darunter alle EU-Mitgliedstaaten, haben seitdem Massnahmen entwickelt und umgesetzt. Ob die Schweiz ihre Ziele erreichen wird, hängt davon ab, wie das CO<sub>2</sub>-Gesetz revidiert und das Klima- und Innovationsgesetz umgesetzt wird.</p><p>Es darf keine neuen Investitionen in fossile Technologien wie Benzin- und Dieselfahrzeuge, Öl- und Erdgasheizungen oder umweltverschmutzende Fabriken geben. Bestehende Anlagen müssen schneller stillgelegt werden.</p><p>Dafür braucht es internationale Zusammenarbeit, und hier zeigt das Pariser Abkommen seinen grössten Mehrwert. In Ländern mit niedrigerem Einkommen müssen CO<sub>2</sub>-freie Projekte gemeinsam geplant und finanziert werden, ebenso die Wertschöpfungsketten für wichtige Mineralien wie Kupfer, Nickel und Lithium.</p>",
+          text: "<p><b>Auch wenn das Pariser Abkommen nicht alle unsere Hoffnungen erfüllt hat, hat es die vernünftigen Erwartungen übertroffen.</b> Die meisten Länder haben offizielle Ziele festgelegt, bis\u00a02050 netto null Emissionen zu erreichen. Kaum jemand hatte dies 2015 erwartet.</p><p>Viele Länder, darunter alle EU-Mitgliedstaaten, haben seitdem Massnahmen entwickelt und umgesetzt. Ob die Schweiz ihre Ziele erreichen wird, hängt davon ab, wie das CO<sub>2</sub>-Gesetz revidiert und das Klima- und Innovationsgesetz umgesetzt wird.</p><p>Es darf keine neuen Investitionen in fossile Technologien wie Benzin- und Dieselfahrzeuge, Öl- und Erdgasheizungen oder umweltverschmutzende Fabriken geben. Bestehende Anlagen müssen schneller stillgelegt werden.</p><p>Dafür braucht es internationale Zusammenarbeit, und hier zeigt das Pariser Abkommen seinen grössten Mehrwert. In Ländern mit niedrigerem Einkommen müssen CO<sub>2</sub>-freie Projekte gemeinsam geplant und finanziert werden, ebenso die Wertschöpfungsketten für wichtige Mineralien wie Kupfer, Nickel und Lithium.</p>",
         },
         {
           respondent: {
             name: "Katharine Hayhoe",
             title: "Klimawissenschaftlerin",
             description:
-              "Leitende Wissenschaftlerin der NGO The Nature Conservancy und Professorin an der Texas Tech University; Autorin «<a href='https://www.buchhaus.ch/de/buecher/fachbuecher/geschichte/politik/detail/ISBN-9781982143831/Hayhoe-Katharine/Saving-Us' target='_blank'>Saving&nbsp;Us</a>» (2021)",
+              "Leitende Wissenschaftlerin der NGO The Nature Conservancy und Professorin an der Texas Tech University; Autorin «<a href='https://www.buchhaus.ch/de/buecher/fachbuecher/geschichte/politik/detail/ISBN-9781982143831/Hayhoe-Katharine/Saving-Us' target='_blank'>Saving\u00a0Us</a>» (2021)",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/c80faa24-b780-4c04-a541-66b86d6b23d0/170_katharine-hayhoe-.jpg",
@@ -331,7 +331,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem…",
-          text: "<p>Als das Pariser Abkommen 2015 unterschrieben wurde, drohte uns eine katastrophale Erwärmung von fast 5&nbsp;Grad bis&nbsp;2100. In Paris wurde klar: Der Klimawandel bedroht das Wohl der Menschen, und die Ära der fossilen Brennstoffe muss enden. Dank der ergriffenen Massnahmen liegen die Prognosen heute etwa bei 3&nbsp;Grad. Das ist immer noch zu hoch, aber ein Beweis, dass globale Abkommen etwas bewirken können.</p><p><b>Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem. Sondern auch soziale und technologische Kipppunkte, die uns helfen werden.</b></p><p>Die meisten Menschen machen sich Sorgen ums Klima, realisieren aber nicht, dass es vielen anderen genauso geht. Und dass Lösungen existieren, um eine bessere Zukunft möglich zu machen. Globales Handeln hängt von solchen Narrativen ab, die Hoffnung und Handlungsfähigkeit schaffen. Soziale Kipppunkte entstehen, wenn normale Menschen an eine bessere Welt glauben, andere mit dieser Vision inspirieren und gemeinsam daran arbeiten, sie zu verwirklichen.</p>",
+          text: "<p>Als das Pariser Abkommen 2015 unterschrieben wurde, drohte uns eine katastrophale Erwärmung von fast 5\u00a0Grad bis\u00a02100. In Paris wurde klar: Der Klimawandel bedroht das Wohl der Menschen, und die Ära der fossilen Brennstoffe muss enden. Dank der ergriffenen Massnahmen liegen die Prognosen heute etwa bei 3\u00a0Grad. Das ist immer noch zu hoch, aber ein Beweis, dass globale Abkommen etwas bewirken können.</p><p><b>Das nächste Jahrzehnt wird von Kipppunkten geprägt sein. Und zwar nicht nur die drohenden Kipppunkte im Klimasystem. Sondern auch soziale und technologische Kipppunkte, die uns helfen werden.</b></p><p>Die meisten Menschen machen sich Sorgen ums Klima, realisieren aber nicht, dass es vielen anderen genauso geht. Und dass Lösungen existieren, um eine bessere Zukunft möglich zu machen. Globales Handeln hängt von solchen Narrativen ab, die Hoffnung und Handlungsfähigkeit schaffen. Soziale Kipppunkte entstehen, wenn normale Menschen an eine bessere Welt glauben, andere mit dieser Vision inspirieren und gemeinsam daran arbeiten, sie zu verwirklichen.</p>",
         },
       ],
     },
@@ -347,7 +347,7 @@ export const bigQuestionData: InputData = {
             name: "Bill McKibben",
             title: "Aktivist und Autor",
             description:
-              "Klimaaktivist, Gründer der NGO 350.org und Autor von «<a href='https://wwnorton.com/books/Here-Comes-the-Sun/' target='_blank'>Here&nbsp;Comes&nbsp;the&nbsp;Sun</a>» (2025)",
+              "Klimaaktivist, Gründer der NGO 350.org und Autor von «<a href='https://wwnorton.com/books/Here-Comes-the-Sun/' target='_blank'>Here\u00a0Comes\u00a0the\u00a0Sun</a>» (2025)",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/a53889fc-dfbb-458a-952c-9fd4e088bad9/170_bill-mckibben_.jpg",
@@ -364,7 +364,7 @@ export const bigQuestionData: InputData = {
             name: "Nemonte Nenquimo",
             title: "Ecuadorianische Umweltschützerin",
             description:
-              "Führende Vertreterin der Waorani im ecuadorianischen Amazonas; Mitgründerin der NGO Amazon Frontlines und Autorin von «<a href='https://www.penguin.de/buecher/nemonte-nenquimo-tochter-des-regenwaldes/buch/9783453218369' target='_blank'>Tochter&nbsp;des&nbsp;Regenwaldes</a>» (2024)",
+              "Führende Vertreterin der Waorani im ecuadorianischen Amazonas; Mitgründerin der NGO Amazon Frontlines und Autorin von «<a href='https://www.penguin.de/buecher/nemonte-nenquimo-tochter-des-regenwaldes/buch/9783453218369' target='_blank'>Tochter\u00a0des\u00a0Regenwaldes</a>» (2024)",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1015b7d5-0b2d-4b11-9175-23dd9bfaa9d6/170_nemonte-nenquimo-(c)-amazon-frontlines.jpg",
@@ -381,7 +381,7 @@ export const bigQuestionData: InputData = {
             name: "Patrick Hofstetter",
             title: "Klimaschutz- und Energieexperte",
             description:
-              "Klimaschutz- und Energieexperte des <a href='https://www.wwf.ch/de/spenden/die-alpen-schuetzen?gad_source=1&gad_campaignid=23092936309&gbraid=0AAAAAD_KKJBqgPC1rnOiGcwsIIXL4Spbm&gclid=CjwKCAjwgeLHBhBuEiwAL5gNEQZTRlz9QC84fgnyUBr7w3xYUg1PFUDawnz6GRXU4QQzLoKqHQ7t3BoC8KoQAvD_BwE' target='_blank'>WWF&nbsp;Schweiz</a>",
+              "Klimaschutz- und Energieexperte des <a href='https://www.wwf.ch/de/spenden/die-alpen-schuetzen?gad_source=1&gad_campaignid=23092936309&gbraid=0AAAAAD_KKJBqgPC1rnOiGcwsIIXL4Spbm&gclid=CjwKCAjwgeLHBhBuEiwAL5gNEQZTRlz9QC84fgnyUBr7w3xYUg1PFUDawnz6GRXU4QQzLoKqHQ7t3BoC8KoQAvD_BwE' target='_blank'>WWF\u00a0Schweiz</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/7c3c9277-34de-444e-b50b-26c3a1acfd45/170_patrick-hofstetter.jpg",
@@ -391,14 +391,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung.",
-          text: "<p>Eine der grossen Leistungen der Klimakonvention bleibt zentral: die schlimmsten Folgen des Klimawandels greifbar zu machen. <b>Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung</b>&nbsp;– und desto grösser die Bereitschaft, auch über CO<sub>2</sub>-Entnahme oder riskantes Geoengineering zu sprechen.</p><p>Gleichzeitig werden China und andere aufstrebende Mächte die Lösungsmärkte noch stärker dominieren. Ihre Ambitionen, die planetaren Grenzen etwa durch die Zuteilung von Kontingenten zu verwalten, werden dabei zunehmend offenkundiger.\n</p>",
+          text: "<p>Eine der grossen Leistungen der Klimakonvention bleibt zentral: die schlimmsten Folgen des Klimawandels greifbar zu machen. <b>Je näher wir den irreversiblen Kipppunkten kommen, desto lauter werden die Fragen nach Schuld und Haftung</b>\u00a0– und desto grösser die Bereitschaft, auch über CO<sub>2</sub>-Entnahme oder riskantes Geoengineering zu sprechen.</p><p>Gleichzeitig werden China und andere aufstrebende Mächte die Lösungsmärkte noch stärker dominieren. Ihre Ambitionen, die planetaren Grenzen etwa durch die Zuteilung von Kontingenten zu verwalten, werden dabei zunehmend offenkundiger.\n</p>",
         },
         {
           respondent: {
             name: "Cyrill Hermann",
             title: "Aktiv beim Klimastreik",
             description:
-              "Aktiv beim Klimastreik und schrieb das Buch «<a href='https://rotpunktverlag.ch/buecher/what-do-we-want' target='_blank'>What do we want? Der Klimastreik&nbsp;– von Systemwandel bis Klimagerechtigkeit</a>» (2025)",
+              "Aktiv beim Klimastreik und schrieb das Buch «<a href='https://rotpunktverlag.ch/buecher/what-do-we-want' target='_blank'>What do we want? Der Klimastreik\u00a0– von Systemwandel bis Klimagerechtigkeit</a>» (2025)",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6cb3223e-0f3e-4c13-8dd2-5f1384461877/170_cyril-hermann.jpg",
@@ -408,14 +408,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Paris ist auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.",
-          text: "<p>Das Pariser Abkommen ist ein Kompromiss zwischen der Begrenzung von Zerstörung, Leid und Tod einerseits und dem Verzicht auf Profite der fossilen Industrie andererseits. Nur durch den beharrlichen Einsatz der Small-Island-States, der Jugendbewegungen und zahlreicher NGO fand die richtungsweisende 1,5-Grad-Grenze schliesslich Eingang in das Abkommen. Bis heute bleibt sie der Massstab wirksamer Klimapolitik.</p><p>Die Regierungen dieser Welt haben das Abkommen feierlich unterzeichnet&nbsp;– und brechen seitdem Tag für Tag ihr Versprechen. Wie kann das sein, angesichts der Hitzewellen, Dürren, Stürme und Fluten der letzten Jahre? <b>Paris ist so auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.</b></p><p>Doch das Versprechen, die Erderhitzung auf 1,5&nbsp;Grad zu begrenzen, ist nicht verschwunden. Auch wenn bürgerliche Kräfte versuchen, dieses Ziel in Vergessenheit geraten zu lassen, dürfen und werden wir es nie aufgeben.</p><p>Für uns als Bewegung war und ist das Abkommen ein Kompass: zuerst die Basis für unsere Forderung nach netto null bis&nbsp;2030, heute Massstab für unsere Wut und Enttäuschung über ein System, das Menschen im Globalen Süden schon so viel genommen hat&nbsp;– und auch uns im Norden alles zu nehmen droht.</p><p>Das Pariser Abkommen mahnt uns: Wir können uns nicht auf unsere Regierungen verlassen. Klimagerechtigkeit bleibt Handarbeit.</p>",
+          text: "<p>Das Pariser Abkommen ist ein Kompromiss zwischen der Begrenzung von Zerstörung, Leid und Tod einerseits und dem Verzicht auf Profite der fossilen Industrie andererseits. Nur durch den beharrlichen Einsatz der Small-Island-States, der Jugendbewegungen und zahlreicher NGO fand die richtungsweisende 1,5-Grad-Grenze schliesslich Eingang in das Abkommen. Bis heute bleibt sie der Massstab wirksamer Klimapolitik.</p><p>Die Regierungen dieser Welt haben das Abkommen feierlich unterzeichnet\u00a0– und brechen seitdem Tag für Tag ihr Versprechen. Wie kann das sein, angesichts der Hitzewellen, Dürren, Stürme und Fluten der letzten Jahre? <b>Paris ist so auch zum Symbol für das Scheitern internationaler Zusammenarbeit geworden.</b></p><p>Doch das Versprechen, die Erderhitzung auf 1,5\u00a0Grad zu begrenzen, ist nicht verschwunden. Auch wenn bürgerliche Kräfte versuchen, dieses Ziel in Vergessenheit geraten zu lassen, dürfen und werden wir es nie aufgeben.</p><p>Für uns als Bewegung war und ist das Abkommen ein Kompass: zuerst die Basis für unsere Forderung nach netto null bis\u00a02030, heute Massstab für unsere Wut und Enttäuschung über ein System, das Menschen im Globalen Süden schon so viel genommen hat\u00a0– und auch uns im Norden alles zu nehmen droht.</p><p>Das Pariser Abkommen mahnt uns: Wir können uns nicht auf unsere Regierungen verlassen. Klimagerechtigkeit bleibt Handarbeit.</p>",
         },
         {
           respondent: {
             name: "Carla Hinrichs",
             title: "Aktivistin bei Neue Generation",
             description:
-              "Teil der Protestgruppe <a href='https://neuegeneration.com/' target='_blank'>Neue&nbsp;Generation</a>",
+              "Teil der Protestgruppe <a href='https://neuegeneration.com/' target='_blank'>Neue\u00a0Generation</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/0ba93570-5443-441f-8ae1-f106519c468e/170_carla_hinrichs.jpg",
@@ -425,14 +425,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungsträger zur Verantwortung zu ziehen.",
-          text: "<p>Das gebrochene 1,5-Grad-Ziel ist ein Mahnmal für die hohlen Versprechen. Es steht stellvertretend für das Versagen der Staaten, sich an ihre eigenen Gesetze zu halten&nbsp;– für die Ignoranz gegenüber uns jungen Menschen, die in eine Höllenzukunft geschickt werden. <b>Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungs­träger zur Verantwortung zu ziehen.</b></p>",
+          text: "<p>Das gebrochene 1,5-Grad-Ziel ist ein Mahnmal für die hohlen Versprechen. Es steht stellvertretend für das Versagen der Staaten, sich an ihre eigenen Gesetze zu halten\u00a0– für die Ignoranz gegenüber uns jungen Menschen, die in eine Höllenzukunft geschickt werden. <b>Für uns Aktivistinnen ist es ein Tritt in den Hintern, noch mehr zu tun, um die Entscheidungs­träger zur Verantwortung zu ziehen.</b></p>",
         },
         {
           respondent: {
             name: "Rosmarie Wydler-Wälti",
             title: "Klimaseniorin",
             description:
-              "Co-Präsidentin des Vereins <a href='https://www.klimaseniorinnen.ch/' target='_blank'>Klimaseniorinnen&nbsp;Schweiz</a>",
+              "Co-Präsidentin des Vereins <a href='https://www.klimaseniorinnen.ch/' target='_blank'>Klimaseniorinnen\u00a0Schweiz</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/6d8e04ba-e3d6-4687-bf27-64228c79eb8b/170_rosmariewydler-waelti_bw.jpg",
@@ -442,7 +442,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist.",
-          text: "<p>Das Pariser Abkommen hat dem Klimaschutz einen massiven Schub verliehen, ist jedoch rechtlich nicht bindend. So kann es nicht verwundern, dass das Hauptziel bis jetzt nicht erreicht wurde. 2024 hat das globale Klima erstmals die 1,5-Grad-Grenze überschritten, vor der uns Klimaforschende seit Jahren warnen. Also braucht es dringend grosse Anstrengungen, um die maximal tolerable Obergrenze von 2&nbsp;Grad überhaupt noch zu erreichen.</p><p><b>Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist. Es erhält nach seinem 10-Jahr-Jubiläum hoffentlich neuen Auftrieb und Aktualität.</b></p><p>Zwei Erzählungen werden die nächsten Jahre prägen. Einerseits werden die Folgen der Klimakatastrophe drastischer. Gesundheits­gefährdende Hitzewellen, Bergrutsche und schwindende Gletscher treten auch in unseren Alpenländern immer häufiger auf. Die Schäden und ihre Verursacher lassen sich nicht mehr leugnen. Wir müssen uns unserer Verantwortung als grosser CO<sub>2</sub>-Emittent bewusst sein.</p><p>Zum anderen werden immer mehr Klimaklagen vor Gerichten eingereicht, welche Politik und Öffentlichkeit beschäftigen. Auf die erfolgreiche Klage der Klimaseniorinnen am Europäischen Gerichtshof für Menschenrechte wurde bereits in einem Dutzend Gerichtsfällen in aller Welt Bezug genommen.</p>",
+          text: "<p>Das Pariser Abkommen hat dem Klimaschutz einen massiven Schub verliehen, ist jedoch rechtlich nicht bindend. So kann es nicht verwundern, dass das Hauptziel bis jetzt nicht erreicht wurde. 2024 hat das globale Klima erstmals die 1,5-Grad-Grenze überschritten, vor der uns Klimaforschende seit Jahren warnen. Also braucht es dringend grosse Anstrengungen, um die maximal tolerable Obergrenze von 2\u00a0Grad überhaupt noch zu erreichen.</p><p><b>Dennoch bleibt das Abkommen wirkmächtig, gerade weil das Ziel so klar und verständlich ist. Es erhält nach seinem 10-Jahr-Jubiläum hoffentlich neuen Auftrieb und Aktualität.</b></p><p>Zwei Erzählungen werden die nächsten Jahre prägen. Einerseits werden die Folgen der Klimakatastrophe drastischer. Gesundheits­gefährdende Hitzewellen, Bergrutsche und schwindende Gletscher treten auch in unseren Alpenländern immer häufiger auf. Die Schäden und ihre Verursacher lassen sich nicht mehr leugnen. Wir müssen uns unserer Verantwortung als grosser CO<sub>2</sub>-Emittent bewusst sein.</p><p>Zum anderen werden immer mehr Klimaklagen vor Gerichten eingereicht, welche Politik und Öffentlichkeit beschäftigen. Auf die erfolgreiche Klage der Klimaseniorinnen am Europäischen Gerichtshof für Menschenrechte wurde bereits in einem Dutzend Gerichtsfällen in aller Welt Bezug genommen.</p>",
         },
       ],
     },
@@ -458,7 +458,7 @@ export const bigQuestionData: InputData = {
             name: "Adam McKay",
             title: "Drehbuchautor und Filmregisseur",
             description:
-              "Drehbuchautor und Filmregisseur von «Don’t Look Up»; Gründer der gemeinnützigen Produktionsfirma <a href='https://yellowdotstudios.com/' target='_blank'>Yellow&nbsp;Dot&nbsp;Studios</a>",
+              "Drehbuchautor und Filmregisseur von «Don’t Look Up»; Gründer der gemeinnützigen Produktionsfirma <a href='https://yellowdotstudios.com/' target='_blank'>Yellow\u00a0Dot\u00a0Studios</a>",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/1cde6869-a072-4b87-ae38-43a7635bce09/170_adam-mckay1_credit-emma-mcintyre.jpeg",
@@ -468,7 +468,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Leider wird das Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.",
-          text: "<p>In den letzten Jahren haben wir die Erwärmung von über 1,5&nbsp;Grad mehrfach überschritten. Meiner Meinung nach ist das 1,5-Grad-Ziel faktisch bereits Geschichte.</p><p>Da Regierungen weltweit ihre Versprechen zurückziehen, ist das Pariser Abkommen an diesem Punkt nicht de facto obsolet?</p><p>Der letzte US-Präsident weigerte sich, einen Klimanotstand auszurufen, und der neue Präsident hält alles für einen Schwindel.</p><p><b>Leider wird das Pariser Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese sehr vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.</b></p>",
+          text: "<p>In den letzten Jahren haben wir die Erwärmung von über 1,5\u00a0Grad mehrfach überschritten. Meiner Meinung nach ist das 1,5-Grad-Ziel faktisch bereits Geschichte.</p><p>Da Regierungen weltweit ihre Versprechen zurückziehen, ist das Pariser Abkommen an diesem Punkt nicht de facto obsolet?</p><p>Der letzte US-Präsident weigerte sich, einen Klimanotstand auszurufen, und der neue Präsident hält alles für einen Schwindel.</p><p><b>Leider wird das Pariser Abkommen wohl als der letzte und einzige Versuch der Menschheit in Erinnerung bleiben, diese sehr vermeidbare Katastrophe zumindest ansatzweise aufzuhalten.</b></p>",
         },
         {
           respondent: {
@@ -484,15 +484,15 @@ export const bigQuestionData: InputData = {
             },
           },
           quote:
-            "Noch könnte man Druck aufbauen&nbsp;– politisch, gesellschaftlich, juristisch. Gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.",
-          text: "<p>«Kannst du eine kurze Einschätzung zum Pariser Klimaabkommen schreiben?» Klar, schrieb ich, doch es vergingen Tage, ja Wochen, ich recherchierte den aktuellen Stand. Dachte an Weihnachten&nbsp;2015, die leichte Euphorie in der Redaktion: Da passierte etwas! Tatsächlich! Aus diffuser Angst und Bedrohung wurden Zahlen und Mittel, vernünftige Schritte von aufgeklärten Menschen. Noch immer nicht genug, aber immerhin. Vielleicht würde es doch gelingen, wie damals mit vereinten Kräften die Löcher in der Ozonschicht zu schliessen.</p><p>Heute tun sich die Löcher in der Umsetzung der nationalen Klimazusagen auf. Wir sprechen kaum noch von 1,5&nbsp;Grad, nicht einmal von 2, sondern eher von 3 oder mehr&nbsp;Grad. Da ist wieder dieses Gefühl, wie in Zeitlupe gegen eine Mauer zu fahren. <b>Noch wäre Zeit, noch könnte man Druck aufbauen&nbsp;– politisch, gesellschaftlich, juristisch. Doch gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.</b></p><p>Nie war unser Lebensstil so sichtbar in seinen Auswirkungen. Es braucht nicht mehr sonderlich viel Vorstellungsvermögen, um Dystopien zu schreiben. Aber wir brauchen andere Erzählungen&nbsp;– von Hoffnung und Mut. Selbst im Äussersten das Antlitz der Menschlichkeit zu bewahren, zählt.</p>",
+            "Noch könnte man Druck aufbauen\u00a0– politisch, gesellschaftlich, juristisch. Gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.",
+          text: "<p>«Kannst du eine kurze Einschätzung zum Pariser Klimaabkommen schreiben?» Klar, schrieb ich, doch es vergingen Tage, ja Wochen, ich recherchierte den aktuellen Stand. Dachte an Weihnachten\u00a02015, die leichte Euphorie in der Redaktion: Da passierte etwas! Tatsächlich! Aus diffuser Angst und Bedrohung wurden Zahlen und Mittel, vernünftige Schritte von aufgeklärten Menschen. Noch immer nicht genug, aber immerhin. Vielleicht würde es doch gelingen, wie damals mit vereinten Kräften die Löcher in der Ozonschicht zu schliessen.</p><p>Heute tun sich die Löcher in der Umsetzung der nationalen Klimazusagen auf. Wir sprechen kaum noch von 1,5\u00a0Grad, nicht einmal von 2, sondern eher von 3 oder mehr\u00a0Grad. Da ist wieder dieses Gefühl, wie in Zeitlupe gegen eine Mauer zu fahren. <b>Noch wäre Zeit, noch könnte man Druck aufbauen\u00a0– politisch, gesellschaftlich, juristisch. Doch gleichzeitig bekriegen sich die Länder, werden Demokratien fast so schnell instabil wie die Polkappen.</b></p><p>Nie war unser Lebensstil so sichtbar in seinen Auswirkungen. Es braucht nicht mehr sonderlich viel Vorstellungsvermögen, um Dystopien zu schreiben. Aber wir brauchen andere Erzählungen\u00a0– von Hoffnung und Mut. Selbst im Äussersten das Antlitz der Menschlichkeit zu bewahren, zählt.</p>",
         },
         {
           respondent: {
             name: "Matthew Winning",
             title: "Umweltökonom und Stand-up-Comedian",
             description:
-              "Umweltökonom am University College London, Stand-up-Comedian und Autor von «<a href='https://mattwinning.com/book/' target='_blank'>Hot&nbsp;Mess</a>» (2022)",
+              "Umweltökonom am University College London, Stand-up-Comedian und Autor von «<a href='https://mattwinning.com/book/' target='_blank'>Hot\u00a0Mess</a>» (2022)",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d0867b30-eb6b-4977-ac2c-058f2400dcbb/170_matt-winning.jpg",
@@ -501,7 +501,7 @@ export const bigQuestionData: InputData = {
             },
           },
           quote: "Das Pariser Abkommen bleibt ein verlässlicher Anker.",
-          text: "<p>Die unaufhörliche Erwärmung, das Verschleiern durch die Industrie und ständig wechselnde politische Bedingungen haben die Beständigkeit des Pariser Abkommens auf die Probe gestellt. Diese Herausforderungen müssen wir meistern. <b>Das Pariser Abkommen bleibt ein verlässlicher Anker.</b> Schon die Verhinderung eines kleinen Anstiegs der Temperatur kann irgendwo auf der Welt Leid reduzieren.</p><p>Gleichzeitig glaube ich, dass das Abkommen vor allem für Industrie, Regierungen und Klimafachleute relevant ist. Was wir wirklich brauchen, sind neue Geschichten, die das Leben gewöhnlicher Menschen berühren&nbsp;– über Sinn, Sicherheit, Gesundheit und Wohlstand. Lokale, gemeinschafts­basierte Geschichten sind dabei entscheidend.</p>",
+          text: "<p>Die unaufhörliche Erwärmung, das Verschleiern durch die Industrie und ständig wechselnde politische Bedingungen haben die Beständigkeit des Pariser Abkommens auf die Probe gestellt. Diese Herausforderungen müssen wir meistern. <b>Das Pariser Abkommen bleibt ein verlässlicher Anker.</b> Schon die Verhinderung eines kleinen Anstiegs der Temperatur kann irgendwo auf der Welt Leid reduzieren.</p><p>Gleichzeitig glaube ich, dass das Abkommen vor allem für Industrie, Regierungen und Klimafachleute relevant ist. Was wir wirklich brauchen, sind neue Geschichten, die das Leben gewöhnlicher Menschen berühren\u00a0– über Sinn, Sicherheit, Gesundheit und Wohlstand. Lokale, gemeinschafts­basierte Geschichten sind dabei entscheidend.</p>",
         },
         {
           respondent: {
@@ -518,14 +518,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Die Wirtschaft beginnt zu verstehen: Fossile Energie ist in vielen Anwendungs­bereichen nicht mehr wettbewerbs­fähig.",
-          text: "<p>Zehn Jahre nach Paris ist es unsere grösste Herausforderung zu begreifen, wie wenig Zeit uns noch bleibt, die Erderwärmung wenigstens auf 2&nbsp;Grad zu begrenzen</p><p>Hoffnung macht die zunehmende Beschleunigung der Energiewende. Die Internationale Energieagentur schätzt, dass in diesem Jahr weltweit bereits doppelt so viel Geld in Projekte für erneuerbare Energien investiert wird wie in fossile. <b>Die Wirtschaft beginnt zu verstehen: Fossile Energie ist in vielen Anwendungsbereichen nicht mehr wettbewerbsfähig.</b></p>",
+          text: "<p>Zehn Jahre nach Paris ist es unsere grösste Herausforderung zu begreifen, wie wenig Zeit uns noch bleibt, die Erderwärmung wenigstens auf 2\u00a0Grad zu begrenzen</p><p>Hoffnung macht die zunehmende Beschleunigung der Energiewende. Die Internationale Energieagentur schätzt, dass in diesem Jahr weltweit bereits doppelt so viel Geld in Projekte für erneuerbare Energien investiert wird wie in fossile. <b>Die Wirtschaft beginnt zu verstehen: Fossile Energie ist in vielen Anwendungsbereichen nicht mehr wettbewerbsfähig.</b></p>",
         },
         {
           respondent: {
             name: "Lucy Stone",
             title: "Storytelling-Expertin",
             description:
-              "Gründerin des Netzwerks <a href='https://www.climate-spring.org/' target='_blank'>Climate&nbsp;Spring</a> für Filmschaffende",
+              "Gründerin des Netzwerks <a href='https://www.climate-spring.org/' target='_blank'>Climate\u00a0Spring</a> für Filmschaffende",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/d2d946fa-724b-4fb5-b469-42eabf4c5c3b/170_lucy_stone.jpg",
@@ -535,14 +535,14 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.",
-          text: "<p>Die dominanten Narrative folgen einer Logik der Ausbeutung: fossile Brennstoffe als Symbol für Fortschritt, Natur als Ware, Konsum als Ziel. Das sind die Wurzeln der Klimakrise. <b>Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.</b></p><p>Wir brauchen Erzählungen, die eine regenerative Zukunft lebendig machen&nbsp;– eine Zukunft, die bereits möglich ist: Erneuerbare Energien versorgen unsere Häuser und unseren Verkehr. Ernährungssysteme stellen Ökosysteme wieder her. Menschen werden als Teil der Natur verstanden, nicht getrennt von ihr.</p><p>Bei Climate Spring arbeiten wir mit Autorinnen, Produzenten und Kreativen daran, diese Geschichten über Film, TV und Popkultur zu verbreiten und Klimanarrative grossflächig zu verändern. Kultur geht Politik voraus, und Vorstellungskraft ist der erste Schritt zur Gestaltungskraft. Narrative müssen die Menschen spüren lassen: Diese Zukunft ist möglich, erstrebenswert und wir alle gestalten sie mit.</p>",
+          text: "<p>Die dominanten Narrative folgen einer Logik der Ausbeutung: fossile Brennstoffe als Symbol für Fortschritt, Natur als Ware, Konsum als Ziel. Das sind die Wurzeln der Klimakrise. <b>Wenn wir systemischen Wandel wollen, müssen wir den Kampf um die Narrative gewinnen.</b></p><p>Wir brauchen Erzählungen, die eine regenerative Zukunft lebendig machen\u00a0– eine Zukunft, die bereits möglich ist: Erneuerbare Energien versorgen unsere Häuser und unseren Verkehr. Ernährungssysteme stellen Ökosysteme wieder her. Menschen werden als Teil der Natur verstanden, nicht getrennt von ihr.</p><p>Bei Climate Spring arbeiten wir mit Autorinnen, Produzenten und Kreativen daran, diese Geschichten über Film, TV und Popkultur zu verbreiten und Klimanarrative grossflächig zu verändern. Kultur geht Politik voraus, und Vorstellungskraft ist der erste Schritt zur Gestaltungskraft. Narrative müssen die Menschen spüren lassen: Diese Zukunft ist möglich, erstrebenswert und wir alle gestalten sie mit.</p>",
         },
         {
           respondent: {
             name: "Nicole Zabel-Wasmuth",
             title: "Medien- und Umweltrechtlerin",
             description:
-              "Medien- und Umweltrechtlerin; Gründerin des Netzwerks <a href='https://planetnarratives.de/' target='_blank'>Planet&nbsp;Narratives</a> für Filmschaffende",
+              "Medien- und Umweltrechtlerin; Gründerin des Netzwerks <a href='https://planetnarratives.de/' target='_blank'>Planet\u00a0Narratives</a> für Filmschaffende",
             avatarUrl: {
               thumb:
                 "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/995e19d1-2c77-4d43-893f-6c9e3d2639b3/170_nicole-zabel-wasmuth.jpeg",
@@ -552,7 +552,7 @@ export const bigQuestionData: InputData = {
           },
           quote:
             "Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.",
-          text: "<p>Damit Abkommen umgesetzt werden, braucht es eine starke gesellschaftliche Kraft, die Veränderung nicht nur einfordert, sondern trägt. Hier besteht eine Wechselwirkung: Ohne soziale Kipppunkte gibt es keine ambitionierten Abkommen und keine Umsetzung der Politik in konkrete und geeignete Massnahmen&nbsp;– und ohne verbindliche Regeln scheitert freiwilliges Handeln immer wieder an entgegenstehenden Einzelinteressen.</p><p><b>Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.</b> Für die nächsten zehn Jahre braucht es Erzählungen, die auf Gemeinsamkeit und Verbundenheit setzen und die Realität als positiv gestaltbar zeigen. </p><p>Medien und Kultur spielen dabei eine Schlüsselrolle. Mit wirksamen Geschichten lässt sich die verbreitete Annahme überwinden, dass Menschen vor allem egoistisch handeln. Wirksam sind Geschichten, die keine naive Hoffnung verbreiten, sondern informierten Optimismus: Sie zeigen Lösungen und machen deutlich, dass Wandel möglich ist.</p>",
+          text: "<p>Damit Abkommen umgesetzt werden, braucht es eine starke gesellschaftliche Kraft, die Veränderung nicht nur einfordert, sondern trägt. Hier besteht eine Wechselwirkung: Ohne soziale Kipppunkte gibt es keine ambitionierten Abkommen und keine Umsetzung der Politik in konkrete und geeignete Massnahmen\u00a0– und ohne verbindliche Regeln scheitert freiwilliges Handeln immer wieder an entgegenstehenden Einzelinteressen.</p><p><b>Kipppunkte erreichen wir nicht durch Faktenvermittlung allein, sondern durch Geschichten, die zeigen: Dekarbonisierung, Energiewende und Ökosystemschutz bedeuten Zukunft.</b> Für die nächsten zehn Jahre braucht es Erzählungen, die auf Gemeinsamkeit und Verbundenheit setzen und die Realität als positiv gestaltbar zeigen. </p><p>Medien und Kultur spielen dabei eine Schlüsselrolle. Mit wirksamen Geschichten lässt sich die verbreitete Annahme überwinden, dass Menschen vor allem egoistisch handeln. Wirksam sind Geschichten, die keine naive Hoffnung verbreiten, sondern informierten Optimismus: Sie zeigen Lösungen und machen deutlich, dass Wandel möglich ist.</p>",
         },
       ],
     },
