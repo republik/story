@@ -3,20 +3,20 @@
 		shadow: 'open', // should we disabled it?
 		props: {
          componentData: { type: 'Object', attribute: 'componentdata'}
-		}}}/>
+		}}} />
 
 <script lang="ts">
-  import {onMount} from "svelte";
+  import { onMount } from "svelte";
   import TheBigQuestion from "./TheBigQuestion.svelte";
-  import type {InputData} from "./types.d.ts";
-  import fontsCSS from '@story/theme/fonts.css?inline';
-  import stylesCSS from '@story/theme/styles.css?inline';
+  import type { InputData } from "./types.d.ts";
+  import fontsCSS from "@story/theme/fonts.css?inline";
+  import stylesCSS from "@story/theme/styles.css?inline";
 
   interface Props {
     componentData?: InputData;
   }
 
-  let {componentData}: Props = $props();
+  let { componentData }: Props = $props();
   let shadowRoot = $host()?.shadowRoot;
 
   // ADD STYLES TO COMPONENT'S SHADOW ROOT
@@ -34,4 +34,6 @@
   });
 </script>
 
-<TheBigQuestion componentData={componentData}/>
+<div id="custom-element-container">
+  <TheBigQuestion componentData={componentData} />
+</div>
