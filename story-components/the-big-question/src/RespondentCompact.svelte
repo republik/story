@@ -26,6 +26,7 @@
     class={css({
       cursor: 'pointer',
       p: 4,
+      pb: 6,
       m: 2,
       width: '320px',
       maxWidth: 'calc(100vw - 16px)',

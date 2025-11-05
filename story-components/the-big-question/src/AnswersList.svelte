@@ -46,7 +46,7 @@
             {respondent.name}
           </h2>
           <p
-            class={css({ textStyle: 'airy', pb: 12 })}>{@html respondent.description}</p>
+            class={css({ textStyle: 'airy', pb: 6 })}>{@html respondent.description}</p>
         </div>
         <img src={respondent.avatarUrl.normal}
              alt={respondent.name} />
@@ -63,7 +63,7 @@
           lg: {
             width: '570px',
             flexShrink: 0,
-            mt: 2,
+            pt: 0,
             pb: 0,
           }
         })}>{@html text}</div>
