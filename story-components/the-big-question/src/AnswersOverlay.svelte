@@ -12,9 +12,10 @@
     onClose: () => void;
     onNext: () => void;
     onSelect: (e?: HTMLSelectElement) => void;
+    isLast: boolean;
   }
 
-  let { answersByCategory, categoryNames, onClose, onNext, onSelect }: Props = $props();
+  let { answersByCategory, categoryNames, onClose, onNext, onSelect, isLast }: Props = $props();
   let { category } = $derived(answersByCategory);
 
   let dialog: HTMLDialogElement | undefined = $state(); // HTMLDialogElement
@@ -82,11 +83,19 @@
   <AnswersList answersByCategory={answersByCategory} />
 
   <div class={css({ p: 4, pb: '300px', display: 'flex', justifyContent: 'center' })}>
-    <button class={ cx(
+    {#if !isLast}
+      <button class={ cx(
         button({ variant: 'outline', size: 'large' }),
         css({ mx: 'auto'})
       )} onclick={() => { onNext(); scrollUp();}}>Nächste Kategorie
-    </button>
+      </button>
+    {:else}
+      <button class={ cx(
+        button({ variant: 'outline', size: 'large' }),
+        css({ mx: 'auto'})
+      )} onclick={() => dialog?.close()}>Zurück zur Übersicht
+      </button>
+    {/if}
   </div>
 </dialog>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Answer, AnswersByCategory, InputData, Respondent as RespondentType } from "./types.d.ts";
+  import type { Answer, AnswersByCategory, CategoryName, InputData, Respondent as RespondentType } from "./types.d.ts";
   import { css } from "@story/theme/css";
   import RespondentCompact from "./RespondentCompact.svelte";
   import AnswersOverlay from "./AnswersOverlay.svelte";
@@ -10,6 +10,7 @@
 
   let { componentData }: Props = $props();
   let selected: AnswersByCategory | undefined = $state();
+  let lastCategoryName: CategoryName | undefined = $state();
   let categoryNames = $derived(
     componentData ? componentData.answers.map((item) => item.category.name) : []
   );
@@ -45,6 +46,13 @@
     }
   }
 
+  function findPreviousCategoryName(currentCategoryName: CategoryName): CategoryName | undefined {
+    if (!selected || !categoryNames) return;
+
+    const currentIndex = categoryNames.indexOf(currentCategoryName);
+    return categoryNames.at(currentIndex - 1);
+  }
+
 </script>
 
 <div class={css({
@@ -78,7 +86,10 @@
         <RespondentCompact respondent={respondent}
                            quote={quote}
                            category={category}
-                           onClick={() => selected = { category, answers: bringFocusFirst(respondent, answers) }} />
+                           onClick={() => {
+                             selected = { category, answers: bringFocusFirst(respondent, answers)};
+                             lastCategoryName = findPreviousCategoryName(category.name);
+                           }} />
       {/each}
     </div>
   {/each}
@@ -88,7 +99,8 @@
       answersByCategory={selected}
       onClose={() => selected = undefined }
       onNext={loadNextCategory}
-      onSelect={selectCategory} />
+      onSelect={selectCategory}
+      isLast={selected.category.name === lastCategoryName } />
   {/if}
 </div>
 
