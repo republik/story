@@ -91,9 +91,10 @@
 </dialog>
 
 
-<svelte:window on:keydown|preventDefault={(e) => {
+<svelte:window on:keydown={(e) => {
     if (e.key === 'Escape') {
-        dialog?.close();
+      e.preventDefault();
+      dialog?.close();
     }
 }} />
 
