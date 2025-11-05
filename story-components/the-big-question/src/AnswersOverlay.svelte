@@ -55,7 +55,7 @@
 >
 
   <div
-    class={css({ pt: '4-8', pb: '8-16', px: '4-8', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3 })}
+    class={css({ p: '4-8', pb: '2', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 3, lg: { pb: '16' } })}
     style:background={category?.color}>
     <button title='close modal' onclick={() => dialog?.close()} class={css({ cursor: 'pointer' })}>
       <ChevronLeft size="24" class={css({ display: 'inline' })} />

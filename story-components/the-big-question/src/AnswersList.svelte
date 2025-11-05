@@ -40,7 +40,6 @@
           fontWeight: 700,
           fontSize: '3xl',
           lineHeight: '100%',
-          zIndex: 4,
           pt: 6,
           pb: 4,
         })}>
