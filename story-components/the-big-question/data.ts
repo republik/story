@@ -220,8 +220,10 @@ export const bigQuestionData: InputData = {
             description:
               "<a href='https://usys.ethz.ch/personen/profil.reto-knutti.html' target='_blank'>Professor&nbsp;für&nbsp;Klimaphysik</a> an der ETH Zürich. Mitarbeit an den Berichten des Weltklimarats (IPCC).",
             avatarUrl: {
-              thumb: "",
-              normal: "",
+              thumb:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5beeffa2-31e3-4575-955a-65885234ee71/knutti_reto_klein.jpg",
+              normal:
+                "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-was-taugt-das-1-5-grad-ziel-noch/files/5f1381ee-5804-4450-a387-510ab23ae977/knutti_reto.jpg",
             },
           },
           quote:
