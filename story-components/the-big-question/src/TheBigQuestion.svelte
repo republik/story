@@ -70,7 +70,8 @@
           lineHeight: 1.5,
           textAlign: 'center',
           pt: '16',
-          pb: '8'
+          pb: '8',
+          color: 'text',
         })}>
       {category.name}
     </h2>
