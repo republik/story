@@ -71,7 +71,7 @@
           textAlign: 'center',
           pt: '16',
           pb: '8',
-          color: 'text',
+          color: 'var(--color-text)',
         })}>
       {category.name}
     </h2>
