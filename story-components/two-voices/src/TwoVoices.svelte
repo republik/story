@@ -75,28 +75,36 @@
   });
 </script>
 
-<div bind:this={container} class={css({ textStyle: "reading" })}>
+<div bind:this={container} class={css({ textStyle: "reading", fontSize: 'l' })}>
     {#if componentData}
         {#each componentData.chapters as chapter}
             <div data-chapter>
                 {#each chapter.pages as page, i}
-                    {@const speaker = voices.find((v) => v.key === page.speaker)}
-                    <div
-                            data-page-wrapper
-                            class={css({ position: "relative" })}
-                            style:z-index={i + 1}
-                    >
-                        <div data-page-content>
-                            {#if i === 0}
-                                <ChapterHeader
-                                        title={chapter.title}
-                                        time={chapter.time}
-                                        coverUrl={chapter.coverUrl}
-                                />
-                            {/if}
-                            <ChapterPage page={page} speaker={speaker}/>
+                    {#if i === 0 || page.speaker === 'Daniel'}
+                        {@const speaker = voices.find((v) => v.key === page.speaker)}
+                        {@const secondVoicePage = page.speaker === 'Daniel' && chapter.pages[i + 1]}
+                        <div
+                                data-page-wrapper
+                                class={css({ position: "relative" })}
+                                style:z-index={i + 1}
+                        >
+                            <div data-page-content>
+                                {#if i === 0}
+                                    <ChapterHeader
+                                            title={chapter.title}
+                                            time={chapter.time}
+                                            coverUrl={chapter.coverUrl}
+                                            speaker={speaker}
+                                    />
+                                {/if}
+                                <ChapterPage page={page} speaker={speaker}/>
+                                {#if secondVoicePage}
+                                    <ChapterPage page={secondVoicePage}
+                                                 speaker={voices.find((v) => v.key === secondVoicePage.speaker)}/>
+                                {/if}
+                            </div>
                         </div>
-                    </div>
+                    {/if}
                 {/each}
             </div>
         {/each}

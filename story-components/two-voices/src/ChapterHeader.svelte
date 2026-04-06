@@ -1,8 +1,12 @@
 <script lang="ts">
   import { css } from "@story/theme/css";
-  import type { TitleProps } from "./types.d.ts";
+  import type { TitleProps, Voice } from "./types.d.ts";
 
-  let { time, title, coverUrl }: TitleProps = $props();
+  interface Props extends TitleProps {
+    speaker: Voice | undefined;
+  }
+
+  let { time, title, coverUrl, speaker }: Props = $props();
 
 </script>
 
@@ -14,8 +18,8 @@
             px: "6",
             position: "relative",
             zIndex: 10,
-            background: "white",
           })}
+  style:background={speaker?.backgroundColor || '#ffffff'}
 >
   <div
     class={css({
