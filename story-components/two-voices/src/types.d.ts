@@ -9,6 +9,7 @@ export type Voice = {
   key: string;
   name: string;
   backgroundColor?: string;
+  primary?: boolean;
 };
 
 export type TitleProps = {

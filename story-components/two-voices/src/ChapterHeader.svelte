@@ -12,6 +12,9 @@
             textAlign: "center",
             py: { base: "16", md: "24" },
             px: "6",
+            position: "relative",
+            zIndex: 10,
+            background: "white",
           })}
 >
   <div

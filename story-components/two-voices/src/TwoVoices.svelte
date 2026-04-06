@@ -14,18 +14,19 @@
 
 <div class={css({
     textStyle: "reading",
-    position: "relative",
   })}
 >
     {#if componentData}
         {#each componentData.chapters as chapter}
-            <ChapterHeader
-                    title={chapter.title}
-                    time={chapter.time}
-                    coverUrl={chapter.coverUrl}
-            />
+            <div>
+                <ChapterHeader
+                        title={chapter.title}
+                        time={chapter.time}
+                        coverUrl={chapter.coverUrl}
+                />
 
-            <ChapterPages pages={chapter.pages} voices={voices}/>
+                <ChapterPages pages={chapter.pages} voices={voices}/>
+            </div>
         {/each}
     {/if}
 </div>
