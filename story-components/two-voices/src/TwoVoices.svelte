@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {InputData} from "./types.d.ts";
+  import type {InputData, Chapter, Page, Voice} from "./types.d.ts";
   import {css} from "@story/theme/css";
   import ChapterPage from "./ChapterPage.svelte";
   import ChapterHeader from "./ChapterHeader.svelte";
@@ -12,6 +12,95 @@
   let {componentData}: Props = $props();
   let voices = $derived(componentData ? componentData.voices : []);
   let container: HTMLElement | undefined = $state();
+
+  // ── Pre-compute sections → sheets → parts ──────────────────────────
+
+  type SheetPart =
+    | { kind: 'header'; title: string; time: string; coverUrl?: string; speaker?: Voice }
+    | { kind: 'page'; page: Page; speaker?: Voice };
+
+  type Sheet = SheetPart[];
+  type Section = Sheet[];
+
+  function findVoice(key: string): Voice | undefined {
+    return voices.find((v: Voice) => v.key === key);
+  }
+
+  function buildChapterSheets(chapter: Chapter): Sheet[] {
+    const sheets: Sheet[] = [];
+
+    for (let i = 0; i < chapter.pages.length; i++) {
+      const page = chapter.pages[i];
+
+      if (i === 0 || page.speaker === 'Daniel') {
+        const sheet: Sheet = [];
+
+        // First page of chapter gets its header
+        if (i === 0) {
+          sheet.push({
+            kind: 'header',
+            title: chapter.title,
+            time: chapter.time,
+            coverUrl: chapter.coverUrl,
+            speaker: findVoice(page.speaker),
+          });
+        }
+
+        sheet.push({ kind: 'page', page, speaker: findVoice(page.speaker) });
+
+        // Daniel absorbs the following page as second voice
+        if (page.speaker === 'Daniel' && chapter.pages[i + 1]) {
+          const next = chapter.pages[i + 1];
+          sheet.push({ kind: 'page', page: next, speaker: findVoice(next.speaker) });
+        }
+
+        sheets.push(sheet);
+      }
+    }
+
+    return sheets;
+  }
+
+  let sections = $derived.by((): Section[] => {
+    if (!componentData) return [];
+
+    const chapters = componentData.chapters;
+    const result: Section[] = [];
+    let targetIdx = -1;
+
+    for (let c = 0; c < chapters.length; c++) {
+      const chapter = chapters[c];
+      if (chapter.pages.length === 0) continue;
+
+      const sheets = buildChapterSheets(chapter);
+      if (sheets.length === 0) continue;
+
+      const prevChapter = c > 0 ? chapters[c - 1] : null;
+      const shouldMerge =
+        prevChapter &&
+        prevChapter.pages.length > 0 &&
+        prevChapter.pages[prevChapter.pages.length - 1].speaker === chapter.pages[0].speaker &&
+        targetIdx >= 0 &&
+        result[targetIdx].length > 0;
+
+      if (shouldMerge) {
+        // Append first sheet of this chapter onto last sheet of current section
+        const lastSheet = result[targetIdx][result[targetIdx].length - 1];
+        const firstSheet = sheets.shift()!;
+        lastSheet.push(...firstSheet);
+        // Remaining sheets stay in the same section
+        result[targetIdx].push(...sheets);
+      } else {
+        // Start a new section
+        result.push(sheets);
+        targetIdx = result.length - 1;
+      }
+    }
+
+    return result;
+  });
+
+  // ── Scroll-driven pinning ──────────────────────────────────────────
 
   onMount(() => {
     if (!container) return;
@@ -30,7 +119,6 @@
           const content = wrapper.querySelector<HTMLElement>('[data-page-content]');
           if (!content) return;
 
-          // Cache content height while it's still in flow
           if (content.style.position !== 'fixed') {
             content.dataset.naturalHeight = String(content.offsetHeight);
           }
@@ -39,7 +127,6 @@
           const wrapperRect = wrapper.getBoundingClientRect();
 
           if (wrapperRect.bottom < vh && contentHeight > 0) {
-            // Page has scrolled past viewport bottom → pin it
             wrapper.style.minHeight = `${contentHeight}px`;
 
             const bottomOffset = Math.max(0, vh - chapterRect.bottom);
@@ -48,7 +135,6 @@
             content.style.left = `${wrapperRect.left}px`;
             content.style.width = `${wrapperRect.width}px`;
           } else {
-            // Normal flow
             content.style.position = '';
             content.style.bottom = '';
             content.style.left = '';
@@ -76,37 +162,30 @@
 </script>
 
 <div bind:this={container} class={css({ textStyle: "reading", fontSize: 'l' })}>
-    {#if componentData}
-        {#each componentData.chapters as chapter}
-            <div data-chapter>
-                {#each chapter.pages as page, i}
-                    {#if i === 0 || page.speaker === 'Daniel'}
-                        {@const speaker = voices.find((v) => v.key === page.speaker)}
-                        {@const secondVoicePage = page.speaker === 'Daniel' && chapter.pages[i + 1]}
-                        <div
-                                data-page-wrapper
-                                class={css({ position: "relative" })}
-                                style:z-index={i + 1}
-                        >
-                            <div data-page-content>
-                                {#if i === 0}
-                                    <ChapterHeader
-                                            title={chapter.title}
-                                            time={chapter.time}
-                                            coverUrl={chapter.coverUrl}
-                                            speaker={speaker}
-                                    />
-                                {/if}
-                                <ChapterPage page={page} speaker={speaker}/>
-                                {#if secondVoicePage}
-                                    <ChapterPage page={secondVoicePage}
-                                                 speaker={voices.find((v) => v.key === secondVoicePage.speaker)}/>
-                                {/if}
-                            </div>
-                        </div>
-                    {/if}
-                {/each}
-            </div>
-        {/each}
-    {/if}
+  {#each sections as section}
+    <div data-chapter>
+      {#each section as sheet, sheetIdx}
+        <div
+          data-page-wrapper
+          class={css({ position: "relative" })}
+          style:z-index={sheetIdx + 1}
+        >
+          <div data-page-content>
+            {#each sheet as part}
+              {#if part.kind === 'header'}
+                <ChapterHeader
+                  title={part.title}
+                  time={part.time}
+                  coverUrl={part.coverUrl}
+                  speaker={part.speaker}
+                />
+              {:else}
+                <ChapterPage page={part.page} speaker={part.speaker}/>
+              {/if}
+            {/each}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/each}
 </div>
