@@ -5,14 +5,23 @@ export type Page = {
   text: string; // HTML text containing links and paragraphs
 };
 
-export type Chapter = {
+export type Voice = {
+  key: string;
+  name: string;
+  backgroundColor?: string;
+};
+
+export type TitleProps = {
   title: string;
-  time: number; // time of the day in hours (e.g. 6 = 06:00, 7.5 = 07:30)
+  time: string; // e.g "9 Uhr"
   coverUrl?: string;
+};
+
+export type Chapter = TitleProps & {
   pages: Page[];
 };
 
 export type InputData = {
+  voices: Voice[]; // a map of speaker name to their properties
   chapters: Chapter[];
 };
-

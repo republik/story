@@ -1,11 +1,22 @@
 import type { InputData } from "./src/types";
 
 export const twoVoicesData: InputData = {
+  voices: [
+    {
+      key: "Ronja",
+      name: "Ronja Beck",
+    },
+    {
+      key: "Daniel",
+      name: "Daniel Faulhaber",
+      backgroundColor: "#99ff99",
+    },
+  ],
   chapters: [
     // ─── Chapter 1: Waking Up ────────────────────────────────────────────
     {
       title: "Waking Up",
-      time: 6,
+      time: "6 Uhr",
       coverUrl: "https://picsum.photos/seed/morning-light/800/500",
       pages: [
         {
@@ -28,7 +39,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 2: The Commute ──────────────────────────────────────────
     {
       title: "The Commute",
-      time: 7.5,
+      time: "7.5 Uhr",
       pages: [
         {
           speaker: "Daniel",
@@ -50,7 +61,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 3: Arrival ──────────────────────────────────────────────
     {
       title: "Arrival",
-      time: 9,
+      time: "9 Uhr",
       coverUrl: "https://picsum.photos/seed/office-morning/800/500",
       pages: [
         {
@@ -80,7 +91,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 4: Coffee Break ─────────────────────────────────────────
     {
       title: "Coffee Break",
-      time: 10.5,
+      time: "10.5 Uhr",
       pages: [
         {
           speaker: "Daniel",
@@ -95,7 +106,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 5: Lunch ────────────────────────────────────────────────
     {
       title: "Lunch",
-      time: 12.5,
+      time: "12.5 Uhr",
       coverUrl: "https://picsum.photos/seed/city-lunch/800/500",
       pages: [
         {
@@ -132,7 +143,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 6: Afternoon ────────────────────────────────────────────
     {
       title: "Afternoon",
-      time: 14,
+      time: "14 Uhr",
       pages: [
         {
           speaker: "Daniel",
@@ -153,7 +164,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 7: The Encounter ────────────────────────────────────────
     {
       title: "The Encounter",
-      time: 16,
+      time: "16 Uhr",
       coverUrl: "https://picsum.photos/seed/bridge-evening/800/500",
       pages: [
         {
@@ -183,7 +194,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 8: Evening ──────────────────────────────────────────────
     {
       title: "Evening",
-      time: 19,
+      time: "19 Uhr",
       pages: [
         {
           speaker: "Daniel",
@@ -205,7 +216,7 @@ export const twoVoicesData: InputData = {
     // ─── Chapter 9: Night ────────────────────────────────────────────────
     {
       title: "Night",
-      time: 22,
+      time: "22 Uhr",
       coverUrl: "https://picsum.photos/seed/night-city/800/500",
       pages: [
         {
@@ -227,4 +238,3 @@ export const twoVoicesData: InputData = {
     },
   ],
 };
-

@@ -281,12 +281,13 @@ export const presetRepublik = definePreset({
             fontFamily: "rubis",
             fontWeight: "normal",
             fontStyle: "normal",
-            
+            fontSize: "base",
+
             lineHeight: 1.5,
             "& b": {
               fontWeight: 700,
             },
-            "& a": { textDecoration: "underline", fontWeight: 700 },
+            "& a": { textDecoration: "underline" },
           },
         },
         airy: {
