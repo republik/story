@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {InputData, Chapter, Page, Voice} from "./types.d.ts";
+  import type {Chapter, InputData, Page, Voice} from "./types.d.ts";
   import {css} from "@story/theme/css";
   import ChapterPage from "./ChapterPage.svelte";
   import ChapterHeader from "./ChapterHeader.svelte";
@@ -46,12 +46,12 @@
           });
         }
 
-        sheet.push({ kind: 'page', page, speaker: findVoice(page.speaker) });
+        sheet.push({kind: 'page', page, speaker: findVoice(page.speaker)});
 
         // Daniel absorbs the following page as second voice
         if (page.speaker === 'Daniel' && chapter.pages[i + 1]) {
           const next = chapter.pages[i + 1];
-          sheet.push({ kind: 'page', page: next, speaker: findVoice(next.speaker) });
+          sheet.push({kind: 'page', page: next, speaker: findVoice(next.speaker)});
         }
 
         sheets.push(sheet);
@@ -66,7 +66,6 @@
 
     const chapters = componentData.chapters;
     const result: Section[] = [];
-    let targetIdx = -1;
 
     for (let c = 0; c < chapters.length; c++) {
       const chapter = chapters[c];
@@ -75,26 +74,8 @@
       const sheets = buildChapterSheets(chapter);
       if (sheets.length === 0) continue;
 
-      const prevChapter = c > 0 ? chapters[c - 1] : null;
-      const shouldMerge =
-        prevChapter &&
-        prevChapter.pages.length > 0 &&
-        prevChapter.pages[prevChapter.pages.length - 1].speaker === chapter.pages[0].speaker &&
-        targetIdx >= 0 &&
-        result[targetIdx].length > 0;
-
-      if (shouldMerge) {
-        // Append first sheet of this chapter onto last sheet of current section
-        const lastSheet = result[targetIdx][result[targetIdx].length - 1];
-        const firstSheet = sheets.shift()!;
-        lastSheet.push(...firstSheet);
-        // Remaining sheets stay in the same section
-        result[targetIdx].push(...sheets);
-      } else {
-        // Start a new section
-        result.push(sheets);
-        targetIdx = result.length - 1;
-      }
+      // Start a new section
+      result.push(sheets);
     }
 
     return result;
@@ -105,11 +86,20 @@
   onMount(() => {
     if (!container) return;
 
-    let rafId = 0;
-
-    function update() {
+    function onScroll() {
       const vh = window.innerHeight;
       const chapters = container!.querySelectorAll<HTMLElement>('[data-chapter]');
+
+      // ── Phase 1: read all measurements (no writes) ──
+      const items: Array<{
+        wrapper: HTMLElement;
+        content: HTMLElement;
+        contentHeight: number;
+        wrapperBottom: number;
+        wrapperLeft: number;
+        wrapperWidth: number;
+        chapterBottom: number;
+      }> = [];
 
       chapters.forEach((chapterEl) => {
         const chapterRect = chapterEl.getBoundingClientRect();
@@ -119,35 +109,42 @@
           const content = wrapper.querySelector<HTMLElement>('[data-page-content]');
           if (!content) return;
 
+          // Cache height while content is still in flow
           if (content.style.position !== 'fixed') {
             content.dataset.naturalHeight = String(content.offsetHeight);
           }
-          const contentHeight = Number(content.dataset.naturalHeight) || 0;
 
           const wrapperRect = wrapper.getBoundingClientRect();
 
-          if (wrapperRect.bottom < vh && contentHeight > 0) {
-            wrapper.style.minHeight = `${contentHeight}px`;
-
-            const bottomOffset = Math.max(0, vh - chapterRect.bottom);
-            content.style.position = 'fixed';
-            content.style.bottom = `${bottomOffset}px`;
-            content.style.left = `${wrapperRect.left}px`;
-            content.style.width = `${wrapperRect.width}px`;
-          } else {
-            content.style.position = '';
-            content.style.bottom = '';
-            content.style.left = '';
-            content.style.width = '';
-            wrapper.style.minHeight = '';
-          }
+          items.push({
+            wrapper,
+            content,
+            contentHeight: Number(content.dataset.naturalHeight) || 0,
+            wrapperBottom: wrapperRect.bottom,
+            wrapperLeft: wrapperRect.left,
+            wrapperWidth: wrapperRect.width,
+            chapterBottom: chapterRect.bottom,
+          });
         });
       });
-    }
 
-    function onScroll() {
-      cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(update);
+      // ── Phase 2: write all styles (no reads) ──
+      for (const m of items) {
+        if (m.wrapperBottom < vh && m.contentHeight > 0) {
+          m.wrapper.style.minHeight = `${m.contentHeight}px`;
+          const bottomOffset = Math.max(0, vh - m.chapterBottom);
+          m.content.style.position = 'fixed';
+          m.content.style.bottom = `${bottomOffset}px`;
+          m.content.style.left = `${m.wrapperLeft}px`;
+          m.content.style.width = `${m.wrapperWidth}px`;
+        } else {
+          m.content.style.position = '';
+          m.content.style.bottom = '';
+          m.content.style.left = '';
+          m.content.style.width = '';
+          m.wrapper.style.minHeight = '';
+        }
+      }
     }
 
     window.addEventListener('scroll', onScroll, {passive: true});
@@ -156,36 +153,35 @@
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
-      cancelAnimationFrame(rafId);
     };
   });
 </script>
 
 <div bind:this={container} class={css({ textStyle: "reading", fontSize: 'l' })}>
-  {#each sections as section}
-    <div data-chapter>
-      {#each section as sheet, sheetIdx}
-        <div
-          data-page-wrapper
-          class={css({ position: "relative" })}
-          style:z-index={sheetIdx + 1}
-        >
-          <div data-page-content>
-            {#each sheet as part}
-              {#if part.kind === 'header'}
-                <ChapterHeader
-                  title={part.title}
-                  time={part.time}
-                  coverUrl={part.coverUrl}
-                  speaker={part.speaker}
-                />
-              {:else}
-                <ChapterPage page={part.page} speaker={part.speaker}/>
-              {/if}
+    {#each sections as section}
+        <div data-chapter>
+            {#each section as sheet, sheetIdx}
+                <div
+                        data-page-wrapper
+                        class={css({ position: "relative" })}
+                        style:z-index={sheetIdx + 1}
+                >
+                    <div data-page-content>
+                        {#each sheet as part}
+                            {#if part.kind === 'header'}
+                                <ChapterHeader
+                                        title={part.title}
+                                        time={part.time}
+                                        coverUrl={part.coverUrl}
+                                        speaker={part.speaker}
+                                />
+                            {:else}
+                                <ChapterPage page={part.page} speaker={part.speaker}/>
+                            {/if}
+                        {/each}
+                    </div>
+                </div>
             {/each}
-          </div>
         </div>
-      {/each}
-    </div>
-  {/each}
+    {/each}
 </div>
