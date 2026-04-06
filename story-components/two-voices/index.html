@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Two Voices — Story Component</title>
+    <style>
+        body {
+            margin: 0;
+            background: #fafafa;
+            color: #1a1a1a;
+        }
+        .intro, .outro {
+            max-width: 620px;
+            margin: auto;
+            padding: 2rem 1.5rem;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+        }
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .intro .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="intro">
+    <h1>Two Voices</h1>
+    <p class="subtitle">A day in the lives of Ronja and Daniel — told from two perspectives.</p>
+
+    <p>They don't know each other. They live in the same city, ride the same trams, walk the same bridges.
+       One designs neighbourhoods. The other models energy systems. Their paths cross without either noticing.</p>
+
+    <p>This is one ordinary day, seen through two pairs of eyes.</p>
+</div>
+
+<two-voices></two-voices>
+
+<div class="outro">
+    <p>The city hums on. Tomorrow will be different, and tomorrow will be the same. Two people, two rhythms,
+       one place — endlessly overlapping, endlessly apart.</p>
+</div>
+
+<script type="module">
+  import './src/index.svelte'
+  import { twoVoicesData } from './data.ts'
+
+  customElements.whenDefined('two-voices').then(() => {
+    const element = document.querySelector('two-voices')
+    element.componentData = twoVoicesData
+  })
+</script>
+</body>
+</html>
+

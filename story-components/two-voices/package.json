@@ -1,0 +1,25 @@
+{
+  "name": "@story/two-voices",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "concurrently \"vite\" \"panda --watch\"",
+    "build": "panda && vite build",
+    "prepare": "panda codegen"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.53.1",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "concurrently": "^9.2.1",
+    "svelte": "^5.55.1",
+    "vite": "8.0.4"
+  },
+  "dependencies": {
+    "@story/theme": "workspace:*"
+  }
+}
+

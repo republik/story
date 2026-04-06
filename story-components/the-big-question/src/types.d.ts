@@ -20,7 +20,7 @@ export type Respondent = {
     normal: string;
   };
 };
-
+s;
 export type Answer = {
   respondent: Respondent;
   text: string;
