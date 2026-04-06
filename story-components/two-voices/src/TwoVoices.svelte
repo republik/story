@@ -25,7 +25,7 @@
         wrapper: HTMLElement;
         content: HTMLElement;
         contentHeight: number;
-        wrapperBottom: number;
+        effectiveBottom: number;
         wrapperLeft: number;
         wrapperWidth: number;
         chapterBottom: number;
@@ -40,40 +40,55 @@
           if (!content) return;
 
           // Cache height while content is still in flow
-          if (content.style.position !== 'fixed') {
+          if (content.dataset.pinned !== '1') {
             content.dataset.naturalHeight = String(content.offsetHeight);
           }
-
+          const contentHeight = Number(content.dataset.naturalHeight) || 0;
           const wrapperRect = wrapper.getBoundingClientRect();
 
           items.push({
             wrapper,
             content,
-            contentHeight: Number(content.dataset.naturalHeight) || 0,
-            wrapperBottom: wrapperRect.bottom,
-            wrapperLeft: wrapperRect.left,
-            wrapperWidth: wrapperRect.width,
+            contentHeight,
+            // Use top + cached height as a stable threshold that doesn't
+            // fluctuate when content toggles between static and fixed
+            effectiveBottom: wrapperRect.top + contentHeight,
+            wrapperLeft: Math.round(wrapperRect.left),
+            wrapperWidth: Math.round(wrapperRect.width),
             chapterBottom: chapterRect.bottom,
           });
         });
       });
 
-      // ── Phase 2: write all styles (no reads) ──
+      // ── Phase 2: write only on state changes (no reads) ──
       for (const m of items) {
-        if (m.wrapperBottom < vh && m.contentHeight > 0) {
+        const shouldPin = m.effectiveBottom < vh && m.contentHeight > 0;
+        const isPinned = m.content.dataset.pinned === '1';
+
+        if (shouldPin && !isPinned) {
+          // Transition: static → fixed
+          m.content.dataset.pinned = '1';
           m.wrapper.style.minHeight = `${m.contentHeight}px`;
-          const bottomOffset = Math.max(0, vh - m.chapterBottom);
           m.content.style.position = 'fixed';
-          m.content.style.bottom = `${bottomOffset}px`;
+          m.content.style.bottom = '0px';
           m.content.style.left = `${m.wrapperLeft}px`;
           m.content.style.width = `${m.wrapperWidth}px`;
-        } else {
+        } else if (shouldPin && isPinned) {
+          // Already pinned — only touch bottomOffset (for chapter exit)
+          const bottomOffset = `${Math.round(Math.max(0, vh - m.chapterBottom))}px`;
+          if (m.content.style.bottom !== bottomOffset) {
+            m.content.style.bottom = bottomOffset;
+          }
+        } else if (!shouldPin && isPinned) {
+          // Transition: fixed → static
+          m.content.dataset.pinned = '';
           m.content.style.position = '';
           m.content.style.bottom = '';
           m.content.style.left = '';
           m.content.style.width = '';
           m.wrapper.style.minHeight = '';
         }
+        // !shouldPin && !isPinned → nothing to do
       }
     }
 
@@ -104,11 +119,9 @@
                                         title={chapter.title}
                                         time={chapter.time}
                                         coverUrl={chapter.coverUrl}
-                                        speaker={speaker}
                                 />
-                            {:else}
-                                <ChapterPage page={page} speaker={speaker}/>
                             {/if}
+                            <ChapterPage page={page} speaker={speaker}/>
                         </div>
                     </div>
                 {/each}
