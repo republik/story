@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {Chapter, InputData, Page, Voice} from "./types.d.ts";
+  import type {InputData} from "./types.d.ts";
   import {css} from "@story/theme/css";
   import ChapterPage from "./ChapterPage.svelte";
   import ChapterHeader from "./ChapterHeader.svelte";
@@ -12,76 +12,6 @@
   let {componentData}: Props = $props();
   let voices = $derived(componentData ? componentData.voices : []);
   let container: HTMLElement | undefined = $state();
-
-  // ── Pre-compute sections → sheets → parts ──────────────────────────
-
-  type SheetPart =
-    | { kind: 'header'; title: string; time: string; coverUrl?: string; speaker?: Voice }
-    | { kind: 'page'; page: Page; speaker?: Voice };
-
-  type Sheet = SheetPart[];
-  type Section = Sheet[];
-
-  function findVoice(key: string): Voice | undefined {
-    return voices.find((v: Voice) => v.key === key);
-  }
-
-  function buildChapterSheets(chapter: Chapter): Sheet[] {
-    const sheets: Sheet[] = [];
-
-    for (let i = 0; i < chapter.pages.length; i++) {
-      const page = chapter.pages[i];
-
-      if (i === 0 || page.speaker === 'Daniel') {
-        const sheet: Sheet = [];
-
-        // First page of chapter gets its header
-        if (i === 0) {
-          sheet.push({
-            kind: 'header',
-            title: chapter.title,
-            time: chapter.time,
-            coverUrl: chapter.coverUrl,
-            speaker: findVoice(page.speaker),
-          });
-        }
-
-        sheet.push({kind: 'page', page, speaker: findVoice(page.speaker)});
-
-        // Daniel absorbs the following page as second voice
-        if (page.speaker === 'Daniel' && chapter.pages[i + 1]) {
-          const next = chapter.pages[i + 1];
-          sheet.push({kind: 'page', page: next, speaker: findVoice(next.speaker)});
-        }
-
-        sheets.push(sheet);
-      }
-    }
-
-    return sheets;
-  }
-
-  let sections = $derived.by((): Section[] => {
-    if (!componentData) return [];
-
-    const chapters = componentData.chapters;
-    const result: Section[] = [];
-
-    for (let c = 0; c < chapters.length; c++) {
-      const chapter = chapters[c];
-      if (chapter.pages.length === 0) continue;
-
-      const sheets = buildChapterSheets(chapter);
-      if (sheets.length === 0) continue;
-
-      // Start a new section
-      result.push(sheets);
-    }
-
-    return result;
-  });
-
-  // ── Scroll-driven pinning ──────────────────────────────────────────
 
   onMount(() => {
     if (!container) return;
@@ -157,31 +87,32 @@
   });
 </script>
 
-<div bind:this={container} class={css({ textStyle: "reading", fontSize: 'l' })}>
-    {#each sections as section}
-        <div data-chapter>
-            {#each section as sheet, sheetIdx}
-                <div
-                        data-page-wrapper
-                        class={css({ position: "relative" })}
-                        style:z-index={sheetIdx + 1}
-                >
-                    <div data-page-content>
-                        {#each sheet as part}
-                            {#if part.kind === 'header'}
+<div bind:this={container} class={css({ textStyle: "reading" })}>
+    {#if componentData}
+        {#each componentData.chapters as chapter}
+            <div data-chapter>
+                {#each chapter.pages as page, i}
+                    {@const speaker = voices.find((v) => v.key === page.speaker)}
+                    <div
+                            data-page-wrapper
+                            class={css({ position: "relative" })}
+                            style:z-index={i + 1}
+                    >
+                        <div data-page-content>
+                            {#if i === 0}
                                 <ChapterHeader
-                                        title={part.title}
-                                        time={part.time}
-                                        coverUrl={part.coverUrl}
-                                        speaker={part.speaker}
+                                        title={chapter.title}
+                                        time={chapter.time}
+                                        coverUrl={chapter.coverUrl}
+                                        speaker={speaker}
                                 />
                             {:else}
-                                <ChapterPage page={part.page} speaker={part.speaker}/>
+                                <ChapterPage page={page} speaker={speaker}/>
                             {/if}
-                        {/each}
+                        </div>
                     </div>
-                </div>
-            {/each}
-        </div>
-    {/each}
+                {/each}
+            </div>
+        {/each}
+    {/if}
 </div>
