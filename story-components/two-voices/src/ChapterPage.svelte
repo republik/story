@@ -4,12 +4,10 @@
 
   interface Props {
     page: Page;
-    voices: Voice[];
+    speaker: Voice | undefined;
   }
 
-  let { page, voices }: Props = $props();
-
-  let speaker = $derived(voices.find((v: Voice) => v.key === page.speaker));
+  let { page, speaker }: Props = $props();
 </script>
 
 <div
