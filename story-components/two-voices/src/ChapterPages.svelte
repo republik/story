@@ -12,16 +12,18 @@
 </script>
 
 {#each pages as page, i}
+  {#if i === 0}
+  {/if}
   <div
     class={css({
-    position: "sticky",
-    top: "0",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "end",
-    background: "white",
-  })}
-    style:z-index={i + 2}
+      position: "sticky",
+      bottom: "0",
+      /* minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "end",*/
+    })}
+    style:z-index={pages.length - i}
   >
     <ChapterPage page={page} voices={voices} />
   </div>
