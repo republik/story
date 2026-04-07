@@ -41,9 +41,9 @@
 >
   <div class={css({
     px: '15px',
-    pt: '6',
-    pb: '2',
-    transition: 'background-color 2s ease',
+    pt: '12',
+    pb: '8',
+    transition: 'background-color 1s ease 0.2s',
     '& p': { mb: 4 },
   })}
        style:background-color={visible ? (speaker?.backgroundColor || '#ffffff') : '#ffffff'}>

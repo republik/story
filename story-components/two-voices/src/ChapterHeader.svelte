@@ -22,25 +22,18 @@
 >
   <div
     class={css({
-              fontSize: { base: "13px", md: "15px" },
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#999",
-              mb: "3",
-              fontFamily: "sans-serif",
+              fontFamily: "gtAmericaStandard",
+              fontSize: 'l',
+              fontWeight: 500,
+              letterSpacing: -0.02,
+              mb: "2",
             })}
   >
     {time}
   </div>
 
   <h2
-    class={css({
-              fontSize: { base: "30px", md: "44px" },
-              fontWeight: "700",
-              lineHeight: 1.15,
-              letterSpacing: "-0.02em",
-              mb: "6",
-            })}
+    class={css({ textStyle: "h1Serif", mb: "2",})}
   >
     {title}
   </h2>
