@@ -15,7 +15,6 @@
             position: "relative",
             zIndex: 10,
             background: "white",
-            minHeight: "50vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
