@@ -41,6 +41,7 @@
     {#if componentData}
         {#each componentData.chapters as chapter}
             <div data-chapter>
+                <ChapterHeader title={chapter.title} time={chapter.time} coverUrl={chapter.coverUrl}/>
                 {#each chapter.pages as page, i}
                     {@const speaker = voices.find((v) => v.key === page.speaker)}
                     <div
@@ -51,14 +52,15 @@
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "end",
+                      top: 0
                     })}
                             style="top: calc(100vh - var(--h, 100vh));"
                             style:z-index={i + 1}
                     >
-                        {#if i === 0}
-                            <ChapterHeader title={chapter.title} time={chapter.time} coverUrl={chapter.coverUrl}/>
-                        {/if}
-                        <ChapterPage page={page} speaker={speaker}/>
+                        <ChapterPage
+                                page={page}
+                                speaker={speaker}
+                        />
                     </div>
                 {/each}
             </div>

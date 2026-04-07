@@ -9,231 +9,159 @@ export const twoVoicesData: InputData = {
     {
       key: "Daniel",
       name: "Daniel Faulhaber",
-      backgroundColor: "#ddffdd",
+      backgroundColor: "#E1F0E6",
       primary: true,
     },
   ],
   chapters: [
-    // ─── Chapter 1: Waking Up ────────────────────────────────────────────
     {
-      title: "Waking Up",
-      time: "6 Uhr",
+      title: "Aufrichten",
+      time: "8 Uhr",
       coverUrl: "https://picsum.photos/seed/morning-light/800/500",
       pages: [
         {
           speaker: "Ronja",
-          text: `<p>The alarm cuts through the silence at exactly six. Ronja reaches for her phone, silences it, and lies still for a moment, watching the first grey light trace patterns on the ceiling through the half-open blinds.</p>
-<p>She thinks about the presentation she needs to give today. The numbers are solid, she tells herself, but the narrative still needs work. She's been at the <a href="https://example.com/urban-planning">urban planning office</a> for three years now, and still every pitch feels like the first.</p>
-<p>The coffee machine hisses to life as she shuffles into the kitchen. Through the window, the city is just waking — a few joggers along the river, a delivery truck backing into the bakery downstairs. The smell of fresh bread drifts up.</p>
-<p>She pulls on her running shoes. Twenty minutes along the Limmat before the day begins. The water is dark and calm, reflecting the amber streetlights that haven't yet switched off.</p>`,
+          text: `<p>Ich liege im Bett und möchte seriös sein und zügig aufstehen. Aber wem etwas vormachen. Ich öffne Tiktok und sehe sogleich einen Typen. Leider ist es einer dieser Crimefluencer, also ein Streamer mit Strafvollzugserfahrung. Er spricht live in sein Handy, während ihn seine Freundin zum Laden chauffiert, um Fleisch zu kaufen. Einen Job hat er keinen, er muss eh bald für Jahre zurück ins Gefängnis. Bis dahin kommandiert er vor Publikum seine Freundin rum wie einen schlecht erzogenen Hund.</p><p>«Deine Frau braucht einen richtigen Mann», schreibt ein Zuschauer des Streams in die Kommentare. Besser keinen Mann, denke ich. «Du bist ein verfickter Schwanzlutscher», antwortet der Crimefluencer..</p><p>Ich wische das Fenster weg. Ein brutaler Start, aber so früh gebe ich nicht auf. Mit offenen Augen liege ich da und träume, dass sich nicht so viele Männer von Trump, Tate, Pelicot, Epstein, Lindemann und diesem Streamer leiten lassen, wie ich fürchte. Ich muss mich aufrichten.</p>`,
         },
         {
           speaker: "Daniel",
-          text: `<p>Daniel's alarm never goes off because he never set one. He's been awake since five, reading a paper on <a href="https://example.com/distributed-energy">distributed energy systems</a> that he found the night before. The margins of his notebook are filling up with small, precise annotations.</p>
-<p>He lives alone in a two-room apartment in Wiedikon, the kind of place where the radiator clanks at odd hours and the neighbour's cat sometimes appears on the windowsill. He doesn't mind. The quiet suits the kind of thinking he does best.</p>
-<p>Breakfast is two slices of dark bread with butter and a pot of black tea — the same every morning. Routine, he believes, is the scaffolding that holds creative thought in place.</p>
-<p>By quarter to seven, he's already dressed. He checks the weather app — twelve degrees, overcast. Perfect walking weather.</p>`,
-        },
-      ],
-    },
-
-    // ─── Chapter 2: The Commute ──────────────────────────────────────────
-    {
-      title: "The Commute",
-      time: "7.5 Uhr",
-      pages: [
-        {
-          speaker: "Daniel",
-          text: `<p>The tram arrives two minutes late, which Daniel notes with the mild displeasure of someone who has optimised every other part of his morning. He finds a window seat near the back and opens his notebook again.</p>
-<p>The city scrolls by outside — construction scaffolding, a new café where the bookshop used to be, schoolchildren weaving between pedestrians. He barely notices. His mind is still on the energy paper, specifically a passage about <a href="https://example.com/microgrids">community microgrids</a> in rural Portugal.</p>
-<p>Could something like that work here? The topology is different, the regulations more rigid. But the principle — decentralised, community-owned — that resonates.</p>
-<p>He scribbles a note: <em>Talk to Martina about pilot feasibility.</em></p>`,
+          text: `<p>Ich träume in dieser Nacht, wie so oft, von einem Wald. Es ist mal wieder bedrohlich, mein Fuss steckt in einer Liane fest, aber dann wache ich auf und sehe wie jeden Morgen denselben eingetopften Papyrus in der Zimmerecke. Grüne dünne Pinsel. Harmlos sehen sie aus, aber heute ist nichts mehr harmlos, sondern alles ist Kontext und Pars pro Toto und darum sagt auch diese Pflanze etwas über mich und Männer im Allgemeinen.</p><p>So suggeriert es wenigstens ein Blumenhändler, der «Männerpflanzen» verkauft und damit Pflanzen meint, die wenig Wasser brauchen und die man auch mal vergessen kann, ohne dass sie gleich sterben. Papyrus sind pflegeleicht. Habe ich Männerpflanzen im Zimmer? Daran muss ich denken, als ich in meine Klamotten steige.</p><p>Und ich denke an eine Männermesse in Zürich, die heute stattfindet und damit wirbt, alles zu bieten, was das Männerherz begehrt. Mein Männerherz begehrt jetzt etwas zu essen. Und einen Kaffee.</p>`,
         },
         {
           speaker: "Ronja",
-          text: `<p>Ronja's bike cuts through the morning air along Langstrasse, past the shuttered clubs and the early risers queuing at the Turkish bakery. She knows every pothole, every traffic light cycle on this route.</p>
-<p>She uses the ride to rehearse. <em>The quarter we're proposing would reduce car dependency by forty percent.</em> No — too aggressive for the opening. Start with the human angle. <em>Imagine a neighbourhood where children walk to school without crossing a four-lane road.</em></p>
-<p>Better. She adjusts her grip on the handlebars and turns onto the bridge. Below, the river is the colour of wet slate.</p>
-<p>At the office bike rack she locks up, straightens her jacket, and notices a message from her colleague Lena: <a href="https://example.com/meeting-notes">the committee moved the meeting up by an hour</a>. Wonderful.</p>`,
+          text: `<p>Ich liege schon wieder. Während ich mit dem Laptop auf dem Schoss auf dem Sofa fläze und arbeite, steht mein Freund in der Küche und erledigt den Abwasch. Ich habe ihn zuvor darauf angesprochen, dass in der Küche seit zwei Tagen ein Chaos herrscht. Und ich die vergangenen zwei Abende nicht zu Hause war. Und mich diese Korrelation stört.</p><p>Für eine Frau ist krustiges Geschirr nicht nur krustiges Geschirr. Es weckt den Verdacht, dass die Ungleichheit zwischen Mann und Frau in Sachen erledigter Hausarbeit auch das eigene Daheim erfasst hat. Dass es nicht nur eine kleine Nachlässigkeit des Partners ist, wie sie jedem passiert, sondern der Ausdruck eines Systems, in dem die Frauen überproportional etwas Existenzielles verlieren: ihre frei verfügbare Lebenszeit.</p><p>So denke und liege ich also, als mir auffällt, dass sich die Wohnung in ihrer Gesamtheit dem totalen Chaos nähert. Während ich auf mein Zeug blicke, das in jeder Ecke wuchert (Wäsche! Wolle! Weihnachtskugeln!), finde ich mich in einer der grossen Fragen einer jeden aufgeklärten Frau wieder: Wann versucht man, sich bewusst feministisch zu verhalten, und wann ist man einfach ein unfairer, ignoranter Troll?</p>`,
         },
       ],
     },
 
-    // ─── Chapter 3: Arrival ──────────────────────────────────────────────
     {
-      title: "Arrival",
+      title: "Körperfett regulieren",
       time: "9 Uhr",
+      pages: [
+        {
+          speaker: "Daniel",
+          text: `<p>Wie kommt man so rein in einen Tag als Mann? Ich, cis-hetero, single income no Kids bin zunächst via Nutri-Score mit Geschlechtsidentität konfrontiert. Ich esse neuerdings Müesli. Weil das den Körperfettanteil optimaler reguliert als Weissbrot, hab ich gelesen, und mein Körperbild ist mir wichtiger, seit ich mich darum kümmern muss. Ein bisschen geraffelter Apfel. Eine Prise Ingwer. Haferflocken.</p><p>Wie vielen meiner männlichen Freunde Mitte Dreissig sitzt mir ein körperlicher Instandhaltungsimperativ im Nacken. Ich fahre Rennrad und gehe ins Gym und sage, dass mir das einfach gut tut, ja, dass ich die Quälerei freiwillig auf mich nehme.</p><p>Gleichzeitig ist der athletische Männerkörper wieder zu Projektionsflächen einer politischen Idee geworden, die Leistung und Härte einfordert. Ist das also wirklich Healthcare, was ich da tue, denke ich, oder Teil einer kollektiven Selbstoptimierung als Mann? Die Disziplinierung der Körper ist Tatsache und der Fitnesshype passt zum Zeitgeist wie die Faust aufs Auge.</p>`,
+        },
+        {
+          speaker: "Ronja",
+          text: `<p>Zeit fürs Powerlifting (ich arbeite teilzeit). Ich düble mir die Airpods rein und hebe meine Kurzhanteln vom delligen Parkett. Geschminkte südkoreanische Männer singen in meine Ohren, wie gerne sie <a href="https://www.youtube.com/watch?v=NaKrke1EL1A&list=RDNaKrke1EL1A&start_radio=1&pp=ygUPdHh0IGNhdCBhbmQgZG9noAcB0gcJCa4KAYcqIYzv">meine Hündchen wären</a>, während mir der Schweiss vom Kinn rinnt. Einer der Gruppe rappt, ich übersetze: «Fühlt sich an wie Cinderella, ich verwandle mich.» Warum vergleicht er sich mit einer Prinzessin? Warum nicht mit einem Superhelden?</p><p>Fast revolutionär, diese mauen Lyrics, in der heutigen Zeit, wo so viel im Zusammenhang mit Männern in den Rückwärtsgang zu drehen scheint, dass ich sie manchmal, wenn ich ihnen auf der Strasse begegne, am liebsten am Kragen packen und rufen würde: Bist du Abtreibungsgegner, Alpha Male, Täter?</p><p>In der Hoffnung liegt die Kraft. In der Wut aber auch. Und so strecke ich in einer Military Press die Hanteln gen Himmel, über mir das Gewicht der Männerwelt.</p>`,
+        },
+        {
+          speaker: "Daniel",
+          text: `<p>Mannsein im Homeoffice. Ich recherchiere und lese Reportagen über Männermessen. Dabei stolpere ich über die Bemerkung eines Autoren, dass es Männer als Kollektiv besonders dann in die Medien schaffen, wenn sie zu dumm, zu gewalttätig oder zu laut sind.</p><p>Ein anderer Typ Mann hat es in den vergangenen Monaten als «performative male» in die öffentliche Debatte geschafft. Damit sind Männer gemeint, die – ich gehöre dazu – offensiv selbstkritisch mit der eigenen Rolle hantieren und das zum Beispiel dadurch zur Schau tragen, dass sie weiche Pullunder tragen. Dass sie gendern. Dass sie feministische Bücher lesen und damit für eine sanfte Männlichkeit stehen, um gleichzeitig den eigenen Status zu steigern.</p><p>Seit diese neue Kulturkritik durch die Debatte geistert, denke ich zweimal nach, bevor ich etwas zu sogenannten Gleichstellungsfragen sage. Aber die Verrenkung, die mir dadurch entsteht, ist leider genau so peinlich. Etwas posten, aber dazuschreiben, dass es performativ wirken kann und man sich dessen bewusst ist? Nichts sagen und sich der Kritik aussetzen, dass Männer bei einschlägigen Themen oft den Mund halten? Was die Kritik am performative male nicht verändert hat: Als Mann kriegt man für jeden selbstkritischen Mucks ordentlich Applaus.</p>`,
+        },
+      ],
+    },
+
+    {
+      title: "Pause machen",
+      time: "12 Uhr",
       coverUrl: "https://picsum.photos/seed/office-morning/800/500",
       pages: [
         {
           speaker: "Ronja",
-          text: `<p>The office smells like someone else's reheated pasta and fresh printer toner. Ronja drops her bag at her desk, opens her laptop, and immediately regrets not checking email during the ride.</p>
-<p>Fourteen new messages. Three are from the same person — Thomas from the transport department — each one more urgent than the last. She scans them: <em>budget concerns, timeline slipping, stakeholder pushback.</em></p>
-<p>She takes a breath. This is the part of the job no one talks about in architecture school. Not the design, not the vision — the endless negotiation with people who see a spreadsheet where she sees a neighbourhood.</p>
-<p>Lena appears with two coffees. "You saw the time change?" Ronja nods. "I've got forty minutes to rewrite the opening." Lena sets down the cup. "You'll manage. You always do."</p>`,
+          text: `<p>In der Dusche greife ich zwischen schwarzen 5-in-1-Flaschen hindurch nach meinem lilafarbenen «Relax»-Duschmittel mit Blümchen drauf. Wer ist eigentlich Schuld daran, dass das hierzulande dominierende Männlichkeitsideal und alles, was damit zusammenhängt, so lame ist? Wo bleiben Lipgloss und Rüschenblusen? Wo stecken die Gefühle jenseits von Wut, wo bleibt die Chance, ein Hund zu sein – aber ein braver Hund?</p><p>Ich ziehe mich an und breche auf. Auf dem Weg zur Tür stapfe ich an Fotos der kleinen Söhne von Freunden und Familie vorbei. Mit ihren Äuglein blicken sie mir nach. Nicht alles ist verloren, Jungs. Bis später, macht's besser!</p>`,
         },
         {
           speaker: "Daniel",
-          text: `<p>The research institute sits on a quiet street behind the university, a converted villa with creaking wooden floors and rooms that are either too hot or too cold. Daniel has worked here for five years, first as a postdoc and now as a project lead.</p>
-<p>His team is small — four researchers, a lab technician, and a rotating cast of master's students who stay for a semester and leave behind half-finished code. He's learned to build systems that don't depend on any single person.</p>
-<p>This morning there's a message from the <a href="https://example.com/energy-fund">federal energy fund</a>: their grant proposal has advanced to the second round. It's not a yes, but it's not a no. Daniel allows himself a small, private smile.</p>
-<p>He opens the simulation software and picks up where he left off yesterday.</p>`,
-        },
-        {
-          speaker: "Ronja",
-          text: `<p>The meeting room is too bright and too warm. Ronja stands at the front with her slides projected behind her, facing a semicircle of officials who look like they'd rather be somewhere else.</p>
-<p>She begins with the human angle, as planned. A photograph of the current street — cars, noise barriers, a playground pressed against a parking garage. Then the rendering: trees, wider pavements, a small market square.</p>
-<p>"This isn't about aesthetics," she says. "It's about how people live." She clicks to the next slide. "Residents in car-reduced quarters report <a href="https://example.com/health-study">thirty percent higher satisfaction</a> with their neighbourhood."</p>
-<p>Thomas from transport raises his hand. She braces herself. But what he says surprises her: "Can you send me those numbers? I might be able to use them for something."</p>`,
+          text: `<p>Ich ziehe jetzt meine Lieblingsjacke an und verlasse das Haus. Mit dem Velo gehts zum Bahnhof, einmal quer durch die Stadt auf dem Weg zur «Man's World». Der Event verkauft sich als Lifestyle-Event für «Marken, Macher und Besucher» mit Fokus auf Shopping, Networking und Genuss.</p><p>Ich liebe Messen. Es sind fantastische Bühnen für Lebensentwürfe im Spätkapitalismus und heute bin ich besonders gespannt. Wie werde ich als Kunde und Produkt dieses Ökosystems bedient?</p><p>Unterwegs begegne ich Männern, die rauchen; Männern, die es eilig haben; Männern, die im Weg stehen und welche, die zuvorkommend ausweichen. Im Viererabteil des Intercitys sitzt ein Mann mit Krawatte und braunen Lederschuhen, der rasselnd die Nase hochzieht wie eine Lokomotive im Frühstadium der industriellen Revolution.</p><p>Eine Journalistin beim «Tages-Anzeiger» hat dafür den hübschen Begriff <a href="https://www.tagesanzeiger.ch/phaenomen-akustisches-manspreading-maenner-eure-staendige-geraeuschemission-nervt-237444874616">vom «akustischen Manspreading» erfunden</a>. Sehr passend, denke ich, während der Ärmel meiner eigenen gepufften Bomberjacke in die Hälfte des freien Sitzplatzes neben mir hineinragt. Apropos raumgreifend.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 4: Coffee Break ─────────────────────────────────────────
     {
-      title: "Coffee Break",
-      time: "10.5 Uhr",
+      title: "Reisen",
+      time: "13 Uhr",
       pages: [
         {
+          speaker: "Ronja",
+          text: `<p>Ich sitze im Tram zu meinem Arbeitstermin: Männermesse. Die Kerle hier starren alle still aufs Handy. Langweilig, wo bleibt der Typ, der neulich im Bus ein Trottinett durch den Gang schleuderte? Ich schaue aus dem Fenster und sehe auf dem Trottoir einen Mann mit einer pinken Handtasche. Sie gehört sicher dem Mädchen, das hinter ihm läuft, denke ich.</p><p>Halt, wer sagt das? Vielleicht ist es auch seine Tasche, die er gerne mag und die ich, gefangen in männlichen Genderstereotypen, ihm abspreche? Und das auf dem Weg an einen Ort, wo ich ein Nest der Klischees vermute und über die ich bestimmt lachen würde – wie zurückgeblieben! Ganz im Gegensatz zu mir, der kleinen Miss Fortschritt.</p>`,
+        },
+        {
           speaker: "Daniel",
-          text: `<p>Daniel takes his coffee outside, into the small courtyard garden behind the institute. There's a wooden bench under a linden tree that he's claimed as his own through years of quiet occupation. Nobody else seems to want it.</p>
-<p>He checks his phone — a rare concession to distraction. There's a message from his sister in Basel: a photo of his niece's first drawing, a wobbly circle with two dots that is apparently a cat. He saves it.</p>
-<p>The grant news is still settling in. If they get the funding, it means two more years of work, a new hire, maybe even a small pilot project. If they don't — well. He's been through that before.</p>
-<p>A blackbird lands on the bench beside him, tilts its head, and flies off. Daniel finishes his coffee and goes back inside. The simulation won't debug itself.</p>`,
+          text: `<p>An diesem Donnerstag im Januar ist der Zug beinah leer. Es gibt ja viele Erzählungen von Frauen, die in einem vermeintlich leeren Bus oder Zugabteil sitzen und dann sitzt der einzige Passagier, männlich, ausgerechnet daneben.</p><p>Die meiste Zeit meines Erwachsenenlebens denke ich selten darüber nach, wo ich mich hinsetze oder wie ich mich bewege. In der Regel bin ich einfach ein Körper auf dem Weg zum Bahnhof oder ein Körper im Gym oder ein Körper im Zug. Mannsein als grosse, federleichte Normalität – vorausgesetzt, man steckt in einem Männerkörper, der den Normkorridor links oder rechts nicht verlässt. Ankunft in Oerlikon. Ein paar Minuten nach mir ist auch Ronja da.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 5: Lunch ────────────────────────────────────────────────
     {
-      title: "Lunch",
-      time: "12.5 Uhr",
+      title: "Provozieren",
+      time: "15 Uhr",
       coverUrl: "https://picsum.photos/seed/city-lunch/800/500",
       pages: [
         {
           speaker: "Ronja",
-          text: `<p>Lena insists on the Vietnamese place around the corner, the one with the plastic chairs and the soup that could cure anything. Ronja doesn't argue. After the meeting, she needs something warm and uncomplicated.</p>
-<p>"It went well," Lena says, chopsticks poised. "Thomas actually listened." Ronja stirs her pho. "He listened because the numbers support us. If they didn't, he'd have torn it apart."</p>
-<p>They eat in comfortable silence for a while. Through the window, the lunchtime crowd flows past — students, office workers, a woman pushing a stroller and talking animatedly into her phone.</p>
-<p>"Sometimes I wonder," Ronja says, "if any of this actually changes anything. We redesign a street, plant some trees, and then what? The same cars just go somewhere else."</p>`,
-        },
-        {
-          speaker: "Daniel",
-          text: `<p>Daniel eats at his desk, which he knows is a bad habit. A container of leftover lentil soup from Sunday, a piece of bread that's seen better days. He's not thinking about the food.</p>
-<p>The simulation has thrown up an anomaly — a feedback loop in the grid model that shouldn't be there. He's been tracing it for an hour, eliminating variables one by one, and he's close to finding the source.</p>
-<p>This is the part he loves: the puzzle, the slow narrowing of possibilities until the answer reveals itself. It's the same satisfaction he imagines <a href="https://example.com/detective-fiction">detective novelists</a> feel, except his mysteries are made of differential equations.</p>
-<p>He takes a bite of bread without looking and keeps scrolling through the data logs.</p>`,
-        },
-        {
-          speaker: "Ronja",
-          text: `<p>"It changes more than you think," Lena says, refilling their water glasses. "Remember the Nordquartier project? Three years later, there are kids playing in that square every afternoon. That didn't happen by accident."</p>
-<p>Ronja knows she's right. But there's a gap between knowing and feeling it. The work is slow, the bureaucracy relentless, and every small victory is followed by a new set of objections from someone with a different spreadsheet.</p>
-<p>She picks up the bill. "My turn." Lena doesn't protest. They have a system.</p>
-<p>Outside, the sun has broken through for the first time today. Ronja tilts her face up for a moment, feels the warmth on her eyelids. "Okay," she says. "Back to it." She reads a post from the <a href="https://example.com/urbanist-blog">urbanist collective</a> on her phone as they walk back.</p>`,
-        },
-        {
-          speaker: "Daniel",
-          text: `<p>Found it. The error was in the boundary conditions — a sign flip introduced three weeks ago when he refactored the thermal model. A tiny mistake with cascading consequences. He fixes it in one line and reruns the simulation.</p>
-<p>The results are clean now. The model shows what he expected: a distributed system outperforms the centralised grid by twelve percent in resilience metrics, though the upfront cost is higher. The trade-off is real, but the long-term case is strong.</p>
-<p>He leans back and stretches. His neck has been locked in the same position for hours. Through the window, he notices the sun has come out. He didn't see it happen.</p>
-<p>He writes a quick message to Martina: <em>Model is working. Results look promising. Let's talk tomorrow.</em></p>`,
+          text: `<p>Ich steige aus dem Tram. Daniel steht am Bahnhof und hat wieder diese Jacke an, die ihm riesige Luft-Bizepse verleiht. «Hast du extra angezogen», sage ich. Er kichert. Wir laufen zur Halle 550, am Eingang stehen Männer in Jackets und schwatzen. Und wer schaut jetzt auf die Kurse im SMI?</p><p>Ich spüre, wie der Zynismus in mir aufkocht und welche Leserkommentare er provozieren wird, wenn ich ihn niederschreibe: Nicht alle Männer! Nicht meine Republik! Doch ich verschanze mich nur hinter meinen Frotzeleien. In Wahrheit fürchte ich im Angesicht der Männerwelt, von ihr enttäuscht zu werden. Also besser vom schlimmsten Ausgehen und Sprüche klopfen, das macht die Stürze weicher. Macht es das eigene Leben generell besser? <a href="https://www.nytimes.com/2024/09/20/well/cynicism-trap-health.html">Eher nicht</a>. Doch möglicherweise bewahrt es einen davor, dem Falschen zu vertrauen und macht das Leben damit sicherer. Und das ist schon viel für eine Frau.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 6: Afternoon ────────────────────────────────────────────
     {
-      title: "Afternoon",
-      time: "14 Uhr",
+      title: "Entdecken",
+      time: "16 Uhr",
       pages: [
         {
           speaker: "Daniel",
-          text: `<p>The afternoon seminar is sparsely attended — seven people in a room designed for forty. A visiting researcher from <a href="https://example.com/eth-lab">ETH</a> presents work on hydrogen storage that Daniel finds genuinely interesting, even if the methodology has gaps.</p>
-<p>He asks a question during the Q&A, something about the scalability assumptions. The presenter pauses, considers it, and says, "That's a good point. I don't have a complete answer yet." Daniel appreciates the honesty. In his experience, the best researchers are the ones comfortable with not knowing.</p>
-<p>After the talk, they exchange cards. The presenter — her name is Yuki — mentions she's looking for collaboration partners. "We might have overlapping interests," Daniel says carefully. He doesn't like to overcommit.</p>`,
+          text: `<p>Ich dachte, die Man’s World wird ein einziger schwarzlackierter Muscle Park für Middle-Ager. Aber dann stehen zwei dünne E-Bikes vor dem Eingang und der erste Stand in der Halle wirbt mit grossen, weichen, weissen Wolken für Dampfzigaretten.</p><p>Wir fragen den Verkäufer, ob denn Männer ein vielversprechendes Zielpublikum sind für Dampf mit Geschmacksrichtung Doppelapfel? Der Mann schaut uns tief in die Augen und sagt lange verwirrende Sätze über neue Märkte und altmodische Vorurteile und schlägt vor, dass wir in der Smokers Lounge erstmal gemeinsam eine durchziehen. Aber wir sind ja erst gerade angekommen. Wir gehen rein.</p>`,
         },
         {
           speaker: "Ronja",
-          text: `<p>The afternoon is a blur of emails, revisions, and one call with a community group from the pilot neighbourhood. They have concerns about the construction timeline — it's disrupting the local market, and two shop owners are threatening to leave.</p>
-<p>Ronja listens, takes notes, promises to raise it with the project manager. She knows these aren't small problems. A neighbourhood plan that displaces the people it's meant to serve is a failure, regardless of how beautiful the renderings look.</p>
-<p>She pulls up the <a href="https://example.com/community-engagement">community engagement framework</a> she drafted last year and starts adapting it. More regular updates, a dedicated liaison, maybe a temporary market space during construction.</p>
-<p>It's unglamorous work. Nobody will put it in a magazine. But it's the work that matters.</p>`,
+          text: `<p>Neugierig treten wir in die Welt von dem, den sie Mann nennen. Hosenträger schnappen uns entgegen wie Schlangenzungen. Die Halle ist überraschend gut gelüftet. Nur manchmal, während wir wie Hobbits in Mordor wimmernd aber willig an den Ständen vorbeitapsen, strömt mir eine Böe Creed Aventus in die Körperöffnungen, und ich beschliesse, fortan besser den Mund zu halten.</p><p>Der Verkäufer eines Telekomunternehmens bespringt uns von der Seite wie ein Katzenjunges, das die Krallen noch nicht einfahren kann, und ich entscheide rein aus Überlebensinstinkt, bei meinem unverschämt teuren Handyabo zu bleiben. Immernoch besser, als maskuline Aufdringlichkeit zu belohnen.</p><p>Wir passieren Stände mit Schischas und scharfen Saucen und irgendwann steht uns ein Boxring im Weg. Am Casinostand drängen sich viele Leute um einen Roulettetisch. Ein guter Ort, um zu hoffen und zu verzagen. Die Szene macht mich traurig.</p><p>«Schau, es geht auch um Selfcare», sagt Daniel und zeigt auf eine Bude mit Zahnbürsten.</p>`,
+        },
+        {
+          speaker: "Daniel",
+          text: `<p>Viele Produktnamen klingen, als wurden sie im Schwitzkasten erdacht. Crafted by Nature. Powered for you. Gebaut für Macher. Der Hersteller einer Bartreinigungspaste heisst Bullfrog.</p><p>Haarpflege. Messer. Gin. Golfschläger. Siegelringe. Rasierpinsel. Und egal an welchem Stand: Da sind Autos in Form von Rennsimulatoren und ausgewachsene Exemplare mit glitzernder Karosserie. Irgendwo steht noch ein Helikopter herum. Der Individualverkehr dient offenbar auch 2026 als Teilchenbeschleuniger für das Versprechen auf männliche Selbstverwirklichung.</p><p>Ich will mich über diese stereotyp codierten Happenings natürlich gerne lustig machen, aber mir scheint mit Blick auf die Stände, dass eine gewisse Lächerlichkeit in den Verkaufsstrategien eingepreist ist. Das kann man an den teilweise grotesk überzeichneten Mannsbildern ablesen, die auf Etiketten und Foto-Collagen abgebildet sind. Wer sieht denn so aus? Ronja zeigt mit dem Finger auf Männer mit Hüten, die hier zwischen den Ständen umhergehen.</p>`,
+        },
+        {
+          speaker: "Ronja",
+          text: `<p>Ich blicke durch die Menge, in der Männer die Regel und Frauen die Ausnahme sind, und kriege Flashbacks von lang vergangenen Clubnächten. Was mich verwundert, sind die Schiebermützen. Ich sehe so viele, in Kombination mit engem Weston, ledernen Schnürschuhen und triumphierendem Lächeln. Die Männer sehen aus wie Peaky Blinders, wie die bewaffneten Gangster, die vor über 100 Jahren in den Slums von Birmingham wüteten und in den vergangenen Jahren in einer immens erfolgreichen Serie <a href="https://www.theguardian.com/tv-and-radio/2022/feb/26/flat-cap-nation-how-peaky-blinders-went-from-a-tv-show-to-a-way-of-life">um die Welt gingen</a>.</p><p>Was hat es zu bedeuten, wenn sich Männer so anziehen?</p><p>Wann ist es noch lustig, wenn wir uns überholten Fantasien von Mann und Frau hingeben, und ab wann gefährlich?</p><p>Allein die Tatsache, dass ein Mann einen Ort besucht, an dem grossteils ein klassisch konservatives Bild davon herrscht, was Männer toll finden, lässt sich als problematisches Statement werten.</p><p>Gleichzeitig: Wenn das schon grenzwertig anmutet, was machen wir dann mit all den Dudes im Internet? Dort, wo in geschlossenen Channels Hass auf andere Männer und vor allem auf Frauen gepflanzt wird, wo er gedeiht und wuchert und aus dem Netz heraus in die eigene Stube blutet?</p><p>Als ein Peaky Blinder am Stand eines Baumarktes eine Schraube in ein Holzstück eindrehen will und sich verklemmt, schnurrt ein Passant in prächtigem Karohemd aus der Mundecke: «Do chasch jo nid zueluege!» Manchmal braucht es nicht mehr als einen Akkubohrer, um den Mythos Mann zu töten.</p><p>Ein paar Meter vor mir steht eine offengelassenen Kloschüssel, wie das so passiert unter Typen. Als ich beim dritten Versuch einen Golfball darin versenke, kann es der freundliche Kerl, der mich instruierte, kaum fassen. Ich gewinne Bier.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 7: The Encounter ────────────────────────────────────────
     {
-      title: "The Encounter",
-      time: "16 Uhr",
+      title: "Händchen halten",
+      time: "18 Uhr",
       coverUrl: "https://picsum.photos/seed/bridge-evening/800/500",
       pages: [
         {
-          speaker: "Ronja",
-          text: `<p>She leaves the office early — or what counts as early, which is only thirty minutes past her contracted hours. The sun is low and golden, throwing long shadows across the pavement. She decides to walk home instead of cycling.</p>
-<p>On the bridge, she stops. Below, a group of teenagers is sitting on the riverbank, passing around a speaker playing something she doesn't recognise. A heron stands motionless in the shallows, indifferent to the music.</p>
-<p>This, she thinks, is what it's about. Not the renderings, not the committee meetings — this. People using space. Being in it. The city as something lived, not just planned.</p>
-<p>She leans on the railing and watches for a while. A man with a notebook walks past her, heading the other direction.</p>`,
-        },
-        {
           speaker: "Daniel",
-          text: `<p>Daniel walks home along the river, as he does most evenings. The route is longer than necessary, but he likes the transition — the slow unwinding of the day's thoughts as the city softens around him.</p>
-<p>On the bridge, he passes a woman leaning on the railing, looking down at the water. He notices her briefly — short hair, a canvas bag over one shoulder — and then she's behind him.</p>
-<p>He's thinking about Yuki's presentation, about hydrogen and storage and the gap between laboratory conditions and the real world. There's always a gap. The trick is building bridges across it — not pretending it isn't there.</p>
-<p>He stops at the small <a href="https://example.com/bookshop">bookshop on Josefstrasse</a> and picks up a novel he ordered last week. The owner knows him by name. "Something light this time?" she asks. He smiles. "Never."</p>`,
-        },
-        {
-          speaker: "Ronja",
-          text: `<p>Her phone buzzes as she reaches the far side of the bridge. It's Thomas again — but this time the message is different. <em>Shared your slides with the director. She wants to discuss expanding the pilot area.</em></p>
-<p>Ronja reads it twice. Then a third time. Expanding the pilot area. That's not just approval — that's ambition. Someone higher up saw the same thing she sees.</p>
-<p>She types a reply — <em>That's great news. Let's set up a meeting.</em> — and puts her phone away. She doesn't want to overthink it. Good news, in her experience, has a way of shrinking if you examine it too closely.</p>
-<p>The evening air smells like rain. She walks faster, not because she minds getting wet, but because she wants to be home. She wants to sit on her balcony with a glass of wine and let this feeling settle. Read the latest on the <a href="https://example.com/15-min-city">fifteen-minute city movement</a>, maybe.</p>`,
+          text: `<p>Was weit und breit nicht zu sehen ist, sind die Angebote für die, äh, Dings, mentale Gesundheit. Passt wohl nicht so gut ins Konzept, obwohl ein bisschen Vielfalt im Angebot fein wäre. Hier, auf dieser Messe, stehen wir am Ende vor denselben fünf Accessoires, die – symbolisch gesprochen – Männer zu Variationen eines ähnlichen Prototyps zusammenbauen.</p><p>Sind sie so, die Männer? Weil, wenn ich mich so umsehe, dann sind da schlaksige Teenager in fleckigen Hoodies, schwule Pärchen, die Händchen halten, und Bodybuilder mit Ringen an jedem Finger. Drahtige Langweiliger im Hemd sind da, aber auch fantastisch herausgeputzte Pfauen. Das Klientel ist nicht so uniform wie das Angebot.</p><p>Ronja hat Bier gewonnen. Ich muss meins bezahlen. Wir sitzen noch ein bisschen auf zwei kleinen Hockern in der Nähe eines Ferraris, bei dem plötzlich die Alarmanlage angeht. Zwei junge Männer weichen erschrocken zurück. Für mich wirds dann langsam Zeit, zu gehen, mein Testosterongipfel steht erst noch bevor. Ich bin noch zum Fussball verabredet. FCB gegen Viktoria Pilsen, es geht um den Verbleib in der Europa League.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 8: Evening ──────────────────────────────────────────────
     {
-      title: "Evening",
-      time: "19 Uhr",
+      title: "Platz machen",
+      time: "20 Uhr",
       pages: [
         {
-          speaker: "Daniel",
-          text: `<p>Dinner is pasta with whatever vegetables are about to go off — courgette, a few cherry tomatoes, half an onion. Daniel cooks with the radio on, a habit inherited from his mother, who believed that kitchens should never be silent.</p>
-<p>He eats at the small table by the window, the novel propped open beside his plate. It's a story about a cartographer in the eighteenth century, mapping coastlines that keep shifting. He finds it oddly relevant.</p>
-<p>Afterwards, he washes up and sits on the sofa with his laptop. Not to work — he has a rule about that — but to read. A long article about <a href="https://example.com/climate-adaptation">climate adaptation in Dutch cities</a>, sent by a colleague. The Dutch, he thinks, have always understood that you can't fight water. You negotiate with it.</p>
-<p>The neighbour's cat appears on the windowsill. Daniel opens the window an inch. They regard each other in silence.</p>`,
+          speaker: "Ronja",
+          text: `<p>Am Ausgang reihen wir uns fein in die Schlange vor der Garderobe ein, während andere von der Seite reingrätschen. Dominanz ist bei uns offenbar keine hängengeblieben.</p><p>Als am Hauptbahnhof das Tram hält, drängen sich die Leute an mir vorbei in den Wagen, als wäre es fünf vor Armageddon. Aber das ist es eigentlich auch. Ein Mann erscheint, stoppt vor der Tür und öffnet seine Arme. Sekunden vergehen, bis ich begreife: er macht mir Platz. Ich husche vorbei wie ein Mäuschen am Kater.</p>`,
         },
         {
-          speaker: "Ronja",
-          text: `<p>The balcony is barely big enough for one chair and a small table, but in the evening light, with the rooftops spread out below, it feels like enough. Ronja sits with her wine and watches the city shift gears — the daytime hum fading into something softer, more scattered.</p>
-<p>She calls her mother in Bern. They talk about nothing in particular — the garden, a cousin's wedding, a recipe for Zopf that neither of them will ever make. It's comforting in the way that unimportant conversations sometimes are.</p>
-<p>"How's work?" her mother asks. "Getting somewhere," Ronja says. She doesn't elaborate. Her mother, a retired teacher, has never fully understood what urban planning means, but she's always believed in it.</p>
-<p>After they hang up, Ronja stays outside. A <a href="https://example.com/bat-conservation">bat</a> flickers past, impossibly fast. The first drops of rain begin to fall. She doesn't move.</p>`,
+          speaker: "Daniel",
+          text: `<p>Das Spiel beginnt zäh, der FC Basel kassiert kurz vor der Halbzeit ein Tor. In der Pause stehen wir in der Galerie und sehen, wie vor uns zwei Männer von einer Gruppe Heimfans aus dem Block geprügelt werden. Unklar, was vorgefallen ist, aber dieser Gewaltausbruch ist so plötzlich wie heftig. Wir stehen da und rauchen, wie die anderen Gäste auch dastehen, als wäre hier gar nichts zu sehen.</p><p>Schwer zu sagen, ob die Gewalt im Stadion normalisiert ist oder ob sie uns einfach paralysiert, wenn sie vor unseren Augen stattfindet. Mir macht sie Angst. Aber ich bin hier eben auch Teil einer schreienden, tosenden, sich betrinkenden Masse und damit der Nährboden für diese Gewalt, da hilft alles Erschrockensein nichts.</p>`,
         },
       ],
     },
 
-    // ─── Chapter 9: Night ────────────────────────────────────────────────
     {
-      title: "Night",
-      time: "22 Uhr",
+      title: "Heimkehr",
+      time: "23 Uhr",
       coverUrl: "https://picsum.photos/seed/night-city/800/500",
       pages: [
         {
+          speaker: "Ronja",
+          text: `<p>Als ich zu Hause bin und mich wieder aufs Sofa lege, merke ich, wie müde ich bin. Und frage mich, was diese Müdigkeit mit den Männern zu tun hat. Ich denke an ein Zitat der Feministin Andrea Dworkin: Für sie lehnten viele Frauen den Feminismus ab, «weil es eine Qual ist, sich der brutalen Frauenfeindlichkeit vollends bewusst zu sein, die Kultur, Gesellschaft und alle persönlichen Beziehungen durchdringt». Es stimmt: Früher konnte ich in reinen Männerrunden problemlos die Stellung halten. Heute sage ich schon im Vorfeld lieber ab.</p><p>Ich glaube, in dem ich mich vor ermüdenden Situationen schütze, ist mein Leben selbstbestimmter geworden. Aber manchmal denke ich: Schade eigentlich.</p>`,
+        },
+        {
           speaker: "Daniel",
-          text: `<p>Before bed, Daniel stands at the window for a long moment. The street below is quiet — a cyclist, a couple walking arm in arm, the orange glow of the Kebab shop that never seems to close. Rain has slicked the pavement, and the reflections of the streetlights look like they belong to a different, submerged city.</p>
-<p>He thinks about the day — the grant, the simulation, the conversation with Yuki. Small steps. That's how it always goes. You don't solve a problem in a day; you narrow the space of uncertainty until an answer begins to emerge.</p>
-<p>He closes his notebook, places it on the nightstand, and turns off the light. Tomorrow, he'll start writing the second-round proposal. Tonight, he lets his mind go quiet.</p>
-<p>Somewhere in the building, a door closes softly. The radiator clanks once and falls silent.</p>`,
+          text: `<p>Das Fussballspiel geht mit 0:1 verloren und ich stehe danach noch melancholisch auf der Plattform hinter dem Stadion unter tausenden anderen Männern und Frauen. Wie war deren Tag, interessiert mich, aber es ist schon zu spät, um Fragen zu stellen. Ich umarme den Kollegen zum Abschied. Dann fahre ich nach Hause.</p>`,
         },
         {
           speaker: "Ronja",
-          text: `<p>Ronja dries her hair after a shower and climbs into bed with her laptop. She rereads Thomas's message one more time, then closes the email app. Enough.</p>
-<p>She opens a <a href="https://example.com/architecture-podcast">podcast about urban architecture in Copenhagen</a> — the kind of thing she listens to when she wants to remember why she chose this work. A Danish planner talks about streets that were reclaimed from cars in the 1960s. "Everyone said it would kill the city," the planner says. "Instead, it brought it to life."</p>
-<p>The rain is steady now, drumming against the window in irregular patterns. Ronja lets the podcast play, her eyes half-closed.</p>
-<p>Tomorrow there will be more emails, more negotiations, more compromises. But also: an expanding pilot area, a director who sees what she sees, a city that — slowly, unevenly, imperfectly — is changing.</p>
-<p>She falls asleep with the light still on.</p>`,
+          text: `<p>Mein Freund will sich zu mir aufs Sofa legen. Damit beide Platz haben, müssen wir mühselig unsere Gliedmassen ineinander verknoten. Immer wieder haben wir darüber gesprochen, uns eine grössere Couch zu kaufen. Und den Gedanken rasch verworfen: Wieso denn, ist doch schön so.</p>`,
         },
       ],
     },

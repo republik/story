@@ -31,17 +31,25 @@
 <div
   bind:this={el}
   class={css({
-    px: '15px',
-    py: '8',
+    minHeight: "100vh",
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    transition: 'background-color 2s ease',
+    justifyContent: 'start',
+    background: 'white',
   })}
-  style:background-color={visible ? (speaker?.backgroundColor || '#ffffff') : '#ffffff'}
+
 >
-  <h3 class={css({ fontWeight: 700, mb: 4 })}>
-    {speaker?.name}
-  </h3>
-  {@html page.text}
+  <div class={css({
+    px: '15px',
+    pt: '6',
+    pb: '2',
+    transition: 'background-color 2s ease',
+    '& p': { mb: 4 },
+  })}
+       style:background-color={visible ? (speaker?.backgroundColor || '#ffffff') : '#ffffff'}>
+    <h3 class={css({ fontWeight: 700, mb: 4 })}>
+      {speaker?.name}
+    </h3>
+    {@html page.text}
+  </div>
 </div>
