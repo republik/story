@@ -17,7 +17,8 @@ export const twoVoicesData: InputData = {
     {
       title: "Aufrichten",
       time: "8 Uhr",
-      coverUrl: "https://picsum.photos/seed/morning-light/800/500",
+      coverUrl:
+        "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/e8707f8c-b043-4eb4-8de1-d6b408269f96/ig_cactus-37.jpg",
       pages: [
         {
           speaker: "Ronja",
@@ -56,7 +57,8 @@ export const twoVoicesData: InputData = {
     {
       title: "Pause machen",
       time: "12 Uhr",
-      coverUrl: "https://picsum.photos/seed/office-morning/800/500",
+      coverUrl:
+        "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/f4b43950-3e3d-4a6e-baea-00ba3e6cad93/ig_cactus-36.jpg",
       pages: [
         {
           speaker: "Ronja",
@@ -87,7 +89,8 @@ export const twoVoicesData: InputData = {
     {
       title: "Provozieren",
       time: "15 Uhr",
-      coverUrl: "https://picsum.photos/seed/city-lunch/800/500",
+      coverUrl:
+        "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/d02399c6-a0db-44ff-99e3-308101bdd28a/ig_cactus-14.jpg",
       pages: [
         {
           speaker: "Ronja",
@@ -122,7 +125,8 @@ export const twoVoicesData: InputData = {
     {
       title: "Händchen halten",
       time: "18 Uhr",
-      coverUrl: "https://picsum.photos/seed/bridge-evening/800/500",
+      coverUrl:
+        "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/45c2c59f-1f99-4f5e-bfbc-27856b03c85b/ig_cactus-38.jpg",
       pages: [
         {
           speaker: "Daniel",
@@ -149,7 +153,8 @@ export const twoVoicesData: InputData = {
     {
       title: "Heimkehr",
       time: "23 Uhr",
-      coverUrl: "https://picsum.photos/seed/night-city/800/500",
+      coverUrl:
+        "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/e8707f8c-b043-4eb4-8de1-d6b408269f96/ig_cactus-37.jpg",
       pages: [
         {
           speaker: "Ronja",

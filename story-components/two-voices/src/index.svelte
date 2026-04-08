@@ -20,7 +20,6 @@
 
   let {componentData}: Props = $props();
 
-  // With shadow: 'none', inject styles into the document head
   onMount(() => {
     const ID = "story-components-theme";
 
