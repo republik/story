@@ -23,6 +23,7 @@
   <h3
     class={css({
               textStyle: "h3Sans",
+              fontWeight: "normal",
               mb: "3",
             })}
   >

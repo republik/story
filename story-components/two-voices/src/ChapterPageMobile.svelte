@@ -24,7 +24,7 @@
   <div class={css({
     px: '15px',
     pt: '16',
-    pb: '12',
+    pb: '24',
     background: 'var(--tv-speaker-bg)',
     '& p': { mb: 4 },
     _dark: {

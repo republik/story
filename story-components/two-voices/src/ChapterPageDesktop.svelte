@@ -18,7 +18,7 @@
       ([entry]) => {
         visible = entry.isIntersecting;
       },
-      { threshold: 0.2 }
+      { threshold: 0.3 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -36,7 +36,7 @@
     background: 'background',
     pb: '16',
     opacity: '0.4',
-    transition: 'opacity 2s ease',
+    transition: 'opacity 1s ease',
   })}
   style:opacity={visible ? '1' : '0.4'}
 >
