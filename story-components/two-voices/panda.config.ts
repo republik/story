@@ -5,7 +5,6 @@ export default defineConfig({
   preflight: true,
   polyfill: true,
   prefix: "tv",
-  cssVarRoot: "#custom-element-container",
 
   presets,
 
@@ -19,4 +18,3 @@ export default defineConfig({
 
   jsxFramework: "svelte",
 });
-

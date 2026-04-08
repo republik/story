@@ -10,30 +10,24 @@
 <div
   class={css({
             textAlign: "center",
-            py: { base: "16", md: "24" },
-            px: "6",
-            position: "relative",
-            zIndex: 10,
-            background: "white",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            pt: "8",
+            pb: "16",
+            px: "4",
+            position: "sticky",
+            top: "0",
           })}
 >
-  <div
+  <h3
     class={css({
-              fontFamily: "gtAmericaStandard",
-              fontSize: 'l',
-              fontWeight: 500,
-              letterSpacing: -0.02,
-              mb: "2",
+              textStyle: "h3Sans",
+              mb: "3",
             })}
   >
     {time}
-  </div>
+  </h3>
 
   <h2
-    class={css({ textStyle: "h1Serif", mb: "2",})}
+    class={css({ textStyle: "h2Serif", mb: "6",})}
   >
     {title}
   </h2>
@@ -43,11 +37,11 @@
       src={coverUrl}
       alt={title}
       class={css({
-                maxWidth: "100%",
-                maxHeight: { base: "280px", md: "480px" },
-                width: "100%",
+                mx: "auto",
+                height: "360px",
+                width: "240px",
                 objectFit: "cover",
-                mt: "4",
+                backgroundColor: "#D8E4D6"
               })}
     />
   {/if}

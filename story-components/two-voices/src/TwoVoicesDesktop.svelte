@@ -22,7 +22,6 @@
     tick().then(() => {
       if (!container) return;
 
-      // ── Track chapter visibility (for mobile fade-in) ──
       const chapterObserver = new IntersectionObserver(
         (entries) => {
           const next = new Set(visibleChapters);
@@ -64,7 +63,6 @@
         })}
         style:opacity={visibleChapters.has(chapterIdx) ? 1 : 0}
       >
-        <!-- ── Chapter header ── -->
         <div
           class={css({
             textAlign: "center",

@@ -35,21 +35,22 @@
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
-    background: 'white',
+    color: 'var(--color-text)',
+    background: '#ffffff',
   })}
 
 >
   <div class={css({
     px: '15px',
-    pt: '12',
-    pb: '8',
-    transition: 'background-color 1s ease 0.2s',
+    pt: '16',
+    pb: '12',
+    transition: 'background-color 2s ease 0.2s',
     '& p': { mb: 4 },
   })}
        style:background-color={visible ? (speaker?.backgroundColor || '#ffffff') : '#ffffff'}>
-    <h3 class={css({ fontWeight: 700, mb: 4 })}>
+    <h4 class={css({ fontWeight: 700, mb: 4 })}>
       {speaker?.name}
-    </h3>
+    </h4>
     {@html page.text}
   </div>
 </div>

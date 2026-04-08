@@ -1,41 +1,40 @@
 <svelte:options customElement={{
     tag: 'two-voices',
-    shadow: 'open',
+    shadow: 'none',
     props: {
       componentData: { type: 'Object', attribute: 'componentdata' }
     }
-  }} />
+  }}/>
 
 <script lang="ts">
-  import { onMount } from "svelte";
   import TwoVoices from "./TwoVoices.svelte";
-  import type { InputData } from "./types.d.ts";
+  import type {InputData} from "./types.d.ts";
+
   import fontsCSS from "@story/theme/fonts.css?inline";
   import stylesCSS from "@story/theme/styles.css?inline";
+  import {onMount} from "svelte";
 
   interface Props {
     componentData?: InputData;
   }
 
-  let { componentData }: Props = $props();
-  let shadowRoot = $host()?.shadowRoot;
+  let {componentData}: Props = $props();
 
-  // ADD STYLES TO COMPONENT'S SHADOW ROOT
-  // (instead of the head of the main document)
-  // there might be a better way to add the styles to the shadowroot, but i couldn't find it...
-  onMount(async () => {
+  // With shadow: 'none', inject styles into the document head
+  onMount(() => {
     const ID = "story-components-theme";
 
-    if (shadowRoot && !shadowRoot.getElementById(ID)) {
+    if (!document.getElementById(ID)) {
       const node = document.createElement("style");
       node.id = ID;
       node.textContent = fontsCSS + stylesCSS;
-      shadowRoot.appendChild(node);
+      document.head.appendChild(node);
     }
   });
 </script>
 
-<div id="custom-element-container">
-  <TwoVoices componentData={componentData} />
-</div>
+<TwoVoices componentData={componentData}/>
+
+
+
 

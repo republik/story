@@ -26,7 +26,6 @@
       }
     });
 
-    // Start observing after Svelte has flushed the DOM
     tick().then(() => {
       container!.querySelectorAll<HTMLElement>('[data-page]').forEach(page => {
         ro.observe(page);
