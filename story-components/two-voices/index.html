@@ -9,6 +9,11 @@
             margin: 0;
         }
 
+        .wrapper {
+            color: var(--tv-colors-text);
+            background: var(--tv-colors-background)
+        }
+
         .intro, .outro {
             max-width: 620px;
             margin: auto;
@@ -24,44 +29,50 @@
 
         .intro .subtitle {
             font-size: 1.1rem;
-            color: #666;
             margin-bottom: 2rem;
         }
     </style>
 </head>
-<body data-theme="dark">
-<div class="intro">
-    <h1>Unter Typen</h1>
-    <p class="subtitle">Was für Männer begegnen uns an einem Tag – zu Hause, im Internet, an einem Fussballspiel und an
-        einer Männermesse? Wir trafen auf solche, die sich mit Cinderella vergleichen und andere, die brutale Gangster
-        geben. Und dann kam’s zur Prügelei.</p>
+<body data-theme="light">
+<div class="wrapper">
+    <div class="intro">
+        <h1>Unter Typen</h1>
+        <p class="subtitle">Was für Männer begegnen uns an einem Tag – zu Hause, im Internet, an einem Fussballspiel und
+            an
+            einer Männermesse? Wir trafen auf solche, die sich mit Cinderella vergleichen und andere, die brutale
+            Gangster
+            geben. Und dann kam’s zur Prügelei.</p>
 
-    <p>TEs gibt viel zu lesen über Männer in diesen Tagen. Vieles davon ist schlecht. Mit Donald Trump und Jeffrey
-        Epstein dominieren seit Jahren zwei besonders schwierige Beispiele die Weltpresse. Und dann fand in Zürich auch
-        noch eine Männermesse statt. Der Event brachte Reporterin Ronja Beck von der Republik und Reporter Daniel
-        Faulhaber vom «Beobachter» auf eine Idee: Einen Tag lang die Männer und ihre Begleiterscheinungen zu beobachten,
-        die ihnen von morgens bis abends begegnen. In sich hineinzulauschen, was die Herren mit ihnen anstellen. Und
-        alles unabhängig vom Anderen in zwei Protokollen festzuhalten, die später zu einem Text vereint würden.</p>
-    <p>Es war ein Experiment, das nie auf Vollständigkeit beruhen sollte, dafür aber auf Hoffnung: Darauf, dass es sich
-        lohnt, die kleinen Rollenspiele im Blick zu behalten – bei den Männern wie bei einem selbst.</p>
+        <p>TEs gibt viel zu lesen über Männer in diesen Tagen. Vieles davon ist schlecht. Mit Donald Trump und Jeffrey
+            Epstein dominieren seit Jahren zwei besonders schwierige Beispiele die Weltpresse. Und dann fand in Zürich
+            auch
+            noch eine Männermesse statt. Der Event brachte Reporterin Ronja Beck von der Republik und Reporter Daniel
+            Faulhaber vom «Beobachter» auf eine Idee: Einen Tag lang die Männer und ihre Begleiterscheinungen zu
+            beobachten,
+            die ihnen von morgens bis abends begegnen. In sich hineinzulauschen, was die Herren mit ihnen anstellen. Und
+            alles unabhängig vom Anderen in zwei Protokollen festzuhalten, die später zu einem Text vereint würden.</p>
+        <p>Es war ein Experiment, das nie auf Vollständigkeit beruhen sollte, dafür aber auf Hoffnung: Darauf, dass es
+            sich
+            lohnt, die kleinen Rollenspiele im Blick zu behalten – bei den Männern wie bei einem selbst.</p>
+    </div>
+
+    <two-voices></two-voices>
+
+    <div class="outro">
+        <p>The city hums on. Tomorrow will be different, and tomorrow will be the same. Two people, two rhythms,
+            one place — endlessly overlapping, endlessly apart.</p>
+    </div>
+
+    <script type="module">
+      import './src/index.svelte'
+      import { twoVoicesData } from './data.ts'
+
+      customElements.whenDefined('two-voices').then(() => {
+        const element = document.querySelector('two-voices')
+        element.componentData = twoVoicesData
+      })
+    </script>
 </div>
-
-<two-voices></two-voices>
-
-<div class="outro">
-    <p>The city hums on. Tomorrow will be different, and tomorrow will be the same. Two people, two rhythms,
-        one place — endlessly overlapping, endlessly apart.</p>
-</div>
-
-<script type="module">
-  import './src/index.svelte'
-  import { twoVoicesData } from './data.ts'
-
-  customElements.whenDefined('two-voices').then(() => {
-    const element = document.querySelector('two-voices')
-    element.componentData = twoVoicesData
-  })
-</script>
-</body>
+</body data-theme="light">
 </html>
 

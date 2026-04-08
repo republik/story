@@ -5,12 +5,14 @@ export const twoVoicesData: InputData = {
     {
       key: "Ronja",
       name: "Ronja Beck",
+      backgroundColor: "#ffffff",
+      backgroundColorDark: "#191919",
     },
     {
       key: "Daniel",
       name: "Daniel Faulhaber",
       backgroundColor: "#D8E4D6",
-      primary: true,
+      backgroundColorDark: "#4A5232",
     },
   ],
   chapters: [

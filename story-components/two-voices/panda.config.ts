@@ -3,7 +3,6 @@ import { presets } from "@story/theme/presets";
 
 export default defineConfig({
   preflight: true,
-  polyfill: true,
   prefix: "tv",
 
   presets,

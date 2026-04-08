@@ -35,10 +35,9 @@
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
-    color: 'var(--color-text)',
-    background: '#ffffff',
+    color: 'text',
+    background: 'background',
   })}
-
 >
   <div class={css({
     px: '15px',
@@ -46,8 +45,30 @@
     pb: '12',
     transition: 'background-color 2s ease 0.2s',
     '& p': { mb: 4 },
+    _dark: {
+      display: 'none'
+    }
   })}
-       style:background-color={visible ? (speaker?.backgroundColor || '#ffffff') : '#ffffff'}>
+       style:background-color={visible? speaker?.backgroundColor : 'inherit'}>
+    <h4 class={css({ fontWeight: 700, mb: 4 })}>
+      {speaker?.name}
+    </h4>
+    {@html page.text}
+  </div>
+
+
+  <div class={css({
+    px: '15px',
+    pt: '16',
+    pb: '12',
+    transition: 'background-color 2s ease 0.2s',
+    '& p': { mb: 4 },
+     display: 'none',
+    _dark: {
+      display: 'block'
+    }
+  })}
+       style:background-color={visible? speaker?.backgroundColorDark : 'inherit'}>
     <h4 class={css({ fontWeight: 700, mb: 4 })}>
       {speaker?.name}
     </h4>

@@ -8,8 +8,8 @@ export type Page = {
 export type Voice = {
   key: string;
   name: string;
-  backgroundColor?: string;
-  primary?: boolean;
+  backgroundColor: string;
+  backgroundColorDark: string;
 };
 
 export type TitleProps = {
