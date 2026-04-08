@@ -33,7 +33,7 @@
         }
     </style>
 </head>
-<body data-theme="light">
+<body>
 <div class="wrapper">
     <div class="intro">
         <h1>Unter Typen</h1>
@@ -59,13 +59,12 @@
     <two-voices></two-voices>
 
     <div class="outro">
-        <p>The city hums on. Tomorrow will be different, and tomorrow will be the same. Two people, two rhythms,
-            one place — endlessly overlapping, endlessly apart.</p>
+        <p>Autorbox</p>
     </div>
 
     <script type="module">
-      import './dist/index.js'
-      // import './src/index.svelte'
+      // import './dist/index.js'
+      import './src/index.svelte'
       import { twoVoicesData } from './data.ts'
 
       customElements.whenDefined('two-voices').then(() => {

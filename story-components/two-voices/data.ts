@@ -12,7 +12,7 @@ export const twoVoicesData: InputData = {
       key: "Daniel",
       name: "Daniel Faulhaber",
       backgroundColor: "#D8E4D6",
-      backgroundColorDark: "#4A5232",
+      backgroundColorDark: "#465342",
     },
   ],
   chapters: [

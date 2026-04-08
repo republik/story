@@ -37,6 +37,7 @@
     justifyContent: 'start',
     color: 'text',
     background: 'background',
+    fontSize: 'l',
   })}
 >
   <div class={css({

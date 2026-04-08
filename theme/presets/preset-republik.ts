@@ -275,19 +275,37 @@ export const presetRepublik = definePreset({
             fontFamily: "gtAmericaStandard",
           },
         },
+        editorial: {
+          description: "1:1 article match",
+          value: {
+            fontFamily: "rubis",
+            fontWeight: "normal",
+            fontStyle: "normal",
+
+            fontSize: {
+              base: "1.0625rem",
+              md: "1.1875rem",
+            },
+            lineHeight: { base: "1.625rem", md: "1.875rem" },
+
+            "& b": {
+              fontWeight: 700,
+            },
+            "& a": { textDecoration: "underline" },
+          },
+        },
         reading: {
           description: "Long form body text",
           value: {
             fontFamily: "rubis",
             fontWeight: "normal",
             fontStyle: "normal",
-            fontSize: "base",
 
             lineHeight: 1.5,
             "& b": {
               fontWeight: 700,
             },
-            "& a": { textDecoration: "underline" },
+            "& a": { textDecoration: "underline", fontWeight: 700 },
           },
         },
         airy: {

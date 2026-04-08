@@ -15,6 +15,9 @@
             px: "4",
             position: "sticky",
             top: "0",
+            md: {
+              position: "initial",
+            }
           })}
 >
   <h3
@@ -27,7 +30,7 @@
   </h3>
 
   <h2
-    class={css({ textStyle: "h2Serif", mb: "6",})}
+    class={css({ textStyle: "h1Serif", mb: "6",})}
   >
     {title}
   </h2>
