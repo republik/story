@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Two Voices — Story Component</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .wrapper {
+            color: var(--tv-colors-text);
+            background: var(--tv-colors-background)
+        }
+
+        .intro, .outro {
+            max-width: 620px;
+            margin: auto;
+            padding: 2rem 1.5rem;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="intro">
+        <h1>Unter Typen</h1>
+        <p class="subtitle">Was für Männer begegnen uns an einem Tag – zu Hause, im Internet, an einem Fussballspiel und
+            an
+            einer Männermesse? Wir trafen auf solche, die sich mit Cinderella vergleichen und andere, die brutale
+            Gangster
+            geben. Und dann kam’s zur Prügelei.</p>
+
+        <p>TEs gibt viel zu lesen über Männer in diesen Tagen. Vieles davon ist schlecht. Mit Donald Trump und Jeffrey
+            Epstein dominieren seit Jahren zwei besonders schwierige Beispiele die Weltpresse. Und dann fand in Zürich
+            auch
+            noch eine Männermesse statt. Der Event brachte Reporterin Ronja Beck von der Republik und Reporter Daniel
+            Faulhaber vom «Beobachter» auf eine Idee: Einen Tag lang die Männer und ihre Begleiterscheinungen zu
+            beobachten,
+            die ihnen von morgens bis abends begegnen. In sich hineinzulauschen, was die Herren mit ihnen anstellen. Und
+            alles unabhängig vom Anderen in zwei Protokollen festzuhalten, die später zu einem Text vereint würden.</p>
+        <p>Es war ein Experiment, das nie auf Vollständigkeit beruhen sollte, dafür aber auf Hoffnung: Darauf, dass es
+            sich
+            lohnt, die kleinen Rollenspiele im Blick zu behalten – bei den Männern wie bei einem selbst.</p>
+    </div>
+
+    <two-voices></two-voices>
+
+    <div class="outro">
+        <p>Autorbox</p>
+    </div>
+
+    <script type="module">
+      // import './dist/index.js'
+      import './src/index.svelte'
+      import { twoVoicesData } from './data.ts'
+
+      customElements.whenDefined('two-voices').then(() => {
+        const element = document.querySelector('two-voices')
+        element.componentData = twoVoicesData
+      })
+    </script>
+</div>
+</body>
+</html>
+

@@ -62,6 +62,7 @@ export const presetRepublik = definePreset({
           10: { value: "2.5rem" },
           12: { value: "3rem" },
           16: { value: "4rem" },
+          24: { value: "6rem" },
           32: { value: "8rem" },
         },
         radii: {
@@ -275,13 +276,32 @@ export const presetRepublik = definePreset({
             fontFamily: "gtAmericaStandard",
           },
         },
+        editorial: {
+          description: "1:1 article match",
+          value: {
+            fontFamily: "rubis",
+            fontWeight: "normal",
+            fontStyle: "normal",
+
+            fontSize: {
+              base: "1.0625rem",
+              md: "1.1875rem",
+            },
+            lineHeight: { base: "1.625rem", md: "1.875rem" },
+
+            "& b": {
+              fontWeight: 700,
+            },
+            "& a": { textDecoration: "underline" },
+          },
+        },
         reading: {
           description: "Long form body text",
           value: {
             fontFamily: "rubis",
             fontWeight: "normal",
             fontStyle: "normal",
-            
+
             lineHeight: 1.5,
             "& b": {
               fontWeight: 700,
