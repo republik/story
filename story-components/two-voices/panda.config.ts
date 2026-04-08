@@ -3,7 +3,8 @@ import { presets } from "@story/theme/presets";
 
 export default defineConfig({
   preflight: true,
-  prefix: "tv",
+  polyfill: true, // was broken on safari without it
+  prefix: "story",
 
   presets,
 

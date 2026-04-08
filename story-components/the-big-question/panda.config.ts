@@ -4,7 +4,7 @@ import { presets } from "@story/theme/presets";
 export default defineConfig({
   preflight: true,
   polyfill: true, // was broken on safari without it
-  prefix: "tbq",
+  prefix: "story",
   cssVarRoot: "#custom-element-container",
 
   // strictTokens: true,
