@@ -32,7 +32,7 @@
   });
 </script>
 
-<div class="story-component">
+<div id="story-component">
     <TwoVoices componentData={componentData}/>
 </div>
 

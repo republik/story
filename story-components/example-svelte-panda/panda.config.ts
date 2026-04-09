@@ -5,7 +5,7 @@ export default defineConfig({
   preflight: true,
   polyfill: true,
   prefix: "story", // do not change
-  cssVarRoot: ".story-component", // do not change
+  cssVarRoot: "#story-component", // do not change
 
   // strictTokens: true,
 

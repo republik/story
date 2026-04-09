@@ -32,8 +32,6 @@
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
-    color: 'text',
-    background: 'background',
     pb: '16',
     opacity: '0.4',
     transition: 'opacity 1s ease',

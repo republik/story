@@ -34,6 +34,6 @@
   });
 </script>
 
-<div class="story-component">
+<div id="story-component">
   <TheBigQuestion componentData={componentData} />
 </div>
