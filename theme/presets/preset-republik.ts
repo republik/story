@@ -303,6 +303,9 @@ export const presetRepublik = definePreset({
             fontStyle: "normal",
 
             lineHeight: 1.5,
+            "& i": {
+              fontStyle: "italic",
+            },
             "& b": {
               fontWeight: 700,
             },
