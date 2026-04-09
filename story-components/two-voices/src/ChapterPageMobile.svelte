@@ -24,7 +24,7 @@
 >
   <div class={css({
     px: '15px',
-    pt: '16',
+    pt: '12',
     pb: '24',
     background: 'var(--speaker-bg)',
     _dark: {

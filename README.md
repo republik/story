@@ -51,3 +51,13 @@ Because of how web components work, the styles are encapsulated (they get applie
 so none of the styles from the article will interfere with the component styles, and vice versa.
 
 Bottom line: you are not trapped in the stack, so if it makes you sad, feel free to write something different.
+
+## Additional Notes
+
+1. Shadow DOM: web components written with Svelte may be configured to use a shadow DOM, which encapsulates the
+   component's styles and markup, or not. After experimentation, I found that not using the shadow DOM causes
+   interferences between the styles of the component and the styles of the article: *not recommended*. However, using
+   the shadow DOM causes some other issues, notably regarding the propagation of the color theme. There is a javascript
+   workaround (observing the document's DOM and setting the data-theme accordingly in the component), used for instance
+   in the `two-voices` component. The hack also involves using a class-based `cssVarRoot` in the panda config, otherwise
+   one runs into issues with the specificity of the panda-generated rules. 

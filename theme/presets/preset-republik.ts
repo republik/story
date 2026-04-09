@@ -288,7 +288,9 @@ export const presetRepublik = definePreset({
               md: "1.1875rem",
             },
             lineHeight: { base: "1.625rem", md: "1.875rem" },
-
+            "& i": {
+              fontStyle: "italic",
+            },
             "& b": {
               fontWeight: 700,
             },
