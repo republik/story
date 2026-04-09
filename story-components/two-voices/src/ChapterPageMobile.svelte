@@ -1,40 +1,41 @@
 <script lang="ts">
-  import { css } from "@story/theme/css";
-  import type { Page, Voice } from "./types.d.ts";
+  import {css} from "@story/theme/css";
+  import type {Page, Voice} from "./types.d.ts";
 
   interface Props {
     page: Page;
     speaker: Voice | undefined;
   }
 
-  let { page, speaker }: Props = $props();
+  let {page, speaker}: Props = $props();
 </script>
 
 <div
-  class={css({
+        class={css({
     minHeight: "100vh",
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
-    color: 'text',
+    background: 'background',
   })}
-  style:--tv-speaker-bg={speaker?.backgroundColor}
-  style:--tv-speaker-bg-dark={speaker?.backgroundColorDark}
+        style:--speaker-bg={speaker?.backgroundColor}
+        style:--speaker-bg-dark={speaker?.backgroundColorDark}
 >
-  <div class={css({
+    <div class={css({
     px: '15px',
     pt: '16',
     pb: '24',
-    background: 'var(--tv-speaker-bg)',
-    '& p': { mb: 4 },
+    color: 'text',
+    background: 'var(--speaker-bg)',
     _dark: {
-      background: 'var(--tv-speaker-bg-dark)',
-    }
+      background: 'var(--speaker-bg-dark)',
+    },
+    '& p': { mb: 4 },
   })}
-  >
-    <h4 class={css({ fontWeight: 700, mb: 4 })}>
-      {speaker?.name}
-    </h4>
-    {@html page.text}
-  </div>
+    >
+        <h4 class={css({ fontWeight: 700, mb: 4 })}>
+            {speaker?.name}
+        </h4>
+        {@html page.text}
+    </div>
 </div>
