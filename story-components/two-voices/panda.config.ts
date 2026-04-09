@@ -15,7 +15,7 @@ export default defineConfig({
 
   importMap: "@story/theme",
 
-  outdir: "../../theme/__generated__",
+  outdir: "./generated",
 
   jsxFramework: "svelte",
 });

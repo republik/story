@@ -18,12 +18,9 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
-  // Package name where style functions get imported from
   importMap: "@story/theme",
 
-  // Output directory for generated files.
-  // NOTE: this must be directory where `importMap` module resolves to
-  outdir: "../../theme/__generated__",
+  outdir: "./generated",
 
   jsxFramework: "svelte",
 });

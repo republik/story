@@ -18,7 +18,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@story/theme/*": ["./generated/*"]
+    }
   },
   "include": ["src", "vite.config.ts"]
 }
