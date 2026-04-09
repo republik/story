@@ -4,21 +4,21 @@
     props: {
       componentData: { type: 'Object', attribute: 'componentdata' }
     }
-  }}/>
+  }} />
 
 <script lang="ts">
   import TwoVoices from "./TwoVoices.svelte";
-  import type {InputData} from "./types.d.ts";
+  import type { InputData } from "./types.d.ts";
 
   import fontsCSS from "@story/theme/fonts.css?inline";
   import stylesCSS from "@story/theme/styles.css?inline";
-  import {onMount} from "svelte";
+  import { onMount } from "svelte";
 
   interface Props {
     componentData?: InputData;
   }
 
-  let {componentData}: Props = $props();
+  let { componentData }: Props = $props();
   let shadowRoot = $host()?.shadowRoot;
   let theme = $state<string | null>(null);
 
@@ -36,20 +36,20 @@
     }
 
     // Mirror data-theme from closest ancestor into shadow DOM
-    const themeSource = document.querySelector('[data-theme]');
+    const themeSource = document.querySelector("[data-theme]");
     if (themeSource) {
-      theme = themeSource.getAttribute('data-theme');
+      theme = themeSource.getAttribute("data-theme");
       const observer = new MutationObserver(() => {
-        theme = themeSource.getAttribute('data-theme');
+        theme = themeSource.getAttribute("data-theme");
       });
-      observer.observe(themeSource, { attributes: true, attributeFilter: ['data-theme'] });
+      observer.observe(themeSource, { attributes: true, attributeFilter: ["data-theme"] });
       return () => observer.disconnect();
     }
   });
 </script>
 
-<div id="story-component" data-theme={theme}>
-    <TwoVoices componentData={componentData}/>
+<div class="story-component" data-theme={theme}>
+  <TwoVoices componentData={componentData} />
 </div>
 
 

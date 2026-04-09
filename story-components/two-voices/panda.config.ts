@@ -5,7 +5,7 @@ export default defineConfig({
   preflight: true,
   polyfill: true, // was broken on safari without it
   prefix: "story",
-  cssVarRoot: "#story-component",
+  cssVarRoot: ".story-component",
 
   presets,
 
