@@ -37,7 +37,7 @@
 </script>
 
 <div bind:this={container}>
-  {#each componentData.chapters as chapter}
+  {#each componentData.chapters as chapter, chIdx}
     <div data-chapter>
       <ChapterHeader title={chapter.title} time={chapter.time} coverUrl={chapter.coverUrl} />
       {#each chapter.pages as page, i}
@@ -58,6 +58,7 @@
           <ChapterPageMobile
             page={page}
             speaker={speaker}
+            showFullName={chIdx === 0 && i < voices.length}
           />
         </div>
       {/each}

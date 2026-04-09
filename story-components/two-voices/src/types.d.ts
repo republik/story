@@ -1,4 +1,4 @@
-export type Speaker = "Ronja" | "Daniel";
+export type Speaker = "Beck" | "Faulhaber";
 
 export type Page = {
   speaker: Speaker;

@@ -6,9 +6,10 @@
   interface Props {
     page: Page;
     speaker: Voice | undefined;
+    showFullName?: boolean;
   }
 
-  let { page, speaker }: Props = $props();
+  let { page, speaker, showFullName }: Props = $props();
   let visible = $state(false);
   let el: HTMLElement | undefined = $state();
 
@@ -42,7 +43,7 @@
     '& p': { mb: 4 },
   })}>
     <h4 class={css({ fontWeight: 700, mb: 4 })}>
-      {speaker?.name}
+      {showFullName ? speaker?.name : speaker?.key}
     </h4>
     {@html page.text}
   </div>
