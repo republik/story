@@ -24,4 +24,6 @@
   });
 </script>
 
-<ActualComponent />
+<div class="story-component">
+  <ActualComponent />
+</div>

@@ -34,6 +34,6 @@
   });
 </script>
 
-<div id="custom-element-container">
+<div class="story-component">
   <TheBigQuestion componentData={componentData} />
 </div>

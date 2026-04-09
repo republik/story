@@ -4,7 +4,8 @@ import { presets } from "@story/theme/presets";
 export default defineConfig({
   preflight: true,
   polyfill: true,
-  prefix: "esp",
+  prefix: "story", // do not change
+  cssVarRoot: ".story-component", // do not change
 
   // strictTokens: true,
 
