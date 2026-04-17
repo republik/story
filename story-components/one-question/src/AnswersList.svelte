@@ -68,7 +68,7 @@
             fontSize: '16px',
             lineHeight: '140%',
             letterSpacing: '0.02',
-            pb: 6
+            pb: 4,
           })}>
             {@html respondent.description}
           </p>
