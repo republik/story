@@ -32,22 +32,6 @@
          top: '200px',
         }
       })}>
-        <div class={css({ display: 'flex', flexDirection: 'column'})}>
-          <h2
-            style:background={answersByCategory.category.color}
-            class={css({
-          fontFamily: 'gtAmericaStandard',
-          fontWeight: 700,
-          fontSize: '3xl',
-          lineHeight: '100%',
-          pt: 6,
-          pb: 4,
-        })}>
-            {respondent.name}
-          </h2>
-          <p
-            class={css({ textStyle: 'airy', pb: 6 })}>{@html respondent.description}</p>
-        </div>
         <img src={respondent.avatarUrl.normal}
              alt={respondent.name} />
       </div>
@@ -66,7 +50,31 @@
             pt: 0,
             pb: 0,
           }
-        })}>{@html text}</div>
+        })}>
+        <div class={css({ display: 'flex', flexDirection: 'column'})}>
+          <h2
+            style:background={answersByCategory.category.color}
+            class={css({
+            fontFamily: 'gtAmericaStandard',
+            fontWeight: 700,
+            fontSize: '3xl',
+            lineHeight: '100%',
+            pb: 4,
+          })}>
+            {respondent.name}
+          </h2>
+          <p class={css({
+            fontFamily: 'gtAmericaStandard',
+            fontSize: '16px',
+            lineHeight: '140%',
+            letterSpacing: '0.02',
+            pb: 6
+          })}>
+            {@html respondent.description}
+          </p>
+        </div>
+        <div>{@html text}</div>
+      </div>
     </div>
   {/each}
 </div>
