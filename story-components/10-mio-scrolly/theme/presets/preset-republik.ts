@@ -326,6 +326,27 @@ export const presetRepublik = definePreset({
             "& a": { textDecoration: "underline", fontWeight: 700 },
           },
         },
+        chartTitle: {
+          value: {
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "medium",
+            fontSize: "1.1875rem",
+            lineHeight: 1.5,
+            md: {
+              fontSize: "1.375rem",
+            },
+          },
+        },
+        chartDescription: {
+          value: {
+            fontFamily: "gtAmericaStandard",
+            fontWeight: "normal",
+            fontSize: "1rem",
+            md: {
+              fontSize: "1.1875rem",
+            },
+          },
+        },
         title: {
           value: {
             fontFamily: "republikSerif",

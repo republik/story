@@ -53,6 +53,7 @@
       });
       if (t < 1) rafId = requestAnimationFrame(step);
     }
+
     rafId = requestAnimationFrame(step);
   });
 
@@ -107,25 +108,19 @@
 </script>
 
 <div bind:this={container} class={css({ width: "100%" })}>
+  {#if scenarioLabel}
+    <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
+      Scenario: {scenarioLabel}
+    </h3>
+    <p class={css({ textStyle: "chartDescription", mb: "15px"})}>Description</p>
+  {/if}
   <svg {width} {height} class={css({ display: "block" })}>
-    {#if scenarioLabel}
-      <text
-        x={margin.left}
-        y={20}
-        font-size="12"
-        font-weight="700"
-        fill="#000"
-        font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
-        Scenario: {scenarioLabel}
-      </text>
-    {/if}
     <g transform={`translate(${margin.left},${margin.top})`}>
       {#each yTicks as t}
         <line x1="0" x2={innerW} y1={y(t)} y2={y(t)}
               stroke="#E5E5E5" />
         <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
-              font-size="11" fill="#757575"
-              font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
+              class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
           {d3.format("~s")(t)}
         </text>
       {/each}
@@ -134,8 +129,8 @@
       {#each xTicks as t}
         <g transform={`translate(${x(t)},${innerH})`}>
           <line y2="5" stroke="#000" />
-          <text y="18" text-anchor="middle" font-size="11" fill="#757575"
-                font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
+          <text y="18" text-anchor="middle"
+                class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
             {fmtYear(t)}
           </text>
         </g>
@@ -156,10 +151,9 @@
           x={innerW + 4}
           y={y(lastPoint[g])}
           dy="0.32em"
-          font-size="11"
+          class={css({ fontSize: "12px", fontFamily: "gtAmericaStandard"})}
           fill={groupColors[g]}
           opacity={highlight.includes(g) ? 1 : 0.15}
-          font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif"
           style="transition: opacity 600ms ease;">
           {g}
         </text>
