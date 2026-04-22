@@ -38,7 +38,7 @@
 <div bind:this={rootEl} class={css({
   maxW: "1100px",
   mx: "auto",
-  px: "4",
+  px: "15px",
   color: "text",
   position: "relative",
 })}>
@@ -72,10 +72,11 @@
       data-section="line"
       data-idx={i}
       class={css({
-            minH: "250px",
+            minH: "280px",
             display: "flex",
             alignItems: "end",
             justifyContent: { base: "center", lg: "flex-end" },
+            _last: { mb: "80px" },
           })}>
       <p class={css({
             background: "background",

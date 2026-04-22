@@ -12,7 +12,7 @@ export const presetRepublik = definePreset({
     },
   },
   globalCss: {
-    html: {
+    "html, :host": {
       WebkitFontSmoothing: "auto",
       MozOsxFontSmoothing: "auto",
     },

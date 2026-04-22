@@ -57,7 +57,7 @@
     rafId = requestAnimationFrame(step);
   });
 
-  const margin = { top: 40, right: 72, bottom: 36, left: 48 };
+  const margin = { top: 10, right: 60, bottom: 20, left: 35 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));

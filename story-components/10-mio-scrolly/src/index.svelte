@@ -25,7 +25,12 @@
     if (shadowRoot && !shadowRoot.getElementById(ID)) {
       const node = document.createElement("style");
       node.id = ID;
-      node.textContent = fontsCSS + stylesCSS;
+      // Panda's :host specificity hack (:host:not(#\#):not(#\#)) doesn't match
+      // the host in Chrome's shadow DOM, so its preflight `:host { antialiased }`
+      // wins and makes text render lighter than the surrounding document. Append
+      // a plain :host override so the shadow tree inherits the browser default.
+      const hostOverride = ":host{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;color:#000;}";
+      node.textContent = fontsCSS + stylesCSS + hostOverride;
       shadowRoot.appendChild(node);
     }
   });
