@@ -52,10 +52,10 @@
       justifyContent: "center",
       zIndex: "1",
       lg: {
-        width: "700px",
-        height: "100wh",
+        width: "680px",
+        height: "100vh",
         alignItems: "center",
-        justifyContent: "center",
+        pb: "6",
       }
     })}>
     <div class={css({
@@ -64,6 +64,9 @@
       height: "calc(100% - 30px)",
       pb: "30px",
       background: "background",
+      lg: {
+        height: "auto",
+      }
     })}>
       <LineChart
         highlight={lineState.highlight}
