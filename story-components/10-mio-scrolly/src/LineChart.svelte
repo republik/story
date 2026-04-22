@@ -1,0 +1,159 @@
+<script lang="ts">
+  import * as d3 from "d3";
+  import { onMount, untrack } from "svelte";
+  import { css } from "@story/theme/css";
+  import type { Group, PopulationPoint } from "./types.d.ts";
+
+  interface Props {
+    population: PopulationPoint[];
+    groups: Group[];
+    groupColors: Record<Group, string>;
+    highlight: Group[];
+    xDomain: [number, number];
+    scenarioLabel?: string;
+  }
+
+  let { population, groups, groupColors, highlight, xDomain, scenarioLabel }: Props = $props();
+
+  let container: HTMLDivElement;
+  let width = $state(600);
+  let height = $state(420);
+
+  onMount(() => {
+    const ro = new ResizeObserver(() => {
+      width = container.clientWidth;
+      height = Math.min(480, Math.max(300, container.clientWidth * 0.66));
+    });
+    ro.observe(container);
+    return () => ro.disconnect();
+  });
+
+  // --- Smooth tween between scenario datasets ---
+  // Displayed population interpolates from the previous dataset to the new one
+  // whenever the `population` prop reference changes.
+  let displayPop = $state<PopulationPoint[]>(population.map((p) => ({ ...p })));
+  let rafId: number | null = null;
+
+  $effect(() => {
+    const target = population;
+    const from = untrack(() => displayPop.map((p) => ({ ...p })));
+    const t0 = performance.now();
+    const duration = 700;
+    if (rafId) cancelAnimationFrame(rafId);
+
+    function step(now: number) {
+      const t = Math.min(1, (now - t0) / duration);
+      // easeInOutCubic
+      const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      displayPop = from.map((d, i) => {
+        const tp = target[i];
+        const out: PopulationPoint = { year: tp.year } as PopulationPoint;
+        for (const g of groups) out[g] = d[g] + (tp[g] - d[g]) * e;
+        return out;
+      });
+      if (t < 1) rafId = requestAnimationFrame(step);
+    }
+    rafId = requestAnimationFrame(step);
+  });
+
+  const margin = { top: 40, right: 72, bottom: 36, left: 48 };
+
+  let innerW = $derived(Math.max(0, width - margin.left - margin.right));
+  let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
+
+  let x = $derived(d3.scaleLinear().domain(xDomain).range([0, innerW]));
+
+  let yMax = $derived(
+    d3.max(displayPop.filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1]),
+      (p) => Math.max(...groups.map((g) => p[g]))) || 1
+  );
+  let y = $derived(d3.scaleLog().domain([10, yMax * 1.1]).range([innerH, 0]).clamp(true));
+
+  let line = $derived(
+    d3.line<{ year: number; v: number }>()
+      .x((d) => x(d.year))
+      .y((d) => y(d.v))
+      .curve(d3.curveMonotoneX)
+  );
+
+  function pathFor(group: Group): string {
+    const pts = displayPop
+      .filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1])
+      .map((p) => ({ year: p.year, v: p[group] }));
+    return line(pts) || "";
+  }
+
+  let xTicks = $derived(x.ticks(6));
+  let yTicks = $derived(y.ticks(4).filter((t) => t >= 10));
+
+  function fmtYear(v: number): string {
+    if (v === 0) return "0";
+    return `${v / 1000}k`;
+  }
+
+  let lastPoint = $derived(
+    displayPop.filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1]).slice(-1)[0]
+  );
+</script>
+
+<div bind:this={container} class={css({ width: "100%" })}>
+  <svg {width} {height} class={css({ display: "block" })}>
+    {#if scenarioLabel}
+      <text
+        x={margin.left}
+        y={20}
+        font-size="12"
+        font-weight="700"
+        fill="#000"
+        font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
+        Scenario: {scenarioLabel}
+      </text>
+    {/if}
+    <g transform={`translate(${margin.left},${margin.top})`}>
+      {#each yTicks as t}
+        <line x1="0" x2={innerW} y1={y(t)} y2={y(t)}
+              stroke="#E5E5E5" stroke-dasharray="2 3" />
+        <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
+              font-size="11" fill="#757575"
+              font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
+          {d3.format("~s")(t)}
+        </text>
+      {/each}
+
+      <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
+      {#each xTicks as t}
+        <g transform={`translate(${x(t)},${innerH})`}>
+          <line y2="5" stroke="#000" />
+          <text y="18" text-anchor="middle" font-size="11" fill="#757575"
+                font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
+            {fmtYear(t)}
+          </text>
+        </g>
+      {/each}
+
+      {#each groups as g}
+        <path
+          d={pathFor(g)}
+          fill="none"
+          stroke={groupColors[g]}
+          stroke-width={highlight.includes(g) ? 2.5 : 1.5}
+          opacity={highlight.includes(g) ? 1 : 0.15}
+          style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
+      {/each}
+
+      {#each groups as g}
+        <text
+          x={innerW + 4}
+          y={y(lastPoint[g])}
+          dy="0.32em"
+          font-size="11"
+          fill={groupColors[g]}
+          opacity={highlight.includes(g) ? 1 : 0.15}
+          font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif"
+          style="transition: opacity 600ms ease;">
+          {g}
+        </text>
+      {/each}
+    </g>
+  </svg>
+</div>
