@@ -39,57 +39,56 @@
   maxW: "1100px",
   mx: "auto",
   px: "4",
-  color: "var(--color-text)",
+  color: "text",
   position: "relative",
 })}>
   <div class={css({
       position: "sticky",
       top: "0",
-      height: "100vh",
+      py: "6",
+      minH: "40vh",
       display: "flex",
-      alignItems: "center",
+      alignItems: "start",
       justifyContent: "center",
-      pointerEvents: "none",
+      zIndex: "2",
+      background: "background",
+      md: {
+        alignItems: "center",
+        justifyContent: "center",
+      }
     })}>
-    <div class={css({ width: "100%", maxW: "900px", px: "4" })}>
-      <LineChart
-        highlight={lineState.highlight}
-        xDomain={lineState.xDomain}
-        population={lineScenario.population}
-        scenarioLabel={lineScenario.label}
-        groups={componentData.groups}
-        groupColors={componentData.groupColors} />
-    </div>
+    <LineChart
+      highlight={lineState.highlight}
+      xDomain={lineState.xDomain}
+      population={lineScenario.population}
+      scenarioLabel={lineScenario.label}
+      groups={componentData.groups}
+      groupColors={componentData.groupColors} />
   </div>
 
-  <div class={css({
-      position: "relative",
-      marginTop: "-100vh",
-      pointerEvents: "none",
-    })}>
-    {#each componentData.lineSteps as step, i}
-      <div
-        data-step
-        data-section="line"
-        data-idx={i}
-        class={css({
-            minH: "90vh",
+  {#each componentData.lineSteps as step, i}
+    <div
+      data-step
+      data-section="line"
+      data-idx={i}
+      class={css({
+            minH: "250px",
             display: "flex",
-            alignItems: "center",
+            alignItems: "end",
             justifyContent: { base: "center", lg: "flex-end" },
-            px: "4",
           })}>
-        <p class={css({
+      <p class={css({
             background: "background",
-            p: "5",
-            maxW: "360px",
             textStyle: "editorial",
             opacity: currentLine === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
+            md: {
+              maxW: "360px",
+              p: "4",
+            }
           })}>
-          {step.text}
-        </p>
-      </div>
-    {/each}
-  </div>
+        {step.text}
+      </p>
+    </div>
+  {/each}
 </div>

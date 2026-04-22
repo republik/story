@@ -166,6 +166,64 @@ function makeScenario(
   return { id, label, population: pop, shares: toShares(pop) };
 }
 
+// --- Forward-looking projections: year 0 to +10 000 ---
+// Starts from the present-day values and extrapolates under different
+// assumptions about fertility, magic, and the climate of the north.
+const presentDay = baseline[baseline.length - 1];
+
+const futureYears = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+
+function projectFuture(
+  step: (year: number, prev: PopulationPoint) => Omit<PopulationPoint, "year">,
+): PopulationPoint[] {
+  const out: PopulationPoint[] = [{ ...presentDay, year: 0 }];
+  for (let i = 1; i < futureYears.length; i++) {
+    const y = futureYears[i];
+    const prev = out[i - 1];
+    out.push({ year: y, ...step(y, prev) });
+  }
+  return out;
+}
+
+// Business-as-usual: gentle continuation of present trends.
+const futureBaseline = projectFuture((_, p) => ({
+  Elves: Math.round(p.Elves * 0.96),
+  Dwarves: Math.round(p.Dwarves * 0.985),
+  Orcs: Math.round(p.Orcs * 1.03),
+  Humans: Math.round(p.Humans * 1.045),
+  Halflings: Math.round(p.Halflings * 1.02),
+}));
+
+// Climate shift: the long winter of the Northern Reaches. Dwarves thrive,
+// Humans and Orcs stall, Elves stabilise.
+const climateShift = projectFuture((y, p) => ({
+  Elves: Math.round(p.Elves * 1.005),
+  Dwarves: Math.round(p.Dwarves * 1.04),
+  Orcs: Math.round(p.Orcs * (y <= 3000 ? 1.01 : 0.985)),
+  Humans: Math.round(p.Humans * (y <= 2000 ? 1.015 : 0.992)),
+  Halflings: Math.round(p.Halflings * 0.99),
+}));
+
+// Dwarven diaspora: the Great Tunnels open, Dwarves explode across the
+// surface, everyone else recalibrates.
+const dwarvenDiaspora = projectFuture((_, p) => ({
+  Elves: Math.round(p.Elves * 0.97),
+  Dwarves: Math.round(p.Dwarves * 1.08),
+  Orcs: Math.round(p.Orcs * 0.99),
+  Humans: Math.round(p.Humans * 1.015),
+  Halflings: Math.round(p.Halflings * 1.025),
+}));
+
+// Human collapse: over-extension, plague, and civil wars halve the Human
+// population every two millennia. Others fill the gap slowly.
+const humanCollapse = projectFuture((y, p) => ({
+  Elves: Math.round(p.Elves * 1.02),
+  Dwarves: Math.round(p.Dwarves * 1.03),
+  Orcs: Math.round(p.Orcs * 1.05),
+  Humans: Math.round(p.Humans * (y <= 4000 ? 0.7 : 0.92)),
+  Halflings: Math.round(p.Halflings * 1.04),
+}));
+
 const scenarios: Record<string, Scenario> = {
   baseline: makeScenario("baseline", "Recorded history", baseline),
   noOrcSurge: makeScenario("noOrcSurge", "Without the Orc Surge", noOrcSurge),
@@ -175,9 +233,13 @@ const scenarios: Record<string, Scenario> = {
     "An Elvish Renaissance",
     elvishRenaissance,
   ),
+  futureBaseline: makeScenario("futureBaseline", "Continuation of present trends", futureBaseline),
+  climateShift: makeScenario("climateShift", "The Long Northern Winter", climateShift),
+  dwarvenDiaspora: makeScenario("dwarvenDiaspora", "The Dwarven Diaspora", dwarvenDiaspora),
+  humanCollapse: makeScenario("humanCollapse", "A Human Unravelling", humanCollapse),
 };
 
-export const scrollyData: InputData = {
+export const scrollyData1: InputData = {
   lineSteps: [
     {
       id: "l1",
@@ -217,6 +279,54 @@ export const scrollyData: InputData = {
         scenarioId: "elvishRenaissance",
         highlight: ["Elves"],
         xDomain: [-10000, 0],
+      },
+    },
+  ],
+  scenarios,
+  groups,
+  groupColors,
+};
+
+export const scrollyData2: InputData = {
+  lineSteps: [
+    {
+      id: "f1",
+      text: "Now turn the telescope the other way. Starting from today's populations, the Royal Academy of Prognostication has modelled four futures for the Mittelland. Here is the business-as-usual projection: Humans keep climbing, Orcs and Halflings drift upward, Elves and Dwarves slowly decline.",
+      state: {
+        chart: "line",
+        scenarioId: "futureBaseline",
+        highlight: ["Humans", "Orcs", "Elves", "Dwarves"],
+        xDomain: [0, 10000],
+      },
+    },
+    {
+      id: "f2",
+      text: "The first alternative: a long winter closes over the Northern Reaches. The cold favours stone and iron over field and orchard. Dwarves multiply sixfold over the coming millennia; Human and Orc expansion stalls in the icebound plains.",
+      state: {
+        chart: "line",
+        scenarioId: "climateShift",
+        highlight: ["Dwarves", "Humans", "Orcs"],
+        xDomain: [0, 10000],
+      },
+    },
+    {
+      id: "f3",
+      text: "Second: the Great Tunnels open and the Dwarves, for the first time in their history, pour out onto the surface. The Halflings — long their trading partners — come up with them. The Elven line keeps falling, just more gently than in the baseline.",
+      state: {
+        chart: "line",
+        scenarioId: "dwarvenDiaspora",
+        highlight: ["Dwarves", "Halflings"],
+        xDomain: [0, 10000],
+      },
+    },
+    {
+      id: "f4",
+      text: "And the darkest forecast: a Human unravelling. Imperial overreach, plague, civil war — the great curve that dominated the last ten thousand years breaks, and every other people inherits a slightly larger share of a much smaller world.",
+      state: {
+        chart: "line",
+        scenarioId: "humanCollapse",
+        highlight: ["Humans", "Orcs", "Halflings", "Elves"],
+        xDomain: [0, 10000],
       },
     },
   ],

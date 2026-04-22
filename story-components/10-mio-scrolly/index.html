@@ -25,7 +25,7 @@
         themselves across the great span of recorded time. And how differently things might have gone.</p>
 </div>
 
-<ten-mio-scrolly></ten-mio-scrolly>
+<ten-mio-scrolly-1></ten-mio-scrolly-1>
 
 <div style="max-width: 700px; margin: auto; padding: 3rem 1rem 1rem;">
     <p>Absolute numbers tell only half the story. Here is the same span of time expressed as the share each people holds
@@ -33,7 +33,7 @@
         the whole — and how those shares shift under each scenario.</p>
 </div>
 
-<ten-mio-scrolly></ten-mio-scrolly>
+<ten-mio-scrolly-2></ten-mio-scrolly-2>
 
 <div style="max-width: 700px; margin: auto; padding: 3rem 1rem 1rem;">
     <h2>What the rolls can — and cannot — tell us</h2>
@@ -53,12 +53,20 @@
 
 <script type="module">
   import './src/index.svelte'
-  import { scrollyData } from './data.ts'
+  import { scrollyData1, scrollyData2 } from './data.ts'
 
-  customElements.whenDefined('ten-mio-scrolly').then(() => {
-    const element = document.querySelector('ten-mio-scrolly')
-    element.componentData = scrollyData
-  })
+  function mount (placeholderTag, data) {
+    const placeholder = document.querySelector(placeholderTag)
+    if (!placeholder) return
+    const el = document.createElement('ten-mio-scrolly')
+    placeholder.replaceWith(el)
+    customElements.whenDefined('ten-mio-scrolly').then(() => {
+      el.componentData = data
+    })
+  }
+
+  mount('ten-mio-scrolly-1', scrollyData1)
+  mount('ten-mio-scrolly-2', scrollyData2)
 </script>
 </body>
 </html>
