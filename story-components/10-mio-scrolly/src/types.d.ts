@@ -22,12 +22,6 @@ export type LineStepState = {
   xDomain: [number, number];
 };
 
-export type BarsStepState = {
-  chart: "bars";
-  scenarioId: string;
-  focusEra?: string;
-};
-
 export type Step = {
   id: string;
   text: string;
@@ -35,17 +29,7 @@ export type Step = {
 };
 
 export type InputData = {
-  intro: {
-    title: string;
-    paragraphs: string[];
-  };
   lineSteps: Step[];
-  bridgeText: string;
-  barsSteps: Step[];
-  outro: {
-    title: string;
-    paragraphs: string[];
-  };
   scenarios: Record<string, Scenario>;
   groups: Group[];
   groupColors: Record<Group, string>;
