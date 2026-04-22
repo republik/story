@@ -45,25 +45,34 @@
   <div class={css({
       position: "sticky",
       top: "0",
-      py: "6",
-      minH: "40vh",
+      pt: "6",
+      pb: "calc(40vh + 30px)",
       display: "flex",
       alignItems: "start",
       justifyContent: "center",
-      zIndex: "2",
-      background: "background",
-      md: {
+      zIndex: "1",
+      lg: {
+        width: "700px",
+        height: "100wh",
         alignItems: "center",
         justifyContent: "center",
       }
     })}>
-    <LineChart
-      highlight={lineState.highlight}
-      xDomain={lineState.xDomain}
-      population={lineScenario.population}
-      scenarioLabel={lineScenario.label}
-      groups={componentData.groups}
-      groupColors={componentData.groupColors} />
+    <div class={css({
+      maxW: "center",
+      width: "100%",
+      height: "calc(100% - 30px)",
+      pb: "30px",
+      background: "background",
+    })}>
+      <LineChart
+        highlight={lineState.highlight}
+        xDomain={lineState.xDomain}
+        population={lineScenario.population}
+        scenarioLabel={lineScenario.label}
+        groups={componentData.groups}
+        groupColors={componentData.groupColors} />
+    </div>
   </div>
 
   {#each componentData.lineSteps as step, i}
@@ -83,7 +92,7 @@
             textStyle: "editorial",
             opacity: currentLine === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
-            md: {
+            lg: {
               maxW: "360px",
               p: "4",
             }

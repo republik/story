@@ -20,12 +20,18 @@
   let height = $state(420);
 
   onMount(() => {
-    const ro = new ResizeObserver(() => {
+    const measure = () => {
       width = container.clientWidth;
-      height = Math.min(480, Math.max(300, container.clientWidth * 0.66));
-    });
+      height = container.clientHeight;
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
     ro.observe(container);
-    return () => ro.disconnect();
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   });
 
   // --- Smooth tween between scenario datasets ---
@@ -105,15 +111,43 @@
   let lastPoint = $derived(
     displayPop.filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1]).slice(-1)[0]
   );
+
+  // Resolve label collisions at the right edge of the chart: for each group
+  // compute its ideal y (on the line), then push labels apart so none overlap.
+  // When a label has been moved from its ideal position, a dotted connector
+  // links the label back to the line's actual end point.
+  const labelMinSpacing = 14;
+
+  type LabelPos = { group: Group; idealY: number; y: number };
+  let labelPositions = $derived.by<LabelPos[]>(() => {
+    const raw = groups.map((g) => ({ group: g, idealY: y(lastPoint[g]), y: y(lastPoint[g]) }));
+    // top-down pass: push each label below the previous by at least minSpacing
+    const sorted = [...raw].sort((a, b) => a.y - b.y);
+    for (let i = 1; i < sorted.length; i++) {
+      const prev = sorted[i - 1];
+      if (sorted[i].y < prev.y + labelMinSpacing) {
+        sorted[i].y = prev.y + labelMinSpacing;
+      }
+    }
+    // bottom-up pass: if last label overflows, pull labels upward
+    for (let i = sorted.length - 2; i >= 0; i--) {
+      const next = sorted[i + 1];
+      if (next.y - sorted[i].y < labelMinSpacing) {
+        sorted[i].y = next.y - labelMinSpacing;
+      }
+    }
+    return sorted;
+  });
 </script>
 
-<div bind:this={container} class={css({ width: "100%" })}>
+<div class={css({ width: "100%", height: "100%", display: "flex", flexDirection: "column" })}>
   {#if scenarioLabel}
     <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
       Scenario: {scenarioLabel}
     </h3>
     <p class={css({ textStyle: "chartDescription", mb: "15px"})}>Description</p>
   {/if}
+  <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
   <svg {width} {height} class={css({ display: "block" })}>
     <g transform={`translate(${margin.left},${margin.top})`}>
       {#each yTicks as t}
@@ -146,18 +180,32 @@
           style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
       {/each}
 
-      {#each groups as g}
+      {#each labelPositions as lp}
+        {@const shifted = Math.abs(lp.y - lp.idealY) > 1}
+        {#if shifted}
+          <line
+            x1={innerW}
+            y1={lp.idealY}
+            x2={innerW + 4}
+            y2={lp.y}
+            stroke={groupColors[lp.group]}
+            stroke-width="1"
+            stroke-dasharray="1 2"
+            opacity={highlight.includes(lp.group) ? 0.6 : 0.1}
+            style="transition: opacity 600ms ease;" />
+        {/if}
         <text
-          x={innerW + 4}
-          y={y(lastPoint[g])}
+          x={innerW + 6}
+          y={lp.y}
           dy="0.32em"
           class={css({ fontSize: "12px", fontFamily: "gtAmericaStandard"})}
-          fill={groupColors[g]}
-          opacity={highlight.includes(g) ? 1 : 0.15}
+          fill={groupColors[lp.group]}
+          opacity={highlight.includes(lp.group) ? 1 : 0.15}
           style="transition: opacity 600ms ease;">
-          {g}
+          {lp.group}
         </text>
       {/each}
     </g>
   </svg>
+  </div>
 </div>
