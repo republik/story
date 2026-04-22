@@ -36,7 +36,7 @@
 </script>
 
 <div bind:this={rootEl} class={css({
-  maxW: "1100px",
+  maxW: "1200px",
   mx: "auto",
   px: "15px",
   color: "text",
@@ -45,14 +45,13 @@
   <div class={css({
       position: "sticky",
       top: "0",
-      pt: "6",
-      pb: "calc(40vh + 30px)",
       display: "flex",
       alignItems: "start",
       justifyContent: "center",
       zIndex: "1",
+      background: "background",
       lg: {
-        width: "680px",
+        width: "60%",
         height: "100vh",
         alignItems: "center",
         pb: "6",
@@ -61,9 +60,8 @@
     <div class={css({
       maxW: "center",
       width: "100%",
-      height: "calc(100% - 30px)",
-      pb: "30px",
-      background: "background",
+      aspectRatio: "4 / 3",
+      py: "6",
       lg: {
         height: "auto",
       }
@@ -84,21 +82,27 @@
       data-section="line"
       data-idx={i}
       class={css({
-            minH: "280px",
+            minH: "40vh",
             display: "flex",
-            alignItems: "end",
-            justifyContent: { base: "center", lg: "flex-end" },
+            alignItems: "center",
+            justifyContent: "center",
+            lg: {
+              ml: "auto",
+              maxW: "40%",
+              minH: "60vh",
+              alignItems: "start",
+            },
             _last: { mb: "80px" },
           })}>
       <p class={css({
+            maxW: "center",
             background: "background",
             textStyle: "editorial",
             opacity: currentLine === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
             lg: {
-              maxW: "360px",
-              p: "4",
-            }
+              pl: "8",
+            },
           })}>
         {step.text}
       </p>
