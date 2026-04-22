@@ -108,8 +108,6 @@
             p: "5",
             maxW: "360px",
             textStyle: "editorial",
-            // gets transparent when out of focus
-            // FIXME: when scrolling back the opcatiy remains
             opacity: currentLine === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
           })}>
@@ -173,9 +171,7 @@
             p: "5",
             maxW: "360px",
             textStyle: "editorial",
-            // gets transparent when out of focus
-            // FIXME: when scrolling back the opcatiy remains
-            opacity: currentLine === i ? 1 : 0.45,
+            opacity: currentBars === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
           })}>
             {step.text}

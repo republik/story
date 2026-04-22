@@ -67,7 +67,10 @@
     d3.max(displayPop.filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1]),
       (p) => Math.max(...groups.map((g) => p[g]))) || 1
   );
-  let y = $derived(d3.scaleLog().domain([10, yMax * 1.1]).range([innerH, 0]).clamp(true));
+  // Snap the top of the scale to the next power of ten so the log ticks
+  // (10, 100, 1 000, 10 000, 100 000 …) sit at perfectly even visual intervals.
+  let yTop = $derived(Math.pow(10, Math.ceil(Math.log10(yMax))));
+  let y = $derived(d3.scaleLog().domain([10, yTop]).range([innerH, 0]).clamp(true));
 
   let line = $derived(
     d3.line<{ year: number; v: number }>()
@@ -84,7 +87,14 @@
   }
 
   let xTicks = $derived(x.ticks(6));
-  let yTicks = $derived(y.ticks(4).filter((t) => t >= 10));
+  // Explicit powers-of-ten ticks within the current domain, evenly spaced on the log axis.
+  let yTicks = $derived(
+    (() => {
+      const ticks: number[] = [];
+      for (let t = 10; t <= yTop; t *= 10) ticks.push(t);
+      return ticks;
+    })()
+  );
 
   function fmtYear(v: number): string {
     if (v === 0) return "0";
@@ -112,7 +122,7 @@
     <g transform={`translate(${margin.left},${margin.top})`}>
       {#each yTicks as t}
         <line x1="0" x2={innerW} y1={y(t)} y2={y(t)}
-              stroke="#E5E5E5" stroke-dasharray="2 3" />
+              stroke="#E5E5E5" />
         <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
               font-size="11" fill="#757575"
               font-family="GT-America-Standard, Helvetica-Neue, Arial, sans-serif">
