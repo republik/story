@@ -5,8 +5,8 @@ import path from "path";
 export default defineConfig({
   resolve: {
     alias: [
-      { find: /^@story\/theme\/fonts\.css/, replacement: path.resolve(__dirname, "../../theme/fonts.css") },
-      { find: /^@story\/theme\/presets$/, replacement: path.resolve(__dirname, "../../theme/presets.ts") },
+      { find: /^@story\/theme\/fonts\.css/, replacement: path.resolve(__dirname, "./theme/fonts.css") },
+      { find: /^@story\/theme\/presets$/, replacement: path.resolve(__dirname, "./theme/presets.ts") },
       { find: /^@story\/theme/, replacement: path.resolve(__dirname, "./generated") },
     ],
   },

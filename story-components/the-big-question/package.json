@@ -19,7 +19,6 @@
     "vite": "^7.1.9"
   },
   "dependencies": {
-    "@lucide/svelte": "^0.545.0",
-    "@story/theme": "workspace:*"
+    "@lucide/svelte": "^0.545.0"
   }
 }

@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import { presets } from "@story/theme/presets";
+import { presets } from "./theme/presets";
 
 export default defineConfig({
   preflight: true,

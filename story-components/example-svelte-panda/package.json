@@ -18,7 +18,5 @@
     "svelte": "^5.39.9",
     "vite": "^7.1.9"
   },
-  "dependencies": {
-    "@story/theme": "workspace:*"
-  }
+  "dependencies": {}
 }
