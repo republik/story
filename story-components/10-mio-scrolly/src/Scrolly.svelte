@@ -16,20 +16,6 @@
 
   let lineScenario = $derived(componentData.scenarios[lineState.scenarioId]);
 
-  let yDomain = $derived.by<[number, number]>(() => {
-    let min = Infinity;
-    let max = -Infinity;
-    for (const s of Object.values(componentData.scenarios)) {
-      for (const p of s.population) {
-        for (const g of componentData.groups) {
-          const v = p[g];
-          if (v < min) min = v;
-          if (v > max) max = v;
-        }
-      }
-    }
-    return [Math.min(0, min), max];
-  });
 
   let rootEl: HTMLDivElement;
 
@@ -84,7 +70,7 @@
       <LineChart
         highlight={lineState.highlight}
         xDomain={lineState.xDomain}
-        {yDomain}
+        yDomain={lineState.yDomain}
         population={lineScenario.population}
         scenarioLabel={lineScenario.label}
         groups={componentData.groups}

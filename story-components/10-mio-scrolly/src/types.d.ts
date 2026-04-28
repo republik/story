@@ -1,22 +1,13 @@
-export type Group =
-  | "Bevölkerungswachstum"
-  | "Ausländeranteil"
-  | "Unter 15-Jährige"
-  | "65-Jährige und Ältere";
+export type Group = "Referenz" | "Hoch" | "Tief";
 
 export type PopulationPoint = {
   year: number;
-} & Record<Group, number>;
-
-export type ShareRow = {
-  era: string;
 } & Record<Group, number>;
 
 export type Scenario = {
   id: string;
   label: string;
   population: PopulationPoint[];
-  shares: ShareRow[];
 };
 
 export type LineStepState = {
@@ -24,6 +15,7 @@ export type LineStepState = {
   scenarioId: string;
   highlight: Group[];
   xDomain: [number, number];
+  yDomain: [number, number];
 };
 
 export type Step = {

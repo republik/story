@@ -141,7 +141,7 @@
               stroke="#E5E5E5" />
         <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
               class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-          {d3.format("~g")(t)}
+          {d3.format("~s")(t)}
         </text>
       {/each}
 
