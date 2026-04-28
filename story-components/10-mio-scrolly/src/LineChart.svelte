@@ -138,14 +138,13 @@
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
   <svg {width} {height} class={css({ display: "block" })}>
     <g transform={`translate(${margin.left},${margin.top})`}>
+      <rect x="0" y="0" width={innerW} height={Math.max(0, y(tenMillionMark))}
+            fill="#8B6F47" opacity="0.08" />
+
       {#each yTicks as t}
-        {@const isTenM = t === tenMillionMark}
-        <line x1="0" x2={innerW} y1={y(t)} y2={y(t)}
-              stroke={isTenM ? "#C0392B" : "#E5E5E5"}
-              stroke-dasharray={isTenM ? "4 4" : null} />
+        <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke="#E5E5E5" />
         <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
-              class={css({ fontSize: "12px", fontFamily: "gtAmericaStandard"})}
-              fill={isTenM ? "#C0392B" : "currentColor"}>
+              class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
           {d3.format("~s")(t)}
         </text>
       {/each}

@@ -1,11 +1,16 @@
-import type { Annotation, Group, InputData, PopulationPoint } from "./src/types";
+import type {
+  Annotation,
+  Group,
+  InputData,
+  PopulationPoint,
+} from "./src/types";
 
 const groups: Group[] = ["Referenz", "Hoch", "Tief"];
 
 const groupColors: Record<Group, string> = {
-  Referenz: "#3A6EA5",
-  Hoch: "#4FB08A",
-  Tief: "#C97A3A",
+  Referenz: "#5B7C99",
+  Hoch: "#6B9F89",
+  Tief: "#C28B6F",
 };
 
 // Source: BFS — Bevölkerungsszenarien 2025–2075 (© BFS).
@@ -80,8 +85,22 @@ function annotationsFor(...selected: Group[]): Annotation[] {
     .filter((a): a is Annotation => a.year !== null);
 }
 
+console.log(annotationsFor("Referenz"));
+
 export const scrollyData1: InputData = {
   lineSteps: [
+    {
+      id: "s1",
+      text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
+      state: {
+        chart: "line",
+        scenarioId: "combined",
+        highlight: ["Referenz"],
+        xDomain,
+        yDomain,
+        annotations: [],
+      },
+    },
     {
       id: "s1",
       text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
@@ -103,7 +122,19 @@ export const scrollyData1: InputData = {
         highlight: ["Hoch"],
         xDomain,
         yDomain,
-        annotations: annotationsFor("Referenz", "Hoch"),
+        annotations: [],
+      },
+    },
+    {
+      id: "s2",
+      text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
+      state: {
+        chart: "line",
+        scenarioId: "combined",
+        highlight: ["Hoch"],
+        xDomain,
+        yDomain,
+        annotations: annotationsFor("Hoch"),
       },
     },
     {
@@ -115,7 +146,7 @@ export const scrollyData1: InputData = {
         highlight: ["Tief"],
         xDomain,
         yDomain,
-        annotations: annotationsFor("Referenz", "Hoch", "Tief"),
+        annotations: [],
       },
     },
   ],
