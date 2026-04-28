@@ -6,154 +6,116 @@ import type {
   ShareRow,
 } from "./src/types";
 
-const groups: Group[] = ["Elves", "Dwarves", "Orcs", "Humans", "Halflings"];
+const groups: Group[] = ["Bevölkerungswachstum"];
 
 const groupColors: Record<Group, string> = {
-  Elves: "#4FB08A",
-  Dwarves: "#C97A3A",
-  Orcs: "#8B5A8C",
-  Humans: "#3A6EA5",
-  Halflings: "#D4A437",
+  "Bevölkerungswachstum": "#3A6EA5",
+  "Ausländeranteil": "#C97A3A",
+  "Unter 15-Jährige": "#4FB08A",
+  "65-Jährige und Ältere": "#8B5A8C",
 };
 
-// Recorded history — the "canonical" chronicle (population in thousands).
-const baseline: PopulationPoint[] = [
-  {
-    year: -10000,
-    Elves: 1200,
-    Dwarves: 400,
-    Orcs: 50,
-    Humans: 80,
-    Halflings: 30,
-  },
-  {
-    year: -9000,
-    Elves: 1300,
-    Dwarves: 520,
-    Orcs: 90,
-    Humans: 130,
-    Halflings: 55,
-  },
-  {
-    year: -8000,
-    Elves: 1400,
-    Dwarves: 680,
-    Orcs: 160,
-    Humans: 220,
-    Halflings: 90,
-  },
-  {
-    year: -7000,
-    Elves: 1420,
-    Dwarves: 860,
-    Orcs: 290,
-    Humans: 380,
-    Halflings: 140,
-  },
-  {
-    year: -6000,
-    Elves: 1380,
-    Dwarves: 1020,
-    Orcs: 510,
-    Humans: 640,
-    Halflings: 210,
-  },
-  {
-    year: -5000,
-    Elves: 1290,
-    Dwarves: 1150,
-    Orcs: 880,
-    Humans: 1080,
-    Halflings: 310,
-  },
-  {
-    year: -4000,
-    Elves: 1150,
-    Dwarves: 1220,
-    Orcs: 1400,
-    Humans: 1900,
-    Halflings: 430,
-  },
-  {
-    year: -3000,
-    Elves: 980,
-    Dwarves: 1210,
-    Orcs: 2100,
-    Humans: 3400,
-    Halflings: 580,
-  },
-  {
-    year: -2000,
-    Elves: 800,
-    Dwarves: 1120,
-    Orcs: 2900,
-    Humans: 6100,
-    Halflings: 760,
-  },
-  {
-    year: -1000,
-    Elves: 620,
-    Dwarves: 960,
-    Orcs: 3600,
-    Humans: 9800,
-    Halflings: 960,
-  },
-  {
-    year: 0,
-    Elves: 450,
-    Dwarves: 780,
-    Orcs: 4200,
-    Humans: 15200,
-    Halflings: 1150,
-  },
+// Source: BFS — Bevölkerungsszenarien 2025–2075 (© BFS).
+// Flat value array, ordered: scenario × year × metric.
+// 3 scenarios × 52 years (2024–2075) × 4 metrics = 624 values.
+// Metric order: Bevölkerungswachstum (%), Ausländeranteil (%),
+// Unter 15-Jährige (%), 65-Jährige und Ältere (%).
+const rawValues: number[] = [
+  0.85, 27.23, 14.92, 19.59, 0.81, 27.48, 14.83, 19.89, 0.8, 27.72, 14.75,
+  20.21, 0.78, 27.97, 14.65, 20.55, 0.76, 28.21, 14.56, 20.92, 0.74, 28.45,
+  14.44, 21.31, 0.72, 28.7, 14.33, 21.66, 0.7, 28.94, 14.2, 21.99, 0.65,
+  29.16, 14.08, 22.29, 0.61, 29.37, 13.97, 22.56, 0.56, 29.56, 13.87, 22.82,
+  0.52, 29.74, 13.77, 23.03, 0.49, 29.91, 13.65, 23.23, 0.46, 30.07, 13.6,
+  23.39, 0.44, 30.22, 13.57, 23.51, 0.42, 30.37, 13.51, 23.63, 0.4, 30.51,
+  13.45, 23.72, 0.39, 30.65, 13.39, 23.81, 0.38, 30.79, 13.34, 23.91, 0.37,
+  30.93, 13.3, 24, 0.36, 31.06, 13.27, 24.1, 0.35, 31.2, 13.24, 24.23, 0.34,
+  31.33, 13.22, 24.35, 0.34, 31.46, 13.21, 24.48, 0.33, 31.59, 13.21, 24.58,
+  0.32, 31.73, 13.21, 24.7, 0.31, 31.86, 13.21, 24.82, 0.3, 31.98, 13.22,
+  24.94, 0.29, 32.11, 13.23, 25.05, 0.28, 32.24, 13.24, 25.19, 0.27, 32.37,
+  13.25, 25.32, 0.26, 32.49, 13.26, 25.46, 0.25, 32.62, 13.26, 25.6, 0.24,
+  32.74, 13.26, 25.73, 0.24, 32.86, 13.25, 25.84, 0.24, 32.98, 13.25, 25.94,
+  0.23, 33.09, 13.24, 26.03, 0.23, 33.2, 13.22, 26.13, 0.23, 33.31, 13.2,
+  26.21, 0.23, 33.42, 13.18, 26.29, 0.23, 33.52, 13.16, 26.36, 0.23, 33.62,
+  13.14, 26.43, 0.23, 33.72, 13.11, 26.48, 0.23, 33.81, 13.09, 26.52, 0.23,
+  33.9, 13.06, 26.55, 0.23, 33.99, 13.04, 26.6, 0.22, 34.08, 13.02, 26.65,
+  0.22, 34.16, 13, 26.7, 0.22, 34.25, 12.98, 26.75, 0.21, 34.33, 12.97,
+  26.8, 0.21, 34.41, 12.95, 26.87, 0.21, 34.49, 12.94, 26.93, 1.19, 27.3,
+  14.97, 19.56, 1.17, 27.62, 14.94, 19.83, 1.16, 27.93, 14.92, 20.12, 1.15,
+  28.24, 14.89, 20.44, 1.13, 28.55, 14.86, 20.78, 1.12, 28.85, 14.81, 21.14,
+  1.1, 29.15, 14.76, 21.46, 1.07, 29.45, 14.7, 21.76, 1.03, 29.74, 14.65,
+  22.03, 0.98, 30, 14.61, 22.28, 0.94, 30.25, 14.58, 22.5, 0.9, 30.47,
+  14.55, 22.69, 0.86, 30.69, 14.5, 22.86, 0.82, 30.89, 14.51, 23, 0.79,
+  31.07, 14.55, 23.12, 0.76, 31.25, 14.51, 23.22, 0.73, 31.4, 14.45, 23.31,
+  0.72, 31.56, 14.4, 23.4, 0.71, 31.71, 14.35, 23.49, 0.7, 31.86, 14.31,
+  23.58, 0.69, 32.01, 14.27, 23.68, 0.68, 32.16, 14.24, 23.8, 0.67, 32.3,
+  14.21, 23.92, 0.66, 32.45, 14.19, 24.05, 0.65, 32.59, 14.17, 24.17, 0.64,
+  32.73, 14.15, 24.29, 0.63, 32.87, 14.14, 24.41, 0.62, 33.01, 14.13, 24.54,
+  0.61, 33.15, 14.12, 24.66, 0.6, 33.29, 14.11, 24.81, 0.59, 33.43, 14.1,
+  24.96, 0.59, 33.56, 14.09, 25.11, 0.58, 33.69, 14.08, 25.26, 0.58, 33.82,
+  14.07, 25.4, 0.57, 33.95, 14.06, 25.52, 0.57, 34.08, 14.05, 25.64, 0.57,
+  34.2, 14.05, 25.75, 0.57, 34.32, 14.03, 25.86, 0.56, 34.43, 14.02, 25.97,
+  0.56, 34.55, 14.01, 26.06, 0.56, 34.65, 14, 26.16, 0.56, 34.76, 13.99,
+  26.25, 0.56, 34.86, 13.98, 26.32, 0.55, 34.96, 13.96, 26.39, 0.55, 35.06,
+  13.95, 26.45, 0.55, 35.15, 13.93, 26.52, 0.55, 35.25, 13.92, 26.6, 0.54,
+  35.33, 13.9, 26.67, 0.54, 35.42, 13.89, 26.75, 0.54, 35.5, 13.87, 26.83,
+  0.53, 35.58, 13.85, 26.92, 0.53, 35.66, 13.84, 27.01, 0.51, 27.16, 14.87,
+  19.62, 0.45, 27.33, 14.72, 19.94, 0.43, 27.51, 14.57, 20.29, 0.4, 27.69,
+  14.41, 20.65, 0.38, 27.86, 14.25, 21.05, 0.35, 28.04, 14.07, 21.47, 0.33,
+  28.22, 13.88, 21.86, 0.31, 28.4, 13.68, 22.22, 0.25, 28.56, 13.49, 22.55,
+  0.21, 28.7, 13.29, 22.86, 0.15, 28.83, 13.12, 23.14, 0.11, 28.94, 12.95,
+  23.39, 0.09, 29.05, 12.74, 23.61, 0.07, 29.16, 12.61, 23.79, 0.05, 29.28,
+  12.51, 23.94, 0.04, 29.39, 12.43, 24.07, 0.03, 29.5, 12.35, 24.17, 0.02,
+  29.62, 12.29, 24.27, 0.01, 29.73, 12.23, 24.38, 0, 29.84, 12.19, 24.48,
+  -0.01, 29.95, 12.16, 24.59, -0.02, 30.06, 12.13, 24.72, -0.03, 30.17,
+  12.12, 24.85, -0.04, 30.28, 12.12, 24.98, -0.05, 30.38, 12.13, 25.09,
+  -0.06, 30.49, 12.15, 25.21, -0.07, 30.59, 12.17, 25.32, -0.08, 30.69,
+  12.2, 25.44, -0.09, 30.79, 12.23, 25.55, -0.1, 30.89, 12.26, 25.69, -0.11,
+  30.99, 12.29, 25.82, -0.12, 31.08, 12.32, 25.96, -0.13, 31.18, 12.34,
+  26.09, -0.14, 31.27, 12.36, 26.21, -0.14, 31.37, 12.36, 26.31, -0.15,
+  31.46, 12.36, 26.4, -0.15, 31.54, 12.36, 26.48, -0.16, 31.63, 12.34,
+  26.56, -0.16, 31.71, 12.32, 26.63, -0.16, 31.79, 12.29, 26.69, -0.16,
+  31.87, 12.26, 26.74, -0.16, 31.95, 12.23, 26.79, -0.16, 32.02, 12.19,
+  26.8, -0.17, 32.09, 12.15, 26.81, -0.17, 32.16, 12.11, 26.81, -0.17,
+  32.23, 12.07, 26.83, -0.18, 32.3, 12.03, 26.85, -0.18, 32.37, 12, 26.86,
+  -0.19, 32.43, 11.98, 26.88, -0.19, 32.5, 11.96, 26.91, -0.19, 32.57,
+  11.94, 26.94, -0.2, 32.64, 11.93, 26.98,
 ];
 
-// Counter-factual: the Orc Surge never happens.
-// Orcs plateau around 500, Humans grow even faster into the vacuum.
-const noOrcSurge: PopulationPoint[] = baseline.map((p) => ({
-  ...p,
-  Orcs: Math.min(p.Orcs, p.year <= -6000 ? p.Orcs : 500 + (p.year + 6000) / 60),
-  Humans:
-    p.year >= -6000
-      ? Math.round(p.Humans * (1 + (p.year + 6000) / 20000))
-      : p.Humans,
-}));
+const yearsPerScenario = 52; // 2024..2075 inclusive
+const metricsPerYear = 4;
+const startYear = 2025; // skip 2024
 
-// Counter-factual: a long plague in the Fourth Age halves Humans,
-// Halflings, and Orcs between year -4000 and -2000.
-const plague: PopulationPoint[] = baseline.map((p) => {
-  if (p.year < -4000 || p.year > -1000) return { ...p };
-  const t = Math.min(1, (p.year + 4000) / 2000); // 0..1 across the plague years, then recovers
-  const dip =
-    p.year <= -2000 ? 0.45 + 0.4 * t : 0.7 + 0.25 * ((p.year + 2000) / 1000);
-  return {
-    ...p,
-    Humans: Math.round(p.Humans * dip),
-    Halflings: Math.round(p.Halflings * (0.6 + 0.35 * t)),
-    Orcs: Math.round(p.Orcs * (0.7 + 0.25 * t)),
-  };
-});
+function buildPopulation(scenarioIdx: number): PopulationPoint[] {
+  const out: PopulationPoint[] = [];
+  for (let y = 1; y < yearsPerScenario; y++) {
+    const base = scenarioIdx * yearsPerScenario * metricsPerYear + y * metricsPerYear;
+    out.push({
+      year: 2024 + y,
+      "Bevölkerungswachstum": rawValues[base + 0],
+      "Ausländeranteil": rawValues[base + 1],
+      "Unter 15-Jährige": rawValues[base + 2],
+      "65-Jährige und Ältere": rawValues[base + 3],
+    });
+  }
+  return out;
+}
 
-// Counter-factual: the Elves adapt and never enter their long decline.
-const elvishRenaissance: PopulationPoint[] = baseline.map((p) => ({
-  ...p,
-  Elves: p.year <= -6000 ? p.Elves : Math.round(1380 + (p.year + 6000) * 0.08),
-}));
+const referenceScenario = buildPopulation(0);
+const highScenario = buildPopulation(1);
+const lowScenario = buildPopulation(2);
 
-const shareYears = [-10000, -7000, -4000, -1000, 0];
+const shareYears = [2025, 2035, 2045, 2055, 2065, 2075];
 
 function eraLabel(year: number): string {
-  if (year === 0) return "Present";
-  return `${Math.abs(year / 1000)}k BA`;
+  return String(year);
 }
 
 function toShares(pop: PopulationPoint[]): ShareRow[] {
   return pop
     .filter((p) => shareYears.includes(p.year))
     .map((p) => {
-      const total = groups.reduce((s, g) => s + p[g], 0);
       const row = { era: eraLabel(p.year) } as ShareRow;
-      groups.forEach((g) => (row[g] = p[g] / total));
+      groups.forEach((g) => (row[g] = p[g]));
       return row;
     });
 }
@@ -166,167 +128,49 @@ function makeScenario(
   return { id, label, population: pop, shares: toShares(pop) };
 }
 
-// --- Forward-looking projections: year 0 to +10 000 ---
-// Starts from the present-day values and extrapolates under different
-// assumptions about fertility, magic, and the climate of the north.
-const presentDay = baseline[baseline.length - 1];
-
-const futureYears = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
-
-function projectFuture(
-  step: (year: number, prev: PopulationPoint) => Omit<PopulationPoint, "year">,
-): PopulationPoint[] {
-  const out: PopulationPoint[] = [{ ...presentDay, year: 0 }];
-  for (let i = 1; i < futureYears.length; i++) {
-    const y = futureYears[i];
-    const prev = out[i - 1];
-    out.push({ year: y, ...step(y, prev) });
-  }
-  return out;
-}
-
-// Business-as-usual: gentle continuation of present trends.
-const futureBaseline = projectFuture((_, p) => ({
-  Elves: Math.round(p.Elves * 0.96),
-  Dwarves: Math.round(p.Dwarves * 0.985),
-  Orcs: Math.round(p.Orcs * 1.03),
-  Humans: Math.round(p.Humans * 1.045),
-  Halflings: Math.round(p.Halflings * 1.02),
-}));
-
-// Climate shift: the long winter of the Northern Reaches. Dwarves thrive,
-// Humans and Orcs stall, Elves stabilise.
-const climateShift = projectFuture((y, p) => ({
-  Elves: Math.round(p.Elves * 1.005),
-  Dwarves: Math.round(p.Dwarves * 1.04),
-  Orcs: Math.round(p.Orcs * (y <= 3000 ? 1.01 : 0.985)),
-  Humans: Math.round(p.Humans * (y <= 2000 ? 1.015 : 0.992)),
-  Halflings: Math.round(p.Halflings * 0.99),
-}));
-
-// Dwarven diaspora: the Great Tunnels open, Dwarves explode across the
-// surface, everyone else recalibrates.
-const dwarvenDiaspora = projectFuture((_, p) => ({
-  Elves: Math.round(p.Elves * 0.97),
-  Dwarves: Math.round(p.Dwarves * 1.08),
-  Orcs: Math.round(p.Orcs * 0.99),
-  Humans: Math.round(p.Humans * 1.015),
-  Halflings: Math.round(p.Halflings * 1.025),
-}));
-
-// Human collapse: over-extension, plague, and civil wars halve the Human
-// population every two millennia. Others fill the gap slowly.
-const humanCollapse = projectFuture((y, p) => ({
-  Elves: Math.round(p.Elves * 1.02),
-  Dwarves: Math.round(p.Dwarves * 1.03),
-  Orcs: Math.round(p.Orcs * 1.05),
-  Humans: Math.round(p.Humans * (y <= 4000 ? 0.7 : 0.92)),
-  Halflings: Math.round(p.Halflings * 1.04),
-}));
-
 const scenarios: Record<string, Scenario> = {
-  baseline: makeScenario("baseline", "Recorded history", baseline),
-  noOrcSurge: makeScenario("noOrcSurge", "Without the Orc Surge", noOrcSurge),
-  plague: makeScenario("plague", "The Fourth-Age Plague", plague),
-  elvishRenaissance: makeScenario(
-    "elvishRenaissance",
-    "An Elvish Renaissance",
-    elvishRenaissance,
+  reference: makeScenario(
+    "reference",
+    "Referenzszenario A-00-2025",
+    referenceScenario,
   ),
-  futureBaseline: makeScenario("futureBaseline", "Continuation of present trends", futureBaseline),
-  climateShift: makeScenario("climateShift", "The Long Northern Winter", climateShift),
-  dwarvenDiaspora: makeScenario("dwarvenDiaspora", "The Dwarven Diaspora", dwarvenDiaspora),
-  humanCollapse: makeScenario("humanCollapse", "A Human Unravelling", humanCollapse),
+  high: makeScenario("high", "'Hohes' Szenario B-00-2025", highScenario),
+  low: makeScenario("low", "'Tiefes' Szenario C-00-2025", lowScenario),
 };
+
+const xDomain: [number, number] = [startYear, 2075];
+const allHighlight: Group[] = [...groups];
 
 export const scrollyData1: InputData = {
   lineSteps: [
     {
-      id: "l1",
-      text: "This is the chronicle as the Scribes of Thal recorded it. Elves dominant in the First Age, Dwarves steady through the Third, and Humans overtaking everyone by the turn of the present era.",
+      id: "s1",
+      text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: Wachstum schwächt sich ab, der Ausländeranteil steigt, die Bevölkerung altert.",
       state: {
         chart: "line",
-        scenarioId: "baseline",
-        highlight: ["Elves", "Dwarves", "Orcs", "Humans"],
-        xDomain: [-10000, 0],
+        scenarioId: "reference",
+        highlight: allHighlight,
+        xDomain,
       },
     },
     {
-      id: "l2",
-      text: "But history is not the only possibility. Consider a Mittelland in which the Orc Surge of the Fourth Age never happened — their clans splintered, their warlords forgotten. The Orc line flattens; Humans expand to fill the space left behind.",
+      id: "s2",
+      text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum stärker, der Ausländeranteil steigt deutlicher — der Anteil der unter 15-Jährigen bleibt höher, die Alterung verläuft langsamer.",
       state: {
         chart: "line",
-        scenarioId: "noOrcSurge",
-        highlight: ["Orcs", "Humans"],
-        xDomain: [-10000, 0],
+        scenarioId: "high",
+        highlight: allHighlight,
+        xDomain,
       },
     },
     {
-      id: "l3",
-      text: "Or imagine the Plague of the Fourth Age had not been contained. Humans, Halflings, and Orcs all collapse between year -4000 and -2000, and only begin to recover by the present. The scale of the Mittelland is a fraction of what we know.",
+      id: "s3",
+      text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative; der Anteil der unter 15-Jährigen sinkt stark, die Alterung beschleunigt sich.",
       state: {
         chart: "line",
-        scenarioId: "plague",
-        highlight: ["Humans", "Halflings", "Orcs"],
-        xDomain: [-10000, 0],
-      },
-    },
-    {
-      id: "l4",
-      text: "And a kinder counter-factual: suppose the Elves had adapted to the new world instead of withdrawing from it. In this timeline their numbers never fall — they finish the chronicle with more than a million, not fewer than five hundred thousand.",
-      state: {
-        chart: "line",
-        scenarioId: "elvishRenaissance",
-        highlight: ["Elves"],
-        xDomain: [-10000, 0],
-      },
-    },
-  ],
-  scenarios,
-  groups,
-  groupColors,
-};
-
-export const scrollyData2: InputData = {
-  lineSteps: [
-    {
-      id: "f1",
-      text: "Now turn the telescope the other way. Starting from today's populations, the Royal Academy of Prognostication has modelled four futures for the Mittelland. Here is the business-as-usual projection: Humans keep climbing, Orcs and Halflings drift upward, Elves and Dwarves slowly decline.",
-      state: {
-        chart: "line",
-        scenarioId: "futureBaseline",
-        highlight: ["Humans", "Orcs", "Elves", "Dwarves"],
-        xDomain: [0, 10000],
-      },
-    },
-    {
-      id: "f2",
-      text: "The first alternative: a long winter closes over the Northern Reaches. The cold favours stone and iron over field and orchard. Dwarves multiply sixfold over the coming millennia; Human and Orc expansion stalls in the icebound plains.",
-      state: {
-        chart: "line",
-        scenarioId: "climateShift",
-        highlight: ["Dwarves", "Humans", "Orcs"],
-        xDomain: [0, 10000],
-      },
-    },
-    {
-      id: "f3",
-      text: "Second: the Great Tunnels open and the Dwarves, for the first time in their history, pour out onto the surface. The Halflings — long their trading partners — come up with them. The Elven line keeps falling, just more gently than in the baseline.",
-      state: {
-        chart: "line",
-        scenarioId: "dwarvenDiaspora",
-        highlight: ["Dwarves", "Halflings"],
-        xDomain: [0, 10000],
-      },
-    },
-    {
-      id: "f4",
-      text: "And the darkest forecast: a Human unravelling. Imperial overreach, plague, civil war — the great curve that dominated the last ten thousand years breaks, and every other people inherits a slightly larger share of a much smaller world.",
-      state: {
-        chart: "line",
-        scenarioId: "humanCollapse",
-        highlight: ["Humans", "Orcs", "Halflings", "Elves"],
-        xDomain: [0, 10000],
+        scenarioId: "low",
+        highlight: allHighlight,
+        xDomain,
       },
     },
   ],

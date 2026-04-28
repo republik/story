@@ -158,7 +158,7 @@
 <script type="module">
   import './src/index.svelte'
   // import './dist/index.js'
-  import { scrollyData1, scrollyData2 } from './data.ts'
+  import { scrollyData1 } from './data.ts'
 
   function mount (placeholderTag, data) {
     const placeholder = document.querySelector(placeholderTag)
@@ -171,7 +171,6 @@
   }
 
   mount('ten-mio-scrolly-1', scrollyData1)
-  mount('ten-mio-scrolly-2', scrollyData2)
 </script>
 </body>
 </html>

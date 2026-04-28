@@ -1,4 +1,8 @@
-export type Group = "Elves" | "Dwarves" | "Orcs" | "Humans" | "Halflings";
+export type Group =
+  | "Bevölkerungswachstum"
+  | "Ausländeranteil"
+  | "Unter 15-Jährige"
+  | "65-Jährige und Ältere";
 
 export type PopulationPoint = {
   year: number;
@@ -25,7 +29,7 @@ export type LineStepState = {
 export type Step = {
   id: string;
   text: string;
-  state: LineStepState | BarsStepState;
+  state: LineStepState;
 };
 
 export type InputData = {

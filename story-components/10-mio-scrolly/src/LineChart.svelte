@@ -10,10 +10,11 @@
     groupColors: Record<Group, string>;
     highlight: Group[];
     xDomain: [number, number];
+    yDomain: [number, number];
     scenarioLabel?: string;
   }
 
-  let { population, groups, groupColors, highlight, xDomain, scenarioLabel }: Props = $props();
+  let { population, groups, groupColors, highlight, xDomain, yDomain, scenarioLabel }: Props = $props();
 
   let container: HTMLDivElement;
   let width = $state(600);
@@ -63,21 +64,14 @@
     rafId = requestAnimationFrame(step);
   });
 
-  const margin = { top: 10, right: 60, bottom: 20, left: 35 };
+  const margin = { top: 10, right: 180, bottom: 20, left: 40 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
 
   let x = $derived(d3.scaleLinear().domain(xDomain).range([0, innerW]));
 
-  let yMax = $derived(
-    d3.max(displayPop.filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1]),
-      (p) => Math.max(...groups.map((g) => p[g]))) || 1
-  );
-  // Snap the top of the scale to the next power of ten so the log ticks
-  // (10, 100, 1 000, 10 000, 100 000 …) sit at perfectly even visual intervals.
-  let yTop = $derived(Math.pow(10, Math.ceil(Math.log10(yMax))));
-  let y = $derived(d3.scaleLog().domain([10, yTop]).range([innerH, 0]).clamp(true));
+  let y = $derived(d3.scaleLinear().domain(yDomain).nice().range([innerH, 0]));
 
   let line = $derived(
     d3.line<{ year: number; v: number }>()
@@ -94,18 +88,10 @@
   }
 
   let xTicks = $derived(x.ticks(6));
-  // Explicit powers-of-ten ticks within the current domain, evenly spaced on the log axis.
-  let yTicks = $derived(
-    (() => {
-      const ticks: number[] = [];
-      for (let t = 10; t <= yTop; t *= 10) ticks.push(t);
-      return ticks;
-    })()
-  );
+  let yTicks = $derived(y.ticks(6));
 
   function fmtYear(v: number): string {
-    if (v === 0) return "0";
-    return `${v / 1000}k`;
+    return String(v);
   }
 
   let lastPoint = $derived(
@@ -155,7 +141,7 @@
               stroke="#E5E5E5" />
         <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
               class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-          {d3.format("~s")(t)}
+          {d3.format("~g")(t)}
         </text>
       {/each}
 
