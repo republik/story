@@ -1,9 +1,4 @@
-import type {
-  Annotation,
-  Group,
-  InputData,
-  PopulationPoint,
-} from "./src/types";
+import type { Group, InputData, PopulationPoint } from "./src/types";
 
 const groups: Group[] = ["Referenz", "Hoch", "Tief"];
 
@@ -69,24 +64,6 @@ const population: PopulationPoint[] = (() => {
 const xDomain: [number, number] = [startYear, endYear];
 const yDomain: [number, number] = [9_000_000, 13_000_000];
 
-// First year each scenario crosses the 10M mark (null if it never does).
-const tenMillionCrossing: Record<Group, number | null> = (() => {
-  const out = {} as Record<Group, number | null>;
-  for (const g of groups) {
-    const hit = population.find((p) => p[g] >= 10_000_000);
-    out[g] = hit ? hit.year : null;
-  }
-  return out;
-})();
-
-function annotationsFor(...selected: Group[]): Annotation[] {
-  return selected
-    .map((g) => ({ year: tenMillionCrossing[g], group: g }))
-    .filter((a): a is Annotation => a.year !== null);
-}
-
-console.log(annotationsFor("Referenz"));
-
 export const scrollyData1: InputData = {
   lineSteps: [
     {
@@ -110,7 +87,14 @@ export const scrollyData1: InputData = {
         highlight: ["Referenz"],
         xDomain,
         yDomain,
-        annotations: annotationsFor("Referenz"),
+        annotations: [
+          {
+            x: 2042,
+            y: 10_030_100,
+            label: "2042",
+            color: groupColors.Referenz,
+          },
+        ],
       },
     },
     {
@@ -134,7 +118,14 @@ export const scrollyData1: InputData = {
         highlight: ["Hoch"],
         xDomain,
         yDomain,
-        annotations: annotationsFor("Hoch"),
+        annotations: [
+          {
+            x: 2034,
+            y: 10_015_100,
+            label: "2034",
+            color: groupColors.Hoch,
+          },
+        ],
       },
     },
     {

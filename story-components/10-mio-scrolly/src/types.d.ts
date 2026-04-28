@@ -11,8 +11,10 @@ export type Scenario = {
 };
 
 export type Annotation = {
-  year: number;
-  group: Group;
+  x: number;
+  y: number;
+  label: string;
+  color?: string;
 };
 
 export type LineStepState = {

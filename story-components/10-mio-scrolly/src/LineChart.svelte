@@ -2,7 +2,7 @@
   import * as d3 from "d3";
   import { onMount, untrack } from "svelte";
   import { css } from "@story/theme/css";
-  import type { Group, PopulationPoint } from "./types.d.ts";
+  import type { Annotation, Group, PopulationPoint } from "./types.d.ts";
 
   interface Props {
     population: PopulationPoint[];
@@ -12,10 +12,19 @@
     xDomain: [number, number];
     yDomain: [number, number];
     scenarioLabel?: string;
-    annotations?: { year: number; group: Group }[];
+    annotations?: Annotation[];
   }
 
-  let { population, groups, groupColors, highlight, xDomain, yDomain, scenarioLabel, annotations = [] }: Props = $props();
+  let {
+    population,
+    groups,
+    groupColors,
+    highlight,
+    xDomain,
+    yDomain,
+    scenarioLabel,
+    annotations = []
+  }: Props = $props();
 
   let container: HTMLDivElement;
   let width = $state(600);
@@ -65,7 +74,7 @@
     rafId = requestAnimationFrame(step);
   });
 
-  const margin = { top: 10, right: 180, bottom: 40, left: 40 };
+  const margin = { top: 10, right: 180, bottom: 50, left: 40 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
@@ -136,80 +145,82 @@
     <p class={css({ textStyle: "chartDescription", mb: "15px"})}>Description</p>
   {/if}
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
-  <svg {width} {height} class={css({ display: "block" })}>
-    <g transform={`translate(${margin.left},${margin.top})`}>
-      <rect x="0" y="0" width={innerW} height={Math.max(0, y(tenMillionMark))}
-            fill="#8B6F47" opacity="0.08" />
+    <svg {width} {height} class={css({ display: "block" })}>
+      <g transform={`translate(${margin.left},${margin.top})`}>
+        <rect x="0" y="0" width={innerW} height={Math.max(0, y(tenMillionMark))}
+              fill="#8B6F47" opacity="0.08" />
 
-      {#each yTicks as t}
-        <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke="#E5E5E5" />
-        <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
-              class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-          {d3.format("~s")(t)}
-        </text>
-      {/each}
-
-      <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
-
-      {#each annotations as a (a.group)}
-        {@const ax = x(a.year)}
-        {#if ax >= 0 && ax <= innerW}
-          <line x1={ax} x2={ax} y1={y(tenMillionMark)} y2={innerH + 26}
-                stroke={groupColors[a.group]} stroke-dasharray="3 3" stroke-width="1" />
-          <circle cx={ax} cy={y(tenMillionMark)} r="3" fill={groupColors[a.group]} />
-          <text x={ax} y={innerH + 34} text-anchor="middle"
-                class={css({ fontSize: "11px", fontFamily: "gtAmericaStandard" })}
-                fill={groupColors[a.group]}>
-            {a.year}
-          </text>
-        {/if}
-      {/each}
-      {#each xTicks as t}
-        <g transform={`translate(${x(t)},${innerH})`}>
-          <line y2="5" stroke="#000" />
-          <text y="18" text-anchor="middle"
+        {#each yTicks as t}
+          <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke="#E5E5E5" />
+          <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
                 class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-            {fmtYear(t)}
+            {d3.format("~s")(t)}
           </text>
-        </g>
-      {/each}
+        {/each}
 
-      {#each groups as g}
-        <path
-          d={pathFor(g)}
-          fill="none"
-          stroke={groupColors[g]}
-          stroke-width={highlight.includes(g) ? 2.5 : 1.5}
-          opacity={highlight.includes(g) ? 1 : 0.15}
-          style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
-      {/each}
+        <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
 
-      {#each labelPositions as lp}
-        {@const shifted = Math.abs(lp.y - lp.idealY) > 1}
-        {#if shifted}
-          <line
-            x1={innerW}
-            y1={lp.idealY}
-            x2={innerW + 4}
-            y2={lp.y}
-            stroke={groupColors[lp.group]}
-            stroke-width="1"
-            stroke-dasharray="1 2"
-            opacity={highlight.includes(lp.group) ? 0.6 : 0.1}
-            style="transition: opacity 600ms ease;" />
-        {/if}
-        <text
-          x={innerW + 6}
-          y={lp.y}
-          dy="0.32em"
-          class={css({ fontSize: "12px", fontFamily: "gtAmericaStandard"})}
-          fill={groupColors[lp.group]}
-          opacity={highlight.includes(lp.group) ? 1 : 0.15}
-          style="transition: opacity 600ms ease;">
-          {lp.group}
-        </text>
-      {/each}
-    </g>
-  </svg>
+        {#each annotations as a (a.label)}
+          {@const ax = x(a.x)}
+          {@const ay = y(a.y)}
+          {@const color = a.color ?? "#444"}
+          {#if ax >= 0 && ax <= innerW}
+            <line x1={ax} x2={ax} y1={ay} y2={innerH + 22}
+                  stroke={color} stroke-dasharray="3 3" stroke-width="1" />
+            <circle cx={ax} cy={ay} r="3" fill={color} />
+            <text x={ax} y={innerH + 36} text-anchor="middle"
+                  class={css({ fontSize: "11px", fontWeight: "medium", fontFamily: "gtAmericaStandard" })}
+                  fill={color}>
+              {a.label}
+            </text>
+          {/if}
+        {/each}
+        {#each xTicks as t}
+          <g transform={`translate(${x(t)},${innerH})`}>
+            <line y2="5" stroke="#000" />
+            <text y="18" text-anchor="middle"
+                  class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
+              {fmtYear(t)}
+            </text>
+          </g>
+        {/each}
+
+        {#each groups as g}
+          <path
+            d={pathFor(g)}
+            fill="none"
+            stroke={groupColors[g]}
+            stroke-width={highlight.includes(g) ? 2.5 : 1.5}
+            opacity={highlight.includes(g) ? 1 : 0.15}
+            style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
+        {/each}
+
+        {#each labelPositions as lp}
+          {@const shifted = Math.abs(lp.y - lp.idealY) > 1}
+          {#if shifted}
+            <line
+              x1={innerW}
+              y1={lp.idealY}
+              x2={innerW + 4}
+              y2={lp.y}
+              stroke={groupColors[lp.group]}
+              stroke-width="1"
+              stroke-dasharray="1 2"
+              opacity={highlight.includes(lp.group) ? 0.6 : 0.1}
+              style="transition: opacity 600ms ease;" />
+          {/if}
+          <text
+            x={innerW + 6}
+            y={lp.y}
+            dy="0.32em"
+            class={css({ fontSize: "12px", fontFamily: "gtAmericaStandard"})}
+            fill={groupColors[lp.group]}
+            opacity={highlight.includes(lp.group) ? 1 : 0.15}
+            style="transition: opacity 600ms ease;">
+            {lp.group}
+          </text>
+        {/each}
+      </g>
+    </svg>
   </div>
 </div>
