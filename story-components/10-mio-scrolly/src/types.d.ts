@@ -10,12 +10,18 @@ export type Scenario = {
   population: PopulationPoint[];
 };
 
+export type Annotation = {
+  year: number;
+  group: Group;
+};
+
 export type LineStepState = {
   chart: "line";
   scenarioId: string;
   highlight: Group[];
   xDomain: [number, number];
   yDomain: [number, number];
+  annotations: Annotation[];
 };
 
 export type Step = {

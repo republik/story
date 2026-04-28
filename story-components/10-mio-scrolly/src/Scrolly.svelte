@@ -74,7 +74,8 @@
         population={lineScenario.population}
         scenarioLabel={lineScenario.label}
         groups={componentData.groups}
-        groupColors={componentData.groupColors} />
+        groupColors={componentData.groupColors}
+        annotations={lineState.annotations} />
     </div>
   </div>
 

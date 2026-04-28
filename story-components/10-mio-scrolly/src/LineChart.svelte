@@ -12,9 +12,10 @@
     xDomain: [number, number];
     yDomain: [number, number];
     scenarioLabel?: string;
+    annotations?: { year: number; group: Group }[];
   }
 
-  let { population, groups, groupColors, highlight, xDomain, yDomain, scenarioLabel }: Props = $props();
+  let { population, groups, groupColors, highlight, xDomain, yDomain, scenarioLabel, annotations = [] }: Props = $props();
 
   let container: HTMLDivElement;
   let width = $state(600);
@@ -64,7 +65,7 @@
     rafId = requestAnimationFrame(step);
   });
 
-  const margin = { top: 10, right: 180, bottom: 20, left: 40 };
+  const margin = { top: 10, right: 180, bottom: 40, left: 40 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
@@ -150,6 +151,20 @@
       {/each}
 
       <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
+
+      {#each annotations as a (a.group)}
+        {@const ax = x(a.year)}
+        {#if ax >= 0 && ax <= innerW}
+          <line x1={ax} x2={ax} y1={y(tenMillionMark)} y2={innerH + 26}
+                stroke={groupColors[a.group]} stroke-dasharray="3 3" stroke-width="1" />
+          <circle cx={ax} cy={y(tenMillionMark)} r="3" fill={groupColors[a.group]} />
+          <text x={ax} y={innerH + 34} text-anchor="middle"
+                class={css({ fontSize: "11px", fontFamily: "gtAmericaStandard" })}
+                fill={groupColors[a.group]}>
+            {a.year}
+          </text>
+        {/if}
+      {/each}
       {#each xTicks as t}
         <g transform={`translate(${x(t)},${innerH})`}>
           <line y2="5" stroke="#000" />
