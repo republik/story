@@ -188,7 +188,6 @@
           style:top="{yScale(Number(step.positionY))}px"
           style:left="{step.positionX}px"
           style:opacity={fadeOpacity(scrollProgress, step.threshold)}>
-          <strong>{step.title}</strong>
           <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
             {componentData.translations[step.step + "/text"] ?? ""}
           </p>

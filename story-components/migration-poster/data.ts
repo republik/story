@@ -37,39 +37,33 @@ const data: MigrationRow[] = [
   { year: 2020, immigration: 137685, emmigration: 83602 },
   { year: 2021, immigration: 143506, emmigration: 88053 },
   { year: 2022, immigration: 169055, emmigration: 90861 },
+  { year: 2023, immigration: 241040, emmigration: 93289 },
+  { year: 2024, immigration: 190043, emmigration: 99680 },
 ];
 
 const steps: Step[] = [
   {
     step: "step1",
-    title: "Jugoslawien-Kriege",
-    positionX: 300,
-    positionY: "1996",
-    threshold: [0.1, 0.25],
-    mobileThreshold: [0.2, 0.21, 0.33, 0.34],
-  },
-  {
-    step: "step2",
     title: "Personenfreizügigkeit mit der EU",
     positionX: 300,
     positionY: "2001",
-    threshold: [0.45, 0.55],
+    threshold: [0.25, 0.4],
     mobileThreshold: [0.53, 0.54, 0.65, 0.66],
   },
   {
-    step: "step3",
+    step: "step2",
     title: "Einwanderung aus Nachbarstaaten",
     positionX: 420,
     positionY: "2007",
-    threshold: [0.65, 0.75],
+    threshold: [0.45, 0.6],
     mobileThreshold: [0.65, 0.66, 0.81, 0.82],
   },
   {
-    step: "step4",
+    step: "step3",
     title: "Und wieder, die Kriege",
     positionX: 420,
     positionY: "2015",
-    threshold: [0.85, 0.9],
+    threshold: [0.8, 0.95],
     mobileThreshold: [0.81, 0.82],
   },
 ];
@@ -78,17 +72,17 @@ const annotations: Annotation[] = [
   {
     color: "immigration",
     title: "Zuwanderung",
-    positionX: 20000,
-    positionY: "1978",
+    positionX: 90000,
+    positionY: "1998",
     threshold: [0.13, 0.14],
     mobilePositionX: 5000,
     mobileThreshold: [0.01, 0.02],
   },
   {
-    color: "emmigration",
     title: "Abwanderung",
-    positionX: 80000,
-    positionY: "1979",
+    color: "emmigration",
+    positionX: 10000,
+    positionY: "1997",
     threshold: [0.13, 0.14],
     mobilePositionX: 80000,
     mobileThreshold: [0.01, 0.02],
@@ -98,27 +92,11 @@ const annotations: Annotation[] = [
 // Years where the gap between immigration & emmigration is highlighted.
 const peaks: PeakHighlight[] = [
   {
-    year: "1975",
-    emmigration: 121081,
-    immigration: 54223,
-    numberPositionX: 75000,
-    threshold: [0.1, 0.11],
-    mobileThreshold: [0, 0.02],
-  },
-  {
-    year: "1991",
-    emmigration: 73443,
-    immigration: 133100,
-    numberPositionX: 95000,
-    threshold: [0.41, 0.42],
-    mobileThreshold: [0.3, 0.31],
-  },
-  {
     year: "2002",
     emmigration: 53517,
     immigration: 105014,
     numberPositionX: 65000,
-    threshold: [0.61, 0.62],
+    threshold: [0.35, 0.36],
     mobileThreshold: [0.5, 0.51],
   },
   {
@@ -126,7 +104,7 @@ const peaks: PeakHighlight[] = [
     emmigration: 58266,
     immigration: 161629,
     numberPositionX: 90000,
-    threshold: [0.72, 0.73],
+    threshold: [0.6, 0.61],
     mobileThreshold: [0.6, 0.61],
   },
   {
@@ -134,25 +112,23 @@ const peaks: PeakHighlight[] = [
     emmigration: 90088,
     immigration: 167407,
     numberPositionX: 110000,
-    threshold: [0.91, 0.92],
+    threshold: [0.9, 0.91],
     mobileThreshold: [0.7, 0.71],
   },
 ];
 
 const translations: Translations = {
   "step1/text":
-    "In den 1990er-Jahren führten die Kriege auf dem Balkan zu einer Zunahme der Zuwanderung. Die Schweiz anerkannte allerdings lediglich einen kleinen Teil der Asylsuchenden aus dem ehemaligen Jugoslawien als Flüchtlinge. Nur sie gelten statistisch als Einwanderer.",
-  "step2/text":
     "2002 trat das sogenannte Freizügigkeits­abkommen in Kraft. In den letzten zwanzig Jahren machte die Zuwanderung aus der EU knapp zwei Drittel der gesamten Zuwanderung in die Schweiz aus.",
-  "step3/text":
+  "step2/text":
     "Die Personenfreizügigkeit für EU-Angehörige war während mehrerer Jahre durch Kontingente beschränkt. 2007 fielen die Beschränkungen für die mittel-, west- und nordeuropäischen EU-Staaten, 2014 die für die meisten osteuropäischen.",
-  "step4/text":
+  "step3/text":
     "2015 kam es auch wegen des Kriegs in Syrien zur Flucht von Hunderttausenden Menschen nach Europa. Rund 40’000 – vor allem Syrer, Eritreerinnen und Afghanen – stellten in der Schweiz ein Asylgesuch. Als Flüchtlinge anerkannt wurden vor allem eritreische Gesuchstellerinnen.",
 };
 
 export const migrationData: InputData = {
   chartTitle: "Die Schweiz und ihre Migration",
-  chartSubTitle: "Ein- und Auswanderung in den letzten 50 Jahren",
+  chartSubTitle: "Ein- und Auswanderung in den letzten 30 Jahren",
   data,
   steps,
   annotations,
