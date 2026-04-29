@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>10 Mio Scrolly</title>
+    <link rel="stylesheet" href="./theme/fonts.css"/>
+    <style>
+        /* Light/dark palette applied at the document level so the static
+           intro/outro outside the shadow component also react to data-theme. */
+        :root,
+        body[data-theme="light"] {
+            --page-text: #020202;
+            --page-bg: #ffffff;
+        }
+
+        body[data-theme="dark"] {
+            --page-text: #ffffff;
+            --page-bg: #191919;
+        }
+
+        body {
+            color: var(--page-text);
+            background: var(--page-bg);
+        }
+
+        /* Match the scrolly paragraphs' "editorial" textStyle so the static
+           intro/outro share the same look. */
+        .story-wrap {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 3rem 1rem 1rem;
+        }
+
+        .story-wrap h2 {
+            font-family: 'RepublikSerif', Georgia, serif;
+            font-weight: 900;
+            font-size: 2rem;
+            line-height: 1.125;
+            margin: 0 0 1.5rem;
+        }
+
+        .story-wrap p {
+            font-family: 'Rubis', Georgia, Droid-Serif, serif;
+            font-weight: 400;
+            font-size: 1.0625rem;
+            line-height: 1.625rem;
+            margin: 0 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .story-wrap p {
+                font-size: 1.1875rem;
+                line-height: 1.875rem;
+            }
+        }
+
+        .story-wrap p i {
+            font-style: italic;
+        }
+
+        .story-wrap p b {
+            font-weight: 700;
+        }
+
+        .story-wrap p a {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body style="margin: 0;" data-theme="light">
+
+<div class="story-wrap">
+    <h1 style="font-family: 'GT-America-Standard', Helvetica, Arial, sans-serif;">Story preview: 10-mio-scrolly</h1>
+    <p><i>The component renders below. Scroll through the narrative to see the
+        charts react to each paragraph. This outer page text sits outside the
+        component and is only here for preview framing.</i></p>
+</div>
+
+<div class="story-wrap">
+    <h2>Ten Thousand Years of Peoples</h2>
+
+    <p>The census rolls of the Mittelland go back further than any living scholar
+        can remember — ten millennia of births, deaths, and migrations, carved into
+        stone in the oldest archives and scrawled in ledgers in the newest.</p>
+
+    <p>The oldest entries are little more than tally marks scratched onto slate
+        by the Elven scribes of the First Age. They counted only themselves at
+        first, and then — grudgingly, when trade demanded it — the Dwarves who
+        came down from the Iron Peaks with their wagons of ore and salt.</p>
+
+    <p>It took another two thousand years before the Mittelland's census
+        acknowledged the existence of the <b>Orcs</b> at all. For centuries the
+        ledgers list them under the catch-all heading «beasts of the border»,
+        a clerical slight that modern historians still argue about in the
+        academies of Thal and Lindenberg.</p>
+
+    <p>The Humans arrived late, as Humans always do. By the time their first
+        villages appeared on the southern coast, the Mittelland was already
+        old, already charted, already sure of itself. The scribes gave them
+        their own column on the rolls with what one chronicler called
+        «audible reluctance».</p>
+
+    <p>And the Halflings, last of the five, slipped into the records almost
+        by accident — listed first as tenants on Elven estates, then as a
+        people in their own right, then finally, in the Fourth Age, as the
+        fastest-growing community in the lowland shires.</p>
+
+    <p>What follows is a walk through the chronicle itself. Scroll on to see
+        how the five peoples — Elves, Dwarves, Orcs, Humans, and Halflings —
+        rose, fell, and reshuffled themselves across the great span of
+        recorded time. And how differently things might have gone.</p>
+</div>
+
+<ten-mio-scrolly-1></ten-mio-scrolly-1>
+
+
+<script type="module">
+  import './src/index.svelte'
+  // import './dist/index.js'
+  import { scrollyData1 } from './data.ts'
+
+  function mount (placeholderTag, data) {
+    const placeholder = document.querySelector(placeholderTag)
+    if (!placeholder) return
+    const el = document.createElement('ten-mio-scrolly')
+    placeholder.replaceWith(el)
+    customElements.whenDefined('ten-mio-scrolly').then(() => {
+      el.componentData = data
+    })
+  }
+
+  mount('ten-mio-scrolly-1', scrollyData1)
+</script>
+</body>
+</html>
