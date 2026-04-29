@@ -96,7 +96,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "<p>The <span class='color'>inflection point</span> is reached in 2042, with 9.4 Million inhabitants.<br/><br/>After that, growth turns into shrinkage and the pulation slowly declines.</p>",
+      text: "<p>The <span class='color'>inflection point</span> is reached in 2042, with 9.4 Million inhabitants.<br/><br/>After that, growth turns into shrinkage and the population slowly declines.</p>",
       state: {
         chartDescription: "Szenario C-00-2025",
         highlight: ["Tief"],

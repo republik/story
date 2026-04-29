@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Migration Poster</title>
+    <link rel="stylesheet" href="./theme/fonts.css"/>
+    <style>
+        .story-wrap {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 3rem 1rem 1rem;
+        }
+        .story-wrap h2 {
+            font-family: 'RepublikSerif', Georgia, serif;
+            font-weight: 900;
+            font-size: 2rem;
+            line-height: 1.125;
+            margin: 0 0 1.5rem;
+        }
+        .story-wrap p {
+            font-family: 'Rubis', Georgia, Droid-Serif, serif;
+            font-weight: 400;
+            font-size: 1.0625rem;
+            line-height: 1.625rem;
+            margin: 0 0 1rem;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+
+<div class="story-wrap">
+    <h1 style="font-family: 'GT-America-Standard', Helvetica, Arial, sans-serif;">Story preview: migration-poster</h1>
+    <p><i>The migration poster renders below. Scroll through it to reveal the chart and surface the annotations.</i></p>
+</div>
+
+<migration-poster-1></migration-poster-1>
+
+<div class="story-wrap">
+    <p>Footer text — sits outside the component to give the scroll some
+       runway after the chart finishes revealing.</p>
+</div>
+
+<script type="module">
+  import './src/index.svelte'
+  import { migrationData } from './data.ts'
+
+  function mount (placeholderTag, data) {
+    const placeholder = document.querySelector(placeholderTag)
+    if (!placeholder) return
+    const el = document.createElement('migration-poster')
+    placeholder.replaceWith(el)
+    customElements.whenDefined('migration-poster').then(() => {
+      el.componentData = data
+    })
+  }
+
+  mount('migration-poster-1', migrationData)
+</script>
+</body>
+</html>
