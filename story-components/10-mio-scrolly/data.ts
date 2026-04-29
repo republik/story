@@ -1,17 +1,9 @@
-import type { Group, InputData, PopulationPoint } from "./src/types";
-
-const groups: Group[] = ["Referenz", "Hoch", "Tief"];
-
-const groupColors: Record<Group, string> = {
-  Referenz: "#5B7C99",
-  Hoch: "#6B9F89",
-  Tief: "#C28B6F",
-};
+import type { InputData } from "./src/types";
 
 // Source: BFS — Bevölkerungsszenarien 2025–2075 (© BFS).
 // Annual Bevölkerungswachstum (%) per scenario, applied from 2026 onward.
 // 2025 is the anchor year (no prior-year change applied).
-const growthRates: Record<Group, number[]> = {
+const growthRates = {
   Referenz: [
     0.8, 0.78, 0.76, 0.74, 0.72, 0.7, 0.65, 0.61, 0.56, 0.52, 0.49, 0.46, 0.44,
     0.42, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.34, 0.33, 0.32, 0.31, 0.3,
@@ -33,11 +25,7 @@ const growthRates: Record<Group, number[]> = {
   ],
 };
 
-const startYear = 2025;
-const endYear = 2075;
-
-// Anchor: ständige Wohnbevölkerung der Schweiz Anfang 2025.
-const startPopulation = 9_100_000;
+const startPopulation = 9_100_000; // December 2025
 
 function compoundPopulation(rates: number[]): number[] {
   const values = [startPopulation];
@@ -45,109 +33,95 @@ function compoundPopulation(rates: number[]): number[] {
   return values;
 }
 
-// Combined dataset: each year row holds the absolute population for all
-// three scenarios, so the chart can plot all three lines at once.
-const population: PopulationPoint[] = (() => {
-  const series: Record<Group, number[]> = {
-    Referenz: compoundPopulation(growthRates.Referenz),
-    Hoch: compoundPopulation(growthRates.Hoch),
-    Tief: compoundPopulation(growthRates.Tief),
-  };
-  return series.Referenz.map((_, i) => ({
-    year: startYear + i,
-    Referenz: Math.round(series.Referenz[i]),
-    Hoch: Math.round(series.Hoch[i]),
-    Tief: Math.round(series.Tief[i]),
-  }));
-})();
-
-const xDomain: [number, number] = [startYear, endYear];
-const yDomain: [number, number] = [9_000_000, 13_000_000];
+const lines = {
+  Referenz: compoundPopulation(growthRates.Referenz),
+  Hoch: compoundPopulation(growthRates.Hoch),
+  Tief: compoundPopulation(growthRates.Tief),
+};
 
 export const scrollyData1: InputData = {
-  lineSteps: [
+  steps: [
     {
-      id: "s1",
       text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
       state: {
-        chart: "line",
-        scenarioId: "combined",
+        chartDescription: "Szenario A-00-2025",
         highlight: ["Referenz"],
-        xDomain,
-        yDomain,
         annotations: [],
       },
     },
     {
-      id: "s1",
       text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
       state: {
-        chart: "line",
-        scenarioId: "combined",
+        chartDescription: "10 Millionen Schweiz: Jahr 2042",
         highlight: ["Referenz"],
-        xDomain,
-        yDomain,
         annotations: [
           {
             x: 2042,
             y: 10_030_100,
             label: "2042",
-            color: groupColors.Referenz,
           },
         ],
       },
     },
     {
-      id: "s2",
       text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
       state: {
-        chart: "line",
-        scenarioId: "combined",
+        chartDescription: "Szenario B-00-2025",
         highlight: ["Hoch"],
-        xDomain,
-        yDomain,
         annotations: [],
       },
     },
     {
-      id: "s2",
       text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
       state: {
-        chart: "line",
-        scenarioId: "combined",
+        chartDescription: "10 Millionen Schweiz: Jahr 2034",
         highlight: ["Hoch"],
-        xDomain,
-        yDomain,
         annotations: [
           {
             x: 2034,
             y: 10_015_100,
             label: "2034",
-            color: groupColors.Hoch,
           },
         ],
       },
     },
     {
-      id: "s3",
       text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative — die Bevölkerung schrumpft.",
       state: {
-        chart: "line",
-        scenarioId: "combined",
+        chartDescription: "Szenario C-00-2025",
         highlight: ["Tief"],
-        xDomain,
-        yDomain,
+        annotations: [],
+      },
+    },
+    {
+      text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative — die Bevölkerung schrumpft.",
+      state: {
+        chartDescription: "Max population: 9.5 Mio in blabla",
+        highlight: ["Tief"],
         annotations: [],
       },
     },
   ],
-  scenarios: {
-    combined: {
-      id: "combined",
-      label: "Bevölkerungswachstum nach Szenario",
-      population,
-    },
+  chartConfig: {
+    title: "TEST",
+    xDomain: [2025, 2075],
+    yDomain: [9_000_000, 13_000_000],
   },
-  groups,
-  groupColors,
+  lines: [
+    {
+      name: "Referenz",
+      color: "#5B7C99",
+      dataPoints: lines.Referenz,
+    },
+    {
+      name: "Hoch",
+      color: "#6B9F89",
+      dataPoints: lines.Hoch,
+    },
+    {
+      name: "Tief",
+      color: "#C28B6F",
+      dataPoints: lines.Tief,
+    },
+  ],
 };

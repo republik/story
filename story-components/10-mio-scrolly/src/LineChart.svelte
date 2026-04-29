@@ -2,30 +2,18 @@
   import * as d3 from "d3";
   import { onMount } from "svelte";
   import { css } from "@story/theme/css";
-  import type { Annotation, Group, PopulationPoint } from "./types.d.ts";
+  import type { ChartConfig, LineData, StepState } from "./types.d.ts";
 
   interface Props {
-    population: PopulationPoint[];
-    groups: Group[];
-    groupColors: Record<Group, string>;
-    highlight: Group[];
-    xDomain: [number, number];
-    yDomain: [number, number];
-    title: string;
-    description: string;
-    annotations?: Annotation[];
+    currentState: StepState;
+    chartConfig: ChartConfig;
+    lines: LineData[];
   }
 
   let {
-    population,
-    groups,
-    groupColors,
-    highlight,
-    xDomain,
-    yDomain,
-    title,
-    description,
-    annotations = []
+    currentState,
+    chartConfig,
+    lines
   }: Props = $props();
 
   let container: HTMLDivElement;
@@ -53,21 +41,17 @@
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
 
-  let x = $derived(d3.scaleLinear().domain(xDomain).range([0, innerW]));
-  let y = $derived(d3.scaleLinear().domain(yDomain).nice().range([innerH, 0]));
+  let x = $derived(d3.scaleLinear().domain(chartConfig.xDomain).range([0, innerW]));
+  let y = $derived(d3.scaleLinear().domain(chartConfig.yDomain).nice().range([innerH, 0]));
 
-  let line = $derived(
-    d3.line<{ year: number; v: number }>()
-      .x((d) => x(d.year))
-      .y((d) => y(d.v))
-      .curve(d3.curveMonotoneX)
-  );
-
-  function pathFor(group: Group): string {
-    const pts = population
-      .filter((p) => p.year >= xDomain[0] && p.year <= xDomain[1])
-      .map((p) => ({ year: p.year, v: p[group] }));
-    return line(pts) || "";
+  function segmentsFor(line: LineData): { x1: number; y1: number; x2: number; y2: number }[] {
+    const segs = [];
+    for (let i = 1; i < line.dataPoints.length; i++) {
+      const a = line.dataPoints[i - 1];
+      const b = line.dataPoints[i];
+      segs.push({ x1: x(a.year), y1: y(a[group]), x2: x(b.year), y2: y(b[group]) });
+    }
+    return segs;
   }
 
   let xTicks = $derived(x.ticks(6));
@@ -81,9 +65,9 @@
 
 <div class={css({ width: "100%", height: "100%", display: "flex", flexDirection: "column" })}>
   <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
-    {title}
+    {chartConfig.title}
   </h3>
-  <p class={css({ textStyle: "chartDescription", mb: "15px"})}>{description}</p>
+  <p class={css({ textStyle: "chartDescription", mb: "15px"})}>{currentState.chartDescription}</p>
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
     <svg {width} {height} class={css({ display: "block" })}>
       <g transform={`translate(${margin.left},${margin.top})`}>
@@ -100,7 +84,7 @@
 
         <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
 
-        {#each annotations as a (a.label)}
+        {#each currentState.annotations as a (a.label)}
           {@const ax = x(a.x)}
           {@const ay = y(a.y)}
           {@const color = a.color ?? "#444"}
@@ -125,14 +109,15 @@
           </g>
         {/each}
 
-        {#each groups as g}
-          <path
-            d={pathFor(g)}
-            fill="none"
-            stroke={groupColors[g]}
-            stroke-width={highlight.includes(g) ? 3 : 1.5}
-            opacity={highlight.includes(g) ? 1 : 0.15}
-            style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
+        {#each lines as line}
+          {#each segmentsFor(line) as s}
+            <line
+              x1={s.x1} y1={s.y1} x2={s.x2} y2={s.y2}
+              stroke={line.color}
+              stroke-width={currentState.highlight.includes(line.name) ? 2.5 : 1.5}
+              opacity={currentState.highlight.includes(line.name) ? 1 : 0.15}
+              style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
+          {/each}
         {/each}
       </g>
     </svg>

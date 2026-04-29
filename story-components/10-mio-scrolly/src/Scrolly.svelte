@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { css } from "@story/theme/css";
   import LineChart from "./LineChart.svelte";
-  import type { InputData, LineStepState } from "./types.d.ts";
+  import type { InputData, Step } from "./types.d.ts";
 
   interface Props {
     componentData: InputData;
@@ -10,12 +10,8 @@
 
   let { componentData }: Props = $props();
 
-  let currentLine = $state(0);
-
-  let lineState = $derived(componentData.lineSteps[currentLine].state as LineStepState);
-
-  let lineScenario = $derived(componentData.scenarios[lineState.scenarioId]);
-
+  let stepIdx = $state(0);
+  let step = $derived(componentData.steps[stepIdx] as Step);
 
   let rootEl: HTMLDivElement;
 
@@ -25,7 +21,7 @@
         for (const e of entries) {
           if (!e.isIntersecting) continue;
           const el = e.target as HTMLElement;
-          currentLine = Number(el.dataset.idx);
+          stepIdx = Number(el.dataset.idx);
         }
       },
       { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
@@ -68,18 +64,13 @@
       }
     })}>
       <LineChart
-        highlight={lineState.highlight}
-        xDomain={lineState.xDomain}
-        yDomain={lineState.yDomain}
-        population={lineScenario.population}
-        scenarioLabel={lineScenario.label}
-        groups={componentData.groups}
-        groupColors={componentData.groupColors}
-        annotations={lineState.annotations} />
+        currentState={step.state}
+        chartConfig={componentData.chartConfig}
+        lines={componentData.lines}
     </div>
   </div>
 
-  {#each componentData.lineSteps as step, i}
+  {#each componentData.steps as step, i}
     <div
       data-step
       data-section="line"
@@ -101,7 +92,7 @@
             maxW: "center",
             background: "background",
             textStyle: "editorial",
-            opacity: currentLine === i ? 1 : 0.45,
+            opacity: stepIdx === i ? 1 : 0.45,
             transition: "opacity 400ms ease",
             lg: {
               pl: "8",

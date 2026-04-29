@@ -1,13 +1,7 @@
-export type Group = "Referenz" | "Hoch" | "Tief";
-
-export type PopulationPoint = {
-  year: number;
-} & Record<Group, number>;
-
-export type Scenario = {
-  id: string;
-  label: string;
-  population: PopulationPoint[];
+export type LineData = {
+  name: string;
+  color: string;
+  dataPoints: number[];
 };
 
 export type Annotation = {
@@ -17,24 +11,25 @@ export type Annotation = {
   color?: string;
 };
 
-export type LineStepState = {
-  chart: "line";
-  scenarioId: string;
-  highlight: Group[];
-  xDomain: [number, number];
-  yDomain: [number, number];
+export type StepState = {
+  chartDescription: string;
+  highlight: string[];
   annotations: Annotation[];
 };
 
 export type Step = {
-  id: string;
   text: string;
-  state: LineStepState;
+  state: StepState;
+};
+
+export type ChartConfig = {
+  title: string;
+  xDomain: [number, number];
+  yDomain: [number, number];
 };
 
 export type InputData = {
-  lineSteps: Step[];
-  scenarios: Record<string, Scenario>;
-  groups: Group[];
-  groupColors: Record<Group, string>;
+  chartConfig: ChartConfig;
+  steps: Step[];
+  lines: LineData[];
 };
