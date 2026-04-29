@@ -557,6 +557,10 @@ html:not(#\#),:host:not(#\#) {
   text-decoration-thickness: 2px;
 }
 
+.story-w_100\%:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  width: 100%;
+}
+
 .story-max-w_center:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   max-width: var(--story-sizes-center);
 }
@@ -567,10 +571,6 @@ html:not(#\#),:host:not(#\#) {
 
 .story-px_15px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   padding-inline: 15px;
-}
-
-.story-w_100\%:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  width: 100%;
 }
 
 .story-max-w_900px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
@@ -603,6 +603,30 @@ html:not(#\#),:host:not(#\#) {
 
 .story-d_block:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   display: block;
+}
+
+.story-fill_background:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  fill: var(--story-colors-background);
+}
+
+.story-stk_text:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  stroke: var(--story-colors-text);
+}
+
+.story-shape-rendering_crispEdges:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  shape-rendering: crispEdges;
+}
+
+.story-fill_transparent:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  fill: var(--story-colors-transparent);
+}
+
+.story-stk-w_1:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  stroke-width: 1;
+}
+
+.story-fill_text:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  fill: var(--story-colors-text);
 }
 
 .story-pos_sticky:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
@@ -657,36 +681,8 @@ html:not(#\#),:host:not(#\#) {
   opacity: 0.5;
 }
 
-.story-fill_text:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  fill: var(--story-colors-text);
-}
-
-.story-stk_text:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  stroke: var(--story-colors-text);
-}
-
 .story-stk-w_1px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   stroke-width: 1px;
-}
-
-.story-shape-rendering_crispEdges:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  shape-rendering: crispEdges;
-}
-
-.story-c_background:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  color: var(--story-colors-background);
-}
-
-.story-fill_background:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  fill: var(--story-colors-background);
-}
-
-.story-fill_transparent:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  fill: var(--story-colors-transparent);
-}
-
-.story-stk-w_1:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  stroke-width: 1;
 }
 
 .story-pr_20px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
@@ -699,6 +695,10 @@ html:not(#\#),:host:not(#\#) {
 
 .story-td-c_rgba\(254\,_145\,_74\,_1\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   text-decoration-color: rgba(254, 145, 74, 1);
+}
+
+.story-ov-x_clip:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  overflow-x: clip;
 }
 
 .story-mb_5px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {

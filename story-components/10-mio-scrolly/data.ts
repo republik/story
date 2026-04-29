@@ -45,24 +45,25 @@ const lines = {
 
 console.log(lines); */
 
+/*{
+  text: "<p>Die wichtigsten Grössen sind:<br />&ndash; die Geburtenrate<br/>&ndash; die Lebenserwartung<br/>&ndash; der Wanderungssaldo</p>",
+  state: {
+    chartDescription: "Drei mögliche Szenarien",
+    highlight: ["Referenz", "Hoch", "Tief"],
+    annotations: [],
+  },
+},
+{
+  text: "<p>Heute kommen in der Schweiz pro Frau 1,28 Kinder zur Welt (ein historischer Tiefstand). Frauen haben eine Lebenserwartung bei Geburt von 86 Jahren, Männer eine von 82,5 Jahren.<br/><br/>Und der durchschnittliche Wanderungssaldo liegt seit 2002 bei rund 65’000 Personen pro Jahr.</p>",
+  state: {
+    chartDescription: "Drei mögliche Szenarien",
+    highlight: ["Referenz", "Hoch", "Tief"],
+    annotations: [],
+  },
+},*/
+
 export const scrollyData1: InputData = {
   steps: [
-    /*{
-      text: "<p>Die wichtigsten Grössen sind:<br />&ndash; die Geburtenrate<br/>&ndash; die Lebenserwartung<br/>&ndash; der Wanderungssaldo</p>",
-      state: {
-        chartDescription: "Drei mögliche Szenarien",
-        highlight: ["Referenz", "Hoch", "Tief"],
-        annotations: [],
-      },
-    },
-    {
-      text: "<p>Heute kommen in der Schweiz pro Frau 1,28 Kinder zur Welt (ein historischer Tiefstand). Frauen haben eine Lebenserwartung bei Geburt von 86 Jahren, Männer eine von 82,5 Jahren.<br/><br/>Und der durchschnittliche Wanderungssaldo liegt seit 2002 bei rund 65’000 Personen pro Jahr.</p>",
-      state: {
-        chartDescription: "Drei mögliche Szenarien",
-        highlight: ["Referenz", "Hoch", "Tief"],
-        annotations: [],
-      },
-    },*/
     {
       text: "<p>Im <span class='color'>Referenzszenario</span>, das in der Mitte der drei Szenarien liegt, geht der Bund von einer höheren Geburtenrate (1,40) als der aktuellen aus. Die Lebenserwartung ist leicht erhöht und der Wanderungssaldo liegt bei 45’000.</p>",
       state: {
