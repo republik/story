@@ -84,7 +84,7 @@
   const trailingTickYear = 2025;
   let yDomain = $derived<[number, number]>([
     d3.min(rows, (d) => d.year) ?? 1995,
-    trailingTickYear,
+    trailingTickYear
   ]);
 
   let xScale = $derived(
@@ -153,7 +153,7 @@
   let drawerHeight = $derived(interp(scrollProgress, [0.04, 0.05], [0, 275]));
 
   const yLabels = $derived(
-    [...rows.map((d) => d.year), trailingTickYear].filter((_, i) => i % 5 === 0),
+    [...rows.map((d) => d.year), trailingTickYear].filter((_, i) => i % 5 === 0)
   );
   const yTicks = $derived([...rows.map((d) => d.year), trailingTickYear]);
 
@@ -166,6 +166,7 @@
   // colored underline plus a wavy SVG flourish — same treatment as the
   // original poster's TextLabel component.
   type Token = { kind: "plain" | "imm" | "emm"; text: string };
+
   function tokenize(s: string): Token[] {
     const re = /\{(einwanderten|auswanderten)\}/g;
     const out: Token[] = [];
@@ -191,13 +192,13 @@
     textDecorationThickness: "2px",
     paddingRight: "20px",
     _after: {
-      content: '" "',
+      content: "\" \"",
       display: "inline-block",
       marginLeft: "4px",
       marginRight: "-20px",
       width: "19px",
-      height: "9px",
-    },
+      height: "9px"
+    }
   } as const;
 
   const labelImmClass = css({
@@ -205,8 +206,8 @@
     textDecorationColor: colors.immigration,
     _after: {
       ...labelBase._after,
-      backgroundImage: wavyUnderlineSvg(colors.immigration),
-    },
+      backgroundImage: wavyUnderlineSvg(colors.immigration)
+    }
   });
 
   const labelEmmClass = css({
@@ -214,12 +215,17 @@
     textDecorationColor: colors.emmigration,
     _after: {
       ...labelBase._after,
-      backgroundImage: wavyUnderlineSvg(colors.emmigration),
-    },
+      backgroundImage: wavyUnderlineSvg(colors.emmigration)
+    }
   });
 </script>
 
-{#snippet stepText(text: string)}{#each tokenize(text) as t}{#if t.kind === "plain"}{t.text}{:else if t.kind === "imm"}<span class={labelImmClass}>{t.text}</span>{:else}<span class={labelEmmClass}>{t.text}</span>{/if}{/each}{/snippet}
+{#snippet stepText (text: string)}
+  {#each tokenize(text) as t}
+    {#if t.kind === "plain"}{t.text}{:else if t.kind === "imm"}<span class={labelImmClass}>{t.text}</span>{:else}<span
+      class={labelEmmClass}>{t.text}</span>{/if}
+  {/each}
+{/snippet}
 
 <div>
   <div class={css({ maxW: "center", mx: "auto", px: "15px" })}>
@@ -306,7 +312,7 @@
         <rect
           width={width - margin.right}
           height={HEIGHT}
-          fill="var(--color-default, #fff)"
+          class={css({ fill: "background" })}
           y={revealY}
           x={margin.left} />
       {/if}
@@ -322,16 +328,15 @@
         <g>
           <line
             x1={x1} x2={x2} y1={yp} y2={yp}
-            stroke="var(--color-text, #000)" stroke-width={t}
-            shape-rendering="crispEdges" />
-          <circle cx={x1} cy={yp} r={t * 4} stroke-width="1" stroke="var(--color-text, #000)" fill="transparent" />
-          <circle cx={x2} cy={yp} r={t * 4} stroke-width="1" stroke="var(--color-text, #000)" fill="transparent" />
+            class={css({ stroke: "text", shapeRendering: "crispEdges" })}
+            stroke-width={t} />
+          <circle cx={x1} cy={yp} r={t * 4} class={css({ stroke: "text", fill: "transparent", strokeWidth: "1" })} />
+          <circle cx={x2} cy={yp} r={t * 4} class={css({ stroke: "text", fill: "transparent", strokeWidth: "1" })} />
           <text
             x={xScale(peak.numberPositionX)} y={yp}
             dy="22" dx={isMobile ? -10 : 0}
             opacity={t}
-            class={css({ fontSize: "14px", fontFamily: "gtAmericaStandard" })}
-            fill="var(--color-text, #000)">
+            class={css({ fontSize: "14px", fontFamily: "gtAmericaStandard", fill: "text" })}>
             {format(peak.immigration - peak.emmigration)}
           </text>
         </g>

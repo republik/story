@@ -8,6 +8,7 @@
     yTicks: number[];
     margin: { top: number; bottom: number; left: number; right: number };
   }
+
   let { yScale, yLabels, yTicks, margin }: Props = $props();
   const TICK_MARGIN_LEFT = 9;
 </script>
@@ -27,10 +28,7 @@
       <line
         x1={major ? margin.left - 32 : margin.left - 36}
         x2={0}
-        stroke="var(--color-text, #000)"
-        stroke-width="1"
-        opacity="0.5"
-        shape-rendering="crispEdges" />
+        class={css({ stroke: "text", strokeWidth: "1px", opacity: "0.5", shapeRendering: "crispEdges" })} />
     </g>
   {/each}
 </g>
