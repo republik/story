@@ -39,10 +39,12 @@ const lines = {
   Tief: compoundPopulation(growthRates.Tief),
 };
 
+console.log(lines);
+
 export const scrollyData1: InputData = {
   steps: [
     {
-      text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
+      text: "<p>Let's start with the <span class='color'>reference scenario</span> calculated by the BFS.</p>",
       state: {
         chartDescription: "Szenario A-00-2025",
         highlight: ["Referenz"],
@@ -50,7 +52,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
+      text: "<p>In this scenario, the country crosses the psychological barrier of <span class='color'>10&nbsp;Million inhabitants</span> by year 2042.</p>",
       state: {
         chartDescription: "Szenario A-00-2025",
         highlight: ["Referenz"],
@@ -64,7 +66,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
+      text: "<p>The next scenario describes <span class='color'>higher population growth</span>. It relies on a higher fertility rate combined with a higher immigration rate.</p>",
       state: {
         chartDescription: "Szenario B-00-2025",
         highlight: ["Hoch"],
@@ -72,7 +74,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
+      text: "<p>The <span class='color'>10 Million</span> mark is reached by 2034, so 8 years earlier than in the reference scenario.<br/><br/>The population continues to grow almost linearly in the following decades.</p>",
       state: {
         chartDescription: "Szenario B-00-2025",
         highlight: ["Hoch"],
@@ -86,7 +88,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative — die Bevölkerung schrumpft.",
+      text: "<p>Let's now have a look at the third scenario, which models a <span class='color'>lower population growth</span>.<br/><br/>Things look very different here.</p>",
       state: {
         chartDescription: "Szenario C-00-2025",
         highlight: ["Tief"],
@@ -94,7 +96,7 @@ export const scrollyData1: InputData = {
       },
     },
     {
-      text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative — die Bevölkerung schrumpft.",
+      text: "<p>The <span class='color'>inflection point</span> is reached in 2042, with 9.4 Million inhabitants.<br/><br/>After that, growth turns into shrinkage and the pulation slowly declines.</p>",
       state: {
         chartDescription: "Szenario C-00-2025",
         highlight: ["Tief"],
@@ -109,24 +111,24 @@ export const scrollyData1: InputData = {
     },
   ],
   chartConfig: {
-    title: "Bevölkerungswachstum nach BFS Szenario",
+    title: "Bevölkerungswachstum in der Schweiz",
     xDomain: [2025, 2075],
     yDomain: [9_000_000, 13_000_000],
   },
   lines: [
     {
       name: "Referenz",
-      color: "#5B7C99",
+      color: "#ff0f4f",
       dataPoints: lines.Referenz,
     },
     {
       name: "Hoch",
-      color: "#6B9F89",
+      color: "#aa16ff",
       dataPoints: lines.Hoch,
     },
     {
       name: "Tief",
-      color: "#C28B6F",
+      color: "#ffa600",
       dataPoints: lines.Tief,
     },
   ],

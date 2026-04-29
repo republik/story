@@ -11,7 +11,7 @@
   let { componentData }: Props = $props();
 
   let stepIdx = $state(0);
-  let step = $derived(componentData.steps[stepIdx] as Step);
+  let currentStep = $derived(componentData.steps[stepIdx] as Step);
 
   let rootEl: HTMLDivElement;
 
@@ -64,17 +64,19 @@
       }
     })}>
       <LineChart
-        currentState={step.state}
+        currentState={currentStep.state}
         chartConfig={componentData.chartConfig}
         lines={componentData.lines} />
     </div>
   </div>
 
   {#each componentData.steps as step, i}
+    {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
     <div
       data-step
       data-section="line"
       data-idx={i}
+      style={stepLine ? `--accent: ${stepLine.color}` : undefined}
       class={css({
             minH: "40vh",
             display: "flex",
@@ -82,24 +84,27 @@
             justifyContent: "center",
             lg: {
               ml: "auto",
-              maxW: "40%",
+              maxW: "30%",
               minH: "60vh",
               alignItems: "start",
             },
             _last: { mb: "80px" },
-          })}>
-      <p class={css({
-            maxW: "center",
-            background: "background",
-            textStyle: "editorial",
-            opacity: stepIdx === i ? 1 : 0.45,
-            transition: "opacity 400ms ease",
-            lg: {
-              pl: "8",
+            '& p': {
+              maxW: "center",
+              background: "background",
+              textStyle: "editorial",
+              opacity: stepIdx === i ? 1 : 0.45,
+              transition: "opacity 400ms ease",
+              lg: {
+                pl: "8",
+              },
             },
+            '& .color': {
+              color: "var(--accent)",
+              fontWeight: 500,
+            }
           })}>
-        {step.text}
-      </p>
+      {@html step.text}
     </div>
   {/each}
 </div>

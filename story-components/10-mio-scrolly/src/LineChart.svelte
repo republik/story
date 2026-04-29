@@ -16,10 +16,11 @@
     lines
   }: Props = $props();
 
+  let currentLine = $derived(lines.find(l => currentState.highlight.includes(l.name)) as LineData);
+
   let container: HTMLDivElement;
   let width = $state(600);
   let height = $state(420);
-  let currentLine = $derived(lines.find(l => currentState.highlight.includes(l.name)) as LineData);
 
   onMount(() => {
     const measure = () => {
@@ -37,7 +38,7 @@
   });
 
 
-  const margin = { top: 10, right: 0, bottom: 50, left: 40 };
+  const margin = { top: 10, right: 5, bottom: 50, left: 40 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
