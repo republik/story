@@ -19,6 +19,7 @@
   let container: HTMLDivElement;
   let width = $state(600);
   let height = $state(420);
+  let currentLine = $derived(lines.find(l => currentState.highlight.includes(l.name)) as LineData);
 
   onMount(() => {
     const measure = () => {
@@ -45,11 +46,17 @@
   let y = $derived(d3.scaleLinear().domain(chartConfig.yDomain).nice().range([innerH, 0]));
 
   function segmentsFor(line: LineData): { x1: number; y1: number; x2: number; y2: number }[] {
+    const startYear = chartConfig.xDomain[0];
     const segs = [];
     for (let i = 1; i < line.dataPoints.length; i++) {
       const a = line.dataPoints[i - 1];
       const b = line.dataPoints[i];
-      segs.push({ x1: x(a.year), y1: y(a[group]), x2: x(b.year), y2: y(b[group]) });
+      segs.push({
+        x1: x(startYear + i - 1),
+        y1: y(a),
+        x2: x(startYear + i),
+        y2: y(b)
+      });
     }
     return segs;
   }
@@ -87,14 +94,13 @@
         {#each currentState.annotations as a (a.label)}
           {@const ax = x(a.x)}
           {@const ay = y(a.y)}
-          {@const color = a.color ?? "#444"}
           {#if ax >= 0 && ax <= innerW}
-            <line x1={ax} x2={ax} y1={ay} y2={innerH + 22}
-                  stroke={color} stroke-dasharray="3 3" stroke-width="1" />
-            <circle cx={ax} cy={ay} r="3" fill={color} />
-            <text x={ax} y={innerH + 36} text-anchor="middle"
+            <line x1={ax} x2={ax} y1={ay} y2={innerH + 27}
+                  stroke={currentLine.color} stroke-dasharray="3 3" stroke-width="1.5" />
+            <circle cx={ax} cy={ay} r="3" fill={currentLine.color} />
+            <text x={ax} y={innerH + 38} text-anchor="middle"
                   class={css({ fontSize: "11px", fontWeight: "medium", fontFamily: "gtAmericaStandard" })}
-                  fill={color}>
+                  fill={currentLine.color}>
               {a.label}
             </text>
           {/if}

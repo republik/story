@@ -66,7 +66,7 @@
       <LineChart
         currentState={step.state}
         chartConfig={componentData.chartConfig}
-        lines={componentData.lines}
+        lines={componentData.lines} />
     </div>
   </div>
 
