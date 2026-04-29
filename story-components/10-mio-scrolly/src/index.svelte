@@ -30,9 +30,22 @@
       // the host in Chrome's shadow DOM, so its preflight `:host { antialiased }`
       // wins and makes text render lighter than the surrounding document. Append
       // a plain :host override so the shadow tree inherits the browser default.
-      const hostOverride = ":host{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;color:#000;}";
+      const hostOverride = ":host{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;}";
       node.textContent = fontsCSS + stylesCSS + hostOverride;
       shadowRoot.appendChild(node);
+    }
+
+    // Mirror data-theme from the closest ancestor into the shadow DOM so the
+    // panda dark/light conditions ('[data-theme="dark"] &') resolve inside the
+    // shadow root.
+    const themeSource = document.querySelector("[data-theme]");
+    if (themeSource) {
+      theme = themeSource.getAttribute("data-theme");
+      const observer = new MutationObserver(() => {
+        theme = themeSource.getAttribute("data-theme");
+      });
+      observer.observe(themeSource, { attributes: true, attributeFilter: ["data-theme"] });
+      return () => observer.disconnect();
     }
   });
 </script>

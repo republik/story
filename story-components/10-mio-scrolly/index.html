@@ -6,14 +6,30 @@
     <title>10 Mio Scrolly</title>
     <link rel="stylesheet" href="./theme/fonts.css"/>
     <style>
+        /* Light/dark palette applied at the document level so the static
+           intro/outro outside the shadow component also react to data-theme. */
+        :root,
+        body[data-theme="light"] {
+            --page-text: #020202;
+            --page-bg: #ffffff;
+        }
+
+        body[data-theme="dark"] {
+            --page-text: #ffffff;
+            --page-bg: #191919;
+        }
+
+        body {
+            color: var(--page-text);
+            background: var(--page-bg);
+        }
+
         /* Match the scrolly paragraphs' "editorial" textStyle so the static
            intro/outro share the same look. */
         .story-wrap {
             max-width: 42rem;
             margin: 0 auto;
             padding: 3rem 1rem 1rem;
-            color: var(--story-colors-text);
-            background: var(--story-colors-background);
         }
 
         .story-wrap h2 {
@@ -53,7 +69,7 @@
         }
     </style>
 </head>
-<body style="margin: 0;" data-theme="dark">
+<body style="margin: 0;" data-theme="light">
 
 <div class="story-wrap">
     <h1 style="font-family: 'GT-America-Standard', Helvetica, Arial, sans-serif;">Story preview: 10-mio-scrolly</h1>

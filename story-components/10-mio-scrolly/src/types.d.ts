@@ -5,6 +5,7 @@ export type LineData = {
 };
 
 export type Annotation = {
+  show10M?: boolean;
   x: number;
   y: number;
   label: string;

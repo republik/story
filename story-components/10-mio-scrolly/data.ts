@@ -78,6 +78,7 @@ export const scrollyData1: InputData = {
         highlight: ["Referenz"],
         annotations: [
           {
+            show10M: true,
             x: 2042,
             y: 10_030_100,
             label: "2042",
@@ -100,6 +101,7 @@ export const scrollyData1: InputData = {
         highlight: ["Hoch"],
         annotations: [
           {
+            show10M: true,
             x: 2034,
             y: 10_015_100,
             label: "2034",
