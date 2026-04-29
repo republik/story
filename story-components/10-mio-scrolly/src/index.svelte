@@ -19,6 +19,7 @@
 
   let { componentData }: Props = $props();
   let shadowRoot = $host()?.shadowRoot;
+  let theme = $state<string | null>(null);
 
   onMount(async () => {
     const ID = "story-components-theme";
@@ -36,7 +37,7 @@
   });
 </script>
 
-<div id="story-component">
+<div class="story-component" data-theme={theme}>
   {#if componentData}
     <Scrolly componentData={componentData} />
   {/if}

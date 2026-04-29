@@ -38,7 +38,7 @@
   });
 
 
-  const margin = { top: 10, right: 5, bottom: 50, left: 40 };
+  const margin = { top: 10, right: 5, bottom: 60, left: 48 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
@@ -79,34 +79,18 @@
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
     <svg {width} {height} class={css({ display: "block" })}>
       <g transform={`translate(${margin.left},${margin.top})`}>
-        <rect x="0" y="0" width={innerW} height={Math.max(0, y(tenMillionMark))}
-              fill="#8B6F47" opacity="0.08" />
-
-        {#each yTicks as t, i}
-          {@const isTop = i === yTicks.length - 1}
-          <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke="#E5E5E5" />
+        {#each yTicks as t}
+          <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke={t === tenMillionMark ? "#000" : "#E5E5E5"}
+                stroke-dasharray={t === tenMillionMark ? "5 2" : "0"} />
           <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
-                class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-            {t / 1_000_000} Mio.{isTop ? " Einwohner" : ""}
+                class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}
+                font-weight={t === tenMillionMark ? "bold" : "normal"}>
+            {t / 1_000_000} Mio.
           </text>
         {/each}
 
         <line x1="0" x2={innerW} y1={innerH} y2={innerH} stroke="#000" />
 
-        {#each currentState.annotations as a (a.label)}
-          {@const ax = x(a.x)}
-          {@const ay = y(a.y)}
-          {#if ax >= 0 && ax <= innerW}
-            <line x1={ax} x2={ax} y1={ay} y2={innerH + 27}
-                  stroke={currentLine.color} stroke-dasharray="3 3" stroke-width="1.5" />
-            <circle cx={ax} cy={ay} r="3" fill={currentLine.color} />
-            <text x={ax} y={innerH + 38} text-anchor="middle"
-                  class={css({ fontSize: "11px", fontWeight: "medium", fontFamily: "gtAmericaStandard" })}
-                  fill={currentLine.color}>
-              {a.label}
-            </text>
-          {/if}
-        {/each}
         {#each xTicks as t}
           <g transform={`translate(${x(t)},${innerH})`}>
             <line y2="5" stroke="#000" />
@@ -115,6 +99,14 @@
               {fmtYear(t)}
             </text>
           </g>
+        {/each}
+
+        {#each currentState.annotations as a (a.label)}
+          {@const ax = x(a.x)}
+          {@const ay = y(a.y)}
+          {#if ax >= 0 && ax <= innerW}
+            <circle cx={ax} cy={ay} r="4" fill="#fff" />
+          {/if}
         {/each}
 
         {#each lines as line}
@@ -126,6 +118,19 @@
               opacity={currentState.highlight.includes(line.name) ? 1 : 0.15}
               style="transition: opacity 600ms ease, stroke-width 600ms ease;" />
           {/each}
+        {/each}
+
+        {#each currentState.annotations as a (a.label)}
+          {@const ax = x(a.x)}
+          {@const ay = y(a.y)}
+          {#if ax >= 0 && ax <= innerW}
+            <line x1={ax} x2={ax} y1={ay + 4} y2={innerH + 30} stroke="#000" stroke-width="1" />
+            <circle cx={ax} cy={ay} r="4" fill="none" stroke="#000" />
+            <text x={ax} y={innerH + 43} text-anchor="middle" fill={currentLine.color}
+                  class={css({ fontSize: "14px", fontFamily: "gtAmericaStandard", fontFeatureSettings: "'tnum', 'kern'" })}>
+              {a.label}
+            </text>
+          {/if}
         {/each}
       </g>
     </svg>
