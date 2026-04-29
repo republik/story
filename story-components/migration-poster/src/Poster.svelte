@@ -13,7 +13,7 @@
 
   let { componentData }: Props = $props();
 
-  const HEIGHT = 1200;
+  const HEIGHT = 2000;
   const WIDTH = 420;
   const margin = { top: 20, bottom: 20, left: 40, right: 20 };
   const colors = {
@@ -79,7 +79,13 @@
 
   let rows = $derived(componentData.data);
   let xDomain = $derived<[number, number]>([0, d3.max(rows, (d) => Math.max(d.immigration, d.emmigration)) ?? 0]);
-  let yDomain = $derived<[number, number]>(d3.extent(rows, (d) => d.year) as [number, number]);
+  // Extend the y-domain one year past the last data point so we can render
+  // a tick for the upcoming year without any data attached to it.
+  const trailingTickYear = 2025;
+  let yDomain = $derived<[number, number]>([
+    d3.min(rows, (d) => d.year) ?? 1995,
+    trailingTickYear,
+  ]);
 
   let xScale = $derived(
     d3.scaleLinear().domain(xDomain).range([margin.left, width - margin.right])
@@ -139,12 +145,17 @@
   );
 
   // Reveal mask: rect covers the chart and slides down as you scroll.
-  let revealY = $derived(scrollProgress * HEIGHT);
+  // Complete the reveal slightly before scroll ends so the final year (bottom
+  // of the chart) is uncovered even when the page doesn't have enough runway
+  // for scrollProgress to reach exactly 1.
+  let revealY = $derived(interp(scrollProgress, [0, 0.9], [0, HEIGHT + 4]));
   // Mobile drawer height grows in a small window early in the scroll.
   let drawerHeight = $derived(interp(scrollProgress, [0.04, 0.05], [0, 275]));
 
-  const yLabels = $derived(rows.map((d) => d.year).filter((_, i) => i % 5 === 0));
-  const yTicks = $derived(rows.map((d) => d.year));
+  const yLabels = $derived(
+    [...rows.map((d) => d.year), trailingTickYear].filter((_, i) => i % 5 === 0),
+  );
+  const yTicks = $derived([...rows.map((d) => d.year), trailingTickYear]);
 
   function clipId(suffix: string) {
     // Unique id so multiple instances on a page don't collide.
@@ -292,7 +303,6 @@
               pointerEvents: "none",
             })}
             style:opacity={fadeOpacity(scrollProgress, threshold)}>
-            <strong>{step.title}</strong>
             <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
               {componentData.translations[step.step + "/text"] ?? ""}
             </p>

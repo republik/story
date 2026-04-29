@@ -118,17 +118,17 @@ export const scrollyData1: InputData = {
   lines: [
     {
       name: "Referenz",
-      color: "#ff0f4f",
+      color: "#36c99e",
       dataPoints: lines.Referenz,
     },
     {
       name: "Hoch",
-      color: "#aa16ff",
+      color: "#327be0",
       dataPoints: lines.Hoch,
     },
     {
       name: "Tief",
-      color: "#ffa600",
+      color: "#df3794",
       dataPoints: lines.Tief,
     },
   ],

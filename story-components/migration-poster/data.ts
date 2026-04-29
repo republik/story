@@ -44,27 +44,35 @@ const data: MigrationRow[] = [
 const steps: Step[] = [
   {
     step: "step1",
-    title: "Personenfreizügigkeit mit der EU",
-    positionX: 300,
-    positionY: "2001",
-    threshold: [0.25, 0.4],
-    mobileThreshold: [0.53, 0.54, 0.65, 0.66],
+    title: "Intro",
+    positionX: 280,
+    positionY: "1996",
+    threshold: [0.1, 0.2],
+    mobileThreshold: [0.01, 0.01, 0.23, 0.24],
   },
   {
     step: "step2",
-    title: "Einwanderung aus Nachbarstaaten",
-    positionX: 420,
-    positionY: "2007",
-    threshold: [0.45, 0.6],
-    mobileThreshold: [0.65, 0.66, 0.81, 0.82],
+    title: "Personenfreizügigkeit mit der EU",
+    positionX: 280,
+    positionY: "2001",
+    threshold: [0.25, 0.4],
+    mobileThreshold: [0.23, 0.24, 0.43, 0.44],
   },
   {
     step: "step3",
+    title: "Einwanderung aus Nachbarstaaten",
+    positionX: 380,
+    positionY: "2007",
+    threshold: [0.4, 0.6],
+    mobileThreshold: [0.43, 0.44, 0.65, 0.66],
+  },
+  {
+    step: "step4",
     title: "Und wieder, die Kriege",
     positionX: 420,
     positionY: "2015",
-    threshold: [0.8, 0.95],
-    mobileThreshold: [0.81, 0.82],
+    threshold: [0.5, 0.95],
+    mobileThreshold: [0.65, 0.66],
   },
 ];
 
@@ -75,7 +83,7 @@ const annotations: Annotation[] = [
     positionX: 90000,
     positionY: "1998",
     threshold: [0.13, 0.14],
-    mobilePositionX: 5000,
+    mobilePositionX: 90000,
     mobileThreshold: [0.01, 0.02],
   },
   {
@@ -84,7 +92,7 @@ const annotations: Annotation[] = [
     positionX: 10000,
     positionY: "1997",
     threshold: [0.13, 0.14],
-    mobilePositionX: 80000,
+    mobilePositionX: 10000,
     mobileThreshold: [0.01, 0.02],
   },
 ];
@@ -97,7 +105,7 @@ const peaks: PeakHighlight[] = [
     immigration: 105014,
     numberPositionX: 65000,
     threshold: [0.35, 0.36],
-    mobileThreshold: [0.5, 0.51],
+    mobileThreshold: [0.1, 0.2],
   },
   {
     year: "2008",
@@ -105,7 +113,7 @@ const peaks: PeakHighlight[] = [
     immigration: 161629,
     numberPositionX: 90000,
     threshold: [0.6, 0.61],
-    mobileThreshold: [0.6, 0.61],
+    mobileThreshold: [0.1, 0.2],
   },
   {
     year: "2016",
@@ -113,16 +121,18 @@ const peaks: PeakHighlight[] = [
     immigration: 167407,
     numberPositionX: 110000,
     threshold: [0.9, 0.91],
-    mobileThreshold: [0.7, 0.71],
+    mobileThreshold: [0.1, 0.2],
   },
 ];
 
 const translations: Translations = {
   "step1/text":
-    "2002 trat das sogenannte Freizügigkeits­abkommen in Kraft. In den letzten zwanzig Jahren machte die Zuwanderung aus der EU knapp zwei Drittel der gesamten Zuwanderung in die Schweiz aus.",
+    "(WE NEED THIS SMALL EXPLANATION – BITTE ANPASSSEN!) Seit den 80er gibt es konsistent in der Schweiz mehr Menschen, die in der Schweiz einwanderten als auswanderten.",
   "step2/text":
-    "Die Personenfreizügigkeit für EU-Angehörige war während mehrerer Jahre durch Kontingente beschränkt. 2007 fielen die Beschränkungen für die mittel-, west- und nordeuropäischen EU-Staaten, 2014 die für die meisten osteuropäischen.",
+    "2002 trat das sogenannte Freizügigkeits­abkommen in Kraft. In den letzten zwanzig Jahren machte die Zuwanderung aus der EU knapp zwei Drittel der gesamten Zuwanderung in die Schweiz aus.",
   "step3/text":
+    "Die Personenfreizügigkeit für EU-Angehörige war während mehrerer Jahre durch Kontingente beschränkt. 2007 fielen die Beschränkungen für die mittel-, west- und nordeuropäischen EU-Staaten, 2014 die für die meisten osteuropäischen.",
+  "step4/text":
     "2015 kam es auch wegen des Kriegs in Syrien zur Flucht von Hunderttausenden Menschen nach Europa. Rund 40’000 – vor allem Syrer, Eritreerinnen und Afghanen – stellten in der Schweiz ein Asylgesuch. Als Flüchtlinge anerkannt wurden vor allem eritreische Gesuchstellerinnen.",
 };
 
