@@ -52,7 +52,7 @@ export const scrollyData1: InputData = {
     {
       text: "Das Referenzszenario A-00-2025 des Bundesamts für Statistik zeichnet die mittlere Annahme: das Bevölkerungswachstum schwächt sich kontinuierlich ab.",
       state: {
-        chartDescription: "10 Millionen Schweiz: Jahr 2042",
+        chartDescription: "Szenario A-00-2025",
         highlight: ["Referenz"],
         annotations: [
           {
@@ -74,7 +74,7 @@ export const scrollyData1: InputData = {
     {
       text: "Im 'hohen' Szenario B-00-2025 bleibt das Wachstum über den ganzen Zeitraum spürbar stärker und sinkt bis 2075 nur langsam auf rund 0,5 %.",
       state: {
-        chartDescription: "10 Millionen Schweiz: Jahr 2034",
+        chartDescription: "Szenario B-00-2025",
         highlight: ["Hoch"],
         annotations: [
           {
@@ -96,14 +96,20 @@ export const scrollyData1: InputData = {
     {
       text: "Im 'tiefen' Szenario C-00-2025 dreht das Wachstum ab Mitte der 2040er ins Negative — die Bevölkerung schrumpft.",
       state: {
-        chartDescription: "Max population: 9.5 Mio in blabla",
+        chartDescription: "Szenario C-00-2025",
         highlight: ["Tief"],
-        annotations: [],
+        annotations: [
+          {
+            x: 2042,
+            y: 9_400_100,
+            label: "2042",
+          },
+        ],
       },
     },
   ],
   chartConfig: {
-    title: "TEST",
+    title: "Bevölkerungswachstum nach BFS Szenario",
     xDomain: [2025, 2075],
     yDomain: [9_000_000, 13_000_000],
   },
