@@ -48,7 +48,7 @@ const steps: Step[] = [
     positionX: 280,
     positionY: "1996",
     threshold: [0.1, 0.2],
-    mobileThreshold: [0.01, 0.01, 0.23, 0.24],
+    mobileThreshold: [0.01, 0.01, 0.15, 0.16],
   },
   {
     step: "step2",
@@ -56,7 +56,7 @@ const steps: Step[] = [
     positionX: 280,
     positionY: "2001",
     threshold: [0.25, 0.4],
-    mobileThreshold: [0.23, 0.24, 0.43, 0.44],
+    mobileThreshold: [0.15, 0.16, 0.33, 0.34],
   },
   {
     step: "step3",
@@ -64,15 +64,23 @@ const steps: Step[] = [
     positionX: 380,
     positionY: "2007",
     threshold: [0.4, 0.6],
-    mobileThreshold: [0.43, 0.44, 0.65, 0.66],
+    mobileThreshold: [0.33, 0.34, 0.55, 0.56],
   },
   {
     step: "step4",
     title: "Und wieder, die Kriege",
     positionX: 420,
     positionY: "2015",
-    threshold: [0.5, 0.95],
-    mobileThreshold: [0.65, 0.66],
+    threshold: [0.5, 0.7],
+    mobileThreshold: [0.55, 0.56, 0.75, 0.76],
+  },
+  {
+    step: "step5",
+    title: "Heutzutag",
+    positionX: 480,
+    positionY: "2023",
+    threshold: [0.7, 0.95],
+    mobileThreshold: [0.75, 0.76],
   },
 ];
 
@@ -134,6 +142,7 @@ const translations: Translations = {
     "Die Personenfreizügigkeit für EU-Angehörige war während mehrerer Jahre durch Kontingente beschränkt. 2007 fielen die Beschränkungen für die mittel-, west- und nordeuropäischen EU-Staaten, 2014 die für die meisten osteuropäischen.",
   "step4/text":
     "2015 kam es auch wegen des Kriegs in Syrien zur Flucht von Hunderttausenden Menschen nach Europa. Rund 40’000 – vor allem Syrer, Eritreerinnen und Afghanen – stellten in der Schweiz ein Asylgesuch. Als Flüchtlinge anerkannt wurden vor allem eritreische Gesuchstellerinnen.",
+  "step5/text": "LUKAS: YOUR MOVE.",
 };
 
 export const migrationData: InputData = {
