@@ -161,7 +161,65 @@
     // Unique id so multiple instances on a page don't collide.
     return `mp-clip-${suffix}-${componentData.chartTitle.replace(/\W+/g, "-")}`;
   }
+
+  // Inline labels: words wrapped in {einwanderten}/{auswanderten} get a
+  // colored underline plus a wavy SVG flourish — same treatment as the
+  // original poster's TextLabel component.
+  type Token = { kind: "plain" | "imm" | "emm"; text: string };
+  function tokenize(s: string): Token[] {
+    const re = /\{(einwanderten|auswanderten)\}/g;
+    const out: Token[] = [];
+    let last = 0;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(s)) !== null) {
+      if (m.index > last) out.push({ kind: "plain", text: s.slice(last, m.index) });
+      out.push({ kind: m[1] === "einwanderten" ? "imm" : "emm", text: m[1] });
+      last = m.index + m[0].length;
+    }
+    if (last < s.length) out.push({ kind: "plain", text: s.slice(last) });
+    return out;
+  }
+
+  const wavyUnderlineSvg = (stroke: string) =>
+    `url('data:image/svg+xml,<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.51593 4.01472C1.51593 4.01472 4.18798 6.24147 6.5 7C8.81202 7.75853 10.5531 2.619 12.5 1.99999C14.4469 1.38097 17.101 3.62084 17.5155 3.89272" stroke="${stroke}" stroke-width="2"/></svg>')`;
+
+  const labelBase = {
+    position: "relative",
+    display: "inline-block",
+    textDecoration: "underline",
+    textUnderlineOffset: "4px",
+    textDecorationThickness: "2px",
+    paddingRight: "20px",
+    _after: {
+      content: '" "',
+      display: "inline-block",
+      marginLeft: "4px",
+      marginRight: "-20px",
+      width: "19px",
+      height: "9px",
+    },
+  } as const;
+
+  const labelImmClass = css({
+    ...labelBase,
+    textDecorationColor: colors.immigration,
+    _after: {
+      ...labelBase._after,
+      backgroundImage: wavyUnderlineSvg(colors.immigration),
+    },
+  });
+
+  const labelEmmClass = css({
+    ...labelBase,
+    textDecorationColor: colors.emmigration,
+    _after: {
+      ...labelBase._after,
+      backgroundImage: wavyUnderlineSvg(colors.emmigration),
+    },
+  });
 </script>
+
+{#snippet stepText(text: string)}{#each tokenize(text) as t}{#if t.kind === "plain"}{t.text}{:else if t.kind === "imm"}<span class={labelImmClass}>{t.text}</span>{:else}<span class={labelEmmClass}>{t.text}</span>{/if}{/each}{/snippet}
 
 <div>
   <div class={css({ maxW: "center", mx: "auto", px: "15px" })}>
@@ -200,7 +258,7 @@
           style:left="{step.positionX}px"
           style:opacity={fadeOpacity(scrollProgress, step.threshold)}>
           <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
-            {componentData.translations[step.step + "/text"] ?? ""}
+            {@render stepText(componentData.translations[step.step + "/text"] ?? "")}
           </p>
         </div>
       {/each}
@@ -304,7 +362,7 @@
             })}
             style:opacity={fadeOpacity(scrollProgress, threshold)}>
             <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
-              {componentData.translations[step.step + "/text"] ?? ""}
+              {@render stepText(componentData.translations[step.step + "/text"] ?? "")}
             </p>
           </div>
         {/each}

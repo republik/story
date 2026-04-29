@@ -135,7 +135,7 @@ const peaks: PeakHighlight[] = [
 
 const translations: Translations = {
   "step1/text":
-    "(WE NEED THIS SMALL EXPLANATION – BITTE ANPASSSEN!) Seit den 80er gibt es konsistent in der Schweiz mehr Menschen, die in der Schweiz einwanderten als auswanderten.",
+    "(WE NEED THIS SMALL EXPLANATION – BITTE ANPASSSEN!) Seit den 80er gibt es konsistent in der Schweiz mehr Menschen, die in der Schweiz {einwanderten} als {auswanderten}.",
   "step2/text":
     "2002 trat das sogenannte Freizügigkeits­abkommen in Kraft. In den letzten zwanzig Jahren machte die Zuwanderung aus der EU knapp zwei Drittel der gesamten Zuwanderung in die Schweiz aus.",
   "step3/text":

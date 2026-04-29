@@ -82,11 +82,12 @@
         <rect x="0" y="0" width={innerW} height={Math.max(0, y(tenMillionMark))}
               fill="#8B6F47" opacity="0.08" />
 
-        {#each yTicks as t}
+        {#each yTicks as t, i}
+          {@const isTop = i === yTicks.length - 1}
           <line x1="0" x2={innerW} y1={y(t)} y2={y(t)} stroke="#E5E5E5" />
           <text x={-8} y={y(t)} dy="0.32em" text-anchor="end"
                 class={css({ fontSize: "12px", fill: "text", fontFamily: "gtAmericaStandard"})}>
-            {d3.format("~s")(t)}
+            {t / 1_000_000} Mio.{isTop ? " Einwohner" : ""}
           </text>
         {/each}
 

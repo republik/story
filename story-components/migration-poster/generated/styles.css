@@ -647,6 +647,30 @@ html:not(#\#):not(#\#),:host:not(#\#):not(#\#) {
   padding-inline: var(--story-spacing-2);
 }
 
+.story-d_inline-block:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  display: inline-block;
+}
+
+.story-td_underline:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration: underline;
+}
+
+.story-tu-o_4px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-underline-offset: 4px;
+}
+
+.story-td-t_2px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-thickness: 2px;
+}
+
+.story-c_rgba\(106\,_81\,_163\,_1\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  color: rgba(106, 81, 163, 1);
+}
+
+.story-c_rgba\(254\,_145\,_74\,_1\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  color: rgba(254, 145, 74, 1);
+}
+
 .story-mb_5px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   margin-bottom: 5px;
 }
@@ -697,4 +721,48 @@ html:not(#\#):not(#\#),:host:not(#\#):not(#\#) {
 
 .story-mb_10px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   margin-bottom: 10px;
+}
+
+.story-pr_20px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  padding-right: 20px;
+}
+
+.story-td-c_rgba\(106\,_81\,_163\,_1\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-color: rgba(106, 81, 163, 1);
+}
+
+.story-td-c_rgba\(254\,_145\,_74\,_1\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-color: rgba(254, 145, 74, 1);
+}
+
+.after\:story-d_inline-block:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  display: inline-block;
+}
+
+.after\:story-w_19px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  width: 19px;
+}
+
+.after\:story-h_9px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  height: 9px;
+}
+
+.after\:story-content_\"_\":not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  content: " ";
+}
+
+.after\:story-ml_4px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  margin-left: 4px;
+}
+
+.after\:story-mr_-20px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  margin-right: -20px;
+}
+
+.after\:story-bg-i_url\(\'data\:image\/svg\+xml\,\<svg_width\=\"19\"_height\=\"9\"_viewBox\=\"0_0_19_9\"_fill\=\"none\"_xmlns\=\"http\:\/\/www\.w3\.org\/2000\/svg\"\>\<path_d\=\"M1\.51593_4\.01472C1\.51593_4\.01472_4\.18798_6\.24147_6\.5_7C8\.81202_7\.75853_10\.5531_2\.619_12\.5_1\.99999C14\.4469_1\.38097_17\.101_3\.62084_17\.5155_3\.89272\"_stroke\=\"rgba\(106\,_81\,_163\,_1\)\"_stroke-width\=\"2\"\/\>\<\/svg\>\'\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  background-image: url('data:image/svg+xml,<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.51593 4.01472C1.51593 4.01472 4.18798 6.24147 6.5 7C8.81202 7.75853 10.5531 2.619 12.5 1.99999C14.4469 1.38097 17.101 3.62084 17.5155 3.89272" stroke="rgba(106, 81, 163, 1)" stroke-width="2"/></svg>');
+}
+
+.after\:story-bg-i_url\(\'data\:image\/svg\+xml\,\<svg_width\=\"19\"_height\=\"9\"_viewBox\=\"0_0_19_9\"_fill\=\"none\"_xmlns\=\"http\:\/\/www\.w3\.org\/2000\/svg\"\>\<path_d\=\"M1\.51593_4\.01472C1\.51593_4\.01472_4\.18798_6\.24147_6\.5_7C8\.81202_7\.75853_10\.5531_2\.619_12\.5_1\.99999C14\.4469_1\.38097_17\.101_3\.62084_17\.5155_3\.89272\"_stroke\=\"rgba\(254\,_145\,_74\,_1\)\"_stroke-width\=\"2\"\/\>\<\/svg\>\'\):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#)::after {
+  background-image: url('data:image/svg+xml,<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.51593 4.01472C1.51593 4.01472 4.18798 6.24147 6.5 7C8.81202 7.75853 10.5531 2.619 12.5 1.99999C14.4469 1.38097 17.101 3.62084 17.5155 3.89272" stroke="rgba(254, 145, 74, 1)" stroke-width="2"/></svg>');
 }
