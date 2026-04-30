@@ -31,20 +31,9 @@
       node.textContent = fontsCSS + stylesCSS;
       shadowRoot.appendChild(node);
     }
-
-    // Mirror data-theme from closest ancestor into shadow DOM
-    const themeSource = document.querySelector("[data-theme]");
-    if (themeSource) {
-      theme = themeSource.getAttribute("data-theme");
-      const observer = new MutationObserver(() => {
-        theme = themeSource.getAttribute("data-theme");
-      });
-      observer.observe(themeSource, { attributes: true, attributeFilter: ["data-theme"] });
-      return () => observer.disconnect();
-    }
   });
 </script>
 
-<div class="story-component" data-theme={theme}>
+<div class="story-component">
   <OneQuestion componentData={componentData} />
 </div>
