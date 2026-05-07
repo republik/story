@@ -57,9 +57,14 @@
     <div class={css({
       maxW: "center",
       width: "100%",
-      aspectRatio: "4 / 3",
       py: "6",
+      aspectRatio: "3 / 4",
+      paddingTop: "[120px]",
+      md: {
+        aspectRatio: "4 / 3"
+      },
       lg: {
+        aspectRatio: "4 / 3",
         height: "auto",
       }
     })}>
@@ -80,7 +85,7 @@
       class={css({
             minH: "40vh",
             display: "flex",
-            alignItems: "center",
+            alignItems: "end",
             justifyContent: "center",
             lg: {
               ml: "auto",
