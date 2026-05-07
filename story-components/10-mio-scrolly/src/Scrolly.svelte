@@ -57,11 +57,12 @@
     <div class={css({
       maxW: "center",
       width: "100%",
-      py: "6",
       aspectRatio: "3 / 4",
-      paddingTop: "[120px]",
+      pt: "[120px]",
+      pb: "6",
       md: {
-        aspectRatio: "4 / 3"
+        aspectRatio: "4 / 3",
+        pt: "6",
       },
       lg: {
         aspectRatio: "4 / 3",
