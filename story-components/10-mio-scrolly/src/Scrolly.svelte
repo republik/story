@@ -1,14 +1,14 @@
 <script lang="ts">
-  import {onMount} from "svelte";
-  import {css} from "@story/theme/css";
+  import { onMount } from "svelte";
+  import { css } from "@story/theme/css";
   import LineChart from "./LineChart.svelte";
-  import type {InputData, Step} from "./types.d.ts";
+  import type { InputData, Step } from "./types.d.ts";
 
   interface Props {
     componentData: InputData;
   }
 
-  let {componentData}: Props = $props();
+  let { componentData }: Props = $props();
 
   let stepIdx = $state(0);
   let currentStep = $derived(componentData.steps[stepIdx] as Step);
@@ -25,7 +25,7 @@
       const vh = window.innerHeight;
       let target: number;
       if (lgQuery.matches) {
-        target = vh / 2;
+        target = vh / 3;
       } else {
         const chartRect = chartEl.getBoundingClientRect();
         const containerRect = stepsEl.getBoundingClientRect();
@@ -48,7 +48,7 @@
     };
 
     onScroll();
-    window.addEventListener("scroll", onScroll, {passive: true});
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -64,7 +64,7 @@
   color: "text",
   position: "relative",
 })}>
-    <div bind:this={chartEl} class={css({
+  <div bind:this={chartEl} class={css({
       position: "sticky",
       top: "0",
       display: "flex",
@@ -78,13 +78,13 @@
       lg: {
         width: "60%",
         mx: "0",
-        height: "100vh",
+        // height: "60vh",
         alignItems: "center",
         pb: "6",
         boxShadow: "none",
       }
     })}>
-        <div class={css({
+    <div class={css({
       maxW: "center",
       width: "min(100%, calc(66vh * 3 / 4))",
       aspectRatio: "3 / 4",
@@ -100,31 +100,31 @@
         height: "auto",
       }
     })}>
-            <LineChart
-                    currentState={currentStep.state}
-                    chartConfig={componentData.chartConfig}
-                    lines={componentData.lines}/>
-        </div>
+      <LineChart
+        currentState={currentStep.state}
+        chartConfig={componentData.chartConfig}
+        lines={componentData.lines} />
     </div>
+  </div>
 
-    <div bind:this={stepsEl} class={css({ lg: { mt: "-100vh", pb: "10vh" }})}>
-        {#each componentData.steps as step, i}
-            {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
-            <div
-                    data-step
-                    data-section="line"
-                    data-idx={i}
-                    style={stepLine ? `--accent: ${stepLine.color}` : undefined}
-                    class={css({
+  <div bind:this={stepsEl} class={css({ lg: { mt: "-36vh", pb: "180px" }})}>
+    {#each componentData.steps as step, i}
+      {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
+      <div
+        data-step
+        data-section="line"
+        data-idx={i}
+        style={stepLine ? `--accent: ${stepLine.color}` : undefined}
+        class={css({
               display: "flex",
               justifyContent: "center",
-              mb: "80px",
+              mb: "20px",
               lg: {
                 ml: "auto",
                 maxW: "30%",
               },
-              _first: { mt: "40vh" },
-              _last: { mb: "40vh" },
+              _first: { mt: "80px" },
+              //_last: { mb: "40vh" },
               '& p': {
                 width: "100%",
                 maxW: "center",
@@ -141,8 +141,8 @@
                 textUnderlineOffset: "3px",
               }
             })}>
-                {@html step.text}
-            </div>
-        {/each}
-    </div>
+        {@html step.text}
+      </div>
+    {/each}
+  </div>
 </div>
