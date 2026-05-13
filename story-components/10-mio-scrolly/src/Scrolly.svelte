@@ -25,7 +25,7 @@
       const vh = window.innerHeight;
       let target: number;
       if (lgQuery.matches) {
-        target = vh / 3;
+        target = vh / 2;
       } else {
         const chartRect = chartEl.getBoundingClientRect();
         const containerRect = stepsEl.getBoundingClientRect();
@@ -78,6 +78,8 @@
       lg: {
         width: "60%",
         mx: "0",
+        // TODO: replace 300px with the actual height of the chart (as a css variable) divided by 2
+        top: "calc(50% - 300px)",
         // height: "60vh",
         alignItems: "center",
         pb: "6",
