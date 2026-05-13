@@ -30,7 +30,6 @@
     fontSize: "14px",
     fontFamily: "gtAmericaStandard",
     color: "text",
-    background: "background",
   })}
   style:margin-left="{TICK_MARGIN_LEFT}px">
   {#each xLabels as tick, idx}

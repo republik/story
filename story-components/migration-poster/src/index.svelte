@@ -30,10 +30,7 @@
       // the host in Chrome's shadow DOM, so its preflight `:host { antialiased }`
       // wins and makes text render lighter than the surrounding document. Append
       // a plain :host override so the shadow tree inherits the browser default.
-      // Make the custom element behave like a normal block-level node and
-      // isolate its layout/paint from the host page so the poster's tall
-      // SVG, sticky x-axis and overlays can't shift the surrounding layout.
-      const hostOverride = ":host{display:block;box-sizing:border-box;contain:layout paint;-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;}.story-component{box-sizing:border-box;width:100%;}*,*::before,*::after{box-sizing:border-box;}";
+      const hostOverride = ":host{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;}";
       node.textContent = fontsCSS + stylesCSS + hostOverride;
       shadowRoot.appendChild(node);
     }

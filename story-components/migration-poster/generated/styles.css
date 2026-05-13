@@ -685,6 +685,10 @@ html:not(#\#),:host:not(#\#) {
   stroke-width: 1px;
 }
 
+.story-bg_transparent:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  background: var(--story-colors-transparent);
+}
+
 .story-pr_20px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   padding-right: 20px;
 }

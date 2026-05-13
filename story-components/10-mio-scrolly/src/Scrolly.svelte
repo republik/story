@@ -62,9 +62,9 @@
       pb: "6",
       md: {
         aspectRatio: "4 / 3",
-        pt: "6",
       },
       lg: {
+        pt: "6",
         aspectRatio: "4 / 3",
         height: "auto",
       }
