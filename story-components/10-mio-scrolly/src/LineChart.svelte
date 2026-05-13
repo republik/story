@@ -75,7 +75,6 @@
   <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
     {chartConfig.title}
   </h3>
-  <p class={css({ textStyle: "chartDescription", mb: "15px"})}>{currentState.chartDescription}</p>
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
     <svg {width} {height} class={css({ display: "block" })}>
       <g transform={`translate(${margin.left},${margin.top})`}>
@@ -92,7 +91,7 @@
           {/if}
         {/each}
 
-        <line x1="0" x2={innerW} y1={innerH} y2={innerH} class={css({ stroke: 'text'})} />
+        <line x1="0" x2={innerW} y1={innerH} y2={innerH} class={css({ stroke: 'text' })} />
 
         {#each xTicks as t}
           <g transform={`translate(${x(t)},${innerH})`}>

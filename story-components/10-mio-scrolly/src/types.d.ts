@@ -13,7 +13,6 @@ export type Annotation = {
 };
 
 export type StepState = {
-  chartDescription: string;
   highlight: string[];
   annotations: Annotation[];
 };
