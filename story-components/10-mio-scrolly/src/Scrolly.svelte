@@ -19,13 +19,20 @@
   onMount(() => {
     const steps = Array.from(stepsEl.querySelectorAll<HTMLElement>("[data-step]"));
 
+    const lgQuery = window.matchMedia("(min-width: 1024px)");
+
     const onScroll = () => {
       const vh = window.innerHeight;
-      const chartRect = chartEl.getBoundingClientRect();
-      const containerRect = stepsEl.getBoundingClientRect();
-      const visibleTop = Math.max(chartRect.bottom, containerRect.top);
-      const visibleBottom = Math.min(vh, containerRect.bottom);
-      const target = (visibleTop + visibleBottom) / 2;
+      let target: number;
+      if (lgQuery.matches) {
+        target = vh / 2;
+      } else {
+        const chartRect = chartEl.getBoundingClientRect();
+        const containerRect = stepsEl.getBoundingClientRect();
+        const visibleTop = Math.max(chartRect.bottom, containerRect.top);
+        const visibleBottom = Math.min(vh, containerRect.bottom);
+        target = (visibleTop + visibleBottom) / 2;
+      }
       let bestIdx = 0;
       let bestDist = Infinity;
       for (const el of steps) {
@@ -100,7 +107,7 @@
         </div>
     </div>
 
-    <div bind:this={stepsEl} class={css({ py: "40vh"})}>
+    <div bind:this={stepsEl} class={css({ lg: { mt: "-100vh", pb: "10vh" }})}>
         {#each componentData.steps as step, i}
             {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
             <div
@@ -116,8 +123,10 @@
                 ml: "auto",
                 maxW: "30%",
               },
-              _last: { mb: "80px" },
+              _first: { mt: "40vh" },
+              _last: { mb: "40vh" },
               '& p': {
+                width: "100%",
                 maxW: "center",
                 background: "background",
                 textStyle: "chartDescription",
