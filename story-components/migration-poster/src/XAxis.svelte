@@ -41,7 +41,7 @@
     </span>
   {/each}
   {#each xTicks as tick, idx}
-    {@const tall = idx === 0 || idx % 6 === 0}
+    {@const tall = idx === 0 || idx % 8 === 0}
     <span
       class={css({ position: "absolute", background: "text", opacity: "0.5" })}
       style:left="{xScale(tick)}px"
