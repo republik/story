@@ -17,8 +17,8 @@
   const WIDTH = 420;
   const margin = { top: 20, bottom: 20, left: 40, right: 20 };
   const colors = {
-    immigration: "rgba(106, 81, 163, 1)",
-    emmigration: "rgba(254, 145, 74, 1)"
+    immigration: "#3AC296",
+    emmigration: "#000000"
   };
   const mobileBreakpoint = 850;
 
@@ -236,12 +236,12 @@
         d={immigrationArea}
         clip-path="url(#{clipId('imm')})" />
       <path
-        fill={colors.emmigration}
+        class={css({ fill: "#000", _dark: { fill: "#fff"}})}
         fill-opacity="0.1"
         d={emmigrationArea}
         clip-path="url(#{clipId('emm')})" />
 
-      <path fill="none" stroke-width="2" stroke={colors.emmigration} d={emmigrationLine} />
+      <path fill="none" stroke-width="2" class={css({ stroke: "#000", _dark: { stroke: "#fff"}})} d={emmigrationLine} />
       <path fill="none" stroke-width="2" stroke={colors.immigration} d={immigrationLine} />
 
       {#if !isMobile}

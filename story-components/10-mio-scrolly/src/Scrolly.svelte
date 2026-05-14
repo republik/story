@@ -11,6 +11,7 @@
   let { componentData }: Props = $props();
 
   let stepIdx = $state(0);
+  let drawerActive = $state(false);
   let currentStep = $derived(componentData.steps[stepIdx] as Step);
 
   let stepsEl: HTMLDivElement;
@@ -41,6 +42,7 @@
         const visibleTop = Math.max(chartRect.bottom, containerRect.top);
         const visibleBottom = Math.min(vh, containerRect.bottom);
         target = (visibleTop + visibleBottom) / 2;
+        drawerActive = chartRect.top <= 0;
       }
       let bestIdx = 0;
       let bestDist = Infinity;
@@ -117,7 +119,7 @@
     </div>
   </div>
 
-  <div bind:this={stepsEl} class={css({ lg: { mt: "calc(var(--chart-h, 600px)*-0.9)", pb: "180px" }})}>
+  <div bind:this={stepsEl} class={css({ lg: { mt: "calc((var(--chart-h, 600px)*-0.5) - 120px)", pb: "180px" }})}>
     {#each componentData.steps as step, i}
       {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
       <div
@@ -133,8 +135,6 @@
               lg: {
                 height: "auto",
                 minH: "auto",
-                mb: "20px",
-                _first: { mt: 0 },
                 ml: "auto",
                 maxW: "30%",
                 '& p': {
@@ -160,7 +160,9 @@
     {/each}
   </div>
 
-  <div bind:this={mobileStepsEl} class={css({
+  <div bind:this={mobileStepsEl}
+       style:transform={drawerActive ? "translateY(0)" : "translateY(100%)"}
+       class={css({
     position: "sticky",
     bottom: "0",
     width: "100vw",
@@ -169,6 +171,7 @@
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
     height: "max(100vh - var(--chart-h), 200px)",
     zIndex: "2",
+    transition: "transform 500ms ease",
     lg: { display: "none" },
   })}>
     {#each componentData.steps as step, i}
@@ -178,11 +181,14 @@
         class={css({
           position: "absolute",
           inset: "0",
-          padding: "20px",
+          px: "15px",
+          pt: "40px",
           opacity: stepIdx === i ? 1 : 0,
-          transition: "opacity 400ms ease",
+          transition: "opacity 200ms ease",
           pointerEvents: "none",
           '& p': {
+            maxWidth: "center",
+            mx: "auto",
             textStyle: "chartDescription",
           },
           '& .color': {

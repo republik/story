@@ -669,6 +669,14 @@ html:not(#\#),:host:not(#\#) {
   stroke-width: 1px;
 }
 
+.story-fill_\#000:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  fill: #000;
+}
+
+.story-stk_\#000:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  stroke: #000;
+}
+
 .story-ov-x_clip:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   overflow-x: clip;
 }
@@ -723,4 +731,12 @@ html:not(#\#),:host:not(#\#) {
 
 .story-mb_10px:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   margin-bottom: 10px;
+}
+
+[data-theme="dark"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) .dark\:story-fill_\#fff {
+  fill: #fff;
+}
+
+[data-theme="dark"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) .dark\:story-stk_\#fff {
+  stroke: #fff;
 }
