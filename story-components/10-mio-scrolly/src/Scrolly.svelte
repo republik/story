@@ -182,7 +182,7 @@
           position: "absolute",
           inset: "0",
           px: "15px",
-          pt: "40px",
+          pt: "20px",
           opacity: stepIdx === i ? 1 : 0,
           transition: "opacity 200ms ease",
           pointerEvents: "none",

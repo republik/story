@@ -72,7 +72,7 @@
 </script>
 
 <div class={css({ width: "100%", height: "100%", display: "flex", flexDirection: "column" })}>
-  <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
+  <h3 class={css({textStyle: "chartTitle", mb: "20px" })}>
     {chartConfig.title}
   </h3>
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
