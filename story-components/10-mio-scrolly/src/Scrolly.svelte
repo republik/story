@@ -80,7 +80,6 @@
       justifyContent: "center",
       zIndex: "1",
       background: "background",
-      boxShadow: "inset 0 -5px 5px -5px rgba(0,0,0,0.2)",
       width: "100vw",
       mx: "calc(50% - 50vw)",
       lg: {
@@ -89,7 +88,6 @@
         top: "calc(50% - var(--chart-h, 600px) / 2)",
         alignItems: "center",
         pb: "6",
-        boxShadow: "none",
       }
     })}>
     <div class={css({
@@ -97,7 +95,7 @@
       width: "min(100%, calc(66vh * 3 / 4))",
       aspectRatio: "3 / 4",
       mx: "auto",
-      py: "6",
+      pt: "10",
       px: "15px",
       md: {
         width: "min(100%, 66vh)",
@@ -128,22 +126,24 @@
         class={css({
               display: "flex",
               justifyContent: "center",
-              mb: "20px",
-              _first: { mt: "120px" },
+              minH: "60vh",
+              '& p': { display: "none" },
               lg: {
+                minH: "auto",
+                mb: "20px",
                 _first: { mt: 0 },
                 ml: "auto",
                 maxW: "30%",
-              },
-              //_last: { mb: "40vh" },
-              '& p': {
-                width: "100%",
-                maxW: "center",
-                background: "background",
-                textStyle: "chartDescription",
-                padding: "20px",
-                opacity: stepIdx === i ? 1 : 0.2,
-                transition: "opacity 400ms ease",
+                '& p': {
+                  display: "block",
+                  width: "100%",
+                  maxW: "center",
+                  background: "background",
+                  textStyle: "chartDescription",
+                  padding: "20px",
+                  opacity: stepIdx === i ? 1 : 0.2,
+                  transition: "opacity 400ms ease",
+                },
               },
               '& .color': {
                 textDecoration: "underline",
@@ -152,6 +152,43 @@
                 textUnderlineOffset: "3px",
               }
             })}>
+        {@html step.text}
+      </div>
+    {/each}
+  </div>
+
+  <div class={css({
+    position: "sticky",
+    bottom: "0",
+    width: "100vw",
+    mx: "calc(50% - 50vw)",
+    background: "background",
+    boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
+    minH: "200px",
+    zIndex: "2",
+    lg: { display: "none" },
+  })}>
+    {#each componentData.steps as step, i}
+      {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
+      <div
+        style={stepLine ? `--accent: ${stepLine.color}` : undefined}
+        class={css({
+          position: "absolute",
+          inset: "0",
+          padding: "20px",
+          opacity: stepIdx === i ? 1 : 0,
+          transition: "opacity 400ms ease",
+          pointerEvents: "none",
+          '& p': {
+            textStyle: "chartDescription",
+          },
+          '& .color': {
+            textDecoration: "underline",
+            textDecorationColor: "var(--accent)",
+            textDecorationThickness: "2px",
+            textUnderlineOffset: "3px",
+          },
+        })}>
         {@html step.text}
       </div>
     {/each}

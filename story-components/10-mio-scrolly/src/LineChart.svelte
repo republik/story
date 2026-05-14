@@ -38,7 +38,7 @@
   });
 
 
-  const margin = { top: 10, right: 5, bottom: 60, left: 48 };
+  const margin = { top: 5, right: 0, bottom: 60, left: 42 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
