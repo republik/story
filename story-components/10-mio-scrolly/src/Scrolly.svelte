@@ -97,9 +97,10 @@
     <div class={css({
       maxW: "center",
       width: "min(100%, calc(66vh * 3 / 4))",
+      marginLeft: "0",
       aspectRatio: "3 / 4",
       mx: "auto",
-      pt: "10",
+      pt: "30px",
       px: "15px",
       md: {
         width: "min(100%, 66vh)",
@@ -130,7 +131,7 @@
         class={css({
               display: "flex",
               justifyContent: "center",
-              height: "max(100vh - var(--chart-h), 200px)",
+              height: "80vh",
               '& p': { display: "none" },
               lg: {
                 height: "auto",
@@ -181,8 +182,7 @@
         class={css({
           position: "absolute",
           inset: "0",
-          px: "15px",
-          pt: "20px",
+          p: "15px",
           opacity: stepIdx === i ? 1 : 0,
           transition: "opacity 200ms ease",
           pointerEvents: "none",
