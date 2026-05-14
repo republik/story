@@ -14,6 +14,7 @@
   let currentStep = $derived(componentData.steps[stepIdx] as Step);
 
   let stepsEl: HTMLDivElement;
+  let mobileStepsEl: HTMLDivElement;
   let chartEl: HTMLDivElement;
 
   onMount(() => {
@@ -25,6 +26,7 @@
       const chartHeight = chartEl.offsetHeight;
       chartEl.style.setProperty("--chart-h", `${chartHeight}px`);
       stepsEl.style.setProperty("--chart-h", `${chartHeight}px`);
+      mobileStepsEl.style.setProperty("--chart-h", `${chartHeight}px`);
     });
     ro.observe(chartEl);
 
@@ -126,9 +128,10 @@
         class={css({
               display: "flex",
               justifyContent: "center",
-              minH: "60vh",
+              height: "max(100vh - var(--chart-h), 200px)",
               '& p': { display: "none" },
               lg: {
+                height: "auto",
                 minH: "auto",
                 mb: "20px",
                 _first: { mt: 0 },
@@ -157,14 +160,14 @@
     {/each}
   </div>
 
-  <div class={css({
+  <div bind:this={mobileStepsEl} class={css({
     position: "sticky",
     bottom: "0",
     width: "100vw",
     mx: "calc(50% - 50vw)",
     background: "background",
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
-    minH: "200px",
+    height: "max(100vh - var(--chart-h), 200px)",
     zIndex: "2",
     lg: { display: "none" },
   })}>
