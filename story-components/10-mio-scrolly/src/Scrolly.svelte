@@ -21,6 +21,13 @@
 
     const lgQuery = window.matchMedia("(min-width: 1024px)");
 
+    const ro = new ResizeObserver(() => {
+      const chartHeight = chartEl.offsetHeight;
+      chartEl.style.setProperty("--chart-h", `${chartHeight}px`);
+      stepsEl.style.setProperty("--chart-h", `${chartHeight}px`);
+    });
+    ro.observe(chartEl);
+
     const onScroll = () => {
       const vh = window.innerHeight;
       let target: number;
@@ -53,6 +60,7 @@
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      ro.disconnect();
     };
   });
 </script>
@@ -78,9 +86,7 @@
       lg: {
         width: "60%",
         mx: "0",
-        // TODO: replace 300px with the actual height of the chart (as a css variable) divided by 2
-        top: "calc(50% - 300px)",
-        // height: "60vh",
+        top: "calc(50% - var(--chart-h, 600px) / 2)",
         alignItems: "center",
         pb: "6",
         boxShadow: "none",
@@ -92,11 +98,13 @@
       aspectRatio: "3 / 4",
       mx: "auto",
       py: "6",
+      px: "15px",
       md: {
         width: "min(100%, 66vh)",
         aspectRatio: "1 / 1",
       },
       lg: {
+        px: "0",
         width: "100%",
         aspectRatio: "4 / 3",
         height: "auto",
@@ -109,7 +117,7 @@
     </div>
   </div>
 
-  <div bind:this={stepsEl} class={css({ lg: { mt: "-36vh", pb: "180px" }})}>
+  <div bind:this={stepsEl} class={css({ lg: { mt: "calc(var(--chart-h, 600px)*-0.9)", pb: "180px" }})}>
     {#each componentData.steps as step, i}
       {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
       <div
@@ -121,11 +129,12 @@
               display: "flex",
               justifyContent: "center",
               mb: "20px",
+              _first: { mt: "120px" },
               lg: {
+                _first: { mt: 0 },
                 ml: "auto",
                 maxW: "30%",
               },
-              _first: { mt: "80px" },
               //_last: { mb: "40vh" },
               '& p': {
                 width: "100%",
