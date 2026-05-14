@@ -331,7 +331,7 @@ export const presetRepublik = definePreset({
             fontFamily: "gtAmericaStandard",
             fontWeight: "medium",
             fontSize: "1.1875rem",
-            lineHeight: 1.5,
+            lineHeight: 1.2,
             md: {
               fontSize: "1.375rem",
             },

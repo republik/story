@@ -38,7 +38,7 @@
   });
 
 
-  const margin = { top: 10, right: 5, bottom: 60, left: 48 };
+  const margin = { top: 5, right: 0, bottom: 60, left: 42 };
 
   let innerW = $derived(Math.max(0, width - margin.left - margin.right));
   let innerH = $derived(Math.max(0, height - margin.top - margin.bottom));
@@ -75,7 +75,6 @@
   <h3 class={css({textStyle: "chartTitle", mb: "15px", "& + p": { mt: "-15px"}})}>
     {chartConfig.title}
   </h3>
-  <p class={css({ textStyle: "chartDescription", mb: "15px"})}>{currentState.chartDescription}</p>
   <div bind:this={container} class={css({ flex: "1", minHeight: "0" })}>
     <svg {width} {height} class={css({ display: "block" })}>
       <g transform={`translate(${margin.left},${margin.top})`}>
@@ -92,7 +91,7 @@
           {/if}
         {/each}
 
-        <line x1="0" x2={innerW} y1={innerH} y2={innerH} class={css({ stroke: 'text'})} />
+        <line x1="0" x2={innerW} y1={innerH} y2={innerH} class={css({ stroke: 'text' })} />
 
         {#each xTicks as t}
           <g transform={`translate(${x(t)},${innerH})`}>
