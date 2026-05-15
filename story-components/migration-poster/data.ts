@@ -252,15 +252,15 @@ export const migrationData: InputData = {
   ],
   translations: {
     "step1/text":
-      "1997 betrug die sogenannte Nettozuwanderung von Ausländern rund 1700 Personen. Das war der tiefste Wert in den letzten 30 Jahren und eine Folge der wirtschaftlichen Stagnation in der ersten Hälfte der 1990er-Jahre.",
+      "1997 betrug die sogenannte Nettozuwanderung von Ausländern rund 1700&nbsp;Personen. Das war der tiefste Wert in den letzten 30&nbsp;Jahren und eine Folge der wirtschaftlichen Stagnation in der ersten Hälfte der 1990er-Jahre.",
     "step2/text":
-      "2002 trat das Freizügigkeits­abkommen zwischen der Schweiz und der EU in Kraft. Seither macht die Zuwanderung aus der EU den mit Abstand grössten Teil der Zuwanderung in die Schweiz aus.",
+      "2002 trat das Freizügigkeitsabkommen zwischen der Schweiz und der EU in Kraft. Seither macht die Zuwanderung aus der EU den mit Abstand grössten Teil der Zuwanderung in die Schweiz aus.",
     "step3/text":
       "2007 fielen die Kontingente, mit denen die Schweiz die Zuwanderung aus den EU-Staaten in einer ersten Phase eingeschränkt hatte – darunter aus Deutschland, Frankreich und Italien.",
     "step4/text":
-      "2015 war das Jahr der Geflüchteten. Sie stammten hauptsächlich aus Eritrea, Syrien und Afghanistan und stellten hier Asylgesuche. Das schlug sich ein Jahr später auch in der Statistik nieder: Die Nettozuwanderung aus Afrika und Asien alleine lag bei rund 27’000 Menschen. Das war ein Höchstwert in den letzten 25 Jahren.",
+      "2015 war das Jahr der Geflüchteten. Sie stammten hauptsächlich aus Eritrea, Syrien und Afghanistan und stellten hier Asylgesuche. Das schlug sich ein Jahr später auch in der Statistik nieder: Die Nettozuwanderung aus Afrika und Asien allein lag bei rund 27’000&nbsp;Menschen. Das war ein Höchstwert in den letzten 25&nbsp;Jahren.",
     "step5/text":
-      "2022 griff Russland die Ukraine an, was zur Flucht von Millionen Ukraninerinnen führte, zu einem kleinen Teil auch in die Schweiz. 2023 vermeldete das BfS eine Nettozuwanderung von rund 69’000 Personen aus dem «übrigen Europa». Die meisten Zuwanderer davon stammten aus der Ukraine.",
+      "2022 griff Russland die Ukraine an, was zur Flucht von Millionen Ukrainerinnen führte, zu einem kleinen Teil auch in die Schweiz. 2023 vermeldete das BFS eine Netto&shy;zuwanderung von rund 69’000&nbsp;Personen aus dem «übrigen Europa». Die meisten Zuwanderer davon stammten aus der Ukraine.",
   },
-  chartSubTitle: "Zu- und Abwanderung in den letzten 30 Jahren",
+  chartSubTitle: "Zu- und Abwanderung in den letzten 30&nbsp;Jahren",
 };

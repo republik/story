@@ -200,7 +200,7 @@
           style:left="{step.positionX}px"
           style:opacity={fadeOpacity(scrollProgress, step.threshold)}>
           <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
-            {componentData.translations[step.step + "/text"]}
+            {@html componentData.translations[step.step + "/text"]}
           </p>
         </div>
       {/each}
@@ -303,7 +303,7 @@
             })}
             style:opacity={fadeOpacity(scrollProgress, threshold)}>
             <p class={css({ textStyle: "chartDescription", mt: "5px" })}>
-              {componentData.translations[step.step + "/text"]}
+              {@html componentData.translations[step.step + "/text"]}
             </p>
           </div>
         {/each}
