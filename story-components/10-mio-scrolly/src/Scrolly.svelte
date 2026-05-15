@@ -131,7 +131,7 @@
         class={css({
               display: "flex",
               justifyContent: "center",
-              height: "80vh",
+              height: "65vh",
               '& p': { display: "none" },
               lg: {
                 height: "auto",
