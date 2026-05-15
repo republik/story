@@ -166,10 +166,10 @@
 <div class={css({ width: "100%", overflowX: "clip" })}>
   <div class={css({ maxW: "center", mx: "auto", px: "15px" })}>
     <h3 class={css({ textStyle: "chartTitle", mb: "5px" })}>
-      {componentData.chartTitle}
+      {@html componentData.chartTitle}
     </h3>
     <p class={css({ textStyle: "chartDescription", mb: "15px" })}>
-      {componentData.chartSubTitle}
+      {@html componentData.chartSubTitle}
     </p>
   </div>
 
