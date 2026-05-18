@@ -171,7 +171,7 @@
     mx: "calc(50% - 50vw)",
     background: "background",
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
-    height: "max(100vh - var(--chart-h), 200px)",
+    minHeight: "200px",
     zIndex: "2",
     transition: "transform 500ms ease",
     lg: { display: "none" },
