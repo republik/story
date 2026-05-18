@@ -21,7 +21,7 @@
   onMount(() => {
     const steps = Array.from(stepsEl.querySelectorAll<HTMLElement>("[data-step]"));
 
-    const lgQuery = window.matchMedia("(min-width: 1024px)");
+    const lgQuery = window.matchMedia("(min-width: 1025px)");
 
     const ro = new ResizeObserver(() => {
       const chartHeight = chartEl.offsetHeight;
@@ -44,7 +44,7 @@
         target = (visibleTop + visibleBottom) / 2;
 
         // buffer
-        if (chartRect.top <= 0) drawerActive = true;
+        if (chartRect.top <= 10) drawerActive = true;
         else if (chartRect.top > 50) drawerActive = false;
       }
       let bestIdx = 0;
@@ -171,7 +171,7 @@
     bottom: "0",
     width: "100vw",
     mx: "calc(50% - 50vw)",
-    background: "background",
+    background: "red",
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
     height: "max(100vh - var(--chart-h), 200px)",
     zIndex: "2",
