@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { css } from "@story/theme/css";
+  import {onMount} from "svelte";
+  import {css} from "@story/theme/css";
   import LineChart from "./LineChart.svelte";
-  import type { InputData, Step } from "./types.d.ts";
+  import type {InputData, Step} from "./types.d.ts";
 
   interface Props {
     componentData: InputData;
   }
 
-  let { componentData }: Props = $props();
+  let {componentData}: Props = $props();
 
   let stepIdx = $state(0);
   let drawerActive = $state(false);
@@ -21,7 +21,7 @@
   onMount(() => {
     const steps = Array.from(stepsEl.querySelectorAll<HTMLElement>("[data-step]"));
 
-    const lgQuery = window.matchMedia("(min-width: 1024px)");
+    const lgQuery = window.matchMedia("(min-width: 1025px)");
 
     const ro = new ResizeObserver(() => {
       const chartHeight = chartEl.offsetHeight;
@@ -42,7 +42,10 @@
         const visibleTop = Math.max(chartRect.bottom, containerRect.top);
         const visibleBottom = Math.min(vh, containerRect.bottom);
         target = (visibleTop + visibleBottom) / 2;
-        drawerActive = chartRect.top <= 0;
+
+        // buffer
+        if (chartRect.top <= 10) drawerActive = true;
+        else if (chartRect.top > 50) drawerActive = false;
       }
       let bestIdx = 0;
       let bestDist = Infinity;
@@ -59,7 +62,7 @@
     };
 
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, {passive: true});
     window.addEventListener("resize", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -76,7 +79,7 @@
   color: "text",
   position: "relative",
 })}>
-  <div bind:this={chartEl} class={css({
+    <div bind:this={chartEl} class={css({
       position: "sticky",
       top: "0",
       display: "flex",
@@ -94,7 +97,7 @@
         pb: "6",
       }
     })}>
-    <div class={css({
+        <div class={css({
       maxW: "center",
       width: "min(100%, calc(66vh * 3 / 4))",
       marginLeft: "0",
@@ -113,22 +116,22 @@
         height: "auto",
       }
     })}>
-      <LineChart
-        currentState={currentStep.state}
-        chartConfig={componentData.chartConfig}
-        lines={componentData.lines} />
+            <LineChart
+                    currentState={currentStep.state}
+                    chartConfig={componentData.chartConfig}
+                    lines={componentData.lines}/>
+        </div>
     </div>
-  </div>
 
-  <div bind:this={stepsEl} class={css({ lg: { mt: "calc((var(--chart-h, 600px)*-0.5) - 120px)", pb: "180px" }})}>
-    {#each componentData.steps as step, i}
-      {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
-      <div
-        data-step
-        data-section="line"
-        data-idx={i}
-        style={stepLine ? `--accent: ${stepLine.color}` : undefined}
-        class={css({
+    <div bind:this={stepsEl} class={css({ lg: { mt: "calc((var(--chart-h, 600px)*-0.5) - 120px)", pb: "180px" }})}>
+        {#each componentData.steps as step, i}
+            {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
+            <div
+                    data-step
+                    data-section="line"
+                    data-idx={i}
+                    style={stepLine ? `--accent: ${stepLine.color}` : undefined}
+                    class={css({
               display: "flex",
               justifyContent: "center",
               height: "350px",
@@ -156,14 +159,14 @@
                 textUnderlineOffset: "3px",
               }
             })}>
-        {@html step.text}
-      </div>
-    {/each}
-  </div>
+                {@html step.text}
+            </div>
+        {/each}
+    </div>
 
-  <div bind:this={mobileStepsEl}
-       style:transform={drawerActive ? "translateY(0)" : "translateY(100%)"}
-       class={css({
+    <div bind:this={mobileStepsEl}
+         style:transform={drawerActive ? "translateY(0)" : "translateY(100%)"}
+         class={css({
     position: "sticky",
     bottom: "0",
     width: "100vw",
@@ -175,11 +178,11 @@
     transition: "transform 500ms ease",
     lg: { display: "none" },
   })}>
-    {#each componentData.steps as step, i}
-      {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
-      <div
-        style={stepLine ? `--accent: ${stepLine.color}` : undefined}
-        class={css({
+        {#each componentData.steps as step, i}
+            {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
+            <div
+                    style={stepLine ? `--accent: ${stepLine.color}` : undefined}
+                    class={css({
           position: "absolute",
           inset: "0",
           p: "15px",
@@ -198,8 +201,8 @@
             textUnderlineOffset: "3px",
           },
         })}>
-        {@html step.text}
-      </div>
-    {/each}
-  </div>
+                {@html step.text}
+            </div>
+        {/each}
+    </div>
 </div>
