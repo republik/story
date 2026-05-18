@@ -13,7 +13,6 @@
   let stepIdx = $state(0);
   let drawerActive = $state(false);
   let currentStep = $derived(componentData.steps[stepIdx] as Step);
-  let currentLine = $derived(componentData.lines.find(l => currentStep.state.highlight.includes(l.name)))
 
   let stepsEl: HTMLDivElement;
   let mobileStepsEl: HTMLDivElement;
@@ -43,7 +42,10 @@
         const visibleTop = Math.max(chartRect.bottom, containerRect.top);
         const visibleBottom = Math.min(vh, containerRect.bottom);
         target = (visibleTop + visibleBottom) / 2;
-        drawerActive = chartRect.top <= 0;
+
+        // buffer
+        if (chartRect.top <= 0) drawerActive = true;
+        else if (chartRect.top > 50) drawerActive = false;
       }
       let bestIdx = 0;
       let bestDist = Infinity;
@@ -97,14 +99,14 @@
     })}>
         <div class={css({
       maxW: "center",
-      width: "100%",
+      width: "min(100%, calc(66vh * 3 / 4))",
       marginLeft: "0",
       aspectRatio: "3 / 4",
       mx: "auto",
       pt: "30px",
       px: "15px",
       md: {
-        width: "100%",
+        width: "min(100%, 66vh)",
         aspectRatio: "1 / 1",
       },
       lg: {
@@ -171,17 +173,21 @@
     mx: "calc(50% - 50vw)",
     background: "background",
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
-    minHeight: "200px",
+    height: "max(100vh - var(--chart-h), 200px)",
     zIndex: "2",
     transition: "transform 500ms ease",
     lg: { display: "none" },
   })}>
-        <div
-                style={currentLine ? `--accent: ${currentLine.color}` : undefined}
-                class={css({
+        {#each componentData.steps as step, i}
+            {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
+            <div
+                    style={stepLine ? `--accent: ${stepLine.color}` : undefined}
+                    class={css({
           position: "absolute",
           inset: "0",
           p: "15px",
+          opacity: stepIdx === i ? 1 : 0,
+          transition: "opacity 200ms ease",
           pointerEvents: "none",
           '& p': {
             maxWidth: "center",
@@ -195,7 +201,8 @@
             textUnderlineOffset: "3px",
           },
         })}>
-            {@html currentStep.text}
-        </div>
+                {@html step.text}
+            </div>
+        {/each}
     </div>
 </div>
