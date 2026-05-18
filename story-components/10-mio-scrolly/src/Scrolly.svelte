@@ -13,6 +13,7 @@
   let stepIdx = $state(0);
   let drawerActive = $state(false);
   let currentStep = $derived(componentData.steps[stepIdx] as Step);
+  let currentLine = $derived(componentData.lines.find(l => currentStep.state.highlight.includes(l.name)))
 
   let stepsEl: HTMLDivElement;
   let mobileStepsEl: HTMLDivElement;
@@ -23,8 +24,6 @@
 
     const lgQuery = window.matchMedia("(min-width: 1024px)");
 
-    let vh = window.innerHeight;
-
     const ro = new ResizeObserver(() => {
       const chartHeight = chartEl.offsetHeight;
       chartEl.style.setProperty("--chart-h", `${chartHeight}px`);
@@ -34,6 +33,7 @@
     ro.observe(chartEl);
 
     const onScroll = () => {
+      const vh = window.innerHeight;
       let target: number;
       if (lgQuery.matches) {
         target = vh / 2;
@@ -59,17 +59,12 @@
       stepIdx = bestIdx;
     };
 
-    const onResize = () => {
-      vh = window.innerHeight;
-      onScroll();
-    };
-
     onScroll();
     window.addEventListener("scroll", onScroll, {passive: true});
-    window.addEventListener("resize", onResize);
+    window.addEventListener("resize", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", onScroll);
       ro.disconnect();
     };
   });
@@ -102,14 +97,14 @@
     })}>
         <div class={css({
       maxW: "center",
-      width: "min(100%, calc(66svh * 3 / 4))",
+      width: "100%",
       marginLeft: "0",
       aspectRatio: "3 / 4",
       mx: "auto",
       pt: "30px",
       px: "15px",
       md: {
-        width: "min(100%, 66svh)",
+        width: "100%",
         aspectRatio: "1 / 1",
       },
       lg: {
@@ -176,21 +171,17 @@
     mx: "calc(50% - 50vw)",
     background: "background",
     boxShadow: "0 -5px 5px -5px rgba(0,0,0,0.2)",
-    height: "max(100svh - var(--chart-h), 200px)",
+    height: "max(100vh - var(--chart-h), 200px)",
     zIndex: "2",
     transition: "transform 500ms ease",
     lg: { display: "none" },
   })}>
-        {#each componentData.steps as step, i}
-            {@const stepLine = componentData.lines.find(l => step.state.highlight.includes(l.name))}
-            <div
-                    style={stepLine ? `--accent: ${stepLine.color}` : undefined}
-                    class={css({
+        <div
+                style={currentLine ? `--accent: ${currentLine.color}` : undefined}
+                class={css({
           position: "absolute",
           inset: "0",
           p: "15px",
-          opacity: stepIdx === i ? 1 : 0,
-          transition: "opacity 200ms ease",
           pointerEvents: "none",
           '& p': {
             maxWidth: "center",
@@ -204,8 +195,7 @@
             textUnderlineOffset: "3px",
           },
         })}>
-                {@html step.text}
-            </div>
-        {/each}
+            {@html currentStep.text}
+        </div>
     </div>
 </div>
