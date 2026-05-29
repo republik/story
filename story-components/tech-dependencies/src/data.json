@@ -1,12 +1,23 @@
 {
-  "organization": { "name": "Republik AG", "country": "CH" },
+  "organization": {
+    "name": "Republik AG",
+    "country": "CH"
+  },
   "asOfMin": "2026-01-01",
-  "asOfMax": "2026-05-01",
+  "asOfMax": "2026-06-01",
   "companies": [
     {
       "id": "salesforce",
       "name": "Salesforce",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.79, "lng": -122.4, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.79,
+          "lng": -122.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -17,15 +28,31 @@
       "id": "heroku",
       "name": "Heroku",
       "parentId": "salesforce",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.41, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.41,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://heroku.com"
     },
     {
       "id": "amazon",
-      "name": "Amazon (AWS)",
-      "hqs": [{ "country": "US", "city": "Seattle", "lat": 47.61, "lng": -122.33, "role": "primary-hq" }],
+      "name": "Amazon",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Seattle",
+          "lat": 47.61,
+          "lng": -122.33,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -34,8 +61,16 @@
     },
     {
       "id": "intuit",
-      "name": "Intuit (Mailchimp)",
-      "hqs": [{ "country": "US", "city": "Mountain View", "lat": 37.39, "lng": -122.08, "role": "primary-hq" }],
+      "name": "Mailchimp",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Mountain View",
+          "lat": 37.39,
+          "lng": -122.08,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -43,8 +78,16 @@
     },
     {
       "id": "google",
-      "name": "Google (Alphabet)",
-      "hqs": [{ "country": "US", "city": "Mountain View", "lat": 37.42, "lng": -122.08, "role": "primary-hq" }],
+      "name": "Google",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Mountain View",
+          "lat": 37.42,
+          "lng": -122.08,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -53,19 +96,39 @@
     },
     {
       "id": "slack",
-      "name": "Slack (Salesforce)",
+      "name": "Slack",
       "parentId": "salesforce",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.77, "lng": -122.41, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.77,
+          "lng": -122.41,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "legalStructure": "for-profit",
       "url": "https://slack.com"
     },
     {
       "id": "elastic",
-      "name": "Elastic NV",
+      "name": "Elastic",
       "hqs": [
-        { "country": "NL", "city": "Amsterdam", "lat": 52.37, "lng": 4.9, "role": "primary-hq" },
-        { "country": "US", "city": "San Francisco", "lat": 37.77, "lng": -122.42, "role": "secondary-hq" }
+        {
+          "country": "NL",
+          "city": "Amsterdam",
+          "lat": 52.37,
+          "lng": 4.9,
+          "role": "primary-hq"
+        },
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.77,
+          "lng": -122.42,
+          "role": "secondary-hq"
+        }
       ],
       "size": "large",
       "publiclyTraded": true,
@@ -74,16 +137,32 @@
     },
     {
       "id": "notion",
-      "name": "Notion Labs",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.39, "role": "primary-hq" }],
+      "name": "Notion",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.39,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://notion.so"
     },
     {
       "id": "atlassian",
-      "name": "Atlassian (Trello)",
-      "hqs": [{ "country": "AU", "city": "Sydney", "lat": -33.87, "lng": 151.21, "role": "primary-hq" }],
+      "name": "Trello",
+      "hqs": [
+        {
+          "country": "AU",
+          "city": "Sydney",
+          "lat": -33.87,
+          "lng": 151.21,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -91,16 +170,65 @@
     },
     {
       "id": "podigee",
-      "name": "Podigee GmbH",
-      "hqs": [{ "country": "DE", "city": "Berlin", "lat": 52.52, "lng": 13.4, "role": "primary-hq" }],
+      "name": "Podigee",
+      "hqs": [
+        {
+          "country": "DE",
+          "city": "Berlin",
+          "lat": 52.52,
+          "lng": 13.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "micro",
       "legalStructure": "for-profit",
       "url": "https://podigee.com"
     },
     {
+      "id": "abacus",
+      "name": "Abacus",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Wittenbach",
+          "lat": 47.46,
+          "lng": 9.38,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "medium",
+      "legalStructure": "for-profit",
+      "url": "https://abacus.ch"
+    },
+    {
+      "id": "abacus-hosting",
+      "name": "Abacus",
+      "parentId": "abacus",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Wittenbach",
+          "lat": 47.46,
+          "lng": 9.38,
+          "role": "data-center"
+        }
+      ],
+      "size": "small",
+      "legalStructure": "for-profit",
+      "url": "https://abacus.hosting"
+    },
+    {
       "id": "adobe",
-      "name": "Adobe Inc.",
-      "hqs": [{ "country": "US", "city": "San Jose", "lat": 37.34, "lng": -121.89, "role": "primary-hq" }],
+      "name": "Adobe",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Jose",
+          "lat": 37.34,
+          "lng": -121.89,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -108,57 +236,113 @@
     },
     {
       "id": "keycdn",
-      "name": "KeyCDN (proinity LLC)",
-      "hqs": [{ "country": "CH", "city": "Zürich", "lat": 47.38, "lng": 8.54, "role": "primary-hq" }],
+      "name": "KeyCDN",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Zürich",
+          "lat": 47.38,
+          "lng": 8.54,
+          "role": "primary-hq"
+        }
+      ],
       "size": "small",
       "legalStructure": "for-profit",
       "url": "https://keycdn.com"
     },
     {
       "id": "datocms",
-      "name": "DatoCMS (Dato srl)",
-      "hqs": [{ "country": "IT", "city": "Trieste", "lat": 45.65, "lng": 13.77, "role": "primary-hq" }],
+      "name": "DatoCMS",
+      "hqs": [
+        {
+          "country": "IT",
+          "city": "Trieste",
+          "lat": 45.65,
+          "lng": 13.77,
+          "role": "primary-hq"
+        }
+      ],
       "size": "small",
       "legalStructure": "for-profit",
       "url": "https://datocms.com"
     },
     {
       "id": "vercel",
-      "name": "Vercel Inc.",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.42, "role": "primary-hq" }],
+      "name": "Vercel",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.42,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://vercel.com"
     },
     {
       "id": "gandi",
-      "name": "Gandi SAS",
-      "hqs": [{ "country": "FR", "city": "Paris", "lat": 48.86, "lng": 2.35, "role": "primary-hq" }],
+      "name": "Gandi",
+      "hqs": [
+        {
+          "country": "FR",
+          "city": "Paris",
+          "lat": 48.86,
+          "lng": 2.35,
+          "role": "primary-hq"
+        }
+      ],
       "size": "small",
       "legalStructure": "for-profit",
       "url": "https://gandi.net"
     },
     {
       "id": "figma",
-      "name": "Figma (Adobe)",
-      "parentId": "adobe",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.77, "lng": -122.4, "role": "primary-hq" }],
+      "name": "Figma",
+      "parentId": "figma",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.77,
+          "lng": -122.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://figma.com"
     },
     {
       "id": "1password",
-      "name": "1Password (AgileBits)",
-      "hqs": [{ "country": "CA", "city": "Toronto", "lat": 43.65, "lng": -79.38, "role": "primary-hq" }],
+      "name": "1Password",
+      "hqs": [
+        {
+          "country": "CA",
+          "city": "Toronto",
+          "lat": 43.65,
+          "lng": -79.38,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://1password.com"
     },
     {
       "id": "apollo",
-      "name": "Apollo Graph Inc.",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.77, "lng": -122.43, "role": "primary-hq" }],
+      "name": "Apollo",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.77,
+          "lng": -122.43,
+          "role": "primary-hq"
+        }
+      ],
       "size": "small",
       "legalStructure": "for-profit",
       "url": "https://apollographql.com"
@@ -166,23 +350,47 @@
     {
       "id": "browserstack",
       "name": "BrowserStack",
-      "hqs": [{ "country": "IE", "city": "Dublin", "lat": 53.33, "lng": -6.25, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "IE",
+          "city": "Dublin",
+          "lat": 53.33,
+          "lng": -6.25,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://browserstack.com"
     },
     {
       "id": "goodtape",
-      "name": "Good Tape ApS",
-      "hqs": [{ "country": "DK", "city": "Copenhagen", "lat": 55.68, "lng": 12.57, "role": "primary-hq" }],
+      "name": "Good Tape",
+      "hqs": [
+        {
+          "country": "DK",
+          "city": "Copenhagen",
+          "lat": 55.68,
+          "lng": 12.57,
+          "role": "primary-hq"
+        }
+      ],
       "size": "micro",
       "legalStructure": "for-profit",
       "url": "https://goodtape.io"
     },
     {
       "id": "vimeo",
-      "name": "Vimeo Inc.",
-      "hqs": [{ "country": "US", "city": "New York", "lat": 40.73, "lng": -73.99, "role": "primary-hq" }],
+      "name": "Vimeo",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "New York",
+          "lat": 40.73,
+          "lng": -73.99,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -190,8 +398,16 @@
     },
     {
       "id": "sentry",
-      "name": "Functional Software (Sentry)",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.41, "role": "primary-hq" }],
+      "name": "Sentry",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.41,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "openSource": true,
@@ -199,9 +415,17 @@
     },
     {
       "id": "github",
-      "name": "GitHub (Microsoft)",
+      "name": "GitHub",
       "parentId": "microsoft",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.39, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.39,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "legalStructure": "for-profit",
       "url": "https://github.com"
@@ -209,7 +433,15 @@
     {
       "id": "microsoft",
       "name": "Microsoft",
-      "hqs": [{ "country": "US", "city": "Redmond", "lat": 47.64, "lng": -122.13, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Redmond",
+          "lat": 47.64,
+          "lng": -122.13,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -219,7 +451,15 @@
     {
       "id": "datenschutzpartner",
       "name": "Datenschutzpartner",
-      "hqs": [{ "country": "CH", "city": "Zürich", "lat": 47.38, "lng": 8.54, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Zürich",
+          "lat": 47.38,
+          "lng": 8.54,
+          "role": "primary-hq"
+        }
+      ],
       "size": "micro",
       "legalStructure": "for-profit",
       "url": "https://datenschutzpartner.ch"
@@ -227,7 +467,15 @@
     {
       "id": "zencastr",
       "name": "Zencastr",
-      "hqs": [{ "country": "US", "city": "Las Vegas", "lat": 36.17, "lng": -115.14, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Las Vegas",
+          "lat": 36.17,
+          "lng": -115.14,
+          "role": "primary-hq"
+        }
+      ],
       "size": "micro",
       "legalStructure": "for-profit",
       "url": "https://zencastr.com"
@@ -235,7 +483,15 @@
     {
       "id": "grafana",
       "name": "Grafana Labs",
-      "hqs": [{ "country": "US", "city": "New York", "lat": 40.71, "lng": -74.01, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "New York",
+          "lat": 40.71,
+          "lng": -74.01,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "openSource": true,
@@ -243,8 +499,16 @@
     },
     {
       "id": "pingdom",
-      "name": "Pingdom (SolarWinds)",
-      "hqs": [{ "country": "SE", "city": "Stockholm", "lat": 59.33, "lng": 18.07, "role": "primary-hq" }],
+      "name": "Pingdom",
+      "hqs": [
+        {
+          "country": "SE",
+          "city": "Stockholm",
+          "lat": 59.33,
+          "lng": 18.07,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "publiclyTraded": false,
       "legalStructure": "for-profit",
@@ -253,15 +517,31 @@
     {
       "id": "ossrox",
       "name": "Ossrox",
-      "hqs": [{ "country": "DE", "city": "Berlin", "lat": 52.52, "lng": 13.4, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "DE",
+          "city": "Berlin",
+          "lat": 52.52,
+          "lng": 13.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "micro",
       "legalStructure": "for-profit",
       "url": "https://ossrox.org"
     },
     {
       "id": "apple",
-      "name": "Apple Inc.",
-      "hqs": [{ "country": "US", "city": "Cupertino", "lat": 37.33, "lng": -122.03, "role": "primary-hq" }],
+      "name": "Apple",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Cupertino",
+          "lat": 37.33,
+          "lng": -122.03,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -270,8 +550,16 @@
     },
     {
       "id": "deepl",
-      "name": "DeepL SE",
-      "hqs": [{ "country": "DE", "city": "Cologne", "lat": 50.94, "lng": 6.96, "role": "primary-hq" }],
+      "name": "DeepL",
+      "hqs": [
+        {
+          "country": "DE",
+          "city": "Cologne",
+          "lat": 50.94,
+          "lng": 6.96,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://deepl.com"
@@ -279,31 +567,63 @@
     {
       "id": "anthropic",
       "name": "Anthropic",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.4, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://anthropic.com"
     },
     {
       "id": "zendesk",
-      "name": "Zendesk (Sunco)",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.4, "role": "primary-hq" }],
+      "name": "Zendesk",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.4,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "legalStructure": "for-profit",
       "url": "https://zendesk.com"
     },
     {
       "id": "expo",
-      "name": "Expo (650 Industries)",
-      "hqs": [{ "country": "US", "city": "Palo Alto", "lat": 37.44, "lng": -122.14, "role": "primary-hq" }],
+      "name": "Expo",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Palo Alto",
+          "lat": 37.44,
+          "lng": -122.14,
+          "role": "primary-hq"
+        }
+      ],
       "size": "small",
       "legalStructure": "for-profit",
       "url": "https://expo.dev"
     },
     {
       "id": "proton",
-      "name": "Proton AG",
-      "hqs": [{ "country": "CH", "city": "Geneva", "lat": 46.2, "lng": 6.15, "role": "primary-hq" }],
+      "name": "Proton",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Geneva",
+          "lat": 46.2,
+          "lng": 6.15,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://proton.me",
@@ -311,16 +631,32 @@
     },
     {
       "id": "stripe",
-      "name": "Stripe Inc.",
-      "hqs": [{ "country": "US", "city": "San Francisco", "lat": 37.78, "lng": -122.39, "role": "primary-hq" }],
+      "name": "Stripe",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.39,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "legalStructure": "for-profit",
       "url": "https://stripe.com"
     },
     {
       "id": "paypal",
-      "name": "PayPal Holdings",
-      "hqs": [{ "country": "US", "city": "San Jose", "lat": 37.33, "lng": -121.9, "role": "primary-hq" }],
+      "name": "PayPal",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Jose",
+          "lat": 37.33,
+          "lng": -121.9,
+          "role": "primary-hq"
+        }
+      ],
       "size": "large",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -328,8 +664,16 @@
     },
     {
       "id": "visa",
-      "name": "Visa Inc.",
-      "hqs": [{ "country": "US", "city": "Foster City", "lat": 37.56, "lng": -122.27, "role": "primary-hq" }],
+      "name": "Visa",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Foster City",
+          "lat": 37.56,
+          "lng": -122.27,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -338,7 +682,15 @@
     {
       "id": "mastercard",
       "name": "Mastercard",
-      "hqs": [{ "country": "US", "city": "Purchase", "lat": 41.02, "lng": -73.72, "role": "primary-hq" }],
+      "hqs": [
+        {
+          "country": "US",
+          "city": "Purchase",
+          "lat": 41.02,
+          "lng": -73.72,
+          "role": "primary-hq"
+        }
+      ],
       "size": "mega",
       "publiclyTraded": true,
       "legalStructure": "public",
@@ -346,11 +698,131 @@
     },
     {
       "id": "twint",
-      "name": "Twint AG",
-      "hqs": [{ "country": "CH", "city": "Bern", "lat": 46.95, "lng": 7.44, "role": "primary-hq" }],
+      "name": "Twint",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Bern",
+          "lat": 46.95,
+          "lng": 7.44,
+          "role": "primary-hq"
+        }
+      ],
       "size": "medium",
       "legalStructure": "for-profit",
       "url": "https://twint.ch"
+    },
+    {
+      "id": "hetzner",
+      "name": "Hetzner",
+      "hqs": [
+        {
+          "country": "DE",
+          "city": "Nuremberg",
+          "lat": 49.45,
+          "lng": 11.08,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "medium",
+      "legalStructure": "for-profit",
+      "url": "https://hetzner.com"
+    },
+    {
+      "id": "huebsch",
+      "name": "Hübsch",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Zürich",
+          "lat": 47.38,
+          "lng": 8.54,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "small",
+      "legalStructure": "for-profit",
+      "url": "https://huebsch.schoenreden.com"
+    },
+    {
+      "id": "datawrapper",
+      "name": "Datawrapper",
+      "hqs": [
+        {
+          "country": "DE",
+          "city": "Berlin",
+          "lat": 52.52,
+          "lng": 13.4,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "small",
+      "legalStructure": "for-profit",
+      "url": "https://datawrapper.de"
+    },
+    {
+      "id": "scalingo",
+      "name": "Scalingo",
+      "hqs": [
+        {
+          "country": "FR",
+          "city": "Strassbourg",
+          "lat": 48.58,
+          "lng": 7.75,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "small",
+      "legalStructure": "for-profit",
+      "url": "https://scalingo.com"
+    },
+    {
+      "id": "ovh",
+      "name": "OVH",
+      "hqs": [
+        {
+          "country": "FR",
+          "city": "Roubaix",
+          "lat": 50.68,
+          "lng": 3.15,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "medium",
+      "legalStructure": "for-profit",
+      "url": "https://ovh.com"
+    },
+    {
+      "id": "sanity",
+      "name": "Sanity",
+      "hqs": [
+        {
+          "country": "US",
+          "city": "San Francisco",
+          "lat": 37.78,
+          "lng": -122.41,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "medium",
+      "legalStructure": "for-profit",
+      "url": "https://sanity.io"
+    },
+    {
+      "id": "republik",
+      "name": "Republik",
+      "hqs": [
+        {
+          "country": "CH",
+          "city": "Zürich",
+          "lat": 47.37,
+          "lng": 8.54,
+          "role": "primary-hq"
+        }
+      ],
+      "size": "small",
+      "legalStructure": "cooperative",
+      "url": "https://republik.ch"
     }
   ],
   "services": [
@@ -359,480 +831,957 @@
       "category": "hosting",
       "product": "Heroku",
       "vendorId": "heroku",
-      "infraIds": ["amazon"],
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 40000,
       "costModel": "usage",
       "deployment": "managed",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
+      "to": "2026-05-14",
+      "replacedById": "heroku-prod-v2",
       "url": "https://heroku.com",
-      "description": "Main application hosting for republik.ch and related apps"
+      "description": "Hosting für die Republik Apps (Front- und Backend)",
+      "centrality": 0.95,
+      "lockIn": 0.55,
+      "sensitivity": 0.95
+    },
+    {
+      "id": "heroku-prod-v2",
+      "category": "hosting",
+      "product": "Heroku",
+      "vendorId": "heroku",
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 37000,
+      "costModel": "usage",
+      "deployment": "managed",
+      "dataResidency": [
+        "US"
+      ],
+      "from": "2026-05-14",
+      "to": "2026-06-01",
+      "replacedById": "heroku-prod-v3",
+      "replacesId": "heroku-prod",
+      "url": "https://heroku.com",
+      "description": "Hosting für die Republik Apps (Front- und Backend)",
+      "centrality": 0.95,
+      "lockIn": 0.55,
+      "sensitivity": 0.95
+    },
+    {
+      "id": "heroku-prod-v3",
+      "category": "hosting",
+      "product": "Heroku",
+      "vendorId": "heroku",
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 30000,
+      "costModel": "usage",
+      "deployment": "managed",
+      "dataResidency": [
+        "US"
+      ],
+      "from": "2026-06-01",
+      "replacesId": "heroku-prod-v2",
+      "url": "https://heroku.com",
+      "description": "Hosting für die Republik Apps (Fron- und Backend)",
+      "centrality": 0.95,
+      "lockIn": 0.55,
+      "sensitivity": 0.95
     },
     {
       "id": "mailchimp",
       "category": "newsletter",
       "product": "Mailchimp",
       "vendorId": "intuit",
-      "infraIds": ["amazon"],
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 21000,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://mailchimp.com"
+      "url": "https://mailchimp.com",
+      "description": "Newsletter delivery for Republik's subscriber communications",
+      "centrality": 0.9,
+      "lockIn": 0.8,
+      "sensitivity": 0.6
     },
     {
       "id": "gws-email",
-      "category": "email",
-      "product": "Google Workspace (Gmail)",
+      "category": "productivity",
+      "product": "Gmail",
       "vendorId": "google",
+      "infraIds": [
+        "google"
+      ],
       "bundleId": "gws",
       "annualCostCHF": 4000,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
+      "to": "2026-04-29",
       "replacedById": "proton-mail",
-      "url": "https://workspace.google.com"
+      "url": "https://workspace.google.com",
+      "description": "Team email",
+      "centrality": 0.85,
+      "lockIn": 0.4,
+      "sensitivity": 0.65
     },
     {
       "id": "gws-office",
-      "category": "office",
-      "product": "Google Workspace (Docs / Drive / Calendar)",
+      "category": "productivity",
+      "product": "Google Workspace",
       "vendorId": "google",
+      "infraIds": [
+        "google"
+      ],
       "bundleId": "gws",
       "annualCostCHF": 4000,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://workspace.google.com"
+      "to": "2026-04-29",
+      "replacedById": "gws-office-v2",
+      "url": "https://workspace.google.com",
+      "description": "Collaborative documents, spreadsheets, and calendar (Gmail portion migrated to Proton Mail)",
+      "centrality": 0.7,
+      "lockIn": 0.55,
+      "sensitivity": 0.4
+    },
+    {
+      "id": "gws-office-v2",
+      "category": "productivity",
+      "product": "Google Workspace",
+      "vendorId": "google",
+      "infraIds": [
+        "google"
+      ],
+      "bundleId": "gws",
+      "annualCostCHF": 8000,
+      "costModel": "per-seat",
+      "deployment": "saas",
+      "dataResidency": [
+        "US"
+      ],
+      "from": "2026-04-29",
+      "replacesId": "gws-office",
+      "url": "https://workspace.google.com",
+      "description": "Collaborative documents, spreadsheets, and calendar (email migrated to Proton Mail)",
+      "centrality": 0.7,
+      "lockIn": 0.55,
+      "sensitivity": 0.4
     },
     {
       "id": "slack-comms",
-      "category": "communication",
+      "category": "productivity",
       "product": "Slack",
       "vendorId": "slack",
-      "infraIds": ["amazon"],
-      "annualCostCHF": 8400,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 5000,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://slack.com"
+      "url": "https://slack.com",
+      "description": "Internal team communication and integrations",
+      "centrality": 0.6,
+      "lockIn": 0.5,
+      "sensitivity": 0.45
     },
     {
       "id": "elastic-search",
-      "category": "search",
-      "product": "Elastic (Elasticsearch Cloud)",
+      "category": "hosting",
+      "product": "Elastic",
       "vendorId": "elastic",
-      "infraIds": ["amazon"],
-      "annualCostCHF": 6000,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 5000,
       "costModel": "usage",
       "deployment": "managed",
       "openSource": true,
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2019-06-01",
-      "url": "https://elastic.co"
+      "url": "https://elastic.co",
+      "description": "Full-text search for article and user content",
+      "centrality": 0.75,
+      "lockIn": 0.45,
+      "sensitivity": 0.1
     },
     {
       "id": "notion-prod",
       "category": "productivity",
       "product": "Notion",
       "vendorId": "notion",
-      "infraIds": ["amazon"],
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 5000,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2020-01-01",
-      "url": "https://notion.so"
+      "url": "https://notion.so",
+      "description": "Internal wiki and team documentation",
+      "centrality": 0.3,
+      "lockIn": 0.4,
+      "sensitivity": 0.3
     },
     {
       "id": "trello-prod",
       "category": "productivity",
       "product": "Trello",
       "vendorId": "atlassian",
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 4500,
       "costModel": "per-seat",
       "deployment": "saas",
       "from": "2018-01-01",
-      "url": "https://trello.com"
+      "url": "https://trello.com",
+      "description": "Lightweight project and task tracking",
+      "centrality": 0.2,
+      "lockIn": 0.3,
+      "sensitivity": 0.2
     },
     {
       "id": "podigee-hosting",
-      "category": "media-hosting",
+      "category": "hosting",
       "product": "Podigee",
       "vendorId": "podigee",
-      "annualCostCHF": 2800,
+      "infraIds": [
+        "hetzner"
+      ],
+      "annualCostCHF": 2500,
       "costModel": "flat",
       "deployment": "saas",
-      "dataResidency": ["DE"],
+      "dataResidency": [
+        "DE"
+      ],
       "from": "2019-01-01",
       "url": "https://podigee.com",
-      "description": "Podcast hosting"
+      "description": "Podcast hosting",
+      "centrality": 0.5,
+      "lockIn": 0.5,
+      "sensitivity": 0.15
     },
     {
       "id": "adobe-cc",
-      "category": "design",
+      "category": "media-production",
       "product": "Adobe Creative Cloud",
       "vendorId": "adobe",
-      "annualCostCHF": 2600,
+      "infraIds": [
+        "microsoft"
+      ],
+      "annualCostCHF": 2500,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
       "url": "https://adobe.com/creativecloud",
-      "description": "Team licenses for Creative Cloud (Photoshop, Illustrator, InDesign, Premiere etc.)"
+      "description": "Team licenses for Creative Cloud (Photoshop, Illustrator, InDesign, Premiere etc.)",
+      "centrality": 0.4,
+      "lockIn": 0.6,
+      "sensitivity": 0.25
     },
     {
       "id": "keycdn-prod",
-      "category": "cdn",
+      "category": "dev-tools",
       "product": "KeyCDN",
       "vendorId": "keycdn",
-      "annualCostCHF": 200,
+      "infraIds": [
+        "keycdn"
+      ],
+      "annualCostCHF": 2400,
       "costModel": "usage",
       "deployment": "saas",
       "from": "2018-01-01",
-      "url": "https://keycdn.com"
+      "url": "https://keycdn.com",
+      "description": "Content delivery network for static assets",
+      "centrality": 0.7,
+      "lockIn": 0.2,
+      "sensitivity": 0.05
     },
     {
       "id": "datocms-prod",
-      "category": "cms",
+      "category": "productivity",
       "product": "DatoCMS",
       "vendorId": "datocms",
-      "annualCostCHF": 2400,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 1700,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2019-01-01",
+      "to": "2026-06-01",
+      "replacedById": "sanity-prod",
       "url": "https://datocms.com",
-      "description": "CMS for marketing pages and story metadata"
+      "description": "CMS for marketing pages and story metadata",
+      "centrality": 0.65,
+      "lockIn": 0.45,
+      "sensitivity": 0.1
     },
     {
       "id": "aws-s3",
       "category": "hosting",
       "product": "AWS S3",
       "vendorId": "amazon",
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 1000,
       "costModel": "usage",
       "deployment": "managed",
-      "dataResidency": ["DE"],
+      "dataResidency": [
+        "DE"
+      ],
       "from": "2018-01-01",
       "url": "https://aws.amazon.com/s3",
-      "description": "S3 object storage for media and assets (eu-central-1 region)"
+      "description": "S3 object storage for media and assets (eu-central-1 region)",
+      "centrality": 0.8,
+      "lockIn": 0.25,
+      "sensitivity": 0.2
     },
     {
       "id": "vercel-prod",
       "category": "hosting",
       "product": "Vercel",
       "vendorId": "vercel",
-      "infraIds": ["amazon"],
-      "annualCostCHF": 1000,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 2000,
       "costModel": "usage",
       "deployment": "managed",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2021-01-01",
-      "url": "https://vercel.com"
+      "url": "https://vercel.com",
+      "description": "Hosting and deployment for frontend applications",
+      "centrality": 0.6,
+      "lockIn": 0.4,
+      "sensitivity": 0.15
     },
     {
       "id": "gandi",
-      "category": "domains",
-      "product": "Domains",
+      "category": "hosting",
+      "product": "Gandi (Domains)",
       "vendorId": "gandi",
+      "infraIds": [
+        "gandi"
+      ],
       "annualCostCHF": 1000,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2018-01-01",
-      "url": "https://gandi.net"
+      "url": "https://gandi.net",
+      "description": "Domain registration and DNS management",
+      "centrality": 0.95,
+      "lockIn": 0.2,
+      "sensitivity": 0.3
     },
     {
       "id": "figma-prod",
-      "category": "design",
+      "category": "media-production",
       "product": "Figma",
       "vendorId": "figma",
-      "infraIds": ["amazon"],
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 1200,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2020-01-01",
-      "url": "https://figma.com"
+      "url": "https://figma.com",
+      "description": "Collaborative UI design and prototyping",
+      "centrality": 0.4,
+      "lockIn": 0.6,
+      "sensitivity": 0.2
     },
     {
       "id": "1password-prod",
-      "category": "password-manager",
+      "category": "productivity",
       "product": "1Password",
       "vendorId": "1password",
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 900,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["CA"],
+      "dataResidency": [
+        "CA"
+      ],
       "from": "2018-01-01",
       "to": "2026-05-01",
       "replacedById": "proton-pass",
-      "url": "https://1password.com"
+      "url": "https://1password.com",
+      "description": "Team password and credentials management",
+      "centrality": 0.4,
+      "lockIn": 0.3,
+      "sensitivity": 0.95
     },
     {
       "id": "apollo-studio",
       "category": "dev-tools",
       "product": "Apollo Studio",
       "vendorId": "apollo",
-      "annualCostCHF": 1200,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 500,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2020-01-01",
       "url": "https://studio.apollographql.com",
-      "description": "GraphQL schema registry and explorer"
+      "description": "GraphQL schema registry and explorer",
+      "centrality": 0.4,
+      "lockIn": 0.5,
+      "sensitivity": 0.15
     },
     {
       "id": "browserstack-prod",
       "category": "dev-tools",
       "product": "BrowserStack",
       "vendorId": "browserstack",
-      "annualCostCHF": 2400,
+      "infraIds": [
+        "browserstack"
+      ],
+      "annualCostCHF": 500,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2019-01-01",
       "url": "https://browserstack.com",
-      "description": "Cross-browser and device testing"
+      "description": "Cross-browser and device testing",
+      "centrality": 0.2,
+      "lockIn": 0.3,
+      "sensitivity": 0.1
     },
     {
       "id": "goodtape-prod",
       "category": "media-production",
       "product": "Good Tape",
       "vendorId": "goodtape",
-      "annualCostCHF": 1200,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 500,
       "costModel": "usage",
       "deployment": "saas",
       "from": "2022-01-01",
       "url": "https://goodtape.io",
-      "description": "AI transcription for audio and video content"
+      "description": "AI transcription for audio and video content",
+      "centrality": 0.25,
+      "lockIn": 0.15,
+      "sensitivity": 0.35
     },
     {
       "id": "vimeo-prod",
-      "category": "media-hosting",
+      "category": "hosting",
       "product": "Vimeo",
       "vendorId": "vimeo",
-      "annualCostCHF": 2400,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 400,
       "costModel": "flat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
       "url": "https://vimeo.com",
-      "description": "Video hosting for editorial content"
+      "description": "Video hosting for editorial content",
+      "centrality": 0.4,
+      "lockIn": 0.5,
+      "sensitivity": 0.05
     },
     {
       "id": "sentry-prod",
-      "category": "monitoring",
+      "category": "dev-tools",
       "product": "Sentry",
       "vendorId": "sentry",
-      "infraIds": ["amazon"],
-      "annualCostCHF": 1800,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 300,
       "costModel": "usage",
       "deployment": "saas",
       "openSource": true,
       "from": "2019-01-01",
       "url": "https://sentry.io",
-      "description": "Error tracking and performance monitoring"
+      "description": "Error tracking and performance monitoring",
+      "centrality": 0.3,
+      "lockIn": 0.2,
+      "sensitivity": 0.4
     },
     {
       "id": "github-prod",
-      "category": "source-control",
+      "category": "dev-tools",
       "product": "GitHub",
       "vendorId": "github",
-      "infraIds": ["microsoft"],
-      "annualCostCHF": 1200,
+      "infraIds": [
+        "microsoft"
+      ],
+      "annualCostCHF": 300,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://github.com"
+      "url": "https://github.com",
+      "description": "Source code hosting, CI/CD pipelines, and code review",
+      "centrality": 0.9,
+      "lockIn": 0.2,
+      "sensitivity": 0.25
     },
     {
       "id": "zencastr-prod",
       "category": "media-production",
       "product": "Zencastr",
       "vendorId": "zencastr",
-      "annualCostCHF": 600,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 200,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2020-01-01",
       "url": "https://zencastr.com",
-      "description": "Remote podcast recording"
+      "description": "Remote podcast recording",
+      "centrality": 0.35,
+      "lockIn": 0.2,
+      "sensitivity": 0.3
     },
     {
       "id": "grafana-prod",
-      "category": "monitoring",
+      "category": "dev-tools",
       "product": "Grafana Cloud",
       "vendorId": "grafana",
-      "annualCostCHF": 1800,
+      "infraIds": [
+        "google"
+      ],
+      "annualCostCHF": 200,
       "costModel": "usage",
       "deployment": "saas",
       "openSource": true,
       "from": "2021-01-01",
       "url": "https://grafana.com",
-      "description": "Metrics, logs and dashboards"
+      "description": "Metrics, logs and dashboards",
+      "centrality": 0.4,
+      "lockIn": 0.35,
+      "sensitivity": 0.35
     },
     {
       "id": "pingdom-prod",
-      "category": "monitoring",
+      "category": "dev-tools",
       "product": "Pingdom",
       "vendorId": "pingdom",
-      "annualCostCHF": 600,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 150,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2018-01-01",
       "url": "https://pingdom.com",
-      "description": "Uptime monitoring"
+      "description": "Uptime monitoring",
+      "centrality": 0.4,
+      "lockIn": 0.15,
+      "sensitivity": 0.05
     },
     {
       "id": "ossrox-mastodon",
       "category": "hosting",
       "product": "Ossrox (Mastodon hosting)",
       "vendorId": "ossrox",
-      "annualCostCHF": 600,
+      "infraIds": [
+        "hetzner"
+      ],
+      "annualCostCHF": 150,
       "costModel": "flat",
       "deployment": "managed",
       "openSource": true,
-      "dataResidency": ["DE"],
+      "dataResidency": [
+        "DE"
+      ],
       "from": "2022-11-01",
       "url": "https://ossrox.org",
-      "description": "Managed Mastodon instance hosting"
+      "description": "Managed Mastodon instance hosting",
+      "centrality": 0.2,
+      "lockIn": 0.2,
+      "sensitivity": 0.1
     },
     {
       "id": "apple-dev",
       "category": "dev-tools",
       "product": "Apple Developer Program",
       "vendorId": "apple",
+      "infraIds": [
+        "apple"
+      ],
       "annualCostCHF": 110,
       "costModel": "flat",
       "deployment": "saas",
       "from": "2019-01-01",
       "url": "https://developer.apple.com",
-      "description": "Required for publishing iOS / React Native apps to the App Store"
+      "description": "Required for publishing iOS / React Native apps to the App Store",
+      "centrality": 0.8,
+      "lockIn": 0.9,
+      "sensitivity": 0.15
     },
     {
       "id": "deepl-prod",
-      "category": "translation",
+      "category": "media-production",
       "product": "DeepL",
       "vendorId": "deepl",
-      "annualCostCHF": 600,
+      "infraIds": [
+        "deepl"
+      ],
+      "annualCostCHF": 100,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["DE"],
+      "dataResidency": [
+        "DE"
+      ],
       "from": "2021-01-01",
-      "url": "https://deepl.com"
+      "url": "https://deepl.com",
+      "description": "Machine translation for editorial content",
+      "centrality": 0.2,
+      "lockIn": 0.2,
+      "sensitivity": 0.23
     },
     {
       "id": "claude-prod",
-      "category": "ai",
+      "category": "dev-tools",
       "product": "Claude (Anthropic API)",
       "vendorId": "anthropic",
-      "annualCostCHF": 2400,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 1400,
       "costModel": "usage",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2023-06-01",
-      "url": "https://anthropic.com"
+      "url": "https://anthropic.com",
+      "description": "AI language model API for editorial and product tools",
+      "centrality": 0.3,
+      "lockIn": 0.4,
+      "sensitivity": 0.1
     },
     {
       "id": "zendesk-prod",
-      "category": "customer-support",
+      "category": "productivity",
       "product": "Zendesk",
       "vendorId": "zendesk",
-      "annualCostCHF": 3600,
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 2400,
       "costModel": "per-seat",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://zendesk.com"
+      "url": "https://zendesk.com",
+      "description": "Customer support ticketing and helpdesk",
+      "centrality": 0.65,
+      "lockIn": 0.45,
+      "sensitivity": 0.8
     },
     {
       "id": "expo-prod",
       "category": "dev-tools",
       "product": "Expo (EAS Build)",
       "vendorId": "expo",
-      "annualCostCHF": 1200,
+      "infraIds": [
+        "google"
+      ],
+      "annualCostCHF": 400,
       "costModel": "usage",
       "deployment": "saas",
       "openSource": true,
       "from": "2021-01-01",
       "url": "https://expo.dev",
-      "description": "React Native build service for iOS and Android apps"
+      "description": "React Native build service for iOS and Android apps",
+      "centrality": 0.3,
+      "lockIn": 0.7,
+      "sensitivity": 0.15
     },
     {
       "id": "proton-mail",
-      "category": "email",
+      "category": "productivity",
       "product": "Proton Mail",
       "vendorId": "proton",
+      "infraIds": [
+        "proton"
+      ],
       "annualCostCHF": 6000,
       "bundleId": "proton-suite",
       "costModel": "flat",
       "deployment": "saas",
-      "dataResidency": ["CH"],
+      "dataResidency": [
+        "CH"
+      ],
       "from": "2026-04-29",
       "replacesId": "gws-email",
-      "url": "https://proton.me/mail"
+      "url": "https://proton.me/mail",
+      "description": "Encrypted team email hosted in Switzerland",
+      "centrality": 0.85,
+      "lockIn": 0.4,
+      "sensitivity": 0.65
     },
     {
       "id": "proton-pass",
-      "category": "password-manager",
+      "category": "productivity",
       "product": "Proton Pass",
       "vendorId": "proton",
+      "infraIds": [
+        "proton"
+      ],
       "annualCostCHF": 0,
       "bundleId": "proton-suite",
       "costModel": "flat",
       "deployment": "saas",
-      "dataResidency": ["CH"],
+      "dataResidency": [
+        "CH"
+      ],
       "from": "2026-05-01",
       "replacesId": "1password-prod",
-      "url": "https://proton.me/pass"
+      "url": "https://proton.me/pass",
+      "description": "Team password manager, part of the Proton suite",
+      "centrality": 0.5,
+      "lockIn": 0.4,
+      "sensitivity": 0.95
     },
     {
       "id": "stripe-prod",
       "category": "payments",
       "product": "Stripe",
       "vendorId": "stripe",
-      "infraIds": ["visa", "mastercard", "twint"],
+      "infraIds": [
+        "amazon"
+      ],
       "annualCostCHF": 150000,
       "costModel": "usage",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://stripe.com"
+      "url": "https://stripe.com",
+      "description": "Payment processing for subscriptions and donations",
+      "centrality": 1,
+      "lockIn": 0.95,
+      "sensitivity": 1
     },
     {
-      "id": "paypal-prod",
-      "category": "payments",
-      "product": "PayPal",
-      "vendorId": "paypal",
-      "annualCostCHF": 12000,
+      "id": "huebsch-prod",
+      "category": "media-production",
+      "product": "Hübsch",
+      "vendorId": "huebsch",
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 40000,
+      "costModel": "usage",
+      "deployment": "api",
+      "dataResidency": [
+        "CH"
+      ],
+      "from": "2024-10-01",
+      "url": "https://huebsch.schoenreden.com",
+      "description": "Text-to-speech API",
+      "centrality": 0.25,
+      "lockIn": 0.35,
+      "sensitivity": 0.15
+    },
+    {
+      "id": "datawrapper",
+      "category": "media-production",
+      "product": "Datawrapper",
+      "vendorId": "datawrapper",
+      "infraIds": [
+        "amazon"
+      ],
+      "annualCostCHF": 5500,
       "costModel": "usage",
       "deployment": "saas",
-      "dataResidency": ["US"],
+      "from": "2026-01-01",
+      "url": "https://datawrapper.de",
+      "description": "Data visualization for Republik's editorial content",
+      "centrality": 0.325,
+      "lockIn": 0.375,
+      "sensitivity": 0.1
+    },
+    {
+      "id": "scalingo-prod",
+      "category": "hosting",
+      "product": "Scalingo",
+      "vendorId": "scalingo",
+      "infraIds": [
+        "ovh"
+      ],
+      "annualCostCHF": 1000,
+      "costModel": "usage",
+      "deployment": "saas",
+      "dataResidency": [
+        "FR"
+      ],
+      "from": "2026-05-14",
+      "url": "https://scalingo.com",
+      "description": "Application hosting for Republik's apps",
+      "centrality": 0.8,
+      "lockIn": 0.35,
+      "sensitivity": 0.85
+    },
+    {
+      "id": "cms-self-hosted",
+      "category": "media-production",
+      "product": "Publikator",
+      "vendorId": "republik",
+      "infraIds": [
+        "heroku",
+        "amazon"
+      ],
+      "annualCostCHF": 1000,
+      "costModel": "flat",
+      "deployment": "self-hosted",
+      "openSource": true,
+      "dataResidency": [
+        "US"
+      ],
       "from": "2018-01-01",
-      "url": "https://paypal.com",
-      "description": "Alternative payment method. Annual cost is an estimate based on transaction volume."
+      "to": "2026-06-01",
+      "replacedById": "sanity-prod",
+      "description": "In-house editorial CMS hosted on Republik infrastructure (no separate vendor contract)",
+      "centrality": 0.9,
+      "lockIn": 0.75,
+      "sensitivity": 0.35
+    },
+    {
+      "id": "sanity-prod",
+      "category": "media-production",
+      "product": "Sanity",
+      "vendorId": "sanity",
+      "infraIds": [
+        "google"
+      ],
+      "annualCostCHF": 43000,
+      "costModel": "flat",
+      "deployment": "saas",
+      "dataResidency": [
+        "US"
+      ],
+      "from": "2026-06-01",
+      "replacesId": "cms-self-hosted",
+      "url": "https://sanity.io",
+      "description": "Headless CMS for editorial content and story metadata",
+      "centrality": 0.9,
+      "lockIn": 0.7,
+      "sensitivity": 0.35
+    },
+    {
+      "id": "abacus-hr",
+      "category": "productivity",
+      "product": "Abacus",
+      "vendorId": "abacus",
+      "infraIds": [
+        "abacus-hosting"
+      ],
+      "annualCostCHF": 5000,
+      "costModel": "flat",
+      "deployment": "saas",
+      "dataResidency": [
+        "CH"
+      ],
+      "from": "2018-01-01",
+      "url": "https://abacus.ch",
+      "description": "HR and payroll software for employee records, contracts, and salary administration",
+      "centrality": 0.8,
+      "lockIn": 0.8,
+      "sensitivity": 0.8
     }
   ],
   "events": [
     {
-      "id": "evt-mail-2026-04",
-      "date": "2026-04-29",
-      "title": "Gmail → Proton Mail",
-      "description": "Migrated team email from Google Workspace (Gmail) to Proton Mail, hosted in Switzerland. Part of a broader push to reduce reliance on US Big Tech and improve data sovereignty.",
-      "fromServiceIds": ["gws-email"],
-      "toServiceIds": ["proton-mail"],
-      "costDeltaCHF": 6000
-    },
-    {
       "id": "evt-pass-2026-05",
       "date": "2026-05-01",
-      "title": "1Password → Proton Pass",
-      "description": "Migrated team password manager from 1Password (Canada) to Proton Pass (Switzerland), consolidating with the Proton ecosystem.",
-      "fromServiceIds": ["1password-prod"],
-      "toServiceIds": ["proton-pass"],
-      "costDeltaCHF": -900
+      "title": "Proton",
+      "description": "Ablösung von Google Mail und 1Password durch Proton Mail und Proton Pass.",
+      "fromServiceIds": [
+        "1password-prod",
+        "gws-email"
+      ],
+      "toServiceIds": [
+        "proton-pass",
+        "proton-mail"
+      ],
+      "costDeltaCHF": 5000
+    },
+    {
+      "id": "evt-scalingo-2026-05",
+      "date": "2026-05-14",
+      "title": "Scalingo",
+      "description": "Migrated 1 of 6 Republik apps from Heroku (US/AWS) to Scalingo (FR). Heroku costs drop by CHF 3,000/year; Scalingo adds CHF 1,000/year — net saving: CHF 2,000/year.",
+      "fromServiceIds": [
+        "heroku-prod"
+      ],
+      "toServiceIds": [
+        "scalingo-prod"
+      ],
+      "costDeltaCHF": -2000
+    },
+    {
+      "id": "evt-sanity-2026-06",
+      "date": "2026-06-01",
+      "title": "Sanity",
+      "description": "Ablösung der eigenen CMS und DatoCMS durch Sanity.io.",
+      "fromServiceIds": [
+        "cms-self-hosted",
+        "datocms-prod"
+      ],
+      "toServiceIds": [
+        "sanity-prod"
+      ],
+      "costDeltaCHF": 34000
     }
   ]
 }

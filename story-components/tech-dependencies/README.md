@@ -75,7 +75,7 @@ Jeder Dienst den Republik nutzt. Bei Bundles (Google Workspace, Adobe) gibt es p
 `hosting` · `infrastructure` · `database` · `search` · `cdn` · `domains` · `cms` ·
 `email` · `newsletter` · `communication` · `office` · `productivity` ·
 `password-manager` · `auth` · `analytics` · `monitoring` ·
-`dev-tools` · `source-control` · `design` · `media-hosting` · `media-production` ·
+`dev-tools` · `design` · `media-hosting` · `media-production` ·
 `ai` · `translation` · `customer-support` · `compliance` · `payments` · `other`
 
 ### 3. `events[]`

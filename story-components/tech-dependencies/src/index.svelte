@@ -11,13 +11,16 @@
   import Timeline from './Timeline.svelte';
   import Sankey from './Sankey.svelte';
   import Totals from './Totals.svelte';
+  import Quadrant from './Quadrant.svelte';
 
   import rawData from './data.json';
   import type { Dataset } from './types.d.ts';
   import {
     activeServicesAt,
     sankeyEdges,
+    sankeyEdgesInfra,
     computeTotals,
+    computeTotalsInfra,
   } from './lib/derive.ts';
 
   const dataset = rawData as unknown as Dataset;
@@ -25,10 +28,14 @@
   let shadowRoot = $host()?.shadowRoot;
   let theme = $state<string | null>(null);
   let currentDate = $state(dataset.asOfMin);
+  let sankeyView = $state<'category' | 'infra'>('category');
 
   const active = $derived(activeServicesAt(dataset, currentDate));
-  const sankey = $derived(sankeyEdges(active));
-  const totals = $derived(computeTotals(active));
+  const sankeyCat = $derived(sankeyEdges(active));
+  const sankeyInfra = $derived(sankeyEdgesInfra(active));
+  const totals = $derived(
+    sankeyView === 'infra' ? computeTotalsInfra(active) : computeTotals(active)
+  );
 
   onMount(() => {
     const ID = 'story-components-theme';
@@ -68,9 +75,36 @@
       <Totals {totals} />
     </section>
 
-    <!-- Money flow -->
+    <!-- Money flow with view toggle -->
     <section class="td-section td-sankey">
-      <Sankey data={sankey} />
+      <div class="view-toggle">
+        <button
+          class="toggle-btn"
+          class:active={sankeyView === 'category'}
+          onclick={() => (sankeyView = 'category')}
+        >Firmensitz</button>
+        <button
+          class="toggle-btn"
+          class:active={sankeyView === 'infra'}
+          onclick={() => (sankeyView = 'infra')}
+        >Hosting-Infrastruktur</button>
+      </div>
+      {#if sankeyView === 'category'}
+        <Sankey
+          data={sankeyCat}
+          labelTypes={['origin', 'category', 'vendor', 'region']}
+        />
+      {:else}
+        <Sankey
+          data={sankeyInfra}
+          labelTypes={['origin', 'vendor', 'infra', 'region']}
+        />
+      {/if}
+    </section>
+
+    <!-- Centrality / lock-in quadrant -->
+    <section class="td-section">
+      <Quadrant services={active} />
     </section>
 
     <!-- Sticky timeline bar -->
@@ -101,6 +135,12 @@
     color: #111;
   }
 
+  @media (max-width: 520px) {
+    .tech-dep {
+      padding: 16px 4px;
+    }
+  }
+
   .td-header {
     margin-bottom: 24px;
   }
@@ -126,6 +166,29 @@
   /* Extra bottom space so Sankey isn't hidden behind the sticky bar */
   .td-sankey {
     padding-bottom: 90px;
+  }
+
+  .view-toggle {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .toggle-btn {
+    padding: 5px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.82rem;
+    cursor: pointer;
+    color: #555;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .toggle-btn:hover { border-color: #999; color: #222; }
+  .toggle-btn.active {
+    background: #111;
+    border-color: #111;
+    color: #fff;
   }
 
   .timeline-sticky {

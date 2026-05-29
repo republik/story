@@ -4,16 +4,23 @@
 
   interface Props {
     data: SankeyData;
+    /** Node types that receive a permanent label (others only shown in tooltip) */
+    labelTypes?: SankeyNode['type'][];
   }
 
-  let { data }: Props = $props();
+  let { data, labelTypes = ['origin', 'category', 'region'] }: Props = $props();
 
   let containerEl: HTMLDivElement;
   let width = $state(800);
-  const padding = { top: 20, right: 140, bottom: 32, left: 100 };
   const nodeWidth = 16;
   const nodePadding = 10;
   const minNodeH = 8;
+
+  // Responsive breakpoint — padding and labels adapt below this width
+  const isMobile = $derived(width < 520);
+
+  // On mobile: no permanent labels at all — everything via tap
+  const effectiveLabelTypes = $derived(isMobile ? [] : labelTypes);
 
   // Set after layout runs — reflects the actual rendered extent
   let svgHeight = $state(480);
@@ -25,6 +32,33 @@
     const rect = containerEl.getBoundingClientRect();
     mouseX = e.clientX - rect.left;
     mouseY = e.clientY - rect.top;
+  }
+
+  function handleTouchNode(e: TouchEvent, node: LayoutNode) {
+    e.preventDefault();
+    e.stopPropagation();
+    const rect = containerEl.getBoundingClientRect();
+    const t = e.touches[0];
+    mouseX = t.clientX - rect.left;
+    mouseY = t.clientY - rect.top;
+    hoveredNode = hoveredNode?.id === node.id ? null : node;
+    hoveredEdge = null;
+  }
+
+  function handleTouchEdge(e: TouchEvent, edge: LayoutEdge) {
+    e.preventDefault();
+    e.stopPropagation();
+    const rect = containerEl.getBoundingClientRect();
+    const t = e.touches[0];
+    mouseX = t.clientX - rect.left;
+    mouseY = t.clientY - rect.top;
+    hoveredEdge = hoveredEdge === edge ? null : edge;
+    hoveredNode = null;
+  }
+
+  function handleContainerTouch() {
+    hoveredNode = null;
+    hoveredEdge = null;
   }
 
   interface LayoutNode extends SankeyNode {
@@ -46,15 +80,21 @@
   let hoveredEdge = $state<LayoutEdge | null>(null);
   let hoveredNode = $state<LayoutNode | null>(null);
 
+  // Full ordering across both views; unused types are simply absent from the data
   const depthOrder: SankeyNode['type'][] = [
     'origin',
     'category',
     'vendor',
+    'infra',
     'region',
   ];
 
   function computeLayout(w: number) {
     if (!data.nodes.length) return;
+
+    const padding = w < 520
+      ? { top: 14, right: 16, bottom: 24, left: 8 }
+      : { top: 20, right: 140, bottom: 32, left: 100 };
 
     const innerW = w - padding.left - padding.right;
 
@@ -175,6 +215,7 @@
     origin:   '#1a1a2e',
     category: '#16213e',
     vendor:   '#0f3460',
+    infra:    '#1e4d8c',
     region:   '#533483', // fallback; per-node color applied via getNodeColor()
   };
 
@@ -218,6 +259,7 @@
   bind:this={containerEl}
   class="sankey-container"
   onmousemove={handleMouseMove}
+  ontouchstart={handleContainerTouch}
   role="presentation"
 >
   <svg {width} height={svgHeight} class="sankey-svg">
@@ -236,6 +278,7 @@
             aria-label="{edge.source.label} → {edge.target.label}"
             onmouseenter={() => (hoveredEdge = edge)}
             onmouseleave={() => (hoveredEdge = null)}
+            ontouchstart={(e) => handleTouchEdge(e, edge)}
           />
         {/each}
       {/if}
@@ -250,6 +293,7 @@
             class="node-group"
             onmouseenter={() => (hoveredNode = node)}
             onmouseleave={() => (hoveredNode = null)}
+            ontouchstart={(e) => handleTouchNode(e, node)}
             role="listitem"
           >
             <rect
@@ -261,15 +305,21 @@
               rx="2"
             />
 
-            <!-- Permanent labels: origin (right), category (left), region (right) — vendor labels shown in tooltip only -->
-            {#if node.type === 'origin'}
-              <text x={node.x1 + 6} y={midY} text-anchor="start" dominant-baseline="middle" font-size="12" font-weight="600" fill="#111">{node.label}</text>
-              <text x={node.x1 + 6} y={midY + 13} text-anchor="start" dominant-baseline="middle" font-size="10" fill="#777">{formatCHF(node.totalCHF)}</text>
-            {:else if node.type === 'category'}
-              <text x={node.x0 - 6} y={midY} text-anchor="end" dominant-baseline="middle" font-size="11" fill="#222">{node.label}</text>
-            {:else if node.type === 'region'}
-              <text x={node.x1 + 6} y={midY - 6} text-anchor="start" dominant-baseline="middle" font-size="11" fill="#222">{node.label}</text>
-              <text x={node.x1 + 6} y={midY + 7} text-anchor="start" dominant-baseline="middle" font-size="9" fill="#888">{formatCHF(node.totalCHF)}</text>
+            <!-- Labels — hidden on mobile (tap tooltip used instead) -->
+            {#if effectiveLabelTypes.includes(node.type)}
+              {#if node.type === 'origin'}
+                <text x={node.x1 + 6} y={midY} text-anchor="start" dominant-baseline="middle" font-size="12" font-weight="600" fill="#111">{node.label}</text>
+                <text x={node.x1 + 6} y={midY + 13} text-anchor="start" dominant-baseline="middle" font-size="10" fill="#777">{formatCHF(node.totalCHF)}</text>
+              {:else if node.type === 'region'}
+                <text x={node.x1 + 6} y={midY - 5} text-anchor="start" dominant-baseline="middle" font-size="11" fill="#222">{node.label}</text>
+                <text x={node.x1 + 6} y={midY + 6} text-anchor="start" dominant-baseline="middle" font-size="9" fill="#888">{formatCHF(node.totalCHF)}</text>
+              {:else if node.type === 'vendor' && labelTypes.includes('category')}
+                <!-- vendor in category view — label on the right, in gap before region -->
+                <text x={node.x1 + 6} y={midY} text-anchor="start" dominant-baseline="middle" font-size="10" fill="#222">{node.label}</text>
+              {:else}
+                <!-- category / vendor (infra view) / infra — left side -->
+                <text x={node.x0 - 6} y={midY} text-anchor="end" dominant-baseline="middle" font-size="11" fill="#222">{node.label}</text>
+              {/if}
             {/if}
           </g>
         {/each}
@@ -281,7 +331,7 @@
   {#if tooltipContent}
     <div
       class="tooltip"
-      style="left: {Math.min(mouseX + 14, width - 180)}px; top: {Math.max(4, mouseY - 36)}px; z-index: 10"
+      style="left: {Math.min(mouseX + 14, width - 180)}px; top: {Math.max(4, mouseY - 36)}px;"
     >
       <span class="tooltip-label">{tooltipContent.label}</span>
       {#if tooltipContent.chf > 0}
@@ -329,7 +379,9 @@
     max-width: 180px;
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 10;
   }
+
 
   .tooltip-label {
     font-weight: 600;

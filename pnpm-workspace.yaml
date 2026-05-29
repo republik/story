@@ -1,2 +1,6 @@
 packages:
   - "story-components/*"
+allowBuilds:
+  esbuild: true
+onlyBuiltDependencies:
+  - esbuild

@@ -53,7 +53,6 @@ export type Category =
   | 'analytics'
   | 'monitoring'
   | 'dev-tools'
-  | 'source-control'
   | 'design'
   | 'media-hosting'
   | 'media-production'
@@ -61,6 +60,7 @@ export type Category =
   | 'translation'
   | 'customer-support'
   | 'compliance'
+  | 'human-resources'
   | 'payments'
   | 'other';
 
@@ -95,6 +95,12 @@ export interface Service {
   replacesId?: string;
   description?: string;
   url?: string;
+  /** 0–1: how critical is this service to running the magazine (0 = not important, 1 = can't operate without it) */
+  centrality?: number;
+  /** 0–1: how hard would it be to migrate away from this service (0 = easy, 1 = very hard) */
+  lockIn?: number;
+  /** 0–1: how sensitive is the data hosted or processed (0 = public, 1 = highly sensitive e.g. payment data) */
+  sensitivity?: number;
 }
 
 export interface MigrationEvent {

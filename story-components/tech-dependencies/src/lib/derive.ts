@@ -92,7 +92,7 @@ export function mapDots(active: ActiveService[]): MapDot[] {
 export interface SankeyNode {
   id: string;
   label: string;
-  type: 'origin' | 'category' | 'vendor' | 'region';
+  type: 'origin' | 'category' | 'vendor' | 'infra' | 'region';
   totalCHF: number;
 }
 
@@ -109,47 +109,28 @@ export interface SankeyData {
 
 const CATEGORY_LABELS: Record<string, string> = {
   hosting: 'Hosting',
-  infrastructure: 'Infrastructure',
-  database: 'Database',
-  search: 'Search',
-  cdn: 'CDN',
-  domains: 'Domains',
-  cms: 'CMS',
-  email: 'Email',
   newsletter: 'Newsletter',
-  communication: 'Communication',
-  office: 'Office',
-  productivity: 'Productivity',
-  'password-manager': 'Passwords',
-  auth: 'Auth',
-  analytics: 'Analytics',
-  monitoring: 'Monitoring',
-  'dev-tools': 'Dev Tools',
-  'source-control': 'Source Control',
-  design: 'Design',
-  'media-hosting': 'Media Hosting',
-  'media-production': 'Media Production',
-  ai: 'AI',
-  translation: 'Translation',
-  'customer-support': 'Support',
-  compliance: 'Compliance',
-  payments: 'Payments',
-  other: 'Other',
+  communication: 'Kommunikation',
+  productivity: 'Produktivität',
+  'dev-tools': 'Entwicklungstools',
+  'media-production': 'Produktion',
+  payments: 'Zahlungen',
+  other: 'Andere',
 };
 
 const COUNTRY_NAMES: Record<string, string> = {
-  US: '🇺🇸 United States',
-  CH: '🇨🇭 Switzerland',
-  DE: '🇩🇪 Germany',
-  NL: '🇳🇱 Netherlands',
-  FR: '🇫🇷 France',
-  GB: '🇬🇧 United Kingdom',
-  SE: '🇸🇪 Sweden',
-  DK: '🇩🇰 Denmark',
-  IE: '🇮🇪 Ireland',
-  CA: '🇨🇦 Canada',
-  AU: '🇦🇺 Australia',
-  IT: '🇮🇹 Italy',
+  US: '🇺🇸 USA',
+  CH: '🇨🇭 Schweiz',
+  DE: '🇩🇪 Deutschland',
+  NL: '🇳🇱 Niederlande',
+  FR: '🇫🇷 Frankreich',
+  GB: '🇬🇧 Vereinigtes Königreich',
+  SE: '🇸🇪 Schweden',
+  DK: '🇩🇰 Dänemark',
+  IE: '🇮🇪 Irland',
+  CA: '🇨🇦 Kanada',
+  AU: '🇦🇺 Australien',
+  IT: '🇮🇹 Italien',
 };
 
 function countryLabel(code: string): string {
@@ -159,7 +140,7 @@ function countryLabel(code: string): string {
 function vendorRegion(country: string): { id: string; label: string } {
   if (country === 'US') return { id: 'region:US', label: '🇺🇸 USA' };
   if (EU_COUNTRIES.has(country)) return { id: 'region:EU', label: '🇪🇺 EU / CH' };
-  return { id: 'region:other', label: '🌐 Other' };
+  return { id: 'region:other', label: '🌐 Andere' };
 }
 
 /**
@@ -204,6 +185,65 @@ export function sankeyEdges(active: ActiveService[]): SankeyData {
     ensureEdge('republik', catId, chf);
     ensureEdge(catId, vendorId, chf);
     ensureEdge(vendorId, region.id, chf);
+  }
+
+  return {
+    nodes: [...nodes.values()],
+    edges: [...edgeMap.values()].filter((e) => e.valueCHF > 0),
+  };
+}
+
+/**
+ * Builds Sankey data: Republik → Company → Hoster → Region
+ *
+ * Shows which cloud/hosting infrastructure the services actually run on.
+ * Services with no infraIds connect the vendor directly to the region column.
+ */
+export function sankeyEdgesInfra(active: ActiveService[]): SankeyData {
+  const nodes = new Map<string, SankeyNode>();
+  const edgeMap = new Map<string, SankeyEdge>();
+
+  function ensureNode(id: string, label: string, type: SankeyNode['type'], chf = 0) {
+    if (!nodes.has(id)) nodes.set(id, { id, label, type, totalCHF: 0 });
+    nodes.get(id)!.totalCHF += chf;
+  }
+
+  function ensureEdge(source: string, target: string, chf: number) {
+    const k = `${source}→${target}`;
+    if (!edgeMap.has(k)) edgeMap.set(k, { source, target, valueCHF: 0 });
+    edgeMap.get(k)!.valueCHF += chf;
+  }
+
+  ensureNode('republik', 'Republik', 'origin');
+
+  for (const svc of active) {
+    const chf = svc.annualCostCHF;
+    const vendorId = `vendor:${svc.vendorId}`;
+
+    ensureNode('republik', 'Republik', 'origin', chf);
+    ensureNode(vendorId, svc.vendor.name, 'vendor', chf);
+    ensureEdge('republik', vendorId, chf);
+
+    if (svc.infra.length > 0) {
+      // Split cost equally across infra providers
+      const chfPerInfra = chf / svc.infra.length;
+      for (const infraCompany of svc.infra) {
+        const infraId = `infra:${infraCompany.id}`;
+        const infraCountry = infraCompany.hqs[0]?.country ?? 'XX';
+        const region = vendorRegion(infraCountry);
+
+        ensureNode(infraId, infraCompany.name, 'infra', chfPerInfra);
+        ensureNode(region.id, region.label, 'region', chfPerInfra);
+        ensureEdge(vendorId, infraId, chfPerInfra);
+        ensureEdge(infraId, region.id, chfPerInfra);
+      }
+    } else {
+      // No known infra — vendor connects directly to region
+      const vendorCountry = svc.vendor.hqs[0]?.country ?? 'XX';
+      const region = vendorRegion(vendorCountry);
+      ensureNode(region.id, region.label, 'region', chf);
+      ensureEdge(vendorId, region.id, chf);
+    }
   }
 
   return {
@@ -266,6 +306,56 @@ export function computeTotals(active: ActiveService[]): Totals {
     totalCHF: total,
     serviceCount: active.length,
     vendorCount: vendorIds.size,
+    usCHF,
+    usPct: pct(usCHF),
+    euCHF,
+    euPct: pct(euCHF),
+    otherCHF,
+    otherPct: pct(otherCHF),
+    bigTechCHF,
+    bigTechPct: pct(bigTechCHF),
+  };
+}
+
+/**
+ * Like computeTotals but sovereignty is measured by the actual hosting
+ * infrastructure provider (infra companies), not the direct vendor.
+ * Services without explicit infra fall back to the vendor's country.
+ */
+export function computeTotalsInfra(active: ActiveService[]): Totals {
+  const total = active.reduce((s, sv) => s + sv.annualCostCHF, 0);
+  const infraIds = new Set<string>();
+  let usCHF = 0;
+  let euCHF = 0;
+  let bigTechCHF = 0;
+
+  for (const svc of active) {
+    const chf = svc.annualCostCHF;
+    if (svc.infra.length > 0) {
+      const share = chf / svc.infra.length;
+      for (const company of svc.infra) {
+        infraIds.add(company.id);
+        const c = company.hqs[0]?.country;
+        if (c === 'US') usCHF += share;
+        else if (c != null && EU_COUNTRIES.has(c)) euCHF += share;
+        if (company.bigTech) bigTechCHF += share;
+      }
+    } else {
+      infraIds.add(svc.vendorId);
+      const c = svc.vendor.hqs[0]?.country;
+      if (c === 'US') usCHF += chf;
+      else if (c != null && EU_COUNTRIES.has(c)) euCHF += chf;
+      if (svc.vendor.bigTech) bigTechCHF += chf;
+    }
+  }
+
+  const otherCHF = total - usCHF - euCHF;
+  const pct = (v: number) => (total > 0 ? Math.round((v / total) * 100) : 0);
+
+  return {
+    totalCHF: total,
+    serviceCount: active.length,
+    vendorCount: infraIds.size,
     usCHF,
     usPct: pct(usCHF),
     euCHF,
