@@ -1,0 +1,58 @@
+[
+  {
+    "group": "Weihnachtsbücher",
+    "groupDescription": "Ihre Geschenke-Liste sieht noch karg aus? Ihr Wunschzettel auch?",
+    "questions": [
+      {
+        "id": 1,
+        "type": "choice",
+        "title": "Und jetzt Sie:",
+        "changeable": true,
+        "customTrueColor": "yellow",
+        "customWronglySelectedColor": "purple",
+        "options": [
+          {
+            "option": "Das verschenk ich!",
+            "debriefing": "Exzellente Wahl für alle Altersklassen! So kleinkindkompatibel <a href=''>bla</a> war noch selten ein Erwachsenen-Buch."
+          },
+          {
+            "option": "Möcht ich selber haben",
+            "debriefing": "Falls Sie sich nicht sattsehen können: Es gibt auch einen Vorgängerband: ",
+            "source": "https://www.matthes-seitz-berlin.de/buch/die-verlorenen-woerter.html?lid=1",
+            "sourceTitle": "«Die verlorenen Wörter»"
+           
+          },
+          {
+            "option": "Lieber weitersuchen",
+            "debriefing": "Es muss ja nicht die Schleiereule sein – an Station 3 warten komische Käuze."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "choice",
+        "changeable": true,
+        "customWronglySelectedColor": "purple",
+        "options": [
+          {
+            "option": "Das verschenk ich!",
+            "debriefing": "Kennen Sie die Anthologie",
+            "source": "https://www.hotlist-online.com/die-jury-2019/wieser-verlag/kookbooks/",
+            "sourceTitle": "«Lyrik im Anthropozän»",
+            "customEndMark": "?"
+          },
+          {
+            "option": "Möcht ich selber haben",
+            "debriefing": "Ganz andere Thematik, aber für deutschsprachige Lyrik-Leser unverzichtbar: die soeben erschienene Gesamtausgabe der Gedichte von",
+            "source": "https://www.wallstein-verlag.de/9783835339989-gesammelte-gedichte.html",
+            "sourceTitle": "Rainer René Mueller"
+          },
+          {
+            "option": "Lieber weitersuchen",
+            "debriefing": "Darf's andere Dichtung sein? Man könnte leicht einen ganzen Adventskalender mit Lyrikempfehlungen 2021 füllen. Nur zwei Namen: Ronya Othmann, Valzhyna Mort."
+          }
+        ]
+      }
+    ]
+  }
+]

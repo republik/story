@@ -1,0 +1,780 @@
+[
+  {
+    "group": "Die Anfänge",
+    "groupDescription": "Im Jahr 1971 gründete Klaus Schwab, ein schwäbischer Maschinenbauingenieur und Ökonom, eine Organisation für erfolgreiches und verantwortungsvolles Management. Gleichen Jahres hielt er in Davos erstmals eine Tagung ab – allerdings unter einem anderen Titel als heute.",
+    "questions": [
+      {
+        "id": 1,
+        "title": "Wie hiess das erste WEF-Jahrestreffen?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Forum für Betriebswirtschaft",
+            "debriefing": "Nein, ein englischer Name musste es auch anno 1971 schon sein: «European Management Symposium». Thema des ersten Treffens:",
+            "sourceTitle": "Europäische Manager sollten US-Managementmethoden kennenlernen",
+            "source": "http://www3.weforum.org/docs/WEF_First40Years_Book_2010.pdf "
+          },
+          {
+            "value": "WAHR",
+            "option": "European Management Symposium",
+            "debriefing": "Korrekt! Und Klaus Schwabs Organisation hiess bis 1987 «European Management Forum». Thema des ersten Symposiums:",
+            "sourceTitle": "Europäische Manager sollten US-Managementmethoden kennenlernen",
+            "source": "http://www3.weforum.org/docs/WEF_First40Years_Book_2010.pdf "
+          },
+          {
+            "value": "FALSCH",
+            "option": "Seminar für soziale Marktwirtschaft",
+            "debriefing": "Sozial war Klaus Schwab zwar schon immer. Doch first things first: Die Organisation hiess bis 1987 «European Management Forum». Thema des ersten Symposiums:",
+            "sourceTitle": "Europäische Manager sollten US-Managementmethoden kennenlernen",
+            "source": "http://www3.weforum.org/docs/WEF_First40Years_Book_2010.pdf "
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Warum wählte Klaus Schwab Davos als Veranstaltungsort?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSE",
+            "option": "Weil er dort während eines Managementtreffens seines Arbeitgebers Escher Wyss zusammen mit der Sekretärin des Finanzchefs LSD ausprobierte und dabei eine Vision hatte, wie man die Welt gerechter machen könnte.",
+            "debriefing": "Dachten Sie das wirklich? Nein: Schwab war zwar bei Escher Wyss angestellt, ",
+            "sourceTitle": "aber dass er dort Drogentrips durchmachte, wäre nicht bekannt",
+            "source": "http://widgets.weforum.org/history/1971.html"
+          },
+          {
+            "value": "FALSE",
+            "option": "Weil er dort beim Skifahren seine spätere Frau kennenlernte, mit der er während der Fahrt auf dem Skilift die Ski kreuzte, worauf beide in eine Mulde stürzten, wo er ihr die inzwischen berühmten Worte sagte: «Fräulein, könnten Sie mir aus der Bindung helfen?»",
+            "debriefing": "Zugegeben: eine schöne Geschichte. Aber sie ist leider frei erfunden.",
+            "sourceTitle": "Die wahre Motivation kam aus der Literatur: von Thomas Mann",
+            "source": "http://widgets.weforum.org/history/1971.html"
+          },
+          {
+            "value": "WAHR",
+            "option": "Weil ihn Thomas Manns Roman «Der Zauberberg» inspirierte, wo Menschen sich in der frischen Alpenluft von Krankheiten und Stress erholten und ihre Köpfe durchlüfteten.",
+            "debriefing": "Richtig. Wär jetzt aber auch peinlich gewesen, wenn Sie hier falsch geraten hätten.",
+            "sourceTitle": "Mehr Historisches zum WEF gibts übrigens hier",
+            "source": "http://widgets.weforum.org/history/1971.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Die Organisation",
+    "groupDescription": "Was viele nicht wissen: Das jährliche Treffen in Davos ist nur eine von vielen Aktivitäten des World Economic Forum. Jahrein, jahraus arbeitet die Organisation mit Sitz am Genfersee und Büros in Delaware, Tokio, Peking und Mumbai daran, einflussreiche Leute – und solche, die es gern werden wollen – zu vernetzen.",
+    "questions": [
+      {
+        "id": 3,
+        "title": "Wie viele Angestellte arbeiten fürs World Economic Forum?",
+        "type": "estimate",
+        "options": [
+          {
+            "value": "FALSE",
+            "option": "Keine",
+            "debriefing": "Falsch. Beim World Economic Forum arbeiten fast 800 Leute. Damit ist es bereits kein KMU mehr, sondern ein ordentliches Unternehmen.",
+            "sourceTitle": "Alles Weitere steht im Geschäftsbericht",
+            "source": "http://www3.weforum.org/docs/WEF_Annual_Report_18-19.pdf"
+          },
+          {
+            "value": "FALSE",
+            "option": 120,
+            "debriefing": "Falsch. Beim World Economic Forum arbeiten fast 800 Leute. Damit ist es bereits kein KMU mehr, sondern ein ordentliches Unternehmen.",
+            "sourceTitle": "Alles Weitere steht im Geschäftsbericht",
+            "source": "http://www3.weforum.org/docs/WEF_Annual_Report_18-19.pdf"
+          },
+          {
+            "value": "FALSE",
+            "option": 241,
+            "debriefing": "Falsch. Beim World Economic Forum arbeiten fast 800 Leute. Damit ist es bereits kein KMU mehr, sondern ein ordentliches Unternehmen.",
+            "sourceTitle": "Alles Weitere steht im Geschäftsbericht",
+            "source": "http://www3.weforum.org/docs/WEF_Annual_Report_18-19.pdf"
+          },
+          {
+            "value": "WAHR",
+            "option": 794,
+            "debriefing": "Richtig! Beim World Economic Forum arbeiten fast 800 Leute. Damit ist es bereits kein KMU mehr, sondern ein ordentliches Unternehmen.",
+            "sourceTitle": "Alles Weitere steht im Geschäftsbericht",
+            "source": "http://www3.weforum.org/docs/WEF_Annual_Report_18-19.pdf"
+          },
+          {
+            "value": "FALSE",
+            "option": 1243,
+            "debriefing": "Falsch. Beim World Economic Forum arbeiten nur knapp 800 Leute. Damit ist es trotzdem ein ordentliches Unternehmen.",
+            "sourceTitle": "Alles Weitere steht im Geschäftsbericht",
+            "source": "http://www3.weforum.org/docs/WEF_Annual_Report_18-19.pdf"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Von welcher Regelung profitieren WEF-Angestellte?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "Wer über 65 ist, darf erste Klasse fliegen.",
+            "debriefing": "Stimmt. Allerdings profitieren normale Menschen nicht davon, da sie mit 65 pensioniert werden. Man kann davon ausgehen, dass der 81-jährige Schwab die Regelung vor allem für sich selber einführte."
+          },
+          {
+            "value": "FALSCH",
+            "option": "Wer zehn Jahre für das WEF arbeitet, erhält einen Firmen-Tesla.",
+            "debriefing": "Ein gesponsertes E-Auto? Klingt schön und nachvollziehbar, entspricht aber nicht der Realität."
+          },
+          {
+            "value": "FALSCH",
+            "option": "Wer nach fünf Jahren im Unternehmen nie krank war, erhält ein VIP-Ticket für ein U2-Konzert.",
+            "debriefing": "Das hätte Bono wohl gerne, ist aber nicht so."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Wie heisst eine der Nachwuchsorganisationen des WEF? Tipp: Drei der untenstehenden Antworten sind richtig.",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "Young Global Leaders",
+            "debriefing": "Bingo! Das WEF hat drei Nachwuchsclubs: die Young Global Leaders, die Global Shapers Community und die Young Scientists. Was die jungen Damen und Herren dort tun, verrät die\n",
+            "sourceTitle": "Website des WEF",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Schwab Scouts",
+            "debriefing": "Na, na. So eitel ist Herr Schwab dann doch nicht. Seine Nachwuchsorganisationen tragen ganz professionelle Namen:",
+            "sourceTitle": "Young Global Leaders, Global Shapers Community, Young Scientists",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "WAHR",
+            "option": "Global Shapers Community",
+            "debriefing": "Bingo! Das WEF hat drei Nachwuchsclubs: die Young Global Leaders, die Global Shapers Community und die Young Scientists. Was die jungen Damen und Herren dort tun, verrät die\n",
+            "sourceTitle": "Website des WEF",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Young Global Shapers",
+            "debriefing": "Knapp daneben … aber auch vorbei. Das WEF hat drei Nachwuchsclubs: die Young Global Leaders, die Global Shapers Community und die Young Scientists. Was die jungen Damen und Herren dort tun, verrät die ",
+            "sourceTitle": "Website des WEF",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "WAHR",
+            "option": "Young Scientists",
+            "debriefing": "Bingo! Das WEF hat drei Nachwuchsclubs: die Young Global Leaders, die Global Shapers Community und die Young Scientists. Was die jungen Damen und Herren dort tun, verrät die\n",
+            "sourceTitle": "Website des WEF",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Community of Young Leaders",
+            "debriefing": "Knapp daneben … aber auch vorbei. Das WEF hat drei Nachwuchsclubs: die Young Global Leaders, die Global Shapers Community und die Young Scientists. Was die jungen Damen und Herren dort tun, verrät die",
+            "sourceTitle": "Website des WEF",
+            "source": "https://www.weforum.org/communities"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Fresh Stakeholders",
+            "debriefing": "Hey, die Rede ist nicht von Snoop Dogg, sondern von Klaus Schwab und seinem WEF! Und, wie erwähnt, von dessen Nachwuchsorganisationen:",
+            "sourceTitle": "Young Global Leaders, Global Shapers Community, Young Scientists",
+            "source": "https://www.weforum.org/communities"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Das Geld",
+    "groupDescription": "Symposien auf fünf Kontinenten, Projekte für die ganze Welt – das kostet eine ordentliche Stange Geld. Das WEF gibt jährlich 344 Millionen Franken aus. Finanziert wird das von Unternehmen: Sie bezahlen bis zu 600’000 Franken, um als Sponsoren und Teilnehmer beim Forum dabei zu sein.",
+    "questions": [
+      {
+        "id": 6,
+        "title": "Welche Firma ist Partner des WEF?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "Glencore (Rohstoffhändlerin mit grossem Kohlegeschäft)",
+            "debriefing": "Gratuliere! Wobei: Sie konnten bei dieser Frage nicht viel falsch machen – die anderen beiden Firmen sind ebenfalls Partner des WEF,",
+            "sourceTitle": "wie hier nachzulesen ist",
+            "source": "https://www.weforum.org/about/our-members-and-partners"
+          },
+          {
+            "value": "WAHR",
+            "option": "Adani Group (baut in Australien eine der weltgrössten Kohleminen)",
+            "debriefing": "Gratuliere! Wobei: Sie konnten bei dieser Frage nicht viel falsch machen – die anderen beiden Firmen sind ebenfalls Partner des WEF,",
+            "sourceTitle": "wie hier nachzulesen ist",
+            "source": "https://www.weforum.org/about/our-members-and-partners"
+          },
+          {
+            "value": "WAHR",
+            "option": "Siemens (liefert Bauteile für die Kohlemine der Adani Group)",
+            "debriefing": "Gratuliere! Wobei: Sie konnten bei dieser Frage nicht viel falsch machen – die anderen beiden Firmen sind ebenfalls Partner des WEF,",
+            "sourceTitle": "wie hier nachzulesen ist",
+            "source": "https://www.weforum.org/about/our-members-and-partners"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Welche Firma ist kein Partner des WEF?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Royal Dutch Shell (die zweitgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Saudi Aramco (die drittgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "BP (die fünftgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Total (die achtgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Lukoil (die neuntgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Eni (die zehntgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Chevron (die zwölftgrösste Ölfirma der Welt)",
+            "debriefing": "Ätsch, das war eine Fangfrage. Alle genannten Firmen sind Partner. Und nebst den genannten beteiligen sich auch die Ölfirmen Nr. 16, 18, 26, 27, 32, 36 und 38",
+            "sourceTitle": " in der weltweiten Grössenrangliste am WEF",
+            "source": "https://en.wikipedia.org/wiki/List_of_largest_oil_and_gas_companies_by_revenue"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Das Global Village",
+    "groupDescription": "Schneeweisse Landschaften, Bergluft und Russinnen im Pelzmantel: Ohne seinen Austragungsort wäre das WEF nicht, was es ist. Doch wer Davos an den restlichen 51 Wochen im Jahr gesehen hat, wird das Dorf in dieser einen Woche kaum wiedererkennen. Sogar sein Name ändert sich dann.",
+    "questions": [
+      {
+        "id": 8,
+        "title": "Wie wird «Davos» von den WEF-Teilnehmern ausgesprochen?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "«Deivos»",
+            "debriefing": "No, no, no. Das «a» bleibt kurz bis halblang. Kostprobe gefällig?\n",
+            "sourceTitle": "CNN-Reporterlegende Richard Quest zeigt, wies geht",
+            "source": "https://www.youtube.com/watch?v=0PPKcZvTUzA"
+          },
+          {
+            "value": "WAHR",
+            "option": "«Dahwoss»",
+            "debriefing": "Und keiner spricht es besser aus als CNN-Reporterlegende Richard Quest, ",
+            "sourceTitle": "der schon 17 Mal am WEF war",
+            "source": "https://www.youtube.com/watch?v=0PPKcZvTUzA"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Davöus»",
+            "debriefing": "Please, nicht so britisch! Sondern mit kurzem «o». Kostprobe gefällig?",
+            "sourceTitle": "CNN-Reporterlegende Richard Quest zeigt, wies geht",
+            "source": "https://www.youtube.com/watch?v=0PPKcZvTUzA"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Wie viele Helikopterflüge gab es während des letzten WEF?",
+        "type": "estimate",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Gar keine",
+            "debriefing": "Doch, es flogen Helikopter ans WEF. Von Zürich oder Dübendorf, Altenrhein oder Friedrichshafen waren es gemäss Angaben des Bazl exakt 177, die den Landeplatz Davos Lago ansteuerten – für zivile Personentransporte oder militärische Transportflüge."
+          },
+          {
+            "value": "FALSCH",
+            "option": 124,
+            "debriefing": "Etwas mehr. Von Zürich oder Dübendorf, Altenrhein oder Friedrichshafen flogen gemäss Angaben des Bazl exakt 177 Mal Helikopter den Landeplatz Davos Lago an – für zivile Personentransporte oder militärische Transportflüge."
+          },
+          {
+            "value": "WAHR",
+            "option": 177,
+            "debriefing": "Treffer! Von Zürich oder Dübendorf, Altenrhein oder Friedrichshafen flogen gemäss Angaben des Bazl exakt 177 Mal Helikopter den Landeplatz Davos Lago an – für zivile Personentransporte oder militärische Transportflüge."
+          },
+          {
+            "value": "FALSCH",
+            "option": 293,
+            "debriefing": "Zu hoch geschätzt. Von Zürich oder Dübendorf, Altenrhein oder Friedrichshafen flogen gemäss Angaben des Bazl exakt 177 Mal Helikopter den Landeplatz Davos Lago an – für zivile Personentransporte oder militärische Transportflüge."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "In angelsächsischen Medien ist öfter die Rede vom «Davos Man». Was bezeichnet dieser Begriff?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Klaus Schwab",
+            "debriefing": "Weit daneben! Schwab ist bekannt als «Turtle Man», nicht als «Davos Man»."
+          },
+          {
+            "value": "FALSCH",
+            "option": "Ein Festival der Jungfreisinnigen auf dem gefrorenen Davosersee",
+            "debriefing": "Leider falsch. Obwohl ja das WEF auch nichts anderes als ein «Burning Man» à la FDP ist."
+          },
+          {
+            "value": "FALSCH\n",
+            "option": "Einen Superhelden, der die Armut auf der Welt bekämpft",
+            "debriefing": "Schön wärs … Kann jemand diesen Helden bitte erfinden?"
+          },
+          {
+            "value": "WAHR",
+            "option": "Den prototypischen Vertreter der globalen Machtelite",
+            "debriefing": "Volltreffer! Übrigens: Haben Sie schon mal eine «Davos Woman» gesichtet? Wir nicht."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Die Sprache",
+    "groupDescription": "«Stakeholders for a Cohesive and Sustainable World»: So lautet das diesjährige Motto in Davos. Das WEF hat mit seinem Symposium-Singsang ein eigentliches literarisches Genre geschaffen. Finden Sie sich darin bereits zurecht?",
+    "questions": [
+      {
+        "id": 12,
+        "title": "Wie lautete das Motto des letzten Jahres?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Creating a Shared Future in a Fractured World",
+            "debriefing": "Falsch! Dies war das (komplett andere) Motto der (gänzlich verschiedenen) Debatten vom vorletzten Jahr. Wie konnten Sie das bloss verwechseln?"
+          },
+          {
+            "value": "WAHR",
+            "option": "Shaping a Global Architecture in the Age of the Fourth Industrial Revolution",
+            "debriefing": "Richtig! Die vierte industrielle Revolution ist eine Lieblingstheorie von Klaus Schwab. Schon 2016 stellte er sie ins Zentrum des Forums («Mastering the Fourth Industrial Revolution»)."
+          },
+          {
+            "value": "FALSCH",
+            "option": "Singing in the Snow",
+            "debriefing": "Sie Scherzbold! Unter diesem Motto würde vielleicht die chinesische Botschaft zum Showprogramm laden – aber sicher nicht Klaus Schwab."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Welche Veranstaltung kann man am diesjährigen WEF nicht besuchen?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "«Global Financial Outlook»",
+            "debriefing": "Am WEF gibt es diverse Outlooks (etwa den «IMF World Economic Outlook Update»),",
+            "sourceTitle": "aber nicht diesen",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Hidden Worlds in Our Oceans»",
+            "debriefing": "Reingefallen! Diesen Workshop gibt es tatsächlich, als Teil einer Serie mit dem Titel «Save the Planet».",
+            "sourceTitle": "Erfunden war: «Global Financial Outlook»",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«The Beauty of Inclusion»",
+            "debriefing": "Reingefallen! Diesen Workshop gibt es tatsächlich, als Teil einer Serie mit dem Titel «Society & Future of Work».",
+            "sourceTitle": "Erfunden war: «Global Financial Outlook»",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Free to Be (LGBTI)»",
+            "debriefing": "Reingefallen! Diesen Workshop gibt es tatsächlich, als Teil einer Serie mit dem Titel «Society & Future of Work».",
+            "sourceTitle": "Erfunden war: «Global Financial Outlook»",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«When Your Doctor Is a Robot»",
+            "debriefing": "Reingefallen! Diesen Workshop gibt es tatsächlich, als Teil einer Serie mit dem Titel «Healthy Futures».",
+            "sourceTitle": "Erfunden war: «Global Financial Outlook»",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Ending Modern Slavery»",
+            "debriefing": "Reingefallen! Diesen Workshop gibt es tatsächlich, als Teil einer Serie mit dem Titel «Save the Planet».",
+            "sourceTitle": "Erfunden war: «Global Financial Outlook»",
+            "source": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2020/programme"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Im Dezember hat Klaus Schwab ein neues «Davos Manifesto» vorgestellt. Welcher der beiden Sätze ist darin zu finden?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "«Das Management muss den Investoren dienen, indem es eine Rendite erwirtschaftet, die höher ist als jene von Staatsanleihen.»",
+            "debriefing": "Fast richtig – aber nicht ganz. Dieser Satz stammt aus dem ursprünglichen",
+            "sourceTitle": "Manifest von 1973",
+            "source": "https://www.weforum.org/agenda/2019/12/davos-manifesto-1973-a-code-of-ethics-for-business-leaders/"
+          },
+          {
+            "value": "WAHR",
+            "option": "«Eine Firma agiert als Hüterin des materiellen und ökologischen Universums künftiger Generationen.»",
+            "debriefing": "Richtig getippt! Der andere Satz war übrigens anderswo zu finden: im ursprünglichen",
+            "sourceTitle": "Manifest von 1973",
+            "source": "https://www.weforum.org/agenda/2019/12/davos-manifesto-1973-a-code-of-ethics-for-business-leaders/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Die Gäste",
+    "groupDescription": "Am WEF treffen Staatschefs auf Topmanager, Aktivisten, Künstler und Journalisten. Einer der schillerndsten Stammgäste (der dieses Jahr aber fehlt) ist U2-Frontmann Bono.",
+    "questions": [
+      {
+        "id": 15,
+        "title": "Wie oft war Bono schon am WEF?",
+        "type": "estimate",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "viermal",
+            "debriefing": "Gemäss unseren Nachforschungen war Bono genau zehnmal am WEF: 2001 und 2002, 2005 bis 2008, 2011, 2014, 2016 und zuletzt 2019.\n"
+          },
+          {
+            "value": "WAHR",
+            "option": "zehnmal",
+            "debriefing": "Gemäss unseren Nachforschungen war Bono genau zehnmal am WEF: 2001 und 2002, 2005 bis 2008, 2011, 2014, 2016 und zuletzt 2019.\n"
+          },
+          {
+            "value": "FALSCH",
+            "option": "zwölfmal",
+            "debriefing": "Gemäss unseren Nachforschungen war Bono genau zehnmal am WEF: 2001 und 2002, 2005 bis 2008, 2011, 2014, 2016 und zuletzt 2019.\n"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "Von wem stammt folgendes Zitat? «Die Oberflächlichkeit der Menschen, die sich an den immer wieder gleichen gesellschaftlichen Anlässen treffen, ist für mich ebenso sinnlos wie die Eitelkeit des WEF-Treffens, wo jeder zeigen will, dass er der Grösste und Schönste sei. Denn wissen Sie: Von einigen wenigen Ausnahmen abgesehen wird am WEF bloss heisse Luft kommuniziert.»",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "Nicolas Hayek",
+            "debriefing": "Richtig. Zumindest hat Ex-SP-Präsident Helmut Hubacher den Swatch-Gründer vor elf Jahren so in einem Text in der «Schweizer Illustrierten» zitiert."
+          },
+          {
+            "value": "FALSCH",
+            "option": "Christoph Blocher",
+            "debriefing": "Falsch! Von Ems-Chemie-Chef Blocher ist über die WEF-Teilnehmer (die teils seine Kunden waren) einzig das Zitat bekannt: «Meist haben sie auf dem Heimweg bei uns in Domat/Ems vorbeigeschaut.»"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Greta Thunberg",
+            "debriefing": "Falsch – hätte aber gut sein können. Greta sagte vor einem Jahr übers WEF: «Leider glaube ich nicht, dass es ein Erfolg fürs Klima war. Die Leute reden nur und tun nicht, was sie sagen»"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "Seit 1995 verleiht das WEF den Crystal Award an Künstler, die sich für eine bessere Welt einsetzen. Wer von diesen Künstlerinnen hat den Award nicht erhalten?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "Udo Jürgens",
+            "debriefing": "Stimmt nicht. Jürgens gewann ihn 2010.\n",
+            "sourceTitle": "Zu den Preisträgern",
+            "source": "http://www3.weforum.org/docs/WEF_Previous_Recipients_Crystal_Award.pdf"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Elton John",
+            "debriefing": "Falsch. Elton John erhielt den Bergkristall vor zwei Jahren.",
+            "sourceTitle": "Der Beweis",
+            "source": "https://www.nau.ch/news/schweiz/wef-2018-davos-cate-blanchett-und-elton-john-ausgezeichnet-65289734"
+          },
+          {
+            "value": "WAHR",
+            "option": "Angelina Jolie",
+            "debriefing": "Richtig. Jolie war zwar 2006 in Davos, aber nicht als Preisträgerin.",
+            "sourceTitle": "Zu den Preisträgern",
+            "source": "http://www3.weforum.org/docs/WEF_Previous_Recipients_Crystal_Award.pdf"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Paulo Coelho",
+            "debriefing": "Falsch. Der brasilianische Autor gewann ihn 1999.",
+            "sourceTitle": "Zu den Preisträgern",
+            "source": "http://www3.weforum.org/docs/WEF_Previous_Recipients_Crystal_Award.pdf"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Bono",
+            "debriefing": "Falsch. Der irische Sänger räumte den Kristall 2002 ab.",
+            "sourceTitle": "Zu den Preisträgern",
+            "source": "http://www3.weforum.org/docs/WEF_Previous_Recipients_Crystal_Award.pdf"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "Wie hoch war letztes Jahr der Frauenanteil unter den Teilnehmern?",
+        "type": "estimate",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "13 %",
+            "debriefing": "Zu tief! Immerhin ein gutes Fünftel der Teilnehmenden war weiblich,",
+            "sourceTitle": "wie eine wunderschöne Infografik des WEF zeigt",
+            "source": "https://widgets.weforum.org/participants-graphic-am19/"
+          },
+          {
+            "value": "WAHR",
+            "option": "22 %",
+            "debriefing": "Korrekt! Immerhin ein gutes Fünftel der Teilnehmenden war weiblich,",
+            "sourceTitle": "wie eine wunderschöne Infografik des WEF zeigt",
+            "source": "https://widgets.weforum.org/participants-graphic-am19/"
+          },
+          {
+            "value": "FALSCH",
+            "option": "36 %",
+            "debriefing": "Zu hoch! Nur ein gutes Fünftel der Teilnehmenden war weiblich,",
+            "sourceTitle": "wie eine wunderschöne Infografik des WEF zeigt",
+            "source": "https://widgets.weforum.org/participants-graphic-am19/"
+          },
+          {
+            "value": "FALSCH",
+            "option": "52 %",
+            "debriefing": "Viel zu hoch! Nur ein gutes Fünftel der Teilnehmenden war weiblich,",
+            "sourceTitle": "wie eine wunderschöne Infografik des WEF zeigt",
+            "source": "https://widgets.weforum.org/participants-graphic-am19/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Die Politik",
+    "groupDescription": "Wenn sich in Davoser Hinterzimmern Staatsoberhäupter und Spitzendiplomaten treffen, werden Deals geschlossen und geopolitische Weichen gestellt. Schon mehrmals kam es zu wichtigen Übereinkünften.",
+    "questions": [
+      {
+        "id": 19,
+        "title": "Was war der wichtigste Handshake in der Geschichte des WEF?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "1988 zwischen dem türkischen Premierminister Turgut Özal und dem griechischen Premierminister Andreas Papandreou, die damit ein Friedensabkommen um Zypern besiegelten, das als «Davos Declaration» in die Geschichte einging.",
+            "debriefing": "Korrekt! Auf dieses Treffen blickt man am WEF besonders stolz zurück. Aufgeführt ist es",
+            "sourceTitle": "in der offiziellen Chronik",
+            "source": "https://www.weforum.org/agenda/2019/12/world-economic-forum-davos-at-50-history-a-timeline-of-highlights/"
+          },
+          {
+            "value": "FALSCH",
+            "option": "1995 zwischen dem chinesischen Präsidenten Deng Xiaoping und US-Präsident Bill Clinton, die damit den «Davos Process» in Gang setzten, der 2001 mit Chinas Aufnahme in die WTO gipfelte.",
+            "debriefing": "Leider falsch. Das WEF hat zwar eine besondere Beziehung zu China, aber so wichtig war Davos",
+            "sourceTitle": "dann für die Chinesen auch wieder nicht",
+            "source": "https://www.weforum.org/agenda/2019/12/world-economic-forum-davos-at-50-history-a-timeline-of-highlights/"
+          },
+          {
+            "value": "FALSCH",
+            "option": "2001 zwischen dem israelischen Premierminister Shimon Peres und dem Palästinenserführer Yassir Arafat, die damit den «Davos Pact» über den Rückzug israelischer Soldaten aus dem Westjordanland schlossen.",
+            "debriefing": "Leider falsch. Ein erfolgreiches Treffen zwischen Peres und Arafat in Davos gab es 1994. Jenes von 2001 ging ziemlich in die Hose. Schwab wollte Frieden,",
+            "sourceTitle": "aber Arafat lieferte eine Brandrede ab",
+            "source": "https://www.britannica.com/topic/World-Economic-Forum#ref1073312"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "title": "Welcher Skandal hat sich am WEF nicht ereignet?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "In der Kongresszeitung erschien 2006 ein antizionistischer Artikel, in dem zum Boykott von Israel aufgerufen wurde.",
+            "debriefing": "Doch, das ist so passiert. Klaus Schwab himself entschuldigte sich für die peinliche Publikation:",
+            "sourceTitle": "Man habe keine Zeit mehr gehabt, um das Magazin richtig zu redigieren. Erfunden ist die Iran-Anekdote",
+            "source": "https://www.weforum.org/agenda/2006/01/statement_from_/"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Bei einer Kontrolle vor vier Jahren zeigte sich, dass Soldaten, die das WEF beschützten, Kokain konsumiert hatten. ",
+            "debriefing": "Kein Witz. Die Armeeangehörigen blieben in einer Kontrolle der Militärpolizei hängen und hatten nicht nur gekokst, sondern auch\n",
+            "sourceTitle": "gekifft. Erfunden ist die Iran-Anekdote",
+            "source": "https://www.tagesanzeiger.ch/wirtschaft/wef/wefsoldaten-auf-drogen/story/27976040?dossier-id=2521"
+          },
+          {
+            "value": "WAHR",
+            "option": "Eine iranische Demokratieaktivistin wurde 2014 von einem Panel mit dem iranischen Präsidenten ausgeladen, weil sie sich weigerte, das Kopftuch zu tragen.",
+            "debriefing": "Stimmt. Hassan Rohani war in besagtem Jahr zwar am WEF. Doch die iranische Delegation passte sich ganz gut an die westlichen Sitten an.",
+            "sourceTitle": "Rohani warb für die wirtschaftliche Zusammenarbeit",
+            "source": "https://www.tagesanzeiger.ch/ausland/naher-osten-und-afrika/Rohani-will-die-Tuer-zum-Westen-ganz-aufstossen/story/22187591"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "title": "Bevor Donald Trump am WEF 2018 seine Abschlussrede halten konnte, spielte auf der Bühne eine Blaskapelle. Trump und Klaus Schwab standen mit ernster Miene daneben. Wie lange?",
+        "type": "estimate",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "30 Sekunden",
+            "debriefing": "Zu tief! Es waren volle drei Minuten. Im",
+            "sourceTitle": "Video lässt sich erahnen, wie sehr Schwab und Trump das Ende des Auftritts herbeisehnen",
+            "source": "https://www.srf.ch/play/tv/wef-davos/video/rede-von-donald-trump-am-wef-2018?id=882e09b7-f56a-42f9-ac09-8e9b5fd391e7"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Eine Minute",
+            "debriefing": "Zu tief! Es waren volle drei Minuten. Im",
+            "sourceTitle": "Video lässt sich erahnen, wie sehr Schwab und Trump das Ende des Auftritts herbeisehnen",
+            "source": "https://www.srf.ch/play/tv/wef-davos/video/rede-von-donald-trump-am-wef-2018?id=882e09b7-f56a-42f9-ac09-8e9b5fd391e7"
+          },
+          {
+            "value": "WAHR",
+            "option": "3 Minuten",
+            "debriefing": "Richtig! Es waren volle drei Minuten. Im",
+            "sourceTitle": "Video lässt sich erahnen, wie sehr Schwab und Trump das Ende des Auftritts herbeisehnen",
+            "source": "https://www.srf.ch/play/tv/wef-davos/video/rede-von-donald-trump-am-wef-2018?id=882e09b7-f56a-42f9-ac09-8e9b5fd391e7"
+          },
+          {
+            "value": "FALSCH",
+            "option": "7 Minuten",
+            "debriefing": "Zu hoch! Es waren nur drei Minuten. Im",
+            "sourceTitle": "Video lässt sich erahnen, wie sehr Schwab und Trump das Ende des Auftritts herbeisehnen",
+            "source": "https://www.srf.ch/play/tv/wef-davos/video/rede-von-donald-trump-am-wef-2018?id=882e09b7-f56a-42f9-ac09-8e9b5fd391e7"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "title": "Der brasilianische Präsident Jair Bolsonaro und die Umweltaktivistin Greta Thunberg haben etwas gemeinsam: Sie waren beide schon mal am WEF. Welche Gemeinsamkeit teilen sie darüber hinaus?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSE",
+            "option": "Sie haben italienische Vorfahren.",
+            "debriefing": "Falsch. Wurzeln in Italien hat nur ",
+            "sourceTitle": "Bolsonaro",
+            "source": "https://video.tagesspiegel.de/bolsonaros-wurzeln-liegen-in-italien.html"
+          },
+          {
+            "value": "FALSCH",
+            "option": "Sie fliegen nicht gerne.",
+            "debriefing": "Falsch. Über Bolsonaros Einstellung zum Fliegen ist nichts bekannt."
+          },
+          {
+            "value": "WAHR",
+            "option": "Sie wurden beide schon in einer Migros-Filiale gesichtet.",
+            "debriefing": "Richtig! Bolsonaro letztes Jahr",
+            "sourceTitle": "in Davos. Thunberg ebenfalls letztes Jahr, aber in Lausanne",
+            "source": "https://www.schweizer-illustrierte.ch/stars/international/am-wef-brasiliens-praesident-macht-mittag-der-migros",
+            "": "https://www.lematin.ch/suisse/migros-surfe-phenomene-greta-thunberg-tolle/story/14367426"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Letzte Worte",
+    "groupDescription": "Bald haben Sie es geschafft! Bevor wir zum Schluss kommen, lassen wir nochmals den Gründer selbst zu Wort kommen.",
+    "questions": [
+      {
+        "id": 23,
+        "title": "Welches Zitat stammt nicht von Klaus Schwab?",
+        "type": "choice",
+        "options": [
+          {
+            "value": "FALSCH",
+            "option": "«Der Neoliberalismus verstösst gegen die Ansprüche der Mehrheit der Bevölkerung, die sich mehr soziale Gerechtigkeit und grössere Umweltverantwortung wünscht.»",
+            "debriefing": "Falsch. Schwab sagte das im Dezember 2019 der ",
+            "sourceTitle": "«Bilanz»",
+            "source": "https://www.handelszeitung.ch/news/klaus-schwab-die-globalisierer-haben-es-ubertrieben"
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Ich war der Erste, der Greta Thunberg zu einem internationalen Treffen einlud.»",
+            "debriefing": "Falsch. Das sagte Schwab Mitte Januar der «Schweizer Illustrierten»."
+          },
+          {
+            "value": "WAHR",
+            "option": "«Ich bin der Götti von Bonos Tochter.»",
+            "debriefing": "Richtig. Bono hat zwar eine Tochter, aber Schwab ist nicht der Götti."
+          },
+          {
+            "value": "FALSCH",
+            "option": "«Es war ein Fehler, Angelina Jolie einzuladen.»",
+            "debriefing": "Falsch. Die Journalisten hätten sich 2006 auf den Hollywoodstar gestürzt, statt sich auf die grossen WEF-Themen zu konzentrieren."
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "title": "Dieses Quiz ist …",
+        "type": "choice",
+        "options": [
+          {
+            "value": "WAHR",
+            "option": "… kein Qualitätsjournalismus! Dafür habe ich nicht die Republik abonniert.",
+            "debriefing": "Da haben Sie völlig recht!",
+            "sourceTitle": "Hier können Sie uns die Meinung geigen",
+            "source": "https://www.republik.ch/dialog"
+          },
+          {
+            "value": "WAHR",
+            "option": "… noch doofer als das Globi-Gedicht vor zwei Jahren!",
+            "debriefing": "Schön, dass Sie sich noch dran erinnern.",
+            "sourceTitle": "Constantin Seibt hat leider auch dieses Jahr nichts Ernsthaftes zum WEF zu bieten",
+            "source": "https://www.republik.ch/2020/01/20/die-verbesserung-der-berichterstattung-ueber-die-verbesserung-der-welt-teil-1"
+          },
+          {
+            "value": "WAHR",
+            "option": "… die einzig sinnhafte Art, über einen Event wie das WEF zu berichten.",
+            "debriefing": "Das sehen wir auch so. Schön, dass Sie mitgemacht haben!",
+            "sourceTitle": "Klicken Sie hier, um die Republik weiterzuempfehlen",
+            "source": "https://www.republik.ch/konto#teilen"
+          }
+        ]
+      }
+    ]
+  }
+]
