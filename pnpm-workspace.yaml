@@ -1,4 +1,9 @@
 packages:
   - "story-components/*"
+  - "legacy/packages/*"
+  - "legacy/packages/mdast/*"
+  - "legacy/dynamic-components/*"
 allowBuilds:
+  "@swc/core": true
   esbuild: true
+  sharp: true

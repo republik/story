@@ -1,0 +1,34 @@
+{
+  "name": "@republik/icons",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "generate:icons": "svgr --out-dir ./lib/components ./lib/svg --silent",
+    "dev": "nodemon --watch lib/svg --exec 'yarn build'",
+    "build": "yarn generate:icons && tsup lib/components/index.ts --format cjs,esm --dts --minify --clean --out-dir dist",
+    "prepare": "yarn build"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^6.1.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsup": "^8.5.0"
+  },
+  "peerDependencies": {
+    "react": "^19.2.6"
+  },
+  "sideEffects": false
+}
