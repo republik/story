@@ -243,9 +243,6 @@ importers:
       '@apollo/client':
         specifier: ^3.13.8
         version: 3.14.1(@types/react@19.2.17)(graphql@16.14.2)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@babel/standalone':
-        specifier: ^7.15.8
-        version: 7.29.7
       '@republik/icons':
         specifier: workspace:*
         version: link:../icons
@@ -285,9 +282,6 @@ importers:
       babel-jest:
         specifier: ^29.5.0
         version: 29.7.0(@babel/core@7.29.7)
-      clipboard-copy:
-        specifier: ^4.0.1
-        version: 4.0.1
       d3-array:
         specifier: ^1.2.1
         version: 1.2.4
@@ -324,9 +318,6 @@ importers:
       graphql:
         specifier: ^16.11.0
         version: 16.14.2
-      identity-obj-proxy:
-        specifier: ^3.0.0
-        version: 3.0.0
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@24.13.2)
@@ -363,9 +354,6 @@ importers:
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(@microsoft/api-extractor@7.43.0(@types/node@24.13.2))(@swc/core@1.15.41)(jiti@2.7.0)(postcss@8.5.8)(typescript@5.6.2)(yaml@2.9.0)
-      typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
 
   story-components/10-mio-scrolly:
     dependencies:
@@ -681,10 +669,6 @@ packages:
 
   '@babel/runtime@7.29.7':
     resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/standalone@7.29.7':
-    resolution: {integrity: sha512-oFh9XoGL20UuHIeIuBQHOvF7r2dOCRnZW0r4SageGb9SWnt6HhbuPLREykNaEnP7/SRpMUwr50SSMJLrmeHvnQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.29.7':
@@ -2828,9 +2812,6 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
-
-  clipboard-copy@4.0.1:
-    resolution: {integrity: sha512-wOlqdqziE/NNTUJsfSgXmBMIrYmfd5V0HCGsR8uAKHcg+h9NENWINcfRjtWGU77wDHC8B8ijV4hMTGYbrKovng==}
 
   clipboardy@2.3.0:
     resolution: {integrity: sha512-mKhiIL2DrQIsuXMgBgnfEHOZOryC7kY7YO//TN6c63wlEm3NG5tz+YgY5rVi29KCmq/QQjKYvM7a19+MDOTHOQ==}
@@ -5853,8 +5834,6 @@ snapshots:
 
   '@babel/runtime@7.29.7': {}
 
-  '@babel/standalone@7.29.7': {}
-
   '@babel/template@7.29.7':
     dependencies:
       '@babel/code-frame': 7.29.7
@@ -7865,8 +7844,6 @@ snapshots:
   cli-boxes@2.2.1: {}
 
   client-only@0.0.1: {}
-
-  clipboard-copy@4.0.1: {}
 
   clipboardy@2.3.0:
     dependencies:
