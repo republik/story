@@ -9,12 +9,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm -r build"
+    "build": "pnpm -r build",
+    "knip": "knip --workspace './legacy/packages/**/*'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^24.13.2",
+    "knip": "^6.17.1",
     "prettier": "^3.3.2",
     "typescript": "^5.4.5"
   }

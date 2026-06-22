@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "tags": ["-lintignore"],
+  "ignoreExportsUsedInFile": {
+    "interface": true,
+    "type": true
+  },
+  "workspaces": {
+    "legacy/packages/*": {
+      "project": ["src/**/*.{js,ts,tsx}", "tests/**/*.{mjs,mts,js,ts,tsx}"]
+    }
+  }
+}
