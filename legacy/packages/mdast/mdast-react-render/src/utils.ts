@@ -1,5 +1,3 @@
-import { parse, format } from 'url'
-
 export const matchType = (type) => (node) => node.type === type
 export const matchHeading = (depth) => (node) =>
   node.type === 'heading' && node.depth === depth
@@ -17,8 +15,8 @@ export const imageSizeInfo = (url) => {
     return url
   }
 
-  const urlObject = parse(url, true)
-  const { size } = urlObject.query
+  const urlObject = new URL(url)
+  const size = urlObject.searchParams.get('size')
   if (!size || typeof size !== 'string') {
     return null
   }
@@ -34,14 +32,15 @@ export const imageResizeUrl = (url, size) => {
     return url
   }
 
-  const urlObject = parse(url, true)
+  const urlObject = new URL(url)
+
   if (urlObject.protocol === 'data:') {
     return url
   }
 
-  urlObject.query.resize = size
   // ensure format calculates from query object
   urlObject.search = undefined
+  urlObject.searchParams.set('resize', size)
 
-  return format(urlObject)
+  return urlObject.toString()
 }
