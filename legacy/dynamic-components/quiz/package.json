@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/orbiting/quiz#readme",
   "devDependencies": {
-    "@project-r/styleguide": "^10.16.0",
+    "@project-r/styleguide": "workspace:*",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",

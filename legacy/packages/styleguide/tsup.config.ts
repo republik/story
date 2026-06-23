@@ -4,10 +4,12 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['src/lib.ts', 'src/editor.ts', 'src/chart.ts'],
   outDir: 'dist',
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   loader: {
     '.js': 'jsx',
   },
+  sourcemap: true,
+  splitting: false,
   // We want declaration maps, see https://tsup.egoist.dev/#generate-typescript-declaration-maps--d-ts-map
   onSuccess: async () => {
     console.log('Generating TypeScript declaration files ...')

@@ -197,6 +197,4 @@ export { default as ErrorBoundary } from './components/ErrorBoundary'
 
 export { Author as EmailAuthor } from './templates/shared/email/components/Author'
 
-export { default as ChartEditor } from './components/Chart/Editor'
-
 export { Marker, markerKeys, markersConfig } from './components/Marker'

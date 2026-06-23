@@ -1,27 +1,27 @@
-import React, { useMemo } from "react";
+import React, { useMemo } from 'react'
 import {
   Editorial,
   Interaction,
   fontStyles,
   useColorContext,
   RawHtml,
-} from "@project-r/styleguide";
-import Card from "./Card";
-import { css } from "glamor";
+} from '@project-r/styleguide'
+import Card from './Card'
+import { css } from 'glamor'
 
 const styles = {
   horizontal: css({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-around",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   }),
   choice: css({
-    cursor: "pointer",
+    cursor: 'pointer',
     marginBottom: 10,
     lineHeight: 1.4,
     ...fontStyles.sansSerifRegular,
   }),
-};
+}
 
 const Choice = ({
   id,
@@ -34,77 +34,77 @@ const Choice = ({
   customTrueColor,
   customWronglySelectedColor,
 }) => {
-  const [colorScheme] = useColorContext();
+  const [colorScheme] = useColorContext()
   const hoverRules = useMemo(
     () =>
       css({
-        "@media (hover)": {
-          ":hover": {
-            background: colorScheme.getCSSColor("text"),
-            color: colorScheme.getCSSColor("default"),
+        '@media (hover)': {
+          ':hover': {
+            background: colorScheme.getCSSColor('text'),
+            color: colorScheme.getCSSColor('default'),
           },
         },
       }),
     [colorScheme],
-  );
+  )
 
-  const isChangeable = !choice || !!changeable;
+  const isChangeable = !choice || !!changeable
   return (
     <Card label={title}>
       <div {...(horizontal && styles.horizontal)}>
         {options.map((o, i) => {
-          let style = {};
-          const isTrueChoice = choice && o.value === "WAHR";
+          let style = {}
+          const isTrueChoice = choice && o.value === 'WAHR'
           const isWronglySelectedChoice =
-            choice && choice.value.option === o.option && o.value !== "WAHR";
+            choice && choice.value.option === o.option && o.value !== 'WAHR'
 
           return (
             <div
               {...styles.choice}
-              {...colorScheme.set("color", isChangeable ? "text" : "disabled")}
+              {...colorScheme.set('color', isChangeable ? 'text' : 'disabled')}
               {...colorScheme.set(
-                "borderColor",
-                isChangeable ? "text" : "disabled",
+                'borderColor',
+                isChangeable ? 'text' : 'disabled',
               )}
               {...colorScheme.set(
-                "backgroundColor",
+                'backgroundColor',
                 isTrueChoice
-                  ? customTrueColor || "sequential100"
+                  ? customTrueColor || 'sequential100'
                   : isWronglySelectedChoice
-                    ? customWronglySelectedColor || "opposite100"
-                    : "default",
+                    ? customWronglySelectedColor || 'opposite100'
+                    : 'default',
               )}
               {...(isChangeable && hoverRules)}
               style={{
                 ...style,
                 border:
                   isTrueChoice || isWronglySelectedChoice
-                    ? "none"
-                    : "1px solid",
+                    ? 'none'
+                    : '1px solid',
                 flexGrow: 1,
                 marginRight: horizontal && i < options.length - 1 ? 10 : 0,
-                textAlign: horizontal ? "center" : "left",
+                textAlign: horizontal ? 'center' : 'left',
                 padding: `0.8rem ${horizontal ? 0.3 : 1}rem`,
               }}
               {...colorScheme.set(
-                "color",
-                isTrueChoice || isWronglySelectedChoice ? "default" : undefined,
+                'color',
+                isTrueChoice || isWronglySelectedChoice ? 'default' : undefined,
               )}
               onClick={(e) => {
-                e.stopPropagation();
+                e.stopPropagation()
                 if (isChangeable) {
-                  onChange({ id, value: o, result: o.value === "WAHR" });
+                  onChange({ id, value: o, result: o.value === 'WAHR' })
                 }
               }}
             >
               {`${o.option}`}
             </div>
-          );
+          )
         })}
       </div>
       {options.some((o) => o.debriefing) && (
         <Interaction.P style={{ marginTop: 10, minHeight: 25 }}>
-          {choice && choice.value.debriefing && (
+          {choice?.value?.debriefing && (
             <span>
               <RawHtml
                 dangerouslySetInnerHTML={{
@@ -113,18 +113,18 @@ const Choice = ({
               />
               {choice.value.source && (
                 <>
-                  {" "}
+                  {' '}
                   <Editorial.A
                     target={
-                      choice.value.source.includes("www.republik.ch")
-                        ? ""
-                        : "_blank"
+                      choice.value.source.includes('www.republik.ch')
+                        ? ''
+                        : '_blank'
                     }
                     href={choice.value.source}
                   >
                     {choice.value.sourceTitle}
                   </Editorial.A>
-                  {choice.value.customEndMark || "."}
+                  {choice.value.customEndMark || '.'}
                 </>
               )}
             </span>
@@ -132,7 +132,7 @@ const Choice = ({
         </Interaction.P>
       )}
     </Card>
-  );
-};
+  )
+}
 
-export default Choice;
+export default Choice
