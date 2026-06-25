@@ -9,6 +9,7 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index',
     },
+    minify: false,
     copyPublicDir: false,
   },
   plugins: [react()],
