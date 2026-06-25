@@ -1,0 +1,470 @@
+{
+  "bern": {
+    "highlightKey": "Annual_Mean_Temperature",
+    "distance": 212,
+    "orig": {
+      "current_city": "Bern",
+      "Annual_Mean_Temperature": 9,
+      "future_Annual_Mean_Temperature": 11.36666667,
+      "Annual_Precipitation": 1035,
+      "future_Annual_Precipitation": 896.6666667,
+      "Max_Temperature_of_Warmest_Month": 22.29999924,
+      "future_Max_Temperature_of_Warmest_Month": 27.2,
+      "Min_Temperature_of_Coldest_Month": -5.300000191,
+      "future_Min_Temperature_of_Coldest_Month": -0.533333333,
+      "label": "Bern",
+      "country": "Schweiz"
+    },
+    "dest": {
+      "current_city": "Milan",
+      "Annual_Mean_Temperature": 13.38333321,
+      "future_Annual_Mean_Temperature": 15.86666667,
+      "Annual_Precipitation": 994,
+      "future_Annual_Precipitation": 993,
+      "Max_Temperature_of_Warmest_Month": 27.10000038,
+      "future_Max_Temperature_of_Warmest_Month": 34.3,
+      "Min_Temperature_of_Coldest_Month": -2.099999905,
+      "future_Min_Temperature_of_Coldest_Month": 1.533333333,
+      "label": "Mailand",
+      "country": "Italien"
+    }
+  },
+  "helsinki": {
+    "highlightKey": "Min_Temperature_of_Coldest_Month",
+    "distance": 1428,
+    "orig": {
+      "current_city": "Helsinki",
+      "Annual_Mean_Temperature": 5.404166698,
+      "future_Annual_Mean_Temperature": 8.233333333,
+      "Annual_Precipitation": 647,
+      "future_Annual_Precipitation": 694.3333333,
+      "Max_Temperature_of_Warmest_Month": 19.29999924,
+      "future_Max_Temperature_of_Warmest_Month": 24.46666667,
+      "Min_Temperature_of_Coldest_Month": -9.399999619,
+      "future_Min_Temperature_of_Coldest_Month": -5.3,
+      "label": "Helsinki",
+      "country": "Finnland"
+    },
+    "dest": {
+      "current_city": "Bratislava",
+      "Annual_Mean_Temperature": 10.3791666,
+      "future_Annual_Mean_Temperature": 12.96666667,
+      "Annual_Precipitation": 637,
+      "future_Annual_Precipitation": 650.6666667,
+      "Max_Temperature_of_Warmest_Month": 23.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 31.06666667,
+      "Min_Temperature_of_Coldest_Month": -5.099999905,
+      "future_Min_Temperature_of_Coldest_Month": -1.2,
+      "label": "Bratislava",
+      "country": "Slowakei"
+    }
+  },
+  "miami": {
+    "highlightKey": "Annual_Precipitation",
+    "distance": 367,
+    "orig": {
+      "current_city": "Miami",
+      "Annual_Mean_Temperature": 24.68333435,
+      "future_Annual_Mean_Temperature": 26.03333333,
+      "Annual_Precipitation": 1502,
+      "future_Annual_Precipitation": 1226.666667,
+      "Max_Temperature_of_Warmest_Month": 32.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 33.26666667,
+      "Min_Temperature_of_Coldest_Month": 16.5,
+      "future_Min_Temperature_of_Coldest_Month": 17.2,
+      "label": "Miami",
+      "country": "USA"
+    },
+    "dest": {
+      "current_city": "Havana",
+      "Annual_Mean_Temperature": 25.77083397,
+      "future_Annual_Mean_Temperature": 26.9,
+      "Annual_Precipitation": 1266,
+      "future_Annual_Precipitation": 1143,
+      "Max_Temperature_of_Warmest_Month": 32.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 34.16666667,
+      "Min_Temperature_of_Coldest_Month": 19.10000038,
+      "future_Min_Temperature_of_Coldest_Month": 19.1,
+      "label": "Havanna",
+      "country": "Kuba"
+    }
+  },
+  "baghdad": {
+    "highlightKey": "Max_Temperature_of_Warmest_Month",
+    "distance": 449,
+    "orig": {
+      "current_city": "Baghdad",
+      "Annual_Mean_Temperature": 23.39166641,
+      "future_Annual_Mean_Temperature": 25.5,
+      "Annual_Precipitation": 174,
+      "future_Annual_Precipitation": 174.6666667,
+      "Max_Temperature_of_Warmest_Month": 42.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 46.8,
+      "Min_Temperature_of_Coldest_Month": 1.700000048,
+      "future_Min_Temperature_of_Coldest_Month": 6.366666667,
+      "label": "Bagdad",
+      "country": "Irak"
+    },
+    "dest": {
+      "current_city": "Basra",
+      "Annual_Mean_Temperature": 24.82083321,
+      "future_Annual_Mean_Temperature": 27.06666667,
+      "Annual_Precipitation": 161,
+      "future_Annual_Precipitation": 189,
+      "Max_Temperature_of_Warmest_Month": 43.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 44.63333333,
+      "Min_Temperature_of_Coldest_Month": 3.299999952,
+      "future_Min_Temperature_of_Coldest_Month": 9.166666667,
+      "label": "Basra",
+      "country": "Irak"
+    }
+  },
+  "edinburgh": {
+    "distance": 535,
+    "orig": {
+      "current_city": "Edinburgh",
+      "Annual_Mean_Temperature": 8.766666412,
+      "future_Annual_Mean_Temperature": 10.43333333,
+      "Annual_Precipitation": 659,
+      "future_Annual_Precipitation": 710,
+      "Max_Temperature_of_Warmest_Month": 17.70000076,
+      "future_Max_Temperature_of_Warmest_Month": 21.96666667,
+      "Min_Temperature_of_Coldest_Month": -0.5,
+      "future_Min_Temperature_of_Coldest_Month": 1.266666667,
+      "label": "Edinburgh",
+      "country": "Grossbritannien"
+    },
+    "dest": {
+      "current_city": "London",
+      "Annual_Mean_Temperature": 11.1291666,
+      "future_Annual_Mean_Temperature": 13.2,
+      "Annual_Precipitation": 638,
+      "future_Annual_Precipitation": 621.3333333,
+      "Max_Temperature_of_Warmest_Month": 21,
+      "future_Max_Temperature_of_Warmest_Month": 26.93333333,
+      "Min_Temperature_of_Coldest_Month": 0.200000003,
+      "future_Min_Temperature_of_Coldest_Month": 3.233333333,
+      "label": "London",
+      "country": "Grossbritannien"
+    }
+  },
+  "stockholm": {
+    "distance": 1242,
+    "orig": {
+      "current_city": "Stockholm",
+      "Annual_Mean_Temperature": 6.650000095,
+      "future_Annual_Mean_Temperature": 9.7,
+      "Annual_Precipitation": 550,
+      "future_Annual_Precipitation": 544.3333333,
+      "Max_Temperature_of_Warmest_Month": 19.79999924,
+      "future_Max_Temperature_of_Warmest_Month": 25.73333333,
+      "Min_Temperature_of_Coldest_Month": -7.5,
+      "future_Min_Temperature_of_Coldest_Month": -2.633333333,
+      "label": "Stockholm",
+      "country": "Schweden"
+    },
+    "dest": {
+      "current_city": "Vienna",
+      "Annual_Mean_Temperature": 10.54166698,
+      "future_Annual_Mean_Temperature": 12.86666667,
+      "Annual_Precipitation": 596,
+      "future_Annual_Precipitation": 644.3333333,
+      "Max_Temperature_of_Warmest_Month": 23.39999962,
+      "future_Max_Temperature_of_Warmest_Month": 30.96666667,
+      "Min_Temperature_of_Coldest_Month": -4.300000191,
+      "future_Min_Temperature_of_Coldest_Month": -0.833333333,
+      "label": "Wien",
+      "country": "Österreich"
+    }
+  },
+  "paris": {
+    "distance": 2258,
+    "orig": {
+      "current_city": "Paris",
+      "Annual_Mean_Temperature": 12.1875,
+      "future_Annual_Mean_Temperature": 13.63333333,
+      "Annual_Precipitation": 685,
+      "future_Annual_Precipitation": 627,
+      "Max_Temperature_of_Warmest_Month": 22.70000076,
+      "future_Max_Temperature_of_Warmest_Month": 28.83333333,
+      "Min_Temperature_of_Coldest_Month": 0.400000006,
+      "future_Min_Temperature_of_Coldest_Month": 2.666666667,
+      "label": "Paris",
+      "country": "Frankreich"
+    },
+    "dest": {
+      "current_city": "Istanbul",
+      "Annual_Mean_Temperature": 14.04166698,
+      "future_Annual_Mean_Temperature": 16.13333333,
+      "Annual_Precipitation": 731,
+      "future_Annual_Precipitation": 874.6666667,
+      "Max_Temperature_of_Warmest_Month": 26.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 30,
+      "Min_Temperature_of_Coldest_Month": 0.899999976,
+      "future_Min_Temperature_of_Coldest_Month": 4.333333333,
+      "label": "Istanbul",
+      "country": "Türkei"
+    }
+  },
+  "monaco": {
+    "distance": 465,
+    "orig": {
+      "current_city": "Monaco",
+      "Annual_Mean_Temperature": 13.72916698,
+      "future_Annual_Mean_Temperature": 15.9,
+      "Annual_Precipitation": 812,
+      "future_Annual_Precipitation": 787.3333333,
+      "Max_Temperature_of_Warmest_Month": 26,
+      "future_Max_Temperature_of_Warmest_Month": 29,
+      "Min_Temperature_of_Coldest_Month": 2.299999952,
+      "future_Min_Temperature_of_Coldest_Month": 4.833333333,
+      "label": "Monaco",
+      "country": "Monaco"
+    },
+    "dest": {
+      "current_city": "Rome",
+      "Annual_Mean_Temperature": 15.59166622,
+      "future_Annual_Mean_Temperature": 18.13333333,
+      "Annual_Precipitation": 708,
+      "future_Annual_Precipitation": 776.3333333,
+      "Max_Temperature_of_Warmest_Month": 28.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 34.13333333,
+      "Min_Temperature_of_Coldest_Month": 2.900000095,
+      "future_Min_Temperature_of_Coldest_Month": 5.7,
+      "label": "Rom",
+      "country": "Italien"
+    }
+  },
+  "rome": {
+    "distance": 2031,
+    "orig": {
+      "current_city": "Rome",
+      "Annual_Mean_Temperature": 15.59166622,
+      "future_Annual_Mean_Temperature": 18.13333333,
+      "Annual_Precipitation": 708,
+      "future_Annual_Precipitation": 776.3333333,
+      "Max_Temperature_of_Warmest_Month": 28.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 34.13333333,
+      "Min_Temperature_of_Coldest_Month": 2.900000095,
+      "future_Min_Temperature_of_Coldest_Month": 5.7,
+      "label": "Rom",
+      "country": "Italien"
+    },
+    "dest": {
+      "current_city": "Adana",
+      "Annual_Mean_Temperature": 18.98749924,
+      "future_Annual_Mean_Temperature": 21.83333333,
+      "Annual_Precipitation": 697,
+      "future_Annual_Precipitation": 625.3333333,
+      "Max_Temperature_of_Warmest_Month": 33.5,
+      "future_Max_Temperature_of_Warmest_Month": 37.86666667,
+      "Min_Temperature_of_Coldest_Month": 5,
+      "future_Min_Temperature_of_Coldest_Month": 6,
+      "label": "Adana",
+      "country": "Türkei"
+    }
+  },
+  "montreal": {
+    "distance": 1145,
+    "orig": {
+      "current_city": "Montreal",
+      "Annual_Mean_Temperature": 6.895833492,
+      "future_Annual_Mean_Temperature": 10.1,
+      "Annual_Precipitation": 1019,
+      "future_Annual_Precipitation": 1084.333333,
+      "Max_Temperature_of_Warmest_Month": 25.29999924,
+      "future_Max_Temperature_of_Warmest_Month": 31.03333333,
+      "Min_Temperature_of_Coldest_Month": -15.30000019,
+      "future_Min_Temperature_of_Coldest_Month": -10.03333333,
+      "label": "Montreal",
+      "country": "Kanada"
+    },
+    "dest": {
+      "current_city": "Cincinnati",
+      "Annual_Mean_Temperature": 11.82083321,
+      "future_Annual_Mean_Temperature": 15.2,
+      "Annual_Precipitation": 1075,
+      "future_Annual_Precipitation": 1106.666667,
+      "Max_Temperature_of_Warmest_Month": 29.5,
+      "future_Max_Temperature_of_Warmest_Month": 35,
+      "Min_Temperature_of_Coldest_Month": -7.900000095,
+      "future_Min_Temperature_of_Coldest_Month": -3.466666667,
+      "label": "Cincinnati",
+      "country": "USA"
+    }
+  },
+  "seattle": {
+    "distance": 1095,
+    "orig": {
+      "current_city": "Seattle",
+      "Annual_Mean_Temperature": 11.03750038,
+      "future_Annual_Mean_Temperature": 13.6,
+      "Annual_Precipitation": 958,
+      "future_Annual_Precipitation": 969,
+      "Max_Temperature_of_Warmest_Month": 21.39999962,
+      "future_Max_Temperature_of_Warmest_Month": 27.5,
+      "Min_Temperature_of_Coldest_Month": -0.400000006,
+      "future_Min_Temperature_of_Coldest_Month": 4.1,
+      "label": "Seattle",
+      "country": "USA"
+    },
+    "dest": {
+      "current_city": "San Francisco",
+      "Annual_Mean_Temperature": 13.91666698,
+      "future_Annual_Mean_Temperature": 15.33333333,
+      "Annual_Precipitation": 877,
+      "future_Annual_Precipitation": 734.3333333,
+      "Max_Temperature_of_Warmest_Month": 22.5,
+      "future_Max_Temperature_of_Warmest_Month": 23.43333333,
+      "Min_Temperature_of_Coldest_Month": 3.299999952,
+      "future_Min_Temperature_of_Coldest_Month": 7.566666667,
+      "label": "San Francisco",
+      "country": "USA"
+    }
+  },
+  "las vegas": {
+    "distance": 414,
+    "orig": {
+      "current_city": "Las Vegas",
+      "Annual_Mean_Temperature": 19.25416756,
+      "future_Annual_Mean_Temperature": 21.06666667,
+      "Annual_Precipitation": 116,
+      "future_Annual_Precipitation": 106,
+      "Max_Temperature_of_Warmest_Month": 38.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 42.36666667,
+      "Min_Temperature_of_Coldest_Month": 0.200000003,
+      "future_Min_Temperature_of_Coldest_Month": 1.9,
+      "label": "Las Vegas",
+      "country": "USA"
+    },
+    "dest": {
+      "current_city": "Phoenix",
+      "Annual_Mean_Temperature": 22.3125,
+      "future_Annual_Mean_Temperature": 24.13333333,
+      "Annual_Precipitation": 214,
+      "future_Annual_Precipitation": 206.3333333,
+      "Max_Temperature_of_Warmest_Month": 41.20000076,
+      "future_Max_Temperature_of_Warmest_Month": 43.4,
+      "Min_Temperature_of_Coldest_Month": 3.299999952,
+      "future_Min_Temperature_of_Coldest_Month": 5.6,
+      "label": "Phoenix",
+      "country": "USA"
+    }
+  },
+  "salvador": {
+    "distance": 668,
+    "orig": {
+      "current_city": "Salvador",
+      "Annual_Mean_Temperature": 25.25,
+      "future_Annual_Mean_Temperature": 26.8,
+      "Annual_Precipitation": 2065,
+      "future_Annual_Precipitation": 1548,
+      "Max_Temperature_of_Warmest_Month": 29.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 32.13333333,
+      "Min_Temperature_of_Coldest_Month": 20.10000038,
+      "future_Min_Temperature_of_Coldest_Month": 21.8,
+      "label": "Salvador",
+      "country": "Brasilien"
+    },
+    "dest": {
+      "current_city": "Recife",
+      "Annual_Mean_Temperature": 25.47083282,
+      "future_Annual_Mean_Temperature": 27.46666667,
+      "Annual_Precipitation": 1585,
+      "future_Annual_Precipitation": 1672.333333,
+      "Max_Temperature_of_Warmest_Month": 30,
+      "future_Max_Temperature_of_Warmest_Month": 32,
+      "Min_Temperature_of_Coldest_Month": 20.20000076,
+      "future_Min_Temperature_of_Coldest_Month": 22.56666667,
+      "label": "Recife",
+      "country": "Brasilien"
+    }
+  },
+  "harare": {
+    "distance": 518,
+    "orig": {
+      "current_city": "Harare",
+      "Annual_Mean_Temperature": 18.07083321,
+      "future_Annual_Mean_Temperature": 20.56666667,
+      "Annual_Precipitation": 861,
+      "future_Annual_Precipitation": 881,
+      "Max_Temperature_of_Warmest_Month": 27.89999962,
+      "future_Max_Temperature_of_Warmest_Month": 30.8,
+      "Min_Temperature_of_Coldest_Month": 6.300000191,
+      "future_Min_Temperature_of_Coldest_Month": 8.566666667,
+      "label": "Harare",
+      "country": "Zimbabwe"
+    },
+    "dest": {
+      "current_city": "Lilongwe",
+      "Annual_Mean_Temperature": 20.63333321,
+      "future_Annual_Mean_Temperature": 22.43333333,
+      "Annual_Precipitation": 872,
+      "future_Annual_Precipitation": 838,
+      "Max_Temperature_of_Warmest_Month": 29.60000038,
+      "future_Max_Temperature_of_Warmest_Month": 32.66666667,
+      "Min_Temperature_of_Coldest_Month": 10.10000038,
+      "future_Min_Temperature_of_Coldest_Month": 10.46666667,
+      "label": "Lilongwe",
+      "country": "Malawi"
+    }
+  },
+  "bishkek": {
+    "distance": 470,
+    "orig": {
+      "current_city": "Bishkek",
+      "Annual_Mean_Temperature": 11.29166698,
+      "future_Annual_Mean_Temperature": 13.43333333,
+      "Annual_Precipitation": 434,
+      "future_Annual_Precipitation": 493.6666667,
+      "Max_Temperature_of_Warmest_Month": 30.70000076,
+      "future_Max_Temperature_of_Warmest_Month": 34.46666667,
+      "Min_Temperature_of_Coldest_Month": -9.5,
+      "future_Min_Temperature_of_Coldest_Month": -5.7,
+      "label": "Bischkek",
+      "country": "Kirgistan"
+    },
+    "dest": {
+      "current_city": "Tashkent",
+      "Annual_Mean_Temperature": 14.38749981,
+      "future_Annual_Mean_Temperature": 17.53333333,
+      "Annual_Precipitation": 480,
+      "future_Annual_Precipitation": 475.6666667,
+      "Max_Temperature_of_Warmest_Month": 33.29999924,
+      "future_Max_Temperature_of_Warmest_Month": 39.36666667,
+      "Min_Temperature_of_Coldest_Month": -6.599999905,
+      "future_Min_Temperature_of_Coldest_Month": 0.2,
+      "label": "Taschkent",
+      "country": "Usbekistan"
+    }
+  },
+  "tokyo": {
+    "distance": 2656,
+    "orig": {
+      "current_city": "Tokyo",
+      "Annual_Mean_Temperature": 15.8083334,
+      "future_Annual_Mean_Temperature": 17.8,
+      "Annual_Precipitation": 1434,
+      "future_Annual_Precipitation": 1542,
+      "Max_Temperature_of_Warmest_Month": 30.5,
+      "future_Max_Temperature_of_Warmest_Month": 32.4,
+      "Min_Temperature_of_Coldest_Month": 2.799999952,
+      "future_Min_Temperature_of_Coldest_Month": 2.866666667,
+      "label": "Tokio",
+      "country": "Japan"
+    },
+    "dest": {
+      "current_city": "Changsha",
+      "Annual_Mean_Temperature": 17.63750076,
+      "future_Annual_Mean_Temperature": 20.13333333,
+      "Annual_Precipitation": 1441,
+      "future_Annual_Precipitation": 1507.333333,
+      "Max_Temperature_of_Warmest_Month": 33.40000153,
+      "future_Max_Temperature_of_Warmest_Month": 36.66666667,
+      "Min_Temperature_of_Coldest_Month": 2.099999905,
+      "future_Min_Temperature_of_Coldest_Month": 4,
+      "label": "Changsha",
+      "country": "China"
+    }
+  }
+}

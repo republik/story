@@ -1,0 +1,46 @@
+{
+  "name": "my-country-talks",
+  "version": "0.1.0",
+  "description": "Custom Consent UI for My Country Talks widget.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"rollup -c -w\" \"cd test && node server.js\"",
+    "build": "rollup -c && npm run fonts",
+    "fonts": "cp -R fonts/*/ build/fonts",
+    "deploy": "s3cmd sync --exclude '.DS_Store' --verbose --acl-public build/ s3://republik-assets/dynamic-components/my-country-talks/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/my-country-talks.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/my-country-talks/issues"
+  },
+  "homepage": "https://github.com/orbiting/my-country-talks#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-eslint": "^8.2.6",
+    "concurrently": "^3.6.1",
+    "eslint": "^5.3.0",
+    "eslint-plugin-react": "^7.10.0",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "glamor": "^2.20.40",
+    "lodash.debounce": "^4.0.8",
+    "next": "^6.1.1",
+    "prettier": "^1.14.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.1",
+    "rollup": "^0.64.1",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-babel": "^4.0.0-beta.5",
+    "rollup-plugin-commonjs": "^9.1.5",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0"
+  }
+}

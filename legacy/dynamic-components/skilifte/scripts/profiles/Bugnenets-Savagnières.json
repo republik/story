@@ -1,0 +1,241 @@
+{
+  "name": "Bugnenets-Savagnières",
+  "profile": [
+    {
+      "dist": 0,
+      "alts": {
+        "COMB": 1132.3
+      },
+      "easting": 567459,
+      "northing": 219602
+    },
+    {
+      "dist": 188.8,
+      "alts": {
+        "COMB": 1164.3
+      },
+      "easting": 567629.3,
+      "northing": 219520.5
+    },
+    {
+      "dist": 377.6,
+      "alts": {
+        "COMB": 1189.1
+      },
+      "easting": 567799.6,
+      "northing": 219439
+    },
+    {
+      "dist": 566.4,
+      "alts": {
+        "COMB": 1223.6
+      },
+      "easting": 567969.9,
+      "northing": 219357.5
+    },
+    {
+      "dist": 755.2,
+      "alts": {
+        "COMB": 1277.8
+      },
+      "easting": 568140.2,
+      "northing": 219276
+    },
+    {
+      "dist": 944,
+      "alts": {
+        "COMB": 1346.1
+      },
+      "easting": 568310.5,
+      "northing": 219194.5
+    },
+    {
+      "dist": 1132.8,
+      "alts": {
+        "COMB": 1416.4
+      },
+      "easting": 568480.8,
+      "northing": 219113
+    },
+    {
+      "dist": 1321.6,
+      "alts": {
+        "COMB": 1348.6
+      },
+      "easting": 568651.1,
+      "northing": 219031.5
+    },
+    {
+      "dist": 1510.4,
+      "alts": {
+        "COMB": 1395.2
+      },
+      "easting": 568821.4,
+      "northing": 218950
+    },
+    {
+      "dist": 1699.2,
+      "alts": {
+        "COMB": 1443.3
+      },
+      "easting": 568991.7,
+      "northing": 218868.5
+    },
+    {
+      "dist": 1888,
+      "alts": {
+        "COMB": 1501.3
+      },
+      "easting": 569162,
+      "northing": 218787
+    }
+  ],
+  "data": [
+    {
+      "﻿OBJEKTART": "Skilift",
+      "UUID": "{C202ABD2-A978-43A2-923B-BACF98884E54}",
+      "NAME": "Chasseral",
+      "MIN_E": "567198",
+      "MIN_N": "218928",
+      "MIN_Z": "1097",
+      "MAX_E": "568469",
+      "MAX_N": "219033",
+      "MAX_Z": "1427",
+      "SKIGEBIET": "Bugnenets-Savagnières",
+      "2005 mid": "yellow",
+      "2005 bottom": "yellow",
+      "2005 top": "yellow",
+      "2035 mid": "yellow",
+      "2035 bottom": "red",
+      "2035 top": "yellow",
+      "2060 mid": "red",
+      "2060 bottom": "red",
+      "2060 top": "yellow",
+      "2085 mid": "red",
+      "2085 bottom": "red",
+      "2085 top": "red"
+    },
+    {
+      "﻿OBJEKTART": "Skilift",
+      "UUID": "{EBCCF3EC-D268-4E2D-9747-D7FF7D824EDF}",
+      "NAME": "Le Rumont",
+      "MIN_E": "567096",
+      "MIN_N": "218757",
+      "MIN_Z": "1083",
+      "MAX_E": "568280",
+      "MAX_N": "218649",
+      "MAX_Z": "1386",
+      "SKIGEBIET": "Bugnenets-Savagnières",
+      "2005 mid": "yellow",
+      "2005 bottom": "yellow",
+      "2005 top": "yellow",
+      "2035 mid": "yellow",
+      "2035 bottom": "red",
+      "2035 top": "yellow",
+      "2060 mid": "red",
+      "2060 bottom": "red",
+      "2060 top": "red",
+      "2085 mid": "red",
+      "2085 bottom": "red",
+      "2085 top": "red"
+    },
+    {
+      "﻿OBJEKTART": "Skilift",
+      "UUID": "{971326D8-22FA-493E-AC17-41F5697E2621}",
+      "NAME": "Les Pointes",
+      "MIN_E": "567826",
+      "MIN_N": "219307",
+      "MIN_Z": "1203",
+      "MAX_E": "568511",
+      "MAX_N": "219070",
+      "MAX_Z": "1425",
+      "SKIGEBIET": "Bugnenets-Savagnières",
+      "2005 mid": "yellow",
+      "2005 bottom": "yellow",
+      "2005 top": "green",
+      "2035 mid": "yellow",
+      "2035 bottom": "yellow",
+      "2035 top": "yellow",
+      "2060 mid": "red",
+      "2060 bottom": "red",
+      "2060 top": "yellow",
+      "2085 mid": "red",
+      "2085 bottom": "red",
+      "2085 top": "red"
+    },
+    {
+      "﻿OBJEKTART": "Skilift",
+      "UUID": "{3260B42E-5A13-417B-A65C-29ADDBBD71E7}",
+      "NAME": "Sava I",
+      "MIN_E": "567469",
+      "MIN_N": "219605",
+      "MIN_Z": "1136",
+      "MAX_E": "568783",
+      "MAX_N": "219477",
+      "MAX_Z": "1456",
+      "SKIGEBIET": "Bugnenets-Savagnières",
+      "2005 mid": "yellow",
+      "2005 bottom": "yellow",
+      "2005 top": "green",
+      "2035 mid": "yellow",
+      "2035 bottom": "red",
+      "2035 top": "yellow",
+      "2060 mid": "red",
+      "2060 bottom": "red",
+      "2060 top": "yellow",
+      "2085 mid": "red",
+      "2085 bottom": "red",
+      "2085 top": "red"
+    },
+    {
+      "﻿OBJEKTART": "Skilift",
+      "UUID": "{D0E33AB5-BC91-43A8-8B56-A14422E6486F}",
+      "NAME": "Sava II",
+      "MIN_E": "567456",
+      "MIN_N": "219599",
+      "MIN_Z": "1136",
+      "MAX_E": "568782",
+      "MAX_N": "219470",
+      "MAX_Z": "1456",
+      "SKIGEBIET": "Bugnenets-Savagnières",
+      "2005 mid": "yellow",
+      "2005 bottom": "yellow",
+      "2005 top": "green",
+      "2035 mid": "yellow",
+      "2035 bottom": "red",
+      "2035 top": "yellow",
+      "2060 mid": "red",
+      "2060 bottom": "red",
+      "2060 top": "yellow",
+      "2085 mid": "red",
+      "2085 bottom": "red",
+      "2085 top": "red"
+    }
+  ],
+  "stations": [
+    {
+      "name": "Savagnières",
+      "E": 567459,
+      "N": 219602,
+      "Z": 1132,
+      "dist": 0,
+      "alts": {
+        "COMB": 1132.3
+      },
+      "easting": 567459,
+      "northing": 219602
+    },
+    {
+      "name": "Col du Chasseral",
+      "E": 569162,
+      "N": 218787,
+      "Z": 1501,
+      "dist": 1888,
+      "alts": {
+        "COMB": 1501.3
+      },
+      "easting": 569162,
+      "northing": 218787
+    }
+  ]
+}

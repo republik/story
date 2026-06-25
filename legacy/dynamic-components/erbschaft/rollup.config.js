@@ -1,0 +1,74 @@
+import babel from 'rollup-plugin-babel'
+import resolve from 'rollup-plugin-node-resolve'
+import commonjs from 'rollup-plugin-commonjs'
+import json from 'rollup-plugin-json'
+import replace from 'rollup-plugin-replace'
+import alias from 'rollup-plugin-alias'
+import builtins from 'rollup-plugin-node-builtins'
+
+import { dataToEsm } from 'rollup-pluginutils'
+import parseSRT from 'parse-srt'
+
+import { join } from 'path'
+
+function srt() {
+  return {
+    name: 'srt',
+    transform(srt, id) {
+      if (id.slice(-4) !== '.srt') return null
+
+      return {
+        code: dataToEsm(
+          parseSRT(srt).map(line => ({
+            text: line.text,
+            start: line.start
+          }))
+        ),
+        map: { mappings: '' }
+      }
+    }
+  }
+}
+
+export default [
+  ['index.js'],
+  ['collage.js']
+].map(([entryFile, locale, outputFile]) => ({
+  input: join('src', entryFile),
+  output: {
+    file: join('build', outputFile || entryFile),
+    format: 'amd'
+  },
+  external: [
+    // default
+    'react', 'prop-types', 'glamor',
+    '@project-r/styleguide', '@project-r/styleguide/chart',
+    'react-apollo', 'graphql-tag'
+  ],
+  plugins: [
+    // locale && replace({
+    //   'translations.$locale.json': `translations.${locale}.json`
+    // }),
+    json(),
+    srt(),
+    babel({
+      runtimeHelpers: true,
+      exclude: 'node_modules/**',
+      presets: [
+        "@babel/react",
+        ["@babel/env", {
+          "targets": {
+            "browsers": ["last 2 versions", "safari >= 7"]
+          },
+          "modules": false
+        }]
+      ]
+    }),
+    builtins(),
+    resolve(),
+    commonjs(),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  ].filter(Boolean)
+}))

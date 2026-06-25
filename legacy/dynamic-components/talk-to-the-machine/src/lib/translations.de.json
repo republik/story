@@ -1,0 +1,266 @@
+{
+  "updated": "2018-07-23T22:57:51.602Z",
+  "title": "de",
+  "data": [
+    {
+      "key": "sort/code/placeholder",
+      "value": "Stärn-Släsch-Kommentar – jetzt sind Sie dran, Ihr Code:"
+    },
+    {
+      "key": "sort/code/swap",
+      "value": "tauschen"
+    },
+    {
+      "key": "sort/code/function",
+      "value": "Eine Abstraktion, für lesbareren Code!"
+    },
+    {
+      "key": "sort/code/swap/if",
+      "value": "Falls die Zahl an Position {position1} grösser ist als an Position {position2}"
+    },
+    {
+      "key": "sort/code/swap/then",
+      "value": "dann"
+    },
+    {
+      "key": "sort/code/bubble/for1",
+      "value": "Für jedes Element im Array"
+    },
+    {
+      "key": "sort/code/bubble/for2",
+      "value": "und für jede Position im Array"
+    },
+    {
+      "key": "sort/code/bubble/if",
+      "value": "vergleichen wir die Zahlen"
+    },
+    {
+      "key": "sort/code/bubble/then",
+      "value": "und tauschen Sie falls nötig"
+    },
+    {
+      "key": "sort/101/title/closed",
+      "value": "Programmieren 1x1?"
+    },
+    {
+      "key": "sort/101/title/open",
+      "value": "Programmieren 1x1:"
+    },
+    {
+      "key": "sort/101/swap",
+      "value": "Erste Position mit zweiter tauschen"
+    },
+    {
+      "key": "sort/101/swap/tmp",
+      "value": "Ein Zwischenspeicher"
+    },
+    {
+      "key": "sort/101/if",
+      "value": "Ist die erste kleiner als die zweite?"
+    },
+    {
+      "key": "sort/101/if/true",
+      "value": "Tun Sie was hier!"
+    },
+    {
+      "key": "sort/101/if/false",
+      "value": "Falls nicht"
+    },
+    {
+      "key": "sort/101/for",
+      "value": "In einer Schlaufe?"
+    },
+    {
+      "key": "sort/101/for/inside",
+      "value": "Code hier!"
+    },
+    {
+      "key": "sort/101/for/nested",
+      "value": "Jede Position mit jeder vergleichen? Verschachteln!"
+    },
+    {
+      "key": "sort/101/for/nested/inside",
+      "value": "Action!"
+    },
+    {
+      "key": "sort/result/correct/generic",
+      "value": "Richtig!"
+    },
+    {
+      "key": "sort/result/correct/manual",
+      "value": "Sie habens gelöst. Nicht für alle Fälle, aber für diesen Fall."
+    },
+    {
+      "key": "sort/result/correct/unkown",
+      "value": "Es funktioniert! Vielleicht mit einem Trick oder nicht mutierend. Aber es funktioniert."
+    },
+    {
+      "key": "sort/result/correct/cheat",
+      "value": "Na ja, die Sortierfunktion ab Stange zu benutzen, ist jetzt keine Leistung. Aber es löst das Problem."
+    },
+    {
+      "key": "sort/result/wrong",
+      "value": "Sie sind hier nicht fertig. Aktuell: {current}, Ziel: {answer}."
+    },
+    {
+      "key": "sort/controls/label",
+      "value": "Optionen:"
+    },
+    {
+      "key": "sort/controls/autoRun",
+      "value": "Code ausführen"
+    },
+    {
+      "key": "sort/controls/reset",
+      "value": "zurücksetzen"
+    },
+    {
+      "key": "sort/error",
+      "value": "Es hat sich ein Fehler in Ihren Code eingeschlichen:"
+    },
+    {
+      "key": "sort/phase/1/title",
+      "value": "Lernen Sie einen Trick!"
+    },
+    {
+      "key": "sort/phase/1/description",
+      "value": "Bringen Sie die Kreise in Ordnung. Sortieren Sie die Zahlen aufsteigend."
+    },
+    {
+      "key": "sort/phase/1/code",
+      "value": "Schreiben Sie etwas Javascript, um die Kreise zu sortieren. Ein kleines Einmaleins dazu finden Sie unter dem Eingabefeld. Total überfordert? Sie können die Kreise auch per Hand bewegen und in die richtige Reihenfolge bekommen."
+    },
+    {
+      "key": "sort/phase/1/smallNote",
+      "value": "Die Programmieraufgabe auf dem kleinen Bildschirm zu lösen, ist knifflig. Mit mehr Platz geht es besser."
+    },
+    {
+      "key": "sort/phase/1/protip",
+      "value": "ProTip™: {input} ist ein Array. {zero} ist die erste Zahl und die erste Position im Array."
+    },
+    {
+      "key": "sort/phase/2/title",
+      "value": "Das mühsame Sortieren"
+    },
+    {
+      "key": "sort/phase/2/description",
+      "value": "Bringen Sie 15 Kreise in Ordnung. Sortieren Sie die Zahlen aufsteigend."
+    },
+    {
+      "key": "sort/phase/2/code",
+      "value": "Schreiben Sie etwas Javascript, um die Kreise zu sortieren."
+    },
+    {
+      "key": "sort/phase/2/protip",
+      "value": "ProTip™: {input} ist ein Array und muss verändert werden. Mutieren Sie mit gutem Gewissen."
+    },
+    {
+      "key": "sort/phase/3/title",
+      "value": "Der letzte Test"
+    },
+    {
+      "key": "sort/phase/3/description",
+      "value": "Bringen Sie 30 Kreise in eine aufsteigende Reihenfolge."
+    },
+    {
+      "key": "sort/phase/3/code",
+      "value": "Schreiben Sie etwas Javascript, um die Kreise zu sortieren. Total überfordert? Wenn Sie die ersten paar Kreise von Hand sortieren, helfen wir Ihnen!"
+    },
+    {
+      "key": "sort/phase/3/protip",
+      "value": "ProTip™: {input} ist ein Array und muss verändert werden. Mutieren Sie mit gutem Gewissen."
+    },
+    {
+      "key": "sort/compare/title",
+      "value": "Sortieralgorithmen im Vergleich"
+    },
+    {
+      "key": "sort/compare/description",
+      "value": "Jedes Verfahren hat Vor- und Nachteile. Oft kommen in einem Programm mehrere Algorithmen zum Einsatz, je nach Eingabedaten."
+    },
+    {
+      "key": "sort/compare/your",
+      "value": "Ihre Lösung"
+    },
+    {
+      "key": "sort/compare/credits",
+      "value": "Die Visualisierungen basieren auf Beispielen von <a href=\"https://bl.ocks.org/mbostock/6dcc9a177065881b1bc4\">Mike Bostock</a> und <a href=\"https://beta.observablehq.com/@tmcw/sorting-overview\">Tom MacWright</a>. Ohne sie wären diese interaktiven Visualisierungen nicht möglich gewesen. Vielen Dank!"
+    },
+    {
+      "key": "nn/title",
+      "value": "Das Lernbeispiel: Ziffernerkennung"
+    },
+    {
+      "key": "nn/description",
+      "value": "Dieses Convolutional Neural Network nutzt 6 Schichten mit bis zu 16 Knotenpunkten. Dies ist wenig, 80 Schichten und mehr sind nicht selten."
+    },
+    {
+      "key": "nn/draw",
+      "value": "Zeichnen Sie eine Ziffer:"
+    },
+    {
+      "key": "nn/draw/clear",
+      "value": "zurücksetzen"
+    },
+    {
+      "key": "nn/network",
+      "value": "Ihre Zeichnung wird live zentriert, invertiert und in das Netzwerk gespeist:"
+    },
+    {
+      "key": "nn/legend",
+      "value": "Legende: Die violetten und grünen Quadrate sind Gewichte (weights), die Rechtecke Bevorzugungen der Knoten (biases). Grün ist positiv, violett negativ."
+    },
+    {
+      "key": "nn/model/pretrained",
+      "value": "Dieses Modell haben wir vortrainiert und lediglich in Ihren Browser geladen."
+    },
+    {
+      "key": "nn/model/untrained",
+      "value": "Dieses Modell wurde mit einer Prise Zufall in Ihrem Browser erstellt und ist noch nicht trainiert. Es hat etwa eine 10%-Chance, die richtige Ziffer zu erkennen – zufällig."
+    },
+    {
+      "key": "nn/model/untrained/data",
+      "value": "Laden Sie die Daten, um es zu trainieren."
+    },
+    {
+      "key": "nn/model/trained",
+      "value": "Dieses Modell wurde in Ihrem Browser erstellt und trainiert. Laut Testdaten hat es eine {accuracy}% Chance, die richtige Ziffer zu erkennen."
+    },
+    {
+      "key": "nn/model/create/label",
+      "value": "Modell bearbeiten"
+    },
+    {
+      "key": "nn/model/create/new",
+      "value": "Neues Modell erstellen"
+    },
+    {
+      "key": "nn/model/create/load",
+      "value": "Daten laden (10 mb)"
+    },
+    {
+      "key": "nn/model/create/train",
+      "value": "Modell trainieren"
+    },
+    {
+      "key": "nn/model/create/pretrained",
+      "value": "Bereits trainiertes Modell wieder laden"
+    },
+    {
+      "key": "nn/model/create/warning",
+      "value": "Achtung: Einige, vorallem ältere und mobile, Browser können beim Modellbauen abstürzen. Dies ist meist nicht weiter schlimm, aber wir haben Sie gewarnt."
+    },
+    {
+      "key": "nn/credits",
+      "value": "Datenquelle: <a href=\"http://yann.lecun.com/exdb/mnist/\">MNIST</a>. Vielen Dank an <a href=\"https://twitter.com/tafsiri\">Yannick Assogba</a> und <a href=\"https://github.com/garamond\">Andreas Moor</a> für Ihre Unterstützung bei der Entwicklung dieser Visualisierung."
+    },
+    {
+      "key": "nn/unsupported",
+      "value": "Ihr Browser ist leider zu alt für dieses Beispiel. Bitte nutzen Sie eine aktuelle Version von Firefox, Chrome, Safari oder Edge."
+    },
+    {
+      "key": "nn/unsupported/firefox",
+      "value": "Jetzt Firefox herunterladen"
+    }
+  ]
+}

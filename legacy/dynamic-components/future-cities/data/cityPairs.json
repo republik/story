@@ -1,0 +1,98 @@
+[
+  [
+    {
+      "label": "Bern",
+      "key": "Bern",
+      "country": "Schweiz",
+      "highlightKey": "Annual_Mean_Temperature",
+      "distance": 212
+    },
+    { "label": "Mailand", "key": "Milan",  "country": "Italien" }
+  ],
+  [
+    {
+      "label": "Helsinki",
+      "key": "Helsinki",
+      "country": "Finnland",
+      "highlightKey": "Min_Temperature_of_Coldest_Month",
+      "distance": 1428
+    },
+    { "label": "Bratislava", "key": "Bratislava", "country": "Slowakei" }
+  ],
+  [
+    {
+      "label": "Miami",
+      "key": "Miami",
+      "country": "USA",
+      "highlightKey": "Annual_Precipitation",
+      "distance": 367
+    },
+    { "label": "Havanna", "key": "Havana", "country": "Kuba" }
+  ],
+  [
+    {
+      "label": "Bagdad",
+      "key": "Baghdad",
+      "country": "Irak",
+      "highlightKey": "Max_Temperature_of_Warmest_Month",
+      "distance": 449
+    },
+    { "label": "Basra", "key": "Basra", "country": "Irak" }
+  ],
+  [
+    { "label": "Edinburgh", "key": "Edinburgh", "distance": 535, "country": "Grossbritannien" },
+    { "label": "London", "key": "London", "country": "Grossbritannien" }
+  ],
+  [
+    { "label": "Stockholm", "key": "Stockholm", "distance": 1242, "country": "Schweden" },
+    { "label": "Wien", "key": "Vienna", "country": "Österreich" }
+  ],
+  [
+    { "label": "Paris", "key": "Paris", "distance": 2258, "country": "Frankreich" },
+    { "label": "Istanbul", "key": "Istanbul", "country": "Türkei" }
+  ],
+  [
+    { "label": "Monaco", "key": "Monaco", "distance": 465, "country": "Monaco" },
+    { "label": "Rom", "key": "Rome", "country": "Italien" }
+  ],
+  [
+    { "label": "Rom", "key": "Rome", "country": "Italien",
+      "distance": 2031 },
+    { "label": "Adana", "key": "Adana", "country": "Türkei" }
+  ],
+  [
+    { "label": "Montreal", "key": "Montreal", "country": "Kanada",
+      "distance": 1145 },
+    { "label": "Cincinnati", "key": "Cincinnati", "country": "USA" }
+  ],
+  [
+    { "label": "Seattle", "key": "Seattle", "country": "USA",
+      "distance": 1095 },
+    { "label": "San Francisco", "key": "San Francisco", "country": "USA" }
+  ],
+  [
+    { "label": "Las Vegas", "key": "Las Vegas", "country": "USA",
+      "distance": 414 },
+    { "label": "Phoenix", "key": "Phoenix", "country": "USA" }
+  ],
+  [
+    { "label": "Salvador", "key": "Salvador", "country": "Brasilien",
+      "distance": 668 },
+    { "label": "Recife", "key": "Recife", "country": "Brasilien" }
+  ],
+  [
+    { "label": "Harare", "key": "Harare", "country": "Zimbabwe",
+      "distance": 518 },
+    { "label": "Lilongwe", "key": "Lilongwe", "country": "Malawi" }
+  ],
+  [
+    { "label": "Bischkek", "key": "Bishkek", "country": "Kirgistan",
+      "distance": 470 },
+    { "label": "Taschkent", "key": "Tashkent", "country": "Usbekistan" }
+  ],
+  [
+    { "label": "Tokio", "key": "Tokyo", "country": "Japan",
+      "distance": 2656 },
+    { "label": "Changsha", "key": "Changsha", "country": "China" }
+  ]
+]

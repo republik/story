@@ -1,0 +1,22 @@
+{
+  "Annual_Mean_Temperature": {
+    "max": 15.2,
+    "min": 6.895833492,
+    "diff": 8.304166507999998
+  },
+  "Annual_Precipitation": {
+    "max": 2065,
+    "min": 1548,
+    "diff": 517
+  },
+  "Max_Temperature_of_Warmest_Month": {
+    "max": 34.3,
+    "min": 22.29999924,
+    "diff": 12.000000759999999
+  },
+  "Min_Temperature_of_Coldest_Month": {
+    "max": -3.466666667,
+    "min": -15.30000019,
+    "diff": 11.833333523
+  }
+}

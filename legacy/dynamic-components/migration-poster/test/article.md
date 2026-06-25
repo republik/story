@@ -1,0 +1,208 @@
+---
+template: article
+title: 'Mit dynamischem Teil'
+darkMode: false
+---
+
+<section><h6>TITLE</h6>
+
+# Mit dynamischem Teil
+
+Mach mehr als das CMS erlaubt.
+
+Von einem Team
+
+<hr /></section>
+
+<section><h6>CENTER</h6>
+
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines grossen Sprachozeans. Ein kleines Bächlein namens Duden fliesst durch ihren Ort und versorgt sie mit den nötigen Regelialien.
+
+Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben. Eines Tages aber beschloss eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in die weite Grammatik.
+
+Der grosse Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen liess sich nicht beirren. Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.
+
+<hr /></section>
+
+<section><h6>DYNAMIC_COMPONENT</h6>
+
+```
+{
+  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/migration-poster/index.js?v36",
+  "props": {
+    "steps": [
+      {
+        "step": "step1",
+        "title": "Rezession",
+        "positionX": 340,
+        "positionY": "1975",
+        "threshold": [
+          0,
+          0.05
+        ],
+        "mobileThreshold": [
+          0.01,
+          0.01,
+          0.33,
+          0.34
+        ]
+      },
+      {
+        "step": "step2",
+        "title": "Jugoslawien-Kriege",
+        "positionX": 350,
+        "positionY": "1990",
+        "threshold": [
+          0.3,
+          0.32
+        ],
+        "mobileThreshold": [
+          0.33,
+          0.34,
+          0.53,
+          0.54
+        ]
+      },
+      {
+        "step": "step3",
+        "title": "Personenfreizügigkeit mit der EU",
+        "positionX": 300,
+        "positionY": "2001",
+        "threshold": [
+          0.45,
+          0.55
+        ],
+        "mobileThreshold": [
+          0.53,
+          0.54,
+          0.65,
+          0.66
+        ]
+      },
+      {
+        "step": "step4",
+        "title": "Einwanderung aus Nachbarstaaten",
+        "positionX": 420,
+        "positionY": "2007",
+        "threshold": [
+          0.65,
+          0.75
+        ],
+        "mobileThreshold": [
+          0.65,
+          0.66,
+          0.81,
+          0.82
+        ]
+      },
+      {
+        "step": "step5",
+        "title": "Und wieder, die Kriege",
+        "positionX": 420,
+        "positionY": "2015",
+        "threshold": [
+          0.85,
+          0.9
+        ],
+        "mobileThreshold": [
+          0.81,
+          0.82
+        ]
+      }
+    ],
+    "chartTitle": "Die Schweiz und ihre Migration",
+    "annotations": [
+      {
+        "color": "immigration",
+        "title": "Zuwanderung",
+        "positionX": 20000,
+        "positionY": "1978",
+        "threshold": [
+          0.13,
+          0.14
+        ],
+        "mobilePositionX": 5000,
+        "mobileThreshold": [
+          0.01,
+          0.02
+        ]
+      },
+      {
+        "color": "emmigration",
+        "title": "Abwanderung",
+        "positionX": 80000,
+        "positionY": "1979",
+        "threshold": [
+          0.13,
+          0.14
+        ],
+        "mobilePositionX": 80000,
+        "mobileThreshold": [
+          0.01,
+          0.02
+        ]
+      }
+    ],
+    "translations": [
+      {
+        "key": "step1/text",
+        "value": "Zum ersten Mal deutlich zurück ging die Zuwanderung in die Schweiz nach der Ölkrise von 1973. Diese führte auch hier zu einer Rezession, das Bruttoinlandprodukt brach regelrecht ein. Die Folge davon war, dass allein 1975 fast 70’000 Menschen mehr aus der Schweiz {emmigrationLabel} als {immigrationLabel}."
+      },
+      {
+        "key": "step1/linkText1",
+        "value": "Öl-Krise von 1973"
+      },
+      {
+        "key": "step1/linkUrl1",
+        "value": "https://de.wikipedia.org/wiki/%C3%96lpreiskrise"
+      },
+      {
+        "key": "step1/linkText2",
+        "value": "das Bruttoinlandprodukt brach regelrecht ein"
+      },
+      {
+        "key": "step1/linkUrl2",
+        "value": "https://www.bfs.admin.ch/bfs/de/home/statistiken/volkswirtschaft/volkswirtschaftliche-gesamtrechnung/bruttoinlandprodukt.assetdetail.27065066.html"
+      },
+      {
+        "key": "step1/emmigrationLabel",
+        "value": "auswanderten"
+      },
+      {
+        "key": "step1/immigrationLabel",
+        "value": "einwanderten"
+      },
+      {
+        "key": "step2/text",
+        "value": "In den 1990er-Jahren führten die Kriege auf dem Balkan zu einer Zunahme der Zuwanderung. Die Schweiz anerkannte allerdings lediglich einen kleinen Teil der Asylsuchenden aus dem ehemaligen Jugoslawien als Flüchtlinge. Nur sie gelten statistisch als Einwanderer."
+      },
+      {
+        "key": "step3/text",
+        "value": "2002 trat das sogenannte Freizügigkeits­abkommen in Kraft. In den letzten zwanzig Jahren machte die Zuwanderung aus der EU knapp zwei Drittel der gesamten Zuwanderung in die Schweiz aus."
+      },
+      {
+        "key": "step4/text",
+        "value": "Die Personenfreizügigkeit für EU-Angehörige war während mehrerer Jahre durch Kontingente beschränkt. 2007 fielen die Beschränkungen für die mittel-, west- und nordeuropäischen EU-Staaten, 2014 die für die meisten osteuropäischen."
+      },
+      {
+        "key": "step5/text",
+        "value": "2015 kam es auch wegen des Kriegs in Syrien zur Flucht von Hunderttausenden Menschen nach Europa. Rund 40’000 – vor allem Syrer, Eritreerinnen und Afghanen – stellten in der Schweiz ein Asylgesuch. Als Flüchtlinge anerkannt wurden vor allem eritreische Gesuchstellerinnen."
+      }
+    ],
+    "chartSubTitle": "Ein- und Auswanderung in den letzten 50 Jahren"
+  },
+  "autoHtml": false
+}
+```
+
+<hr /></section>
+
+<section><h6>CENTER</h6>
+
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines grossen Sprachozeans. Ein kleines Bächlein namens Duden fliesst durch ihren Ort und versorgt sie mit den nötigen Regelialien.
+
+Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben. Eines Tages aber beschloss eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in die weite Grammatik.
+
+Der grosse Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen liess sich nicht beirren. Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.
+
+<hr /></section>

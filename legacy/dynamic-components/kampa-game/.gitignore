@@ -1,0 +1,9 @@
+.DS_Store
+.idea/
+.vscode/
+dist/
+build/
+node_modules/
+*.iml
+.next
+.env
