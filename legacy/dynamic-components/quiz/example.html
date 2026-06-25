@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Component</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Quiz</h1>
+      <republik-quiz
+        data='{"config":{"questions":[
+        {
+          "group": "Gewaltdelikte",
+          "groupDescription": "Lorem ipsum dolor sit amet",
+          "questions": [
+            {
+              "id": 1,
+              "title": "Wie viele Täter von Gewaltdelikten waren laut deutscher polizeilicher Kriminalstatistik 2018 Deutsche?",
+              "type": "estimate",
+              "options": [
+                {
+                  "value": "WAHR",
+                  "option": "69 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "FALSCH",
+                  "option": "37 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "FALSCH",
+                  "option": "3 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Wie häufig wurden Deutsche in Fernsehberichten als Täter von Gewaltdelikten genannt?",
+              "type": "estimate",
+              "options": [
+                {
+                  "value": "FALSE",
+                  "option": "65 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "FALSE",
+                  "option": "29 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "WAHR",
+                  "option": "3 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "Wie häufig wurden Deutsche in Presseberichten als Täter von Gewaltdelikten genannt?",
+              "type": "estimate",
+              "options": [
+                {
+                  "value": "FALSE",
+                  "option": "69 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "FALSE",
+                  "option": "31 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                },
+                {
+                  "value": "WAHR",
+                  "option": "3 Prozent",
+                  "debriefing": "Lorem ipsum dolor sit amet. Quelle:",
+                  "sourceTitle": "Bundesamt für Statistik",
+                  "source": "https://www.example.org"
+                }
+              ]
+            }
+          ]
+        }
+      ]}}'
+      ></republik-quiz>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>
