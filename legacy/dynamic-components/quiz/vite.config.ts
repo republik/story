@@ -2,10 +2,10 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  define: { 'process.env.NODE_ENV': '"production"' },
+  define: { 'process.env.NODE_ENV': `"${process.env.NODE_ENV}"` },
   build: {
     lib: {
-      entry: './src/index.js',
+      entry: './src/index.tsx',
       formats: ['es'],
       fileName: 'index',
     },
