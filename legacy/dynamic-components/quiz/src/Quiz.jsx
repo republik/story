@@ -1,45 +1,43 @@
-import React from "react";
+import React from 'react'
 
-import { Editorial, RawHtml } from "@project-r/styleguide";
+import { Editorial, RawHtml } from '@project-r/styleguide'
 
-import Choice from "./Choice";
-import Estimate from "./Estimate";
-import { css } from "glamor";
+import Choice from './Choice'
+import Estimate from './Estimate'
+import { css } from 'glamor'
 
 const styles = {
-  section: css({
-    marginTop: 60,
-  }),
-};
+  section: css({}),
+}
 
 const Quiz = ({ config: { questions = [], results = [] } = {} }) => {
-  const [gameState, setGameState] = React.useState([]);
-  const [counter, setCounter] = React.useState(0);
+  const [gameState, setGameState] = React.useState([])
+  const [counter, setCounter] = React.useState(0)
 
   const addChoice = (choice) =>
     setGameState((state) => {
-      const index = state.findIndex((s) => s.id === choice.id);
+      const index = state.findIndex((s) => s.id === choice.id)
       if (index >= 0) {
-        state[index] = choice;
-        setCounter(counter + 1);
-        return state;
+        state[index] = choice
+        setCounter(counter + 1)
+        return state
       }
-      return [...state, choice];
-    });
+      return [...state, choice]
+    })
 
   const resultsByScoreDesc = React.useMemo(() => {
-    return [...results].sort((a, b) => b.score - a.score);
-  }, [results]);
+    return [...results].sort((a, b) => b.score - a.score)
+  }, [results])
 
   const numQuestions = questions.reduce(
     (acc, cur) => acc + cur.questions.length,
     0,
-  );
-  const score = gameState.filter((s) => s.result === true).length;
+  )
+  const score = gameState.filter((s) => s.result === true).length
 
-  const { message } = resultsByScoreDesc.find((r) => score >= r.score) || {};
+  const { message } = resultsByScoreDesc.find((r) => score >= r.score) || {}
 
-  const answersNeeded = Math.min(5, numQuestions);
+  const answersNeeded = Math.min(5, numQuestions)
 
   return (
     <div>
@@ -50,7 +48,7 @@ const Quiz = ({ config: { questions = [], results = [] } = {} }) => {
             <Editorial.P>{d.groupDescription}</Editorial.P>
           )}
           {d.questions.map((q) =>
-            q.type == "choice" ? (
+            q.type == 'choice' ? (
               <Choice
                 onChange={addChoice}
                 choice={gameState.find((c) => c.id === q.id)}
@@ -90,7 +88,7 @@ const Quiz = ({ config: { questions = [], results = [] } = {} }) => {
           </section>
         ))}
     </div>
-  );
-};
+  )
+}
 
-export default Quiz;
+export default Quiz
