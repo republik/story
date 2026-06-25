@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm -r build",
+    "build": "pnpm -r --filter '!@project-r/styleguide' --filter '!pleadings' --filter '!questionnaire' --filter '!sozialhilfe-simulation' --filter '!talk-to-the-machine' --filter '!who-takes-the-cake' build",
     "knip": "knip --workspace './legacy/packages/**/*'"
   },
   "keywords": [],

@@ -10,7 +10,7 @@ import { actions2Cards, selectOptions, findActiveOptions } from '../utils'
 import { COLORS } from '../theme'
 import { PADDING_MOBILE, PADDING, CATEGORIES } from '../constants'
 import { Button, mediaQueries } from '@project-r/styleguide'
-import { ChartTitle } from '@project-r/styleguide/lib/components/Chart'
+import { ChartTitle } from '@project-r/styleguide'
 import Text from './text'
 import sum from 'lodash/sum'
 import range from 'lodash/range'
@@ -52,7 +52,6 @@ const Game: React.FC<Props> = ({ size, profile, resetProfile }) => {
   const detailedScore: { [key: string]: number } = gameState
     .filter((c, i) => c.id <= activeCards)
     .map((c, i) => {
-
       return {
         category: c.category,
         delta: findActiveOptions(gameState, c.id)[0].delta
@@ -117,7 +116,7 @@ const Game: React.FC<Props> = ({ size, profile, resetProfile }) => {
           Der Zwischenstand wird laufend aktualisiert.
         </Text>
         {scoreSize &&
-          gameState.map((card, i) =>  (
+          gameState.map((card, i) => (
             <Card
               key={card.id}
               active={card.id <= activeCards}
