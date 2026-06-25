@@ -14,8 +14,8 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@orbiting/remark-preset": "^1.2.4",
-    "@project-r/styleguide": "^9.5.2",
+    "@republik/remark-preset": "workspace:*",
+    "@project-r/styleguide": "workspace:*",
     "@storybook/react": "^5.0.11",
     "@types/jest": "^24.0.25",
     "@types/react": "^16.8.17",
@@ -50,10 +50,9 @@
     "isomorphic-unfetch": "^3.0.0",
     "jest": "^24.9.0",
     "lodash": "^4.17.15",
-    "mdast-react-render": "^1.2.0",
+    "@republik/mdast-react-render": "workspace:*",
     "next": "^9.0.4",
     "node-fetch": "^2.6.0",
-    "node-fetch-polyfill": "^2.0.6",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

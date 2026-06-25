@@ -4,8 +4,15 @@ packages:
   - "legacy/packages/mdast/*"
   - "legacy/dynamic-components/*"
 allowBuilds:
+  '@ampproject/toolbox-optimizer': false
   "@swc/core": true
   core-js: false
+  core-js-pure: false
+  ejs: false
+  es5-ext: false
   esbuild: true
   fsevents: false
+  highlight.js: false
+  protobufjs: false
   sharp: true
+  uglifyjs-webpack-plugin: false

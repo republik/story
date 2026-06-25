@@ -11,8 +11,8 @@
     "lint": "eslint --ignore-path .gitignore --fix ."
   },
   "devDependencies": {
-    "@orbiting/remark-preset": "^1.2.4",
-    "@project-r/styleguide": "^9.4.0",
+    "@republik/remark-preset": "workspace:*",
+    "@project-r/styleguide": "workspace:*",
     "@storybook/react": "^5.0.11",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
@@ -44,7 +44,7 @@
     "graphql-tag": "^2.10.1",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
-    "mdast-react-render": "^1.2.0",
+    "@republik/mdast-react-render": "workspace:*",
     "next": "^9.0.4",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
