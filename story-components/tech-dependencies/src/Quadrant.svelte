@@ -46,6 +46,8 @@
     'Heroku',
     'Proton Mail',
     'Google Workspace',
+    'Sanity',
+    'GitHub',
   ]);
 
   let hoveredId = $state<string | null>(null);
@@ -127,18 +129,21 @@
 
   const dots = $derived((): DotInfo[] => {
     const BUCKET = 0.06;
+    const JITTER = DOT_R * 2 + 2; // enough to fully separate overlapping dots
     const bucketCount: Record<string, number> = {};
 
     return scored.map((s) => {
-      const cx = toX(s.lockIn!);
-      const cy = toY(s.centrality!);
-      const r = DOT_R;
-
       const key = `${Math.round(s.lockIn! / BUCKET)},${Math.round(s.centrality! / BUCKET)}`;
       const slot = bucketCount[key] ?? 0;
       bucketCount[key] = slot + 1;
 
       const [odx, ody] = LABEL_OFFSETS[slot % LABEL_OFFSETS.length];
+
+      // Slot 0 stays at the true position; later slots radiate outward.
+      const cx = toX(s.lockIn!) + (slot === 0 ? 0 : odx * JITTER);
+      const cy = toY(s.centrality!) + (slot === 0 ? 0 : ody * JITTER);
+      const r = DOT_R;
+
       const labelPad = r + 3;
       const labelX = cx + odx * labelPad + (odx === 0 ? 0 : odx * 2);
       const labelY = cy + ody * labelPad + (ody >= 0 ? 10 : -3);

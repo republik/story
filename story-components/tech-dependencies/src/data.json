@@ -2,7 +2,6 @@
   "services": [
     {
       "id": "heroku-prod-v3",
-      "category": "hosting",
       "product": "Heroku",
       "centrality": 0.95,
       "lockIn": 0.55,
@@ -12,37 +11,33 @@
     },
     {
       "id": "mailchimp",
-      "category": "newsletter",
       "product": "Mailchimp",
       "centrality": 0.9,
       "lockIn": 0.8,
       "sensitivity": 0.6,
       "country": "US",
-      "description": "Versand von Newslettern an Republik-Abonnentinnen."
+      "description": "Versand von Newslettern und Transaktions-Emails."
     },
     {
       "id": "gws-office-v2",
-      "category": "productivity",
       "product": "Google Workspace",
       "centrality": 0.7,
       "lockIn": 0.55,
       "sensitivity": 0.4,
       "country": "US",
-      "description": "Kollaborative Dokumente, Tabellen und Kalender für das Team."
+      "description": "Kollaborative Dokumente, Tabellen und Kalender."
     },
     {
       "id": "slack-comms",
-      "category": "productivity",
       "product": "Slack",
       "centrality": 0.6,
       "lockIn": 0.5,
       "sensitivity": 0.45,
       "country": "US",
-      "description": "Interne Teamkommunikation und Tool-Integrationen."
+      "description": "Interne Teamkommunikation."
     },
     {
       "id": "elastic-search",
-      "category": "hosting",
       "product": "Elastic",
       "centrality": 0.75,
       "lockIn": 0.45,
@@ -52,7 +47,6 @@
     },
     {
       "id": "notion-prod",
-      "category": "productivity",
       "product": "Notion",
       "centrality": 0.3,
       "lockIn": 0.4,
@@ -62,17 +56,15 @@
     },
     {
       "id": "trello-prod",
-      "category": "productivity",
       "product": "Trello",
       "centrality": 0.2,
       "lockIn": 0.3,
       "sensitivity": 0.2,
       "country": "AU",
-      "description": "Einfaches Projekt- und Aufgabenmanagement."
+      "description": "Redaktionelles Projekt- und Aufgabenmanagement."
     },
     {
       "id": "podigee-hosting",
-      "category": "hosting",
       "product": "Podigee",
       "centrality": 0.5,
       "lockIn": 0.5,
@@ -82,17 +74,15 @@
     },
     {
       "id": "adobe-cc",
-      "category": "media-production",
       "product": "Adobe Creative Cloud",
       "centrality": 0.4,
       "lockIn": 0.6,
       "sensitivity": 0.25,
       "country": "US",
-      "description": "Team-Lizenzen für Photoshop, Illustrator, InDesign und weitere Creative-Cloud-Apps."
+      "description": "Photoshop, Illustrator, InDesign und weitere Creative-Cloud-Apps."
     },
     {
       "id": "keycdn-prod",
-      "category": "dev-tools",
       "product": "KeyCDN",
       "centrality": 0.7,
       "lockIn": 0.2,
@@ -102,17 +92,15 @@
     },
     {
       "id": "aws-s3",
-      "category": "hosting",
       "product": "AWS S3",
       "centrality": 0.8,
       "lockIn": 0.25,
       "sensitivity": 0.2,
       "country": "US",
-      "description": "Objektspeicher für Medien und Assets in der EU-Region."
+      "description": "Objektspeicher für Medien und Assets."
     },
     {
       "id": "vercel-prod",
-      "category": "hosting",
       "product": "Vercel",
       "centrality": 0.6,
       "lockIn": 0.4,
@@ -122,7 +110,6 @@
     },
     {
       "id": "gandi",
-      "category": "hosting",
       "product": "Gandi (Domains)",
       "centrality": 0.95,
       "lockIn": 0.2,
@@ -131,8 +118,16 @@
       "description": "Domainregistrierung und DNS-Verwaltung."
     },
     {
+      "id": "cloudflare",
+      "product": "Cloudflare",
+      "centrality": 0.8,
+      "lockIn": 0.2,
+      "sensitivity": 0.1,
+      "country": "US",
+      "description": "DNS-Verwaltung und Bot-Protection."
+    },
+    {
       "id": "figma-prod",
-      "category": "media-production",
       "product": "Figma",
       "centrality": 0.4,
       "lockIn": 0.6,
@@ -142,7 +137,6 @@
     },
     {
       "id": "apollo-studio",
-      "category": "dev-tools",
       "product": "Apollo Studio",
       "centrality": 0.4,
       "lockIn": 0.5,
@@ -152,7 +146,6 @@
     },
     {
       "id": "browserstack-prod",
-      "category": "dev-tools",
       "product": "BrowserStack",
       "centrality": 0.2,
       "lockIn": 0.3,
@@ -162,7 +155,6 @@
     },
     {
       "id": "goodtape-prod",
-      "category": "media-production",
       "product": "Good Tape",
       "centrality": 0.25,
       "lockIn": 0.15,
@@ -172,7 +164,6 @@
     },
     {
       "id": "vimeo-prod",
-      "category": "hosting",
       "product": "Vimeo",
       "centrality": 0.4,
       "lockIn": 0.5,
@@ -182,7 +173,6 @@
     },
     {
       "id": "sentry-prod",
-      "category": "dev-tools",
       "product": "Sentry",
       "centrality": 0.3,
       "lockIn": 0.2,
@@ -192,7 +182,6 @@
     },
     {
       "id": "github-prod",
-      "category": "dev-tools",
       "product": "GitHub",
       "centrality": 0.9,
       "lockIn": 0.2,
@@ -202,7 +191,6 @@
     },
     {
       "id": "zencastr-prod",
-      "category": "media-production",
       "product": "Zencastr",
       "centrality": 0.35,
       "lockIn": 0.2,
@@ -212,7 +200,6 @@
     },
     {
       "id": "grafana-prod",
-      "category": "dev-tools",
       "product": "Grafana Cloud",
       "centrality": 0.4,
       "lockIn": 0.35,
@@ -222,7 +209,6 @@
     },
     {
       "id": "pingdom-prod",
-      "category": "dev-tools",
       "product": "Pingdom",
       "centrality": 0.4,
       "lockIn": 0.15,
@@ -232,8 +218,7 @@
     },
     {
       "id": "ossrox-mastodon",
-      "category": "hosting",
-      "product": "Ossrox (Mastodon hosting)",
+      "product": "Ossrox",
       "centrality": 0.2,
       "lockIn": 0.2,
       "sensitivity": 0.1,
@@ -242,7 +227,6 @@
     },
     {
       "id": "apple-dev",
-      "category": "dev-tools",
       "product": "Apple Developer Program",
       "centrality": 0.8,
       "lockIn": 0.9,
@@ -252,7 +236,6 @@
     },
     {
       "id": "deepl-prod",
-      "category": "media-production",
       "product": "DeepL",
       "centrality": 0.2,
       "lockIn": 0.2,
@@ -262,17 +245,24 @@
     },
     {
       "id": "claude-prod",
-      "category": "dev-tools",
-      "product": "Claude (Anthropic API)",
-      "centrality": 0.3,
-      "lockIn": 0.4,
-      "sensitivity": 0.1,
+      "product": "Claude",
+      "centrality": 0.1,
+      "lockIn": 0.17,
+      "sensitivity": 0.05,
       "country": "US",
-      "description": "KI-Sprachmodell-API für redaktionelle und Produkt-Tools."
+      "description": "KI-Sprachmodell."
+    },
+    {
+      "id": "mistral",
+      "product": "Mistral",
+      "centrality": 0.1,
+      "lockIn": 0.17,
+      "sensitivity": 0.05,
+      "country": "FR",
+      "description": "KI-Sprachmodell."
     },
     {
       "id": "zendesk-prod",
-      "category": "productivity",
       "product": "Zendesk",
       "centrality": 0.65,
       "lockIn": 0.45,
@@ -282,57 +272,51 @@
     },
     {
       "id": "expo-prod",
-      "category": "dev-tools",
-      "product": "Expo (EAS Build)",
+      "product": "Expo",
       "centrality": 0.3,
       "lockIn": 0.7,
       "sensitivity": 0.15,
       "country": "US",
-      "description": "Build-Dienst für die React-Native-Apps auf iOS und Android."
+      "description": "Build-Dienst für die iOS und Android Apps."
     },
     {
       "id": "proton-mail",
-      "category": "productivity",
       "product": "Proton Mail",
       "centrality": 0.85,
       "lockIn": 0.4,
       "sensitivity": 0.65,
       "country": "CH",
-      "description": "Verschlüsselter Team-E-Mail-Dienst, gehostet in der Schweiz."
+      "description": "E-Mail für die Redaktion."
     },
     {
       "id": "proton-pass",
-      "category": "productivity",
       "product": "Proton Pass",
       "centrality": 0.5,
       "lockIn": 0.4,
       "sensitivity": 0.95,
       "country": "CH",
-      "description": "Team-Passwortmanager als Teil der Proton-Suite."
+      "description": "Passwortmanager für die Redaktion."
     },
     {
       "id": "stripe-prod",
-      "category": "payments",
       "product": "Stripe",
       "centrality": 1,
       "lockIn": 0.95,
       "sensitivity": 1,
       "country": "US",
-      "description": "Zahlungsabwicklung für Abonnements und Spenden."
+      "description": "Zahlungsabwicklung für Mitgliedsbeiträge."
     },
     {
       "id": "huebsch-prod",
-      "category": "media-production",
       "product": "Hübsch",
       "centrality": 0.25,
       "lockIn": 0.35,
       "sensitivity": 0.15,
       "country": "CH",
-      "description": "Text-zu-Sprache-API für die Vorlesefunktion."
+      "description": "Text-to-Speech-API für die Vorlesefunktion."
     },
     {
       "id": "datawrapper",
-      "category": "media-production",
       "product": "Datawrapper",
       "centrality": 0.325,
       "lockIn": 0.375,
@@ -342,27 +326,24 @@
     },
     {
       "id": "scalingo-prod",
-      "category": "hosting",
       "product": "Scalingo",
       "centrality": 0.8,
       "lockIn": 0.35,
       "sensitivity": 0.85,
       "country": "FR",
-      "description": "Application-Hosting für Republik-Apps auf europäischer Infrastruktur."
+      "description": "Hosting für Republik-Apps."
     },
     {
       "id": "sanity-prod",
-      "category": "media-production",
       "product": "Sanity",
       "centrality": 0.9,
       "lockIn": 0.7,
       "sensitivity": 0.35,
       "country": "US",
-      "description": "Headless CMS für redaktionelle Inhalte und Story-Metadaten."
+      "description": "Headless CMS für redaktionelle Inhalte."
     },
     {
       "id": "abacus-hr",
-      "category": "productivity",
       "product": "Abacus",
       "centrality": 0.8,
       "lockIn": 0.8,
