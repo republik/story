@@ -116,6 +116,7 @@ function DatawrapperInteractive({
       <div ref={chartRef} style={{ minHeight: 10 }}></div>
       <Script
         id='datawrapper-lib'
+        // @ts-expect-error somehow the types don't resolve
         src='https://datawrapper.dwcdn.net/lib/datawrapper.js'
         onReady={() => {
           setScriptReady(true)
