@@ -89,11 +89,18 @@ export function mapDots(active: ActiveService[]): MapDot[] {
   return [...dotMap.values()].sort((a, b) => b.totalCHF - a.totalCHF);
 }
 
+export interface SankeyVendorBreakdown {
+  name: string;
+  chf: number;
+}
+
 export interface SankeyNode {
   id: string;
   label: string;
   type: 'origin' | 'category' | 'vendor' | 'infra' | 'region';
   totalCHF: number;
+  /** Vendor or infra breakdown shown on category/region hover in compact views */
+  vendors?: SankeyVendorBreakdown[];
 }
 
 export interface SankeyEdge {
@@ -185,6 +192,168 @@ export function sankeyEdges(active: ActiveService[]): SankeyData {
     ensureEdge('republik', catId, chf);
     ensureEdge(catId, vendorId, chf);
     ensureEdge(vendorId, region.id, chf);
+  }
+
+  return {
+    nodes: [...nodes.values()],
+    edges: [...edgeMap.values()].filter((e) => e.valueCHF > 0),
+  };
+}
+
+/**
+ * Builds Sankey data: Republik → Category → Region
+ *
+ * Same sovereignty grouping as sankeyEdges, but skips the vendor column.
+ * Category nodes carry a vendor breakdown for tooltips.
+ */
+export function sankeyEdgesByCategory(active: ActiveService[]): SankeyData {
+  const nodes = new Map<string, SankeyNode>();
+  const edgeMap = new Map<string, SankeyEdge>();
+  const categoryVendors = new Map<string, Map<string, { name: string; chf: number }>>();
+
+  function ensureNode(id: string, label: string, type: SankeyNode['type'], chf = 0) {
+    if (!nodes.has(id)) {
+      nodes.set(id, { id, label, type, totalCHF: 0 });
+    }
+    nodes.get(id)!.totalCHF += chf;
+  }
+
+  function ensureEdge(source: string, target: string, chf: number) {
+    const k = `${source}→${target}`;
+    if (!edgeMap.has(k)) {
+      edgeMap.set(k, { source, target, valueCHF: 0 });
+    }
+    edgeMap.get(k)!.valueCHF += chf;
+  }
+
+  ensureNode('republik', 'Republik', 'origin');
+
+  for (const svc of active) {
+    const chf = svc.annualCostCHF;
+    const catId = `cat:${svc.category}`;
+    const primaryCountry = svc.vendor.hqs[0]?.country ?? 'XX';
+    const region = vendorRegion(primaryCountry);
+
+    ensureNode('republik', 'Republik', 'origin', chf);
+    ensureNode(catId, CATEGORY_LABELS[svc.category] ?? svc.category, 'category', chf);
+    ensureNode(region.id, region.label, 'region', chf);
+
+    ensureEdge('republik', catId, chf);
+    ensureEdge(catId, region.id, chf);
+
+    if (!categoryVendors.has(catId)) categoryVendors.set(catId, new Map());
+    const vendorMap = categoryVendors.get(catId)!;
+    const existing = vendorMap.get(svc.vendorId);
+    if (existing) {
+      existing.chf += chf;
+    } else {
+      vendorMap.set(svc.vendorId, { name: svc.vendor.name, chf });
+    }
+  }
+
+  for (const [catId, vendorMap] of categoryVendors) {
+    const node = nodes.get(catId);
+    if (node) {
+      node.vendors = [...vendorMap.values()].sort((a, b) => b.chf - a.chf);
+    }
+  }
+
+  return {
+    nodes: [...nodes.values()],
+    edges: [...edgeMap.values()].filter((e) => e.valueCHF > 0),
+  };
+}
+
+const INFRA_OTHER_THRESHOLD_CHF = 5000;
+const INFRA_OTHER_ID = 'infra:other';
+
+/** Infra providers whose total attributed spend is below the threshold roll into "Andere". */
+function smallInfraIds(active: ActiveService[]): Set<string> {
+  const totals = new Map<string, number>();
+  for (const svc of active) {
+    if (svc.infra.length === 0) continue;
+    const chfPerInfra = svc.annualCostCHF / svc.infra.length;
+    for (const company of svc.infra) {
+      totals.set(company.id, (totals.get(company.id) ?? 0) + chfPerInfra);
+    }
+  }
+  return new Set(
+    [...totals.entries()]
+      .filter(([, total]) => total < INFRA_OTHER_THRESHOLD_CHF)
+      .map(([id]) => id),
+  );
+}
+
+/**
+ * Builds Sankey data: Republik → Category → Region
+ *
+ * Hosting infrastructure view: skips the infra column and routes category
+ * directly to region. Region nodes carry an infra-provider breakdown for tooltips.
+ * Infra providers below 5'000 CHF/year are rolled into "Andere".
+ * Services with no infraIds fall back to the vendor's country.
+ */
+export function sankeyEdgesInfraByCategory(active: ActiveService[]): SankeyData {
+  const nodes = new Map<string, SankeyNode>();
+  const edgeMap = new Map<string, SankeyEdge>();
+  const rolledUpInfra = smallInfraIds(active);
+  const regionInfra = new Map<string, Map<string, { name: string; chf: number }>>();
+
+  function ensureNode(id: string, label: string, type: SankeyNode['type'], chf = 0) {
+    if (!nodes.has(id)) nodes.set(id, { id, label, type, totalCHF: 0 });
+    nodes.get(id)!.totalCHF += chf;
+  }
+
+  function ensureEdge(source: string, target: string, chf: number) {
+    const k = `${source}→${target}`;
+    if (!edgeMap.has(k)) edgeMap.set(k, { source, target, valueCHF: 0 });
+    edgeMap.get(k)!.valueCHF += chf;
+  }
+
+  function addRegionInfra(regionId: string, key: string, name: string, chf: number) {
+    if (!regionInfra.has(regionId)) regionInfra.set(regionId, new Map());
+    const map = regionInfra.get(regionId)!;
+    const existing = map.get(key);
+    if (existing) existing.chf += chf;
+    else map.set(key, { name, chf });
+  }
+
+  ensureNode('republik', 'Republik', 'origin');
+
+  for (const svc of active) {
+    const chf = svc.annualCostCHF;
+    const catId = `cat:${svc.category}`;
+
+    ensureNode('republik', 'Republik', 'origin', chf);
+    ensureNode(catId, CATEGORY_LABELS[svc.category] ?? svc.category, 'category', chf);
+    ensureEdge('republik', catId, chf);
+
+    if (svc.infra.length > 0) {
+      const chfPerInfra = chf / svc.infra.length;
+      for (const infraCompany of svc.infra) {
+        const rollUp = rolledUpInfra.has(infraCompany.id);
+        const infraKey = rollUp ? INFRA_OTHER_ID : infraCompany.id;
+        const infraLabel = rollUp ? 'Andere' : infraCompany.name;
+        const infraCountry = infraCompany.hqs[0]?.country ?? 'XX';
+        const region = vendorRegion(infraCountry);
+
+        ensureNode(region.id, region.label, 'region', chfPerInfra);
+        ensureEdge(catId, region.id, chfPerInfra);
+        addRegionInfra(region.id, infraKey, infraLabel, chfPerInfra);
+      }
+    } else {
+      const vendorCountry = svc.vendor.hqs[0]?.country ?? 'XX';
+      const region = vendorRegion(vendorCountry);
+      ensureNode(region.id, region.label, 'region', chf);
+      ensureEdge(catId, region.id, chf);
+      addRegionInfra(region.id, svc.vendorId, svc.vendor.name, chf);
+    }
+  }
+
+  for (const [regionId, infraMap] of regionInfra) {
+    const node = nodes.get(regionId);
+    if (node) {
+      node.vendors = [...infraMap.values()].sort((a, b) => b.chf - a.chf);
+    }
   }
 
   return {

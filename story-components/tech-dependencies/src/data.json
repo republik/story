@@ -1469,7 +1469,7 @@
       "product": "DeepL",
       "vendorId": "deepl",
       "infraIds": [
-        "deepl"
+        "amazon"
       ],
       "annualCostCHF": 100,
       "costModel": "per-seat",
@@ -1618,7 +1618,7 @@
       "product": "Hübsch",
       "vendorId": "huebsch",
       "infraIds": [
-        "amazon"
+        "google"
       ],
       "annualCostCHF": 40000,
       "costModel": "usage",
@@ -1678,7 +1678,6 @@
       "product": "Publikator",
       "vendorId": "republik",
       "infraIds": [
-        "heroku",
         "amazon"
       ],
       "annualCostCHF": 1000,
@@ -1726,7 +1725,7 @@
       "infraIds": [
         "abacus-hosting"
       ],
-      "annualCostCHF": 5000,
+      "annualCostCHF": 10000,
       "costModel": "flat",
       "deployment": "saas",
       "dataResidency": [

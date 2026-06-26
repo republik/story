@@ -10,6 +10,7 @@
 
   import Timeline from './Timeline.svelte';
   import Sankey from './Sankey.svelte';
+  import SankeyAlt from './SankeyAlt.svelte';
   import Totals from './Totals.svelte';
   import Quadrant from './Quadrant.svelte';
 
@@ -19,6 +20,8 @@
     activeServicesAt,
     sankeyEdges,
     sankeyEdgesInfra,
+    sankeyEdgesByCategory,
+    sankeyEdgesInfraByCategory,
     computeTotals,
     computeTotalsInfra,
   } from './lib/derive.ts';
@@ -31,8 +34,10 @@
   let sankeyView = $state<'category' | 'infra'>('category');
 
   const active = $derived(activeServicesAt(dataset, currentDate));
-  const sankeyCat = $derived(sankeyEdges(active));
-  const sankeyInfra = $derived(sankeyEdgesInfra(active));
+  const sankeyCat = $derived(sankeyEdgesByCategory(active));
+  const sankeyInfra = $derived(sankeyEdgesInfraByCategory(active));
+  const sankeyCatFull = $derived(sankeyEdges(active));
+  const sankeyInfraFull = $derived(sankeyEdgesInfra(active));
   const totals = $derived(
     sankeyView === 'infra' ? computeTotalsInfra(active) : computeTotals(active)
   );
@@ -90,13 +95,25 @@
         >Hosting-Infrastruktur</button>
       </div>
       {#if sankeyView === 'category'}
-        <Sankey
+        <p class="td-section-title">Übersicht</p>
+        <SankeyAlt
           data={sankeyCat}
+          labelTypes={['origin', 'category', 'region']}
+        />
+        <p class="td-section-title sankey-variant-title">Detail</p>
+        <Sankey
+          data={sankeyCatFull}
           labelTypes={['origin', 'category', 'vendor', 'region']}
         />
       {:else}
-        <Sankey
+        <p class="td-section-title">Übersicht</p>
+        <SankeyAlt
           data={sankeyInfra}
+          labelTypes={['origin', 'category', 'region']}
+        />
+        <p class="td-section-title sankey-variant-title">Detail</p>
+        <Sankey
+          data={sankeyInfraFull}
           labelTypes={['origin', 'vendor', 'infra', 'region']}
         />
       {/if}
@@ -189,6 +206,10 @@
     background: #111;
     border-color: #111;
     color: #fff;
+  }
+
+  .sankey-variant-title {
+    margin-top: 28px;
   }
 
   .timeline-sticky {
