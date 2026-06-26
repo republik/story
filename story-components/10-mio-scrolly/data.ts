@@ -67,15 +67,13 @@ export const scrollyData1: InputData = {
     {
       text: "<p>Im <span class='color'>Referenzszenario</span>, das in der Mitte der drei Szenarien liegt, geht der Bund von einer höheren Geburtenrate (1,40) als der aktuellen aus. Die Lebenserwartung ist leicht erhöht und der Wanderungssaldo liegt bei 45’000.</p>",
       state: {
-        chartDescription: "Das Referenzszenario",
         highlight: ["Referenz"],
         annotations: [],
       },
     },
     {
-      text: "<p>In diesem Szenario wäre die <span class='color'>10-Millionen-Schweiz</span> im Jahr 2042 erreicht.</p>",
+      text: "<p>In diesem Szenario wäre die 10-Millionen-Schweiz im Jahr 2042 erreicht.</p>",
       state: {
-        chartDescription: "Das Referenzszenario",
         highlight: ["Referenz"],
         annotations: [
           {
@@ -90,15 +88,13 @@ export const scrollyData1: InputData = {
     {
       text: "<p>Im <span class='color'>hohen Szenario</span> sind alle drei Grössen deutlich höher. Die Lebenserwartung läge bei 90,5 beziehungsweise 88,5 Jahren, die Geburtenrate bei 1,55 Kinder und der Wanderungssaldo bei 60’000 Personen.</p>",
       state: {
-        chartDescription: "Das hohe Szenario",
         highlight: ["Hoch"],
         annotations: [],
       },
     },
     {
-      text: "<p>Schon im Jahr 2034 würde die Bevölkerung die <span class='color'>Marke von 10 Milionen</span> erreichen.</p>",
+      text: "<p>Schon im Jahr 2034 würde die Bevölkerung die Marke von 10 Millionen erreichen.</p>",
       state: {
-        chartDescription: "Das hohe Szenario",
         highlight: ["Hoch"],
         annotations: [
           {
@@ -113,7 +109,6 @@ export const scrollyData1: InputData = {
     {
       text: "<p>Im <span class='color'>tiefen Szenario</span> bliebe die Lebenserwartung in etwa gleich. Die Geburtenrate läge bei 1,25 Kindern pro Frau und der Wanderungssaldo bei 30’000 Personen.</p>",
       state: {
-        chartDescription: "Das tiefe Szenario",
         highlight: ["Tief"],
         annotations: [],
       },
@@ -121,7 +116,6 @@ export const scrollyData1: InputData = {
     {
       text: "<p>In diesem Szenario würde die 10-Millionen-Schweiz nie erreicht und ab 2043 würde die Bevölkerung schrumpfen.</p>",
       state: {
-        chartDescription: "Das tiefe Szenario",
         highlight: ["Tief"],
         annotations: [
           {
@@ -135,7 +129,6 @@ export const scrollyData1: InputData = {
     {
       text: "<p>Es ist also alle andere als sicher, ob die Schweiz überhaupt 10 Millionen Einwohnerinnen erreicht.</p>",
       state: {
-        chartDescription: "Drei mögliche Szenarien",
         highlight: ["Referenz", "Hoch", "Tief"],
         annotations: [],
       },
