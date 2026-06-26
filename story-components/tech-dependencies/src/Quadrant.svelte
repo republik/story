@@ -38,17 +38,25 @@
   const midX = $derived(PAD.left + plotW / 2);
   const midY = PAD.top + plotH / 2;
 
-  // Log-scaled radius: map CHF [100..200000] → r [4..18]
-  const MIN_R = 4;
-  const MAX_R = 18;
-  const LOG_MIN = Math.log(100);
-  const LOG_MAX = Math.log(200000);
-  function dotRadius(cost: number): number {
-    const clamped = Math.max(100, Math.min(200000, cost || 100));
-    return MIN_R + ((Math.log(clamped) - LOG_MIN) / (LOG_MAX - LOG_MIN)) * (MAX_R - MIN_R);
-  }
+  const DOT_R = 7;
+
+  const ALWAYS_VISIBLE = new Set([
+    'Stripe',
+    'Mailchimp',
+    'Heroku',
+    'Proton Mail',
+    'Google Workspace',
+  ]);
 
   let hoveredId = $state<string | null>(null);
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function countryFlag(code: string): string {
+    return [...code.toUpperCase()].map(
+      (c) => String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)
+    ).join('');
+  }
 
   const QUADRANT_LABELS = [
     { label: 'Zentral & Flexibel', x: 0.01, y: 0.01, anchor: 'start' as const },
@@ -56,11 +64,6 @@
     { label: 'Ersatzbar', x: 0.01, y: 0.99, anchor: 'start' as const },
     { label: 'Lock-in', x: 0.99, y: 0.99, anchor: 'end' as const },
   ];
-
-  function formatCHF(n: number): string {
-    if (n >= 1000) return (n / 1000).toFixed(0) + 'k CHF/yr';
-    return n.toLocaleString('de-CH') + ' CHF/yr';
-  }
 
   // Detect dark theme from parent data-theme attribute
   let isDark = $state(false);
@@ -119,6 +122,7 @@
     anchor: 'start' | 'middle' | 'end';
     fill: string;
     sensitivity: number;
+    pinned: boolean;
   }
 
   const dots = $derived((): DotInfo[] => {
@@ -128,7 +132,7 @@
     return scored.map((s) => {
       const cx = toX(s.lockIn!);
       const cy = toY(s.centrality!);
-      const r = dotRadius(s.annualCostCHF);
+      const r = DOT_R;
 
       const key = `${Math.round(s.lockIn! / BUCKET)},${Math.round(s.centrality! / BUCKET)}`;
       const slot = bucketCount[key] ?? 0;
@@ -143,8 +147,9 @@
 
       const sensitivity = s.sensitivity ?? 0;
       const fill = sensitivityColor(sensitivity);
+      const pinned = ALWAYS_VISIBLE.has(s.product);
 
-      return { service: s, cx, cy, r, labelX, labelY, anchor, fill, sensitivity };
+      return { service: s, cx, cy, r, labelX, labelY, anchor, fill, sensitivity, pinned };
     });
   });
 </script>
@@ -153,10 +158,14 @@
   <h3 class="q-title">Zentralität vs. Lock-in</h3>
   <p class="q-subtitle">
     Wie zentral ist ein Dienst für den Betrieb — und wie aufwändig wäre ein Wechsel?
-    Punktgrösse entspricht dem Jahresbudget (logarithmisch).
   </p>
 
-  <div class="quadrant-chart" style="position: relative;">
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <div
+    class="quadrant-chart"
+    style="position: relative;"
+    onmousemove={(e) => { const r = e.currentTarget.getBoundingClientRect(); mouseX = e.clientX - r.left; mouseY = e.clientY - r.top; }}
+  >
     <svg {width} height={HEIGHT} class="quadrant-svg">
       <!-- Quadrant backgrounds -->
       <!-- top-left: core & flexible (neutral) -->
@@ -243,14 +252,16 @@
             stroke={hovered ? d.fill : 'none'}
             stroke-width={hovered ? 1.5 : 0}
           />
-          <text
-            x={d.labelX}
-            y={d.labelY}
-            text-anchor={d.anchor}
-            font-size={d.sensitivity >= 0.7 ? 10 : 9}
-            font-weight={d.sensitivity >= 0.7 || hovered ? 600 : 400}
-            fill={hovered || d.sensitivity >= 0.7 ? color.text : color.muted}
-          >{d.service.product}</text>
+          {#if hovered || d.pinned}
+            <text
+              x={d.labelX}
+              y={d.labelY}
+              text-anchor={d.anchor}
+              font-size="9"
+              font-weight={hovered ? 600 : 400}
+              fill={hovered ? color.text : color.muted}
+            >{d.service.product}</text>
+          {/if}
         </g>
       {/each}
     </svg>
@@ -259,19 +270,20 @@
     {#if hoveredId}
       {@const d = dots().find((x) => x.service.id === hoveredId)}
       {#if d}
+        {@const flipX = mouseX > width * 0.65}
         <div
           class="q-tooltip"
-          style="left: {Math.min(d.cx + 14, width - 200)}px; top: {Math.max(4, d.cy - 48)}px;"
+          style="
+            {flipX ? `right: ${width - mouseX + 12}px;` : `left: ${mouseX + 12}px;`}
+            top: {Math.max(4, mouseY - 16)}px;
+          "
         >
-          <span class="q-tt-name">{d.service.product}</span>
+          <div class="q-tt-header">
+            <span class="q-tt-name">{d.service.product}</span>
+            <span class="q-tt-flag">{countryFlag(d.service.country)}</span>
+          </div>
           {#if d.service.description}
             <span class="q-tt-desc">{d.service.description}</span>
-          {/if}
-          <span class="q-tt-meta">
-            Zentralität {d.service.centrality?.toFixed(2)} · Lock-in {d.service.lockIn?.toFixed(2)} · Sensibilität {d.service.sensitivity?.toFixed(2) ?? '—'}
-          </span>
-          {#if d.service.annualCostCHF > 0}
-            <span class="q-tt-cost">{formatCHF(d.service.annualCostCHF)}</span>
           {/if}
         </div>
       {/if}
@@ -291,13 +303,6 @@
         <rect x="0" y="2" width="72" height="8" rx="4" fill="url(#q-sensitivity-gradient)" />
       </svg>
       <span>Farbe = Datensensibilität (grau → rot)</span>
-    </div>
-    <div class="q-legend-item">
-      <svg width="28" height="12" aria-hidden="true">
-        <circle cx="4" cy="6" r="4" fill={color.dotFallback} fill-opacity="0.55" />
-        <circle cx="20" cy="6" r="8" fill={color.dotFallback} fill-opacity="0.55" />
-      </svg>
-      <span>Punktgrösse = Jahresbudget (log)</span>
     </div>
   </div>
 </div>
@@ -337,16 +342,23 @@
   .q-tooltip {
     position: absolute;
     pointer-events: none;
-    background: rgba(20, 20, 30, 0.9);
+    background: rgba(20, 20, 30, 0.92);
     color: #fff;
-    padding: 7px 10px;
-    border-radius: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
     font-size: 0.78rem;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    max-width: 210px;
+    gap: 4px;
+    max-width: 220px;
     z-index: 10;
+  }
+
+  .q-tt-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .q-tt-name {
@@ -354,26 +366,19 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex: 1;
+  }
+
+  .q-tt-flag {
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
   }
 
   .q-tt-desc {
     font-size: 0.72rem;
     color: #ccc;
-    line-height: 1.3;
-    white-space: normal;
-  }
-
-  .q-tt-meta {
-    font-size: 0.7rem;
-    color: #aaa;
-    font-variant-numeric: tabular-nums;
-    margin-top: 2px;
-  }
-
-  .q-tt-cost {
-    font-size: 0.7rem;
-    color: #bbb;
-    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
   }
 
   .q-legend {
