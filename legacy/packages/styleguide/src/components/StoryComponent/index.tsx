@@ -39,7 +39,6 @@ function StoryComponent({
         <CustomComponent componentdata={JSON.stringify(componentData)}>
           {Loader}
         </CustomComponent>
-        {/* @ts-expect-error somehow the types don't resolve*/}
         <Script type='module' src={url} strategy='lazyOnload' />
       </Figure>
     </>

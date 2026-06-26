@@ -5,9 +5,27 @@
     "interface": true,
     "type": true
   },
+  "ignoreWorkspaces": ["legacy/packages/icons"],
   "workspaces": {
     "legacy/packages/*": {
-      "project": ["src/**/*.{js,ts,tsx}", "tests/**/*.{mjs,mts,js,ts,tsx}"]
+      "entry": ["src/index.{js,jsx,ts,tsx}",""],
+      "project": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "tests/**/*.{mjs,mts,js,jsx,ts,tsx}"
+      ]
+    },
+    "legacy/packages/styleguide": {
+      "entry": ["src/{lib,chart}.ts"],
+      "project": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "tests/**/*.{mjs,mts,js,jsx,ts,tsx}"
+      ]
+    },
+    "legacy/dynamic-components/*": {
+      "project": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "test/**/*.{mjs,mts,js,jsx,ts,tsx}"
+      ]
     }
   }
 }

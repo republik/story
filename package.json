@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm -r --filter '!pleadings' --filter '!questionnaire' --filter '!sozialhilfe-simulation' --filter '!talk-to-the-machine' --filter '!who-takes-the-cake' build",
-    "knip": "knip --workspace './legacy/packages/**/*'"
+    "knip:packages": "knip --workspace './legacy/packages/**/*'",
+    "knip:dynamic-components": "knip --workspace './legacy/dynamic-components/*'"
   },
   "keywords": [],
   "author": "",
