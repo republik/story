@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waffle Timeline</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Waffle Timeline</h1>
+      <republik-waffle-timeline data='{"image":"neue_schweiz.png","title":"Die stabilen Kantone","lead":"Ständeräte, 1971 bis 2019","source":"Quelle: Eigene Berechnungen","annotationColumn":"Appenzell Ausserrhoden","filterList":["Basel-Stadt","Appenzell Ausserrhoden","Aargau","Appenzell Innerrhoden","Graubünden","Luzern","Jura","Glarus","Schaffhausen","Thurgau","Uri","Wallis","Zürich"],"annotations":[{"mirror":true,"label":"2019","positionX":260,"positionY":22},{"mirror":false,"label":"1971","positionX":85,"positionY":22}]}'></republik-waffle-timeline>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid19</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Covid19</h1>
+      <republik-covid19 data='{"parameter":"infectedOffset","label":"{formattedValue} Tage zwischen Ansteckung und positivem Test","title":"Wie viel Zeit vergeht bis zum Test?","lead":"Probieren Sie es selbst aus:","limitLabel":"Plätze auf den Intensivstationen:","overloadLabel":"mutmassliche Überlastung am {date}","offsetLabel":"bereits vor {formattedValue} Tagen infiziert","footnotes":[{"text":"Quelle: "},{"text":"Bundesamt für Gesundheit","href":"https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/situation-schweiz-und-international.html"},{"text":", eigene Berechnungen."}],"config":{"xTicks":["2020-03-01","2020-03-25","2020-04-12"]}}'></republik-covid19>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veil</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Veil</h1>
+      <republik-veil data='{"veil":"slider","config":{"paddingBottom":"0","min":0,"max":100,"step":1,"revealValue":33,"initialValue":50,"colors":{"light":{"guess":"red","guessed":"#3CAD00","reveal":"#622281","guide":"#979797"},"dark":{"guess":"blue","guessed":"blue","reveal":"red","guide":"#979797"}},"guide":true},"translations":[{"key":"slider/label/text","value":"Sie schätzen, dass {emphasis} verfasst wurden."},{"key":"slider/label/emphasis","value":"{value}% der Republik Artikel"},{"key":"slider/guide","value":"Verschieben Sie den grünen Regler an die gewünschte Stelle."},{"key":"veil/label/text","value":"etwa {emphasis} weibliche Vornamen"},{"key":"veil/label/emphasis","value":"{value}%"},{"key":"button","value":"Verrate"}]}'></republik-veil>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>
