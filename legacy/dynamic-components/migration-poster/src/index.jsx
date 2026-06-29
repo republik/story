@@ -255,7 +255,7 @@ const Index = ({
                 <motion.rect
                   width={width - margin.right}
                   height={HEIGHT}
-                  fill='var(--color-default)'
+                  fill='var(--styleguide-color-default)'
                   y={rectHeightAnimationStyle}
                   x={margin.left}
                 ></motion.rect>
@@ -338,7 +338,7 @@ const Index = ({
             style={{
               position: 'sticky',
               bottom: 0,
-              backgroundColor: 'var(--color-default)',
+              backgroundColor: 'var(--styleguide-color-default)',
               zIndex: 100,
               height: dynamicHeightAnimationStyle,
               boxShadow: '0 -5px 5px -5px rgb(0, 0, 0, 0.1)',
@@ -415,7 +415,7 @@ const TextOverlay = ({
         opacity: opacity,
         width: isMobile ? '100%' : '420px',
         padding: 20,
-        color: 'var(--color-text)',
+        color: 'var(--styleguide-color-text)',
       }}
     >
       <div style={{ position: 'relative', width: '100%', height: '100%' }}>
@@ -463,7 +463,7 @@ const PeakAnnotation = ({
         x2={x2}
         y1={y1}
         y2={y2}
-        stroke='var(--color-text)'
+        stroke='var(--styleguide-color-text)'
         strokeWidth={useTransform(yRange, threshold, [0, 1])}
         style={{ shapeRendering: 'crispEdges' }}
       ></motion.line>
@@ -473,7 +473,7 @@ const PeakAnnotation = ({
         cx={x1}
         cy={y1}
         strokeWidth='1'
-        stroke='var(--color-text)'
+        stroke='var(--styleguide-color-text)'
         fill='transparent'
       ></motion.circle>
 
@@ -482,7 +482,7 @@ const PeakAnnotation = ({
         cx={x2}
         cy={y1}
         strokeWidth='1'
-        stroke='var(--color-text)'
+        stroke='var(--styleguide-color-text)'
         fill='transparent'
       ></motion.circle>
 
@@ -523,14 +523,14 @@ const styles = {
     fontSize: 14,
     fontFeatureSettings: '"tnum", "kern"',
     fontFamily: fontFamilies.sansSerifRegular,
-    fill: 'var(--color-text)',
-    color: 'var(--color-text)',
+    fill: 'var(--styleguide-color-text)',
+    color: 'var(--styleguide-color-text)',
   }),
   line: css({
     strokeWidth: '1px',
     shapeRendering: 'crispEdges',
     opacity: 0.5,
-    stroke: 'var(--color-text)',
+    stroke: 'var(--styleguide-color-text)',
   }),
   labelLine: css({
     position: 'relative',

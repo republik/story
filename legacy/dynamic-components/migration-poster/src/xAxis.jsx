@@ -55,7 +55,7 @@ export const XAxis = ({
             left: xScale(tick),
             height: idx !== 0 && idx % 6 !== 0 ? '4px' : '8px',
             width: '1px',
-            backgroundColor: 'var(--color-text)',
+            backgroundColor: 'var(--styleguide-color-text)',
             opacity: '0.5',
             marginTop: idx !== 0 && idx % 6 !== 0 ? '14px' : '10px',
           }}

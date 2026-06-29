@@ -1,5 +1,5 @@
-import * as React from "react";
-import { TimelineItem } from "../timeline/Timeline";
+import * as React from 'react'
+import { TimelineItem } from '../timeline/Timeline'
 import {
   TeaserFrontImage,
   TeaserFrontTile,
@@ -14,39 +14,39 @@ import {
   Breakout,
   mediaQueries,
   RawHtml,
-} from "@project-r/styleguide";
-import { css } from "glamor";
+} from '@project-r/styleguide'
+import { css } from 'glamor'
 
 export type BannerTeaserItem = {
-  date?: string;
-  title?: string;
-  header?: string;
-  description?: string;
-  url: string;
-  author?: string;
-  highlight?: boolean;
-  image?: string;
-  color?: string;
-  center?: boolean;
-  bgColor?: string;
-  textPosition?: string;
-  split?: boolean;
-  lead?: string;
-  noMargin: boolean;
-};
+  date?: string
+  title?: string
+  header?: string
+  description?: string
+  url: string
+  author?: string
+  highlight?: boolean
+  image?: string
+  color?: string
+  center?: boolean
+  bgColor?: string
+  textPosition?: string
+  split?: boolean
+  lead?: string
+  noMargin: boolean
+}
 
 type Props = {
-  item: BannerTeaserItem;
-};
+  item: BannerTeaserItem
+}
 
 const styles = {
   link: css({
-    color: "inherit",
-    ":visited": {
-      color: "inherit",
+    color: 'inherit',
+    ':visited': {
+      color: 'inherit',
     },
-    textDecoration: "none",
-    cursor: "pointer",
+    textDecoration: 'none',
+    cursor: 'pointer',
   }),
   description: css({
     marginTop: 15,
@@ -56,25 +56,25 @@ const styles = {
     },
   }),
   credit: css({
-    "& a": {
-      color: "inherit",
-      ":hover": {
-        color: "inherit",
+    '& a': {
+      color: 'inherit',
+      ':hover': {
+        color: 'inherit',
         opacity: 0.8,
       },
-      ":visited": {
-        color: "inherit",
+      ':visited': {
+        color: 'inherit',
       },
-      textDecoration: "underline",
+      textDecoration: 'underline',
     },
   }),
-};
+}
 
 const BannerTeaser: React.FC<Props> = ({ item }) => {
   const TeaserHeadLine =
-    item.header == "Aus der Redaktion"
+    item.header == 'Aus der Redaktion'
       ? TeaserFrontImageHeadline.Interaction
-      : TeaserFrontImageHeadline.Editorial;
+      : TeaserFrontImageHeadline.Editorial
 
   const inner = (
     <>
@@ -86,7 +86,10 @@ const BannerTeaser: React.FC<Props> = ({ item }) => {
       </TeaserHeadLine>
       {item.lead && <TeaserFrontLead>{item.lead}</TeaserFrontLead>}
       <TeaserFrontCredit>
-        <div {...styles.credit} style={{ "--color-text": item.color }}>
+        <div
+          {...styles.credit}
+          style={{ '--styleguide-color-text': item.color }}
+        >
           <RawHtml
             dangerouslySetInnerHTML={{
               __html: item.author,
@@ -95,39 +98,39 @@ const BannerTeaser: React.FC<Props> = ({ item }) => {
         </div>
       </TeaserFrontCredit>
     </>
-  );
+  )
 
   if (item.split) {
     return (
-      <div style={{ marginTop: item.noMargin ? "-15px" : 0 }}>
+      <div style={{ marginTop: item.noMargin ? '-15px' : 0 }}>
         <TeaserFrontSplit
           even
           image={item.image}
-          color={item.color || "#fff"}
-          bgColor={item.bgColor || "#000"}
+          color={item.color || '#fff'}
+          bgColor={item.bgColor || '#000'}
         >
           {inner}
         </TeaserFrontSplit>
       </div>
-    );
+    )
   } else {
     return (
       <div>
         <a {...styles.link} href={item.url}>
           <TeaserFrontImage
-            color={item.color || "#fff"}
-            bgColor={item.bgColor || "#000"}
+            color={item.color || '#fff'}
+            bgColor={item.bgColor || '#000'}
             image={item.image}
             center={item.center}
-            textPosition={item.textPosition || "bottom"}
+            textPosition={item.textPosition || 'bottom'}
           >
             {inner}
           </TeaserFrontImage>
         </a>
         <Editorial.P {...styles.description}>{item.description}</Editorial.P>
       </div>
-    );
+    )
   }
-};
+}
 
-export default BannerTeaser;
+export default BannerTeaser

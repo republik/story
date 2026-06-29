@@ -339,7 +339,7 @@ class Story extends Component {
     const defaultColor =
       window
         ?.getComputedStyle(document.body)
-        ?.getPropertyValue('--color-default')
+        ?.getPropertyValue('--styleguide-color-default')
         ?.trim() || '#FFFFFF'
     return !scrollBlocks ? (
       <>
@@ -357,7 +357,7 @@ class Story extends Component {
           dangerouslySetInnerHTML={{
             __html: `
             noscript + div { position: relative; z-index: 1; }
-            .title-block, article > div:first-child .center { position: relative; } 
+            .title-block, article > div:first-child .center { position: relative; }
             .title-block h1, .title-block h2, .title-block p { text-shadow: -1px 0 ${defaultColor}, 0 1px ${defaultColor}, 1px 0 ${defaultColor}, 0 -1px ${defaultColor}; }
             `,
           }}
@@ -482,9 +482,10 @@ const MapWithStats = ({
     [allPostalCodes]
   )
 
-  const cityBuckets = useMemo(() => membershipStats.geoCities?.buckets || [], [
-    membershipStats,
-  ])
+  const cityBuckets = useMemo(
+    () => membershipStats.geoCities?.buckets || [],
+    [membershipStats]
+  )
 
   const translations = useMemo(() => {
     const latestCities = cityBuckets.map((city) => ({

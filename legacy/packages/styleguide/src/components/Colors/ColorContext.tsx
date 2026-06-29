@@ -27,10 +27,10 @@ const createScheme = (specificColors) => {
     const mapping = mappings[mappingName] || {}
 
     return color in mapping
-      ? `var(--color-${mapping[color]})`
+      ? `var(--styleguide-color-${mapping[color]})`
       : color in colorDefinitions
-      ? `var(--color-${color})`
-      : color
+        ? `var(--styleguide-color-${color})`
+        : color
   }
 
   const createColorRule = (attr, color, mappingName = undefined) => {
@@ -82,7 +82,7 @@ const createScheme = (specificColors) => {
 }
 const generateCSSColorDefinitions = (colors) => {
   return variableColorKeys
-    .map((key) => `--color-${key}: ${colors[key]};`)
+    .map((key) => `--styleguide-color-${key}: ${colors[key]};`)
     .join(' ')
 }
 
@@ -95,7 +95,10 @@ const getObjectForKeys = (colorKeys, mapper = (key) => key) =>
 
 const defaultColorContextValue = createScheme({
   schemeKey: 'auto',
-  ...getObjectForKeys(variableColorKeys, (key) => `var(--color-${key})`),
+  ...getObjectForKeys(
+    variableColorKeys,
+    (key) => `var(--styleguide-color-${key})`,
+  ),
 })
 
 const ColorContext = React.createContext(defaultColorContextValue)
@@ -122,7 +125,7 @@ export const ColorContextLocalExtension: React.FC<{
       ...localColors[schemeKey === 'auto' ? 'light' : schemeKey],
       ...getObjectForKeys(
         variableLocalColorKeys,
-        (key) => `var(--color-${key})`,
+        (key) => `var(--styleguide-color-${key})`,
       ),
       mappings: {
         ...mappings,
@@ -136,11 +139,11 @@ export const ColorContextLocalExtension: React.FC<{
     }
 
     const lightColorCSSDefs = variableLocalColorKeys.reduce((defs, key) => {
-      defs[`--color-${key}`] = localColors.light[key]
+      defs[`--styleguide-color-${key}`] = localColors.light[key]
       return defs
     }, {})
     const darkColorCSSDefs = variableLocalColorKeys.reduce((defs, key) => {
-      defs[`--color-${key}`] = localColors.dark[key]
+      defs[`--styleguide-color-${key}`] = localColors.dark[key]
       return defs
     }, {})
 

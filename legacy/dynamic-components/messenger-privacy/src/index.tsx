@@ -1,12 +1,18 @@
 // @ts-ignore
 import Component from './index.jsx'
+import { RootColorVariables } from '@project-r/styleguide'
 import r2wc from '@r2wc/react-to-web-component'
 
 function Wrapper({ data }: { data: Record<string, any> }) {
-  return <Component {...(data ?? {})} />
+  return (
+    <>
+      <RootColorVariables />
+      <Component {...(data ?? {})} />
+    </>
+  )
 }
 
 customElements.define(
   'republik-messenger-privacy',
-  r2wc(Wrapper, { props: { data: 'json' } }),
+  r2wc(Wrapper, { props: { data: 'json' } })
 )

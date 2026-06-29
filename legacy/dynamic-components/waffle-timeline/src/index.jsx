@@ -70,7 +70,9 @@ const Index = ({
         {sortedData.map(({ key, values }) => (
           <div key={key}>
             <div>
-              <strong style={{ color: 'var(--color-text)' }}>{key}</strong>
+              <strong style={{ color: 'var(--styleguide-color-text)' }}>
+                {key}
+              </strong>
             </div>
             <WaffleComponent
               group={values}
@@ -150,7 +152,7 @@ const Annotation = ({
   positionX,
   positionY,
   mirror = true,
-  fill = 'var(--color-text)',
+  fill = 'var(--styleguide-color-text)',
   labelOffset,
 }) => {
   return (
@@ -185,7 +187,7 @@ const WaffleCircle = ({ year, value, fill }) => {
         cx={xScale(year)}
         r={value > 0 ? RADIUS : 0}
         fill={fill}
-        stroke='var(--color-default)'
+        stroke='var(--styleguide-color-default)'
         fillOpacity={1}
         strokeWidth='1'
       ></circle>
@@ -194,7 +196,7 @@ const WaffleCircle = ({ year, value, fill }) => {
         cx={xScale(year)}
         r={value > 0 ? RADIUS : 0}
         fill={fill}
-        stroke='var(--color-default)'
+        stroke='var(--styleguide-color-default)'
         fillOpacity={1}
         strokeWidth='1'
       ></circle>
@@ -205,7 +207,7 @@ const WaffleCircle = ({ year, value, fill }) => {
       cx={xScale(year)}
       r={value > 0 ? RADIUS : 0}
       fill={fill}
-      stroke='var(--color-default)'
+      stroke='var(--styleguide-color-default)'
       fillOpacity={1}
       strokeWidth='1'
     ></circle>
@@ -235,14 +237,14 @@ const styles = {
     strokeWidth: '1px',
     shapeRendering: 'crispEdges',
     opacity: 0.5,
-    stroke: 'var(--color-dividerInverted)',
+    stroke: 'var(--styleguide-color-dividerInverted)',
   }),
   legend: css({
     fontWeight: 'normal',
     fontSize: 14,
     fontFeatureSettings: '"tnum", "kern"',
     fontFamily: fontFamilies.sansSerifRegular,
-    fill: 'var(--color-text)',
-    color: 'var(--color-text)',
+    fill: 'var(--styleguide-color-text)',
+    color: 'var(--styleguide-color-text)',
   }),
 }

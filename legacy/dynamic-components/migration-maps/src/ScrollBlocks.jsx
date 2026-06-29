@@ -55,7 +55,7 @@ const styles = {
     padding: '20px 15px',
     width: '100%',
     borderRadius: '5px',
-    boxShadow: 'var(--color-imageChoiceShadow)',
+    boxShadow: 'var(--styleguide-color-imageChoiceShadow)',
     [mediaQueries.mUp]: {
       // marginLeft: ARTBOARD_SIZE[1],
       width: 400, // make text box little bit wider than usual text flow

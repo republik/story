@@ -198,7 +198,7 @@ class PostCodes extends Component {
     const defaultColor =
       window
         ?.getComputedStyle(document.body)
-        ?.getPropertyValue('--color-default')
+        ?.getPropertyValue('--styleguide-color-default')
         ?.trim() || '#FFFFFF'
     const isLightMode =
       defaultColor.toUpperCase() === '#FFFFFF' ||
