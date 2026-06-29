@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/orbiting/my-country-talks#readme",
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^5.3.0",
-    "eslint-plugin-react": "^7.10.0",
     "glamor": "^2.20.40",
     "lodash.debounce": "^4.0.8",
     "@types/react": "^19.2.17",
