@@ -2,10 +2,16 @@
 import Component0 from './index.jsx'
 // @ts-ignore
 import Component1 from './y2020.jsx'
+import { RootColorVariables } from '@project-r/styleguide'
 import r2wc from '@r2wc/react-to-web-component'
 
 function Wrapper0({ data }: { data: Record<string, any> }) {
-  return <Component0 {...(data ?? {})} />
+  return (
+    <>
+      <RootColorVariables />
+      <Component0 {...(data ?? {})} />
+    </>
+  )
 }
 
 customElements.define(
@@ -14,7 +20,12 @@ customElements.define(
 )
 
 function Wrapper1({ data }: { data: Record<string, any> }) {
-  return <Component1 {...(data ?? {})} />
+  return (
+    <>
+      <RootColorVariables />
+      <Component1 {...(data ?? {})} />
+    </>
+  )
 }
 
 customElements.define(

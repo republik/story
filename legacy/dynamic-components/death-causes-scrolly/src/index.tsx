@@ -14,5 +14,5 @@ function Wrapper({ data }: { data: Record<string, any> }) {
 
 customElements.define(
   'republik-death-causes-scrolly',
-  r2wc(Wrapper, { props: { data: 'json' } })
+  r2wc(Wrapper, { props: { data: 'json' } }),
 )

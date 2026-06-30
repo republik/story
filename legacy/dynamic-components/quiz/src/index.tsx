@@ -1,8 +1,14 @@
 import Quiz from './Quiz'
+import { RootColorVariables } from '@project-r/styleguide'
 import r2wc from '@r2wc/react-to-web-component'
 
 function Wrapper({ data }: { data: Record<string, any> }) {
-  return <Quiz {...data} />
+  return (
+    <>
+      <RootColorVariables />
+      <Quiz {...data} />
+    </>
+  )
 }
 
 customElements.define(

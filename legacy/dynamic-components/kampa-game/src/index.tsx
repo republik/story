@@ -13,5 +13,5 @@ function Wrapper({ data }: { data: Record<string, any> }) {
 
 customElements.define(
   'republik-kampa-game',
-  r2wc(Wrapper, { props: { data: 'json' } })
+  r2wc(Wrapper, { props: { data: 'json' } }),
 );
