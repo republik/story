@@ -1,5 +1,6 @@
 // @ts-ignore
 import Component from './index.ts';
+import { RootColorVariables } from '@project-r/styleguide';
 import r2wc from '@r2wc/react-to-web-component';
 
 function Wrapper({ data }: { data: Record<string, any> }) {

@@ -38,7 +38,12 @@ customElements.define(
 )
 
 function Wrapper2({ data }: { data: Record<string, any> }) {
-  return <Component2 {...(data ?? {})} />
+  return (
+    <>
+      <RootColorVariables />
+      <Component2 {...(data ?? {})} />
+    </>
+  )
 }
 
 customElements.define(
@@ -47,7 +52,12 @@ customElements.define(
 )
 
 function Wrapper3({ data }: { data: Record<string, any> }) {
-  return <Component3 {...(data ?? {})} />
+  return (
+    <>
+      <RootColorVariables />
+      <Component3 {...(data ?? {})} />
+    </>
+  )
 }
 
 customElements.define(
