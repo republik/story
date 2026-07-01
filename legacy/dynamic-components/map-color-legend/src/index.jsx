@@ -21,24 +21,42 @@ const legendColors = [
   '#1f78b4',
   '#6a3d9a',
 ]
-// const names = [
-//   'Léman',
-//   'Jura',
-//   'Bern',
-//   'Basel',
-//   'Zürich',
-//   'Rigi',
-//   'Wallis',
-//   'Gottardo',
-//   'Säntis',
-// ]
+const names = [
+  'Léman',
+  'Jura',
+  'Bern',
+  'Basel',
+  'Zürich',
+  'Rigi',
+  'Wallis',
+  'Gottardo',
+  'Säntis',
+]
 
-const Index = ({ title, lead, source, image, names }) => {
+const Index = ({
+  title,
+  lead,
+  source,
+  image,
+  sequentialColors,
+  sequentialColorLegend,
+  labelLeft,
+  labelRight,
+}) => {
+  console.log({ title, lead, source, image, names })
   return (
     <>
       <ChartTitle>{title}</ChartTitle>
       <ChartLead>{lead}</ChartLead>
-      <Legend colors={legendColors} names={names} />
+      {sequentialColorLegend ? (
+        <SequentialLegend
+          colors={sequentialColors}
+          labelLeft={labelLeft}
+          labelRight={labelRight}
+        />
+      ) : (
+        <Legend colors={legendColors} names={names} />
+      )}
       <img {...styles.image} src={ASSETS_BASE_URL + image} />
       <FigureCaption>{source}</FigureCaption>
     </>
@@ -63,6 +81,34 @@ const Legend = ({ colors, names }) => {
           </span>
         </span>
       ))}
+    </div>
+  )
+}
+
+const SequentialLegend = ({
+  colors,
+  labelLeft = 'Geringer Anteil',
+  labelRight = 'Hoher Anteil',
+}) => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+      }}
+    >
+      <Label>{labelLeft}</Label>
+
+      <div style={{ display: 'flex' }}>
+        {colors.map((color, i) => (
+          <span style={{ whiteSpace: 'nowrap' }} key={`color-legend-${i}`}>
+            <span {...styles.circle} style={{ backgroundColor: color }} />
+          </span>
+        ))}
+      </div>
+
+      <Label>{labelRight}</Label>
     </div>
   )
 }
