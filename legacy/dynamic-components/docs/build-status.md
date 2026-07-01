@@ -16,9 +16,6 @@ Missing `d3-ease` — used in animations. Add `d3-ease` as a dependency.
 ### `talk-to-the-machine`
 Imports `babel-runtime/regenerator` — a legacy Babel runtime dep that was removed during migration. Replace with `@babel/runtime/regenerator` or refactor the async code to not require it.
 
-### `who-takes-the-cake`
-`react-icons` v2 parse error: the `Md3dRotation` symbol can't be parsed from the v2 package in the current build toolchain. Either upgrade the imports to `react-icons` v4+ naming conventions (`import { Md3dRotation } from 'react-icons/md'`) or find an alternative.
-
 ## Skipped (intentional)
 
 None — the 5 above are the only known failures.

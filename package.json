@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test:serve": "pnx serve --cors",
-    "build": "pnpm -r --filter '!pleadings' --filter '!questionnaire' --filter '!sozialhilfe-simulation' --filter '!talk-to-the-machine' --filter '!who-takes-the-cake' build",
+    "build": "pnpm -r --filter '!pleadings' --filter '!questionnaire' --filter '!sozialhilfe-simulation' --filter '!talk-to-the-machine' build",
     "knip:packages": "knip --workspace './legacy/packages/**/*'",
     "knip:dynamic-components": "knip --workspace './legacy/dynamic-components/*'"
   },
