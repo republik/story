@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Steps</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Baby Steps</h1>
+      <republik-baby-steps data='{"voting":"gen202011-1","caption":"Ihrer Kolleginnen und Kollegen haben bereits abgestimmt. Ziel: {currentGoal}. 1st Ziel: {firstGoal}","goals":[{"number":3345,"description":"This is how many people voted on the same objects last year. Let&apos;s try and beat that, shall we?"},{"percent":0.3,"description":"30% of you voted, that&apos;s {count} people. Not too bad at all. And thank you to everyone who voted already."},{"percent":0.5,"description":"{count} people, or half of you, took part in the voting. That&apos;s really, really good. Thank you very much to all of you for your investment in Republik&apos;s future."}]}'></republik-baby-steps>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>

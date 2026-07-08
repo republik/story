@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Questionnaire</h1>
+      <republik-questionnaire data='{"slug":"mss-klimabeitrag","translations":[{"key":"questionnaire/question/0/text","value":"Wie viel wären Sie bereit für einen solchen Dienst auszugeben?"},{"key":"questionnaire/question/0/range/submit","value":"{value} Franken speichern"},{"key":"questionnaire/question/0/range/tick/first","value":"nichts"},{"key":"questionnaire/question/0/range/tick/last","value":"1000 Franken und mehr"}],"settings":[{"order":0,"colors":{"min":"#fbfbfb","max":"#d6d6d6"},"colorsDark":{"min":"#232323","max":"#757575"},"slider":{"step":1},"augments":[{"path":"[0].userAnswer.payload.value","color":"#048e02","colorDark":"#00AA00","label":"{value} Franken (Sie)"},{"path":"[0].rangeResults.median","color":"#ba5968","label":"{value} Franken (Mittelwert)"}]}]}'></republik-questionnaire>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>

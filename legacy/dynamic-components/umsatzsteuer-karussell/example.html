@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umsatzsteuer Karussell</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Renders the built library code in dist/ -->
+      <h1>Umsatzsteuer Karussell</h1>
+      <republik-umsatzsteuer-karussell data='{"anchor":"karussell","labels":{"buffer":"Händler C","io":"Firma A","mt":"Firma B","distributor":"Händler D","amt":"Finanzamt","amtOrt":"Deutschland","distributorOrt":"Deutschland","mtOrt":"Deutschland","ioOrt":"Luxemburg","bufferOrt":"Deutschland"},"phases":[{"active":["io","io-mt","mt"],"html":"A in Luxemburg verkauft die Ware über die EU-Innengrenze an B in Deutschland. Dies ist mehrwertsteuerbefreit."},{"active":["io","io-mt","mt","mt-buffer","buffer"],"html":"Hier geschieht der Kern des Betrugs: B fälscht ihre Rechnungen und tut so, als hätte sie Mehrwertsteuer an A bezahlt. Die Ware verkauft sie an C weiter, inklusive Gewinnmarge und 100 Euro Mehrwertsteuer."},{"active":["io","io-mt","mt","mt-buffer","buffer","buffer-distributor","distributor"],"html":"C verkauft inländisch an D weiter – erneut inklusive Gewinnmarge und damit 130 Euro Mehrwertsteuer."},{"active":["io","io-mt","mt","mt-buffer","buffer","buffer-distributor","distributor","distributor-io"],"html":"D verkauft zurück ins EU-Ausland. Dies ist mehrwertsteuerfrei."},{"active":["io","io-mt","mt","mt-buffer","buffer","buffer-distributor","distributor","distributor-io","amt"],"html":"Das deutsche Finanzamt muss die Steuer ausgleichen."},{"active":["io","io-mt","mt","mt-buffer","buffer","buffer-distributor","distributor","distributor-io","amt","buffer-amt","amt-distributor"],"html":"C zahlt B 100 Euro Mehrwertsteuer. 130 Euro Mehrwertsteuer verrechnet sie D. Die Differenz – 30 Euro – zahlt sie dem Finanzamt ein. D erhält die bezahlte Steuer vom Amt zurück. Diese Transaktionen sind alle korrekt."},{"active":["io","io-mt","mt-faded","mt-buffer","buffer","buffer-distributor","distributor","distributor-io","amt","buffer-amt","amt-distributor","mt-amt"],"html":"B müsste die Mehrwertsteuer von 100 Euro ans Finanzamt abführen, tut das aber nicht. Meist löst sich die Firma nach den Geschäften in Luft auf. Das Finanzamt hat unter dem Strich 100 Euro ausbezahlt, die es nie erhalten hat."}],"schema":"UStKarussell"}'></republik-umsatzsteuer-karussell>
+    </div>
+    <script type="module">
+      import './dist/index.mjs'
+    </script>
+  </body>
+</html>

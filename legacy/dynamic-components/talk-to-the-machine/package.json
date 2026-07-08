@@ -1,0 +1,39 @@
+{
+  "name": "talk-to-the-machine",
+  "version": "0.5.0",
+  "description": "custom components for the story, three bundles—one per part",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/talk-to-the-machine.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/talk-to-the-machine/issues"
+  },
+  "homepage": "https://github.com/orbiting/talk-to-the-machine#readme",
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "glamor": "^2.20.40",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "@tensorflow/tfjs": "^0.11.6",
+    "babel-standalone": "^6.26.0",
+    "codemirror": "^5.39.0",
+    "d3": "^5.5.0",
+    "lodash.debounce": "^4.0.8",
+    "react-codemirror2": "^5.0.4",
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

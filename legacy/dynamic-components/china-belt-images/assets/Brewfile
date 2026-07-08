@@ -1,0 +1,24 @@
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+brew "python@3.9"
+brew "glib"
+brew "cairo"
+brew "gmp"
+brew "gcc"
+brew "git", link: false
+brew "lftp"
+brew "libomp", link: true
+brew "llvm"
+brew "mongodb-community@4.0", restart_service: true
+brew "python@3.8", link: false
+brew "redis"
+brew "s3cmd"
+brew "tor"
+brew "yarn"
+brew "heroku/brew/heroku"
+cask "meshlab"
+cask "xquartz"

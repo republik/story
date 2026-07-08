@@ -1,0 +1,38 @@
+{
+  "name": "101-reasons",
+  "version": "0.0.1",
+  "description": "custom components for the story",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/101-reasons.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/101-reasons/issues"
+  },
+  "homepage": "https://github.com/orbiting/101-reasons#readme",
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "d3-array": "^1.2.4",
+    "d3-dsv": "^1.0.8",
+    "glamor": "^2.20.40",
+    "react-spring": "^8.0.2",
+    "react-use-gesture": "^5.1.3",
+    "scroll-into-view": "^1.9.7",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "2.2.7"
+  }
+}

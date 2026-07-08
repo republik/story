@@ -97,7 +97,7 @@ function DatawrapperInteractive({
       {idMissing ? (
         <div
           style={{
-            color: 'var(--color-error)',
+            color: 'var(--styleguide-color-error)',
             padding: 15,
           }}
         >
@@ -106,7 +106,7 @@ function DatawrapperInteractive({
       ) : error ? (
         <div
           style={{
-            color: 'var(--color-error)',
+            color: 'var(--styleguide-color-error)',
             padding: 15,
           }}
         >

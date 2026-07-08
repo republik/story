@@ -1,0 +1,36 @@
+{
+  "name": "REPOSLUG",
+  "version": "0.0.1",
+  "description": "custom components for the story",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/REPOSLUG.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/REPOSLUG/issues"
+  },
+  "homepage": "https://github.com/orbiting/REPOSLUG#readme",
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "glamor": "^2.20.40",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-apollo": "^2.5.8",
+    "graphql-tag": "^2.12.6",
+    "graphql": "^14.7.0",
+    "apollo-client": "^2.6.10"
+  }
+}

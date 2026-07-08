@@ -1,0 +1,32 @@
+{
+  "name": "svg-chart-support",
+  "version": "0.0.1",
+  "description": "custom components for the story",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/svg-chart-support.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/svg-chart-support/issues"
+  },
+  "homepage": "https://github.com/orbiting/svg-chart-support#readme",
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "glamor": "^2.20.40",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "footprint",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "@types/jest": "^24.0.25",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "d3-color": "^1.4.0",
+    "glamor": "^2.20.40",
+    "jest": "^24.9.0",
+    "lodash": "^4.17.15",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "clipboard-copy": "^3.1.0",
+    "intersection-observer-polyfill": "^0.1.0",
+    "prop-types": "^15.8.1",
+    "querystring": "^0.2.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "2.2.7",
+    "react-spring": "^8.0.27"
+  }
+}

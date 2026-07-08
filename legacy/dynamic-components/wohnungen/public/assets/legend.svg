@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="301px" height="209px" viewBox="0 0 301 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Legend</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Legend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Städtische-Liegensch" font-family="GTAmerica-Medium, GT America" font-size="15" font-weight="400" fill="#000000">
+            <tspan x="116.26" y="164">Städtische Liegenschaft</tspan>
+            <tspan x="101.8225" y="182" font-family="GTAmerica-Regular, GT America" font-weight="normal">Eigentum der Gemeinde oder </tspan>
+            <tspan x="101.7625" y="200" font-family="GTAmerica-Regular, GT America" font-weight="normal">öffentlich-rechtliche Stiftung</tspan>
+        </text>
+        <text id="Wohnbaugenossenschaf" font-family="GTAmerica-Medium, GT America" font-size="15" font-weight="400" fill="#000000">
+            <tspan x="1.285" y="13">Wohnbaugenossenschaft</tspan>
+            <tspan x="20.5075" y="31" font-family="GTAmerica-Regular, GT America" font-weight="normal">Unvollständige Liste </tspan>
+            <tspan x="6.145" y="49" font-family="GTAmerica-Regular, GT America" font-weight="normal">aus öffentlichen Quellen</tspan>
+        </text>
+        <path d="M124,95 C100.08219,95 89,79.8162058 89,60" id="Path" stroke="#B8B8B8"></path>
+        <path d="M201,141 C177.08219,141 166,125.816206 166,106" id="Path-Copy" stroke="#B8B8B8" transform="translate(183.500000, 123.500000) scale(-1, -1) translate(-183.500000, -123.500000) "></path>
+        <rect id="Rectangle-Copy-59" fill="#0000FF" x="161" y="96" width="2" height="2"></rect>
+        <g id="Group-3" transform="translate(139.000000, 85.000000) scale(1, -1) translate(-139.000000, -85.000000) translate(130.000000, 79.000000)" fill="#0000FF">
+            <rect id="Rectangle-Copy-88" transform="translate(17.000000, 10.000000) scale(-1, -1) translate(-17.000000, -10.000000) " x="16" y="9" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-89" transform="translate(15.000000, 6.000000) scale(-1, -1) translate(-15.000000, -6.000000) " x="14" y="5" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-90" transform="translate(8.000000, 2.000000) scale(-1, -1) translate(-8.000000, -2.000000) " x="7" y="1" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-91" transform="translate(11.000000, 1.000000) scale(-1, -1) translate(-11.000000, -1.000000) " x="10" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-92" transform="translate(10.000000, 5.000000) scale(-1, -1) translate(-10.000000, -5.000000) " x="9" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-93" transform="translate(1.000000, 2.000000) scale(-1, -1) translate(-1.000000, -2.000000) " x="0" y="1" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-94" transform="translate(4.000000, 3.000000) scale(-1, -1) translate(-4.000000, -3.000000) " x="3" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-95" transform="translate(11.000000, 8.000000) scale(-1, -1) translate(-11.000000, -8.000000) " x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-96" transform="translate(8.000000, 11.000000) scale(-1, -1) translate(-8.000000, -11.000000) " x="7" y="10" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-97" transform="translate(6.000000, 6.000000) scale(-1, -1) translate(-6.000000, -6.000000) " x="5" y="5" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-98" transform="translate(3.000000, 11.000000) scale(-1, -1) translate(-3.000000, -11.000000) " x="2" y="10" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-99" transform="translate(1.000000, 7.000000) scale(-1, -1) translate(-1.000000, -7.000000) " x="0" y="6" width="2" height="2"></rect>
+        </g>
+        <g id="Group-3-Copy" transform="translate(136.000000, 99.000000) scale(-1, -1) translate(-136.000000, -99.000000) translate(127.000000, 93.000000)" fill="#0000FF">
+            <rect id="Rectangle-Copy-88" transform="translate(17.000000, 10.000000) scale(-1, -1) translate(-17.000000, -10.000000) " x="16" y="9" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-89" transform="translate(15.000000, 6.000000) scale(-1, -1) translate(-15.000000, -6.000000) " x="14" y="5" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-90" transform="translate(8.000000, 2.000000) scale(-1, -1) translate(-8.000000, -2.000000) " x="7" y="1" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-91" transform="translate(11.000000, 1.000000) scale(-1, -1) translate(-11.000000, -1.000000) " x="10" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-92" transform="translate(10.000000, 5.000000) scale(-1, -1) translate(-10.000000, -5.000000) " x="9" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-93" transform="translate(1.000000, 2.000000) scale(-1, -1) translate(-1.000000, -2.000000) " x="0" y="1" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-94" transform="translate(4.000000, 3.000000) scale(-1, -1) translate(-4.000000, -3.000000) " x="3" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-95" transform="translate(11.000000, 8.000000) scale(-1, -1) translate(-11.000000, -8.000000) " x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-96" transform="translate(8.000000, 11.000000) scale(-1, -1) translate(-8.000000, -11.000000) " x="7" y="10" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-97" transform="translate(6.000000, 6.000000) scale(-1, -1) translate(-6.000000, -6.000000) " x="5" y="5" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-98" transform="translate(3.000000, 11.000000) scale(-1, -1) translate(-3.000000, -11.000000) " x="2" y="10" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-99" transform="translate(1.000000, 7.000000) scale(-1, -1) translate(-1.000000, -7.000000) " x="0" y="6" width="2" height="2"></rect>
+        </g>
+        <rect id="Rectangle-Copy-77" fill="#0000FF" x="159" y="92" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-83" fill="#0000FF" x="152" y="88" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-84" fill="#0000FF" x="155" y="87" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-85" fill="#0000FF" x="154" y="91" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-86" fill="#0000FF" x="145" y="88" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-87" fill="#0000FF" x="148" y="90" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-78" fill="#0000FF" x="155" y="94" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-79" fill="#0000FF" x="151" y="96" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-80" fill="#0000FF" x="150" y="92" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-81" fill="#0000FF" x="147" y="97" width="2" height="2"></rect>
+        <rect id="Rectangle-Copy-82" fill="#0000FF" x="145" y="93" width="2" height="2"></rect>
+        <g id="Group-2" transform="translate(149.000000, 98.000000)" fill="#FFFF00">
+            <rect id="Rectangle-Copy-66" x="7" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-67" x="10" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-68" x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-69" x="0" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-70" x="1" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-71" x="5" y="8" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-72" x="4" y="3" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-73" x="7" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-74" x="12" y="11" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-75" x="13" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-76" x="8" y="12" width="2" height="2"></rect>
+        </g>
+        <g id="Group-2-Copy-3" transform="translate(118.000000, 116.000000)" fill="#FFFF00">
+            <rect id="Rectangle-Copy-66" x="7" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-67" x="10" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-68" x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-69" x="0" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-70" x="1" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-71" x="5" y="8" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-72" x="4" y="3" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-73" x="7" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-74" x="12" y="11" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-75" x="13" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-76" x="8" y="12" width="2" height="2"></rect>
+        </g>
+        <g id="Group-2-Copy" transform="translate(138.500000, 115.000000) scale(1, -1) translate(-138.500000, -115.000000) translate(131.000000, 108.000000)" fill="#FFFF00">
+            <rect id="Rectangle-Copy-66" x="7" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-67" x="10" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-68" x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-69" x="0" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-70" x="1" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-71" x="5" y="8" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-72" x="4" y="3" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-73" x="7" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-74" x="12" y="11" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-75" x="13" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-76" x="8" y="12" width="2" height="2"></rect>
+        </g>
+        <g id="Group-2-Copy-2" transform="translate(153.500000, 119.000000) scale(1, -1) rotate(90.000000) translate(-153.500000, -119.000000) translate(146.000000, 112.000000)" fill="#FFFF00">
+            <rect id="Rectangle-Copy-66" x="7" y="4" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-67" x="10" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-68" x="10" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-69" x="0" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-70" x="1" y="2" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-71" x="5" y="8" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-72" x="4" y="3" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-73" x="7" y="0" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-74" x="12" y="11" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-75" x="13" y="7" width="2" height="2"></rect>
+            <rect id="Rectangle-Copy-76" x="8" y="12" width="2" height="2"></rect>
+        </g>
+    </g>
+</svg>

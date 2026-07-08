@@ -1,0 +1,162 @@
+{
+  "updated": "2020-03-26T01:25:10.726Z",
+  "title": "de",
+  "data": [
+    {
+      "key": "label/unchanged",
+      "value": "Worst Case"
+    },
+    {
+      "key": "label/plan",
+      "value": "Unser Plan"
+    },
+    {
+      "key": "label/user",
+      "value": "Ihr Plan"
+    },
+    {
+      "key": "slider/title",
+      "value": "Parameter"
+    },
+    {
+      "key": "slider/group/1/cf",
+      "value": "Erneuerungsrate: {percent} Crowdfunder"
+    },
+    {
+      "key": "slider/group/1/y1",
+      "value": "{percent} Erneuerung Neuverleger"
+    },
+    {
+      "key": "slider/group/1/y2",
+      "value": "{percent} ab zweiter Erneuerung"
+    },
+    {
+      "key": "slider/group/1/y3",
+      "value": "{percent} ab dritter Erneuerung"
+    },
+    {
+      "key": "slider/group/2",
+      "value": "{count} neue Mitgliedschaften pro Monat"
+    },
+    {
+      "key": "slider/group/3/save",
+      "value": "Budget: {percent} sparen"
+    },
+    {
+      "key": "slider/group/3/grow",
+      "value": "Budget: {percent} mehr ausgeben"
+    },
+    {
+      "key": "slider/group/4/other",
+      "value": "{count} Millionen Investment"
+    },
+    {
+      "key": "slider/group/4/1",
+      "value": "{count} Million Investment"
+    },
+    {
+      "key": "annotation/stable",
+      "value": "selbsttragend bei"
+    },
+    {
+      "key": "annotation/min",
+      "value": " "
+    },
+    {
+      "key": "unit/chf",
+      "value": "Schweizer Franken"
+    },
+    {
+      "key": "unit/memberships",
+      "value": "Jahresmitgliedschaften"
+    },
+    {
+      "key": "user/title",
+      "value": "Ihre Prophezeiung?"
+    },
+    {
+      "key": "user/bankrupt/statment",
+      "value": "Die Republik geht im {monthYear} pleite."
+    },
+    {
+      "key": "user/bankrupt/share",
+      "value": "Die Republik geht im {monthYear} pleite"
+    },
+    {
+      "key": "user/bankrupt/text",
+      "value": "Sie glauben, dass das Unternehmen in Bankrott geht. Wir werden zwar alles tun, um Sie zu widerlegen – aber wer weiss? (Nun: Sie!)"
+    },
+    {
+      "key": "user/survive/statment",
+      "value": "Das Abenteuer heisst: überleben."
+    },
+    {
+      "key": "user/survive/share",
+      "value": "Das Abenteuer heisst: überleben"
+    },
+    {
+      "key": "user/survive/text",
+      "value": "Sie denken, die Republik übersteht die nächsten vier Jahre. Aber Journalismus ist teuer und braucht Zeit: Wann die Republik selbsttragend wird, ist ungewiss."
+    },
+    {
+      "key": "user/sufficient/statment",
+      "value": "Lang lebe die Republik!"
+    },
+    {
+      "key": "user/sufficient/share",
+      "value": "Lang lebe die Republik! Selbsttragend ab August 2020"
+    },
+    {
+      "key": "user/sufficient/text",
+      "value": "Sie sind überzeugt, die Republik schafft es, selbsttragend zu werden. Und Sie haben bereits errechnet, wann: im {monthYear}."
+    },
+    {
+      "key": "user/share/p1",
+      "value": "Nun, es wäre uns ein grosser Erkenntnisgewinn, wenn Sie Ihr oben entworfenes Szenario auf Twitter oder Facebook mit dem Hashtag #republikszenario teilen."
+    },
+    {
+      "key": "user/share/p2",
+      "value": "Nicht zuletzt deshalb, um eines Tages den unumstösslichen Beweis zu haben, dass Sie bereits heute wussten, was dann passiert."
+    },
+    {
+      "key": "user/share/clean",
+      "value": "Bewegen Sie die Schieber oben, um Ihre Prophezeiung zu errechnen."
+    },
+    {
+      "key": "user/after1",
+      "value": "Sollten wir a) überleben, b) in Bankrott gehen, c) profitabel werden, werden wir den genauesten Propheten, die genaueste Prophetin einladen. Je nachdem zu unserem Leichenmahl, zum 5-Jahres-Jubiläum oder zum Aktionärstrinken."
+    },
+    {
+      "key": "user/after2",
+      "value": "Dort werden wir Sie mit geneigtem Kopf begrüssen, in Bewunderung für Ihre Gabe, die Zukunft vorauszusagen."
+    },
+    {
+      "key": "label/extract/plan",
+      "value": "Republik-Plan"
+    },
+    {
+      "key": "label/extract/user",
+      "value": "Mein Plan"
+    },
+    {
+      "key": "user/share/description",
+      "value": "Annahmen: {list}"
+    },
+    {
+      "key": "chart/liq/title",
+      "value": "Liquiditätsentwicklung"
+    },
+    {
+      "key": "chart/liq/footnote",
+      "value": "Das Investment wird im Juni 2019 verbucht."
+    },
+    {
+      "key": "chart/mem/title",
+      "value": "Entwicklung Mitgliedschaften"
+    },
+    {
+      "key": "chart/liq/footnote2020",
+      "value": "Im April 2020 werden CHF 600’000 von Investorinnen und Grossspender verbucht."
+    }
+  ]
+}

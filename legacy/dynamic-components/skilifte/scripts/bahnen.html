@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Skilifte</title>
+</head>
+<body>
+<div id="root"/>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+
+<script type="text/babel">
+
+  d3.json('../src/data/profiles.json').then(data => {
+
+    const App = () =>
+      <table>
+        <thead>
+        <tr>
+          <th>Skigebiet</th>
+          <th>Name</th>
+          <th>Karte</th>
+          <th>Korrektur</th>
+        </tr>
+        </thead>
+        <tbody>
+        {
+          data.map(d =>
+            <React.Fragment>
+              {
+                d.data.map((s, i) =>
+                  <tr>
+                    <td>{d.name}</td>
+                    <td>{s.NAME}</td>
+                    <td><a href={`https://map.geo.admin.ch/?E=${s.MIN_E}&N=${s.MIN_N}&zoom=10&crosshair=marker`}
+                           target="_blank">{s.MIN_E} / {s.MIN_N} </a></td>
+                      <td></td>
+                  </tr>
+                )
+              }
+            </React.Fragment>)
+
+        }
+        </tbody>
+      </table>
+
+    ReactDOM.render(<App/>, document.querySelector('#root'))
+
+  })
+
+</script>
+
+</body>
+</html>

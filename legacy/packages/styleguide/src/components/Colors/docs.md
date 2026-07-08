@@ -47,7 +47,7 @@ colorScheme.getCSSColor(color, [mappingName]): string[]|string
 ```
 
 - `attr`: string, the css attribute, e.g. `'backgroundColor'`, `'color'` or `'borderColor'`
-- `color`: string, the variable name, e.g. `'default'` or `'text'`, for convenience you may also pass literal values (`'#000'`) and css color arrays (`['#000', 'var(--color-text)']`)
+- `color`: string, the variable name, e.g. `'default'` or `'text'`, for convenience you may also pass literal values (`'#000'`) and css color arrays (`['#000', 'var(--styleguide-color-text)']`)
 - `mappingName`: string, optional, use a predefined map to transform `color` to a variable or different literal value, e.g. `'format'`
 
 `colorScheme.set` returns a glamor rule (like glamors `css`) which should be spread onto a React element.
@@ -257,4 +257,3 @@ E.g. for charts. Default local colors: inverted colors.
 </ColorContextLocalExtension>
 </ColorContextProvider>
 ```
-

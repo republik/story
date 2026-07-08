@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "key": "countdown/time/days/1",
+      "value": "1 Tag"
+    },
+    {
+      "key": "countdown/time/days/other",
+      "value": "{count} Tage"
+    },
+    {
+      "key": "countdown/time/hours/1",
+      "value": "1 Stunde"
+    },
+    {
+      "key": "countdown/time/hours/other",
+      "value": "{count} Stunden"
+    },
+    {
+      "key": "countdown/time/minutes/1",
+      "value": "1 Minute"
+    },
+    {
+      "key": "countdown/time/minutes/other",
+      "value": "{count} Minuten"
+    },
+    {
+      "key": "countdown/time/seconds/1",
+      "value": "1 Sekunde"
+    },
+    {
+      "key": "countdown/time/seconds/other",
+      "value": "{count} Sekunden"
+    }
+  ]
+}

@@ -190,11 +190,6 @@ export * from './chart'
 
 // export * from './components/Icons'
 
-export * from './templates'
-export { mdastToString } from './templates/Article/utils'
-
 export { default as ErrorBoundary } from './components/ErrorBoundary'
-
-export { Author as EmailAuthor } from './templates/shared/email/components/Author'
 
 export { Marker, markerKeys, markersConfig } from './components/Marker'

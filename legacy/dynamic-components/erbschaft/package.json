@@ -1,0 +1,44 @@
+{
+  "name": "erbschaft",
+  "version": "0.0.1",
+  "description": "custom components for the story",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/erbschaft.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/erbschaft/issues"
+  },
+  "homepage": "https://github.com/orbiting/erbschaft#readme",
+  "devDependencies": {
+    "@project-r/styleguide": "workspace:*",
+    "glamor": "^2.20.40",
+    "react-textarea-autosize": "^6.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "d3-ease": "^1.0.5",
+    "d3-interpolate": "^1.3.2",
+    "d3-timer": "^1.0.9",
+    "lodash": "^4.17.11",
+    "scroll-into-view": "^1.14.1",
+    "validator": "^10.11.0",
+    "@r2wc/react-to-web-component": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-apollo": "^2.5.8",
+    "graphql-tag": "^2.12.6",
+    "graphql": "^14.7.0",
+    "apollo-client": "^2.6.10"
+  }
+}

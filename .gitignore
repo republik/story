@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .idea/*
 .claude/*
+
+# Playwright test results
+test-results/

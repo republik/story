@@ -1,0 +1,286 @@
+import * as React from 'react'
+import { storiesOf } from '@storybook/react'
+
+import Timeline, { TimelineItem } from './Timeline'
+
+export const ETH_TIMELINE: TimelineItem[] = [
+  {
+    "date": "22.10.2017",
+    "title": "Der Fall wird publik",
+    "description": "«Eklat an der ETH: Professorin mobbt Studenten», <a href=\"https://nzzas.nzz.ch/schweiz/eklat-an-eth-professorin-mobbt-studenten-ld.1323367\">titelt die «NZZ am Sonntag»</a>. Und schreibt: «Im Institut für Astronomie schikaniert eine Professorin über zehn Jahre lang Doktoranden. Erst als die Situation eskaliert, reagiert die Schulleitung. Zu spät und zu mild, sagen viele.» Zu diesem Zeitpunkt hat die ETH noch nicht einmal eine Untersuchung gegen die im Artikel zwar anonymisierte, aber leicht zu identifizierende Professorin Marcella Carollo eingeleitet  – die Zeitung verbreitet somit unüberprüfte Vorwürfe als Tatsachen. ",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "23.10.2017",
+    "title": "ETH leitet Untersuchung ein",
+    "description": "Das Aufsichtsorgan ETH-Rat beschliesst, einen externen Anwalt mit der Durchführung einer <a href=\"https://cdn.republik.space/s3/republik-assets/assets/das-versagen-der-eth/05-administrativuntersuchung.pdf\">Administrativuntersuchung</a> zu betrauen. Von der Untersuchung ausgenommen wird der damalige ETH-Präsident Lino Guzzella, dem ethisch einwandfreies Verhalten attestiert wird. Zu untersuchen sei lediglich «mögliches Führungs­fehl­verhalten von X [Carollo]». Geprüft werden sollen nicht nur die gegen sie kursierenden Mobbing­vorwürfe, sondern auch, ob sie sich wissenschaftlichen Fehl­verhaltens schuldig gemacht habe. ",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "29.08.2018",
+    "title": "Interview mit Antonio Togni: «Fehlverhalten muss Konsequenzen haben»",
+    "description": "Der mutmassliche Mobbing-Fall gibt zu reden. Was ist das Problem an der ETH? «Die Abhängigkeit der Doktorierenden von betreuenden Professoren ist gross», sagt ETH-Prorektor Antonio Togni im Interview mit der Republik. Zwar gebe es interne Kontrollmechanismen und Anlaufstellen für Leute, denen Unrecht geschehe. «Doch wenn ein Professor sehr mächtig ist, kann er diese zu leicht ausschalten. Das darf nicht passieren.»",
+    "author": "Von Silvan Aeschlimann und Dominik Osswald",
+    "url": "https://www.republik.ch/2018/08/29/fehlverhalten-muss-konsequenzen-haben",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "31.10.2018",
+    "title": "ETH leitet Kündigungsverfahren ein",
+    "description": "Dutzende Befragungen hat der externe Untersuchungsleiter im Jahr 2018 durchgeführt, seit Ende Sommer steht <a href=\"https://cdn.republik.space/s3/republik-assets/assets/das-versagen-der-eth/05-administrativuntersuchung.pdf\">sein Urteil</a> fest: Er empfiehlt, Professorin Marcella Carollo zu entlassen. ETH-Präsident Lino Guzzella leitet Ende Oktober 2018 das erste Entlassungs­verfahren in der 164-jährigen Geschichte der Hochschule ein.",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "12.02.2019",
+    "title": "Entlassungskommission stellt sich gegen Entlassung",
+    "description": "Eine aus drei externen und drei ETH-Professoren zusammengesetzte Entlassungs­kommission, die darüber entscheiden muss, ob die Entlassung angemessen ist, kommt zu <a href=\"https://www.ethz.ch/content/dam/ethz/main/news/eth-news/medienmitteilungen/2019/pdf/190410-Berichte/Empfehlung-Kommission-Anonymisiert.pdf\">einem unmissverständlichen Schluss</a>: «Auf eine Entlassung von Professorin Carollo sei zu verzichten.» Allerdings solle die Professorin von der Aufgabe, Doktorierende zu betreuen, entbunden werden. Bereits im Januar ist Carollo vom Vorwurf wissenschaftlichen Fehlverhaltens freigesprochen worden.",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "14.03.2019",
+    "title": "ETH stellt Antrag auf Entlassung",
+    "description": "Der neue ETH-Präsident Joël Mesot tritt vor die Medien und <a href=\"https://www.ethz.ch/de/news-und-veranstaltungen/eth-news/news/2019/03/massnahmen-fuehrung.html\">verkündet</a>, dem ETH-Rat die Entlassung von Professorin Carollo zu beantragen – entgegen der Empfehlung der Entlassungskommission. Gleichzeitig entschuldigt sich Mesot bei allen ETH-Angehörigen, die respektlos behandelt wurden: «Insbesondere all jenen, die von Fehl­verhalten ihrer Vorgesetzten betroffen waren.»",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "19.03.2019",
+    "title": "Das Versagen",
+    "description": "Gestützt auf über 3000 Seiten interner Dokumente und Dutzenden Gesprächen rollt die Republik den «Fall Carollo» neu auf und zeichnet in Teil 1 der Recherche nach, wie anonym vorgebrachte Vorwürfe aufgrund eines internen Machtgerangels dazu führen, dass die ETH ihre vorgegebenen Konfliktlösungsprozesse systematisch missachtet – und damit auch das rechtsstaatliche Prinzip der Unschuldsvermutung ausser Kraft setzt. Der «Fall Carollo» wird zum Fall ETH.",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald (Text) und Dominic Nahr (Bilder)",
+    "url": "https://www.republik.ch/2019/03/19/das-versagen-der-eth",
+    "type": "article",
+    "highlight": true,
+    "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-eth-auftakt/images/2a5cd77e3510e8507bffc5999e00efa5d6ff67e2.jpeg",
+    "color": "#fff",
+    "bgColor": "#000",
+    "textPosition": "bottom"
+  },
+  {
+    "date": "20.03.2019",
+    "title": "Macht und Ohnmacht",
+    "description": "In Teil 2 der Serie schildert die Republik, wie die ETH Massnahmen gegen Professorin Marcella Carollo einleitet, ohne die Vorwürfe auf ihren Wahrheitsgehalt zu überprüfen – unter Druck der Öffentlichkeit und besorgt um ihr Image. Als das Aufsichtsorgan ETH-Rat – aufgeschreckt von einem ersten Medienbericht – eine Administrativuntersuchung anordnet, entwickelt sich die Mobbingaffäre zum Rufmord.",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald (Text) und Dominic Nahr (Bilder)",
+    "url": "https://www.republik.ch/2019/03/20/macht-und-ohnmacht",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "21.03.2019",
+    "title": "Abgekartetes Spiel",
+    "description": "In Teil 3 der Serie zeichnet die Republik nach, wie der Leiter der Administrativuntersuchung im «Fall Carollo» ein Urteil fällte, das Fragen aufwirft, und wie ETH-Präsident Joël Mesot trotz gegenteiliger Empfehlung der Entlassungskommission die Kündigung von Professorin Marcella Carollo besiegelte. ",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald (Text) und Dominic Nahr (Bilder)",
+    "url": "https://www.republik.ch/2019/03/21/abgekartetes-spiel",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "22.03.2019",
+    "title": "Interview mit Ursula Keller: «Mit einem männlichen Professor wäre man anders umgesprungen»",
+    "description": "Ursula Keller – die einzige weibliche ETH-Physikprofessorin neben Marcella Carollo – geht in der Republik an die Öffentlichkeit, stellt sich an die Seite ihrer beschuldigten Kollegin und belastet die ETH Zürich schwer. «Die ETH wird von inoffiziellen Koalitionen gelenkt, die sämtliche Macht auf sich vereinigen», sagt sie – und spricht von gravierenden Führungsmängeln, Sexismus und Korruption. ",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a> und Dominik Osswald",
+    "url": "https://www.republik.ch/2019/03/22/mit-einem-maennlichen-professor-waere-man-anders-umgesprungen",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "25.03.2019",
+    "title": "Interview mit Kenneth Westhues: «Als wären Studierende zarte, schwache, hilflose Wesen»",
+    "description": "Für die Republik analysiert Kenneth Westhues den «Fall Carollo»: Der renommierte Experte für Mobbing an Hochschulen stellt der ETH ein miserables Zeugnis aus. Und er kritisiert, dass Doktoranden anonym gegen Professoren vorgehen können.",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a> und Dominik Osswald",
+    "url": "https://www.republik.ch/2019/03/25/als-waeren-studierende-zarte-schwache-hilflose-wesen",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "25.03.2019",
+    "title": "Die Nebelpetarden der ETH",
+    "description": "In einem Mediencommuniqué wirft die ETH der Republik drei «grundlegende Falsch­aussagen» vor. Das Fazit nach der Prüfung dieser Vorwürfe: «Die Medien­mitteilung ist ein Kunstwerk der Vernebelung. An den Fakten ändert sie nichts.»",
+    "author": "Von <a href=\"/~cmoser\">Christof Moser</a>",
+    "url": "https://www.republik.ch/2019/03/25/die-nebelpetarden-der-eth",
+    "type": "ant",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "27.03.2019",
+    "title": "Audio-Podcast: Der «Fall ETH»",
+    "description": "Die drei beteiligten Republik-Autoren erklären, wie sie bei der Recherche zum «Fall Carollo» vorgegangen sind, warum sie die Schuldfrage der Professorin nicht geklärt haben und wie sie die ersten Reaktionen auf die Publikation der Recherche einschätzen.\n",
+    "author": "Von Thom Nagy (Moderation), Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald",
+    "url": "https://www.republik.ch/2019/03/27/audio-podcast-der-fall-eth",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "29.03.2019",
+    "title": "ETH-Rat lässt Vorwürfe extern überprüfen",
+    "description": "An einer <a href=\"https://www.ethrat.ch/de/node/4932\">ausserordentlichen Sitzung</a> behandelt der ETH-Rat den Antrag der ETH Zürich, Professorin Carollo zu entlassen – und beschliesst, dass die Beschuldigte angehört werden soll. Die von Physikprofessorin Ursula Keller erhobenen Vorwürfe betreffend Führungsversagen, intransparente Verteilung der finanziellen Mittel und Geschlechtergleichstellung lässt der ETH-Rat vom externen Wirtschaftsprüfungs- und Treuhandunternehmen BDO untersuchen.",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "10.04.2019",
+    "title": "«Fall ETH»: Jetzt ist das Versagen offiziell",
+    "description": "Die ETH veröffentlicht aufgrund des medialen Drucks den Bericht der Entlassungskommission zum «Fall Carollo». Der Bericht bestätigt die Recherchen der Republik zu den gravierenden Mängeln der Administrativ­untersuchung gegen die beschuldigte Professorin.",
+    "author": "Von Silvan Aeschlimann",
+    "url": "https://www.republik.ch/2019/04/10/fall-eth-jetzt-ist-das-versagen-offiziell",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "16.04.2019",
+    "title": "Willkür",
+    "description": "Ein neues, internes Dokument des ETH-Rechtsdienstes zeigt: Der Fall Carollo ist an der ETH Zürich kein Einzelfall – bloss der einzige, bei dem es zu einer Entlassung kommen soll. Weder die Leitung noch die Aufsicht der Hochschule kennen einen einheitlichen Umgang mit Vorwürfen gegen Professoren.",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald (Text) und Dominic Nahr (Bild)",
+    "url": "https://www.republik.ch/2019/04/16/der-fall-eth-teil-4-willkuer",
+    "type": "article",
+    "highlight": true,
+    "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-eth-der-rechtsdienst-sah-alles-kommen/images/623774511975335ef0f9420933fb44f86b86a52b.jpeg",
+    "color": "#fff",
+    "bgColor": "#000",
+    "textPosition": "bottom"
+  },
+  {
+    "date": "29.04.2019",
+    "title": "Wie an der ETH Posten vergeben werden – der «Groschenroman»",
+    "description": "Gestützt auf interne Dokumente zeichnet die Republik nach, wie sich ETH-Professoren im innersten Machtzirkel am Physikdepartement gegenseitig zu Führungsfunktionen verhelfen – mittels einer Findungskommission, die bloss als Feigenblatt dient. In einem Faktencheck kontert die Republik die vorgebrachten Vorwürfe eines involvierten Professors gegen die ETH-Recherche.",
+    "author": "Von Silvan Aeschlimann, <a href=\"/~dbuehler\">Dennis Bühler</a>, Dominik Osswald (Text) und Dominic Nahr (Bild)",
+    "url": "https://www.republik.ch/2019/04/29/wie-an-der-eth-posten-vergeben-werden-der-groschenroman",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "28.05.2019",
+    "title": "Interview mit Christoph Eymann: «Es sind Zweifel angebracht, ob die ETH-Verantwortlichen richtig gehandelt haben»",
+    "description": "Nationalrat und Bildungspolitiker Christoph Eymann fordert eine politische Untersuchung der Vorgänge an der ETH. «Ich begrüsse die Untersuchung der Finanzkontrolle, zweifle aber, dass sie genügt», sagt er im Interview mit der Republik. Denn: «Eine Beschränkung rein auf das Finanzielle würde bei der ETH zu kurz greifen.»",
+    "author": "Von <a href=\"/~dbuehler\">Dennis Bühler</a>",
+    "url": "https://www.republik.ch/2019/05/28/nationalrat-eymann-zur-eth",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "06.06.2019",
+    "title": "ETH erweitert Führungsstruktur",
+    "description": "Die ETH-Spitze wird vergrössert: «Um den steigenden Anforderungen in Leadership und Personalentwicklung sowie in Wissenstransfer und Wirtschaftsbeziehungen Rechnung zu tragen, wird die Zahl der Schulleitungsbereiche von fünf auf sieben erhöht», <a href=\"https://www.ethz.ch/de/news-und-veranstaltungen/eth-news/news/2019/06/eth-erweitert-fuehrungsstruktur.html\">teilt die Hochschule mit</a>. Präsident Joël Mesot wird mit den Worten zitiert: «Ich hoffe sehr, dass es uns gelingt, Frauen für die neuen Führungsaufgaben zu begeistern.»",
+    "author": null,
+    "url": null,
+    "type": "event",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "25.06.2019",
+    "title": "Interview mit Martina Hirayama: «Die ETH-Leitung hat Fehler gemacht»",
+    "description": "Die Staatssekretärin für Bildung, Forschung und Innovation äussert sich erstmals zum Fall ETH. «Auch an Hochschulen muss die Unschuldsvermutung uneingeschränkt gelten», sagt Hirayama. Und sie kündigt Massnahmen an, sollten an der ETH Frauen systematisch benachteiligt werden: «Sexismus dulde ich nicht.»",
+    "author": "Von <a href=\"/~cmoser\">Christof Moser</a> und <a href=\"/~dbuehler\">Dennis Bühler</a>",
+    "url": "https://www.republik.ch/2019/06/25/die-eth-leitung-hat-fehler-gemacht",
+    "type": "article",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  },
+  {
+    "date": "11.07.2019",
+    "title": "Fall ETH: Finanz­kontrolle empfiehlt Transparenz – und eine unabhängige Ombudsstelle",
+    "description": "Gravierende Führungs­mängel, Sexismus, Korruption – es waren harte Vorwürfe, die Physik­­professorin Ursula Keller im Interview mit der Republik gegen die ETH Zürich erhob. Die Resultate einer ausserordentlichen Prüfung durch die Eidgenössische Finanz­kontrolle gibt Keller in wesentlichen Punkten recht.\n",
+    "author": "Von <a href=\"/~cmoser\">Christof Moser</a>",
+    "url": "https://www.republik.ch/2019/07/11/fall-eth-finanzkontrolle-empfiehlt-transparenz-und-eine-unabhaengige-ombudsstelle",
+    "type": "ant",
+    "highlight": null,
+    "image": null,
+    "color": null,
+    "bgColor": null,
+    "textPosition": null
+  }
+]
+
+
+storiesOf('Timeline', module)
+  .add('default', () =>
+    <Timeline timeline={ETH_TIMELINE} />
+  )
