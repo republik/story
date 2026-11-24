@@ -42,6 +42,18 @@
   <div class={css({
     '& p': { mb: 4 },
   })}>
+    {#if speaker?.portraitUrl}
+      <img
+        src={speaker.portraitUrl}
+        alt=''
+        class={css({
+                mb: "2",
+                height: "64px",
+                width: "64px",
+                borderRadius: "100%",
+              })}
+      />
+    {/if}
     <h4 class={css({ fontWeight: 700, mb: 4 })}>
       {showFullName ? speaker?.name : speaker?.key}
     </h4>

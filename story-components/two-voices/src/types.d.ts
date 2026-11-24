@@ -1,7 +1,5 @@
-export type Speaker = "Beck" | "Faulhaber";
-
 export type Page = {
-  speaker: Speaker;
+  speaker: string;
   text: string; // HTML text containing links and paragraphs
 };
 
@@ -10,6 +8,7 @@ export type Voice = {
   name: string;
   backgroundColor: string;
   backgroundColorDark: string;
+  portraitUrl?: string;
 };
 
 export type TitleProps = {
