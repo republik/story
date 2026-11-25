@@ -31,6 +31,22 @@
       background: 'var(--speaker-bg-dark)',
     },
     '& p': { mb: 4 },
+    '& figure': { my: '6', mx: '0' },
+    '& figure img': {
+      display: 'block',
+      width: '100%',
+      height: 'auto',
+      objectFit: 'cover',
+    },
+    '& figcaption': {
+      mt: '1',
+      fontFamily: 'gtAmericaStandard',
+      fontSize: 's',
+      lineHeight: '1.2',
+      color: 'text',
+      textAlign: 'left',
+    },
+    '& figcaption p': { mb: '0' },
   })}
   >
     {#if speaker?.portraitUrl}
