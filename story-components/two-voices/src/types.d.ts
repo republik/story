@@ -13,7 +13,7 @@ export type Voice = {
 
 export type TitleProps = {
   title: string;
-  time: string; // e.g "9 Uhr"
+  time?: string; // e.g "9 Uhr"
   coverUrl?: string;
 };
 

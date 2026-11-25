@@ -22,7 +22,7 @@ export const twoVoicesData: InputData = {
   chapters: [
     {
       title: "Aufrichten",
-      time: "7 Uhr",
+      //time: "7 Uhr",
       coverUrl:
         "https://cdn.repub.ch/s3/republik-assets/repos/republik/article-unter-typen/files/e8707f8c-b043-4eb4-8de1-d6b408269f96/ig_cactus-37.jpg",
       pages: [

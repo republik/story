@@ -20,16 +20,19 @@
             }
           })}
 >
-  <h3
-    class={css({
+  {#if time}
+    <h3
+      class={css({
               textStyle: "h3Sans",
               fontWeight: "normal",
               mb: "3",
             })}
-  >
-    {time}
-  </h3>
+    >
+      {time}
+    </h3>
+  {/if}
 
+  
   <h2
     class={css({ textStyle: "h1Serif", mb: "6",})}
   >
